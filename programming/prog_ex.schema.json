@@ -4,42 +4,38 @@
   "additionalItems": false,
   "definitions": {
     "ProgExercise": {
-      "type": "object",
-      "properties": {
-        "id": {"type": "number"},
-        "collectionId": {"type": "number"},
-        "semanticVersion": {"$ref": "./semantic_version.schema.json"},
-        "title": {"type": "string"},
-        "author": {"type": "string"},
-        "text": {"type": "string"},
-        "status": {"type": "string", "enum": ["RESERVED", "CREATED", "ACCEPTED", "APPROVED"]},
-        "functionname": {"type": "string"},
-        "foldername": {"type": "string"},
-        "filename": {"type": "string"},
-        "inputTypes": {"type": "array", "items": {"$ref": "#/definitions/ProgInputType"}, "additionalItems": false},
-        "outputType": {"type": "string"},
-        "sampleTestData": {
-          "type": "array",
-          "items": {"$ref": "#/definitions/ProgSampleTestData"},
-          "additionalItems": false
-        },
-        "unitTestPart": {"$ref": "#/definitions/UnitTestPart"},
-        "implementationPart": {"$ref": "#/definitions/ImplementationPart"},
-        "sampleSolutions": {
-          "type": "array",
-          "description": "Eine Menge an Musterlösungen (normalerweise nur eine)",
-          "items": {"$ref": "#/definitions/ProgSampleSolution"},
-          "additionalItems": false
+      "allOf": [
+        {"$ref": "../exercise.schema.json"}, {
+          "type": "object",
+          "properties": {
+            "functionname": {"type": "string"},
+            "foldername": {"type": "string"},
+            "filename": {"type": "string"},
+            "inputTypes": {"type": "array", "items": {"$ref": "#/definitions/ProgInputType"}, "additionalItems": false},
+            "outputType": {"type": "string"},
+            "sampleTestData": {
+              "type": "array",
+              "items": {"$ref": "#/definitions/ProgSampleTestData"},
+              "additionalItems": false
+            },
+            "unitTestPart": {"$ref": "#/definitions/UnitTestPart"},
+            "implementationPart": {"$ref": "#/definitions/ImplementationPart"},
+            "sampleSolutions": {
+              "type": "array",
+              "description": "Eine Menge an Musterlösungen (normalerweise nur eine)",
+              "items": {"$ref": "#/definitions/ProgSampleSolution"},
+              "additionalItems": false
+            }
+          },
+          "required": [
+            "functionname", "foldername", "filename",
+            "inputTypes", "outputType",
+            "unitTestPart", "implementationPart",
+            "sampleSolutions", "sampleTestData"
+          ],
+          "additionalProperties": false
         }
-      },
-      "required": [
-        "id", "collectionId", "semanticVersion", "title", "author", "text", "status",
-        "functionname", "foldername", "filename",
-        "inputTypes", "outputType",
-        "unitTestPart", "implementationPart",
-        "sampleSolutions", "sampleTestData"
-      ],
-      "additionalProperties": false
+      ]
     },
     "ProgInputType": {
       "type": "object",
