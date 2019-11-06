@@ -1,0 +1,155 @@
+{
+  "type": "array",
+  "items": {"$ref": "#/definitions/ProgExercise"},
+  "additionalItems": false,
+  "definitions": {
+    "ProgExercise": {
+      "type": "object",
+      "properties": {
+        "id": {"type": "number"},
+        "collectionId": {"type": "number"},
+        "semanticVersion": {"$ref": "./semantic_version.schema.json"},
+        "title": {"type": "string"},
+        "author": {"type": "string"},
+        "text": {"type": "string"},
+        "status": {"type": "string", "enum": ["RESERVED", "CREATED", "ACCEPTED", "APPROVED"]},
+        "functionname": {"type": "string"},
+        "foldername": {"type": "string"},
+        "filename": {"type": "string"},
+        "inputTypes": {"type": "array", "items": {"$ref": "#/definitions/ProgInputType"}, "additionalItems": false},
+        "outputType": {"type": "string"},
+        "sampleTestData": {
+          "type": "array",
+          "items": {"$ref": "#/definitions/ProgSampleTestData"},
+          "additionalItems": false
+        },
+        "unitTestPart": {"$ref": "#/definitions/UnitTestPart"},
+        "implementationPart": {"$ref": "#/definitions/ImplementationPart"},
+        "sampleSolutions": {
+          "type": "array",
+          "description": "Eine Menge an Musterlösungen (normalerweise nur eine)",
+          "items": {"$ref": "#/definitions/ProgSampleSolution"},
+          "additionalItems": false
+        }
+      },
+      "required": [
+        "id", "collectionId", "semanticVersion", "title", "author", "text", "status",
+        "functionname", "foldername", "filename",
+        "inputTypes", "outputType",
+        "unitTestPart", "implementationPart",
+        "sampleSolutions", "sampleTestData"
+      ],
+      "additionalProperties": false
+    },
+    "ProgInputType": {
+      "type": "object",
+      "properties": {
+        "id": {"type": "number"},
+        "name": {"type": "string"},
+        "type": {"type": "string"}
+      },
+      "required": ["id", "name", "type"],
+      "additionalProperties": false
+    },
+    "UnitTestPart": {
+      "type": "object",
+      "properties": {
+        "unitTestType": {
+          "type": "string",
+          "description": "Modus, in dem die Unittests ausgeführt werden. 'Simplified' für vereinfacht, 'Normal' for normale Unittests.",
+          "enum": ["Simplified", "Normal"]
+        },
+        "unitTestsDescription": {
+          "type": "string",
+          "description": "Beschreibung, die dem Nutzer bei der Erstellung des Unittests angezeigt wird. Kann HTML enthalten."
+        },
+        "unitTestFiles": {
+          "type": "array",
+          "description": "Dateien, die dem Nutzer bei der Bearbeitung des Erstellen des Unittests angezeigt werden.",
+          "items": {"$ref": "./exercise_file.schema.json"},
+          "additionalItems": false
+        },
+        "unitTestTestConfigs": {
+          "type": "array",
+          "description": "Angabe der einzelnen Lösungen, gegen die der Unittest der Nutzer getestet wird inklusive Angabe, ob er fehlschlagen soll.",
+          "items": {"$ref": "#/definitions/UnitTestTestConfig"},
+          "additionalItems": false
+        },
+        "testFileName": {"type": "string"},
+        "sampleSolFileNames": {
+          "type": "array",
+          "description": "Angabe, welche der Dateien aus der Musterlösung bei diesem Aufgabenteil angezeigt werden sollen.",
+          "items": {"type": "string"},
+          "additionalItems": false
+        }
+      },
+      "required": [
+        "unitTestType", "unitTestsDescription", "unitTestFiles", "unitTestTestConfigs", "testFileName",
+        "sampleSolFileNames"
+      ],
+      "additionalProperties": false
+    },
+    "UnitTestTestConfig": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number",
+          "description": "Eindeutige ID. Es muss eine passende Datei (siehe README.md) existieren!"
+        },
+        "shouldFail": {
+          "type": "boolean",
+          "description": "Angabe, ob der Unittest fehlschlagen soll (true, falls die zugehörige Lösung einen Fehler enthält)."
+        },
+        "cause": {"type": "string"},
+        "description": {"type": "string"}
+      },
+      "required": ["id", "shouldFail"],
+      "additionalProperties": false
+    },
+    "ImplementationPart": {
+      "type": "object",
+      "properties": {
+        "base": {"type": "string"},
+        "files": {
+          "type": "array",
+          "description": "Dateien, die dem Nutzer bei der Bearbeitung der Implementierung angezeigt werden.",
+          "items": {"$ref": "./exercise_file.schema.json"},
+          "additionalItems": false
+        },
+        "implFileName": {"type": "string"},
+        "sampleSolFileNames": {
+          "type": "array",
+          "description": "Angabe, welche der Dateien aus der Musterlösungen bei diesem Aufgabenteil angezeigt werden sollen.",
+          "items": {"type": "string"},
+          "additionalItems": false
+        }
+      },
+      "required": ["base", "files", "implFileName", "sampleSolFileNames"],
+      "additionalProperties": false
+    },
+    "ProgSampleSolution": {
+      "type": "object",
+      "properties": {
+        "id": {"type": "number"},
+        "files": {
+          "type": "array",
+          "description": "Alle Dateien, die für die Aufgabe bearbeitet werden, als fertige Musterlösung.",
+          "items": {"$ref": "./exercise_file.schema.json"},
+          "additionalItems": false
+        }
+      },
+      "required": ["id", "files"],
+      "additionalProperties": false
+    },
+    "ProgSampleTestData": {
+      "type": "object",
+      "properties": {
+        "id": {"type": "number"},
+        "inputs": {},
+        "output": {}
+      },
+      "required": ["id", "inputs", "output"],
+      "additionalProperties": false
+    }
+  }
+}

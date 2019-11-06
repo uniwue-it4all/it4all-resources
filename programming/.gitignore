@@ -1,0 +1,12 @@
+.idea/*
+!.idea/jsonSchemas.xml
+
+__pycache__/
+venv/
+
+.mypy_cache/
+
+.mutmut-cache
+
+.coverage
+htmlcov/

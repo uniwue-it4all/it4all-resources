@@ -1,0 +1,505 @@
+- id: 1
+  collectionId: 7
+  semanticVersion: {major: 0, minor: 0, patch: 1}
+  title: Kreise
+  author: bje40dc
+  text: TODO!
+  status: APPROVED
+
+  functionname: circle
+  foldername: circle
+  filename: circle
+
+  inputTypes: []
+  outputType: None
+
+  unitTestPart:
+
+    unitTestType: Normal
+
+    unitTestsDescription: >
+      Schreiben Sie Unittests für eine Implementierung der Klasse <code>Circle</code>, die einen Kreis mit einem
+      Mittelpunkt (bestehend aus X- und Y-Koordinate und einem Radius) darstellt. Es sollen ein Konstruktor
+      (<code>def __init__(self, center_x: float, center_y: float, radius: float)</code>) und eine Funktion
+      <code>def area(self) -> float:</code> implementiert werden, die die Fläche des Kreises berechnet.
+
+    unitTestFiles:
+      - path: circle.py
+        resourcePath: programming/7-classes/1-circle/circle_declaration.py
+        fileType: python
+        editable: false
+      - path: test_circle.py
+        resourcePath: programming/7-classes/1-circle/test_circle_declaration.py
+        fileType: python
+        editable: true
+
+    unitTestTestConfigs:
+      - id: 0
+        shouldFail: false
+        description: Musterlösung...
+      - id: 1
+        shouldFail: true
+        cause: illegal_argument
+        description: Die X-Koordinate sollte eine Ganz- oder Fließkommazahl sein.
+      - id: 2
+        shouldFail: true
+        cause: logic_error
+        description: Der Wert des Konstruktorarguments 'center_x' sollte unter dem selben Namen als Argument zugänglich sein.
+      - id: 3
+        shouldFail: true
+        cause: illegal_argument
+        description: Die Y-Koordinate sollte eine Ganz- oder Fließkommazahl sein.
+      - id: 4
+        shouldFail: true
+        cause: logic_error
+        description: Der Wert des Konstruktorarguments 'center_y' sollte unter dem selben Namen als Argument zugänglich sein.
+      - id: 5
+        shouldFail: true
+        cause: illegal_argument
+        description: Der Radius sollte eine Ganz- oder Fließkommazahl sein.
+      - id: 6
+        shouldFail: true
+        cause: illegal_argument
+        description: Der Radius sollte größer oder gleich 0 sein.
+      - id: 7
+        shouldFail: true
+        cause: logic_error
+        description: Der Wert des Konstruktorarguments 'radius' sollte unter dem selben Namen als Argument zugänglich sein.
+      - id: 8
+        shouldFail: true
+        cause: wrong_result
+        description: Die Fläche des Kreises sollte richtig berechnet werden
+    testFileName: test_circle.py
+    sampleSolFileNames: [test_circle.py]
+
+  implementationPart:
+    base: |
+      from math import pi
+
+
+      class Circle:
+          def __init__(self, center_x: float, center_y: float, radius: float):
+              pass
+
+          def area(self) -> float:
+              pass
+    files:
+      - path: test_circle.py
+        resourcePath: programming/7-classes/1-circle/test_circle.py
+        fileType: python
+        editable: false
+      - path: circle.py
+        resourcePath: programming/7-classes/1-circle/circle_declaration.py
+        fileType: python
+        editable: true
+    implFileName: circle.py
+    sampleSolFileNames: [circle.py]
+
+  sampleSolutions:
+    - id: 1
+      files:
+        - path: circle.py
+          resourcePath: programming/7-classes/1-circle/circle.py
+          fileType: python
+          editable: false
+        - path: test_circle.py
+          resourcePath: programming/7-classes/1-circle/test_circle.py
+          fileType: python
+          editable: false
+
+  sampleTestData: []
+
+- id: 2
+  collectionId: 7
+  semanticVersion: {major: 1, minor: 0, patch: 0}
+  title: Mau-Mau
+  author: bje40dc
+  text: >
+    <p>
+    <a href="https://de.wikipedia.org/wiki/Mau-Mau_(Kartenspiel)" target="_blank">Mau-Mau</a> ist ein Kartenspiel für zwei und mehr Spieler, bei dem es
+    darum geht, seine Karten möglichst schnell abzulegen.
+    Die Spieler legen dabei jeweils reihum - falls möglich - eine Karte auf den Stapel.
+    Möglich ist dies, wenn die abzulegende Karte in Kartenwert oder Kartenfarbe mit der obersten offen liegenden Karte
+    übereinstimmt.
+    Auf die Pik 10 darf also entweder eine andere Pik-Karte oder eine andere 10 gelegt werden.
+    </p>
+    <p>
+    Gegeben sei folgende Implementierung der Klasse <code>Card</code>, die eine Spielkarte darstellt:
+    </p>
+    <p>
+    <code>
+    class Card:<br>
+    &nbsp;&nbsp;def __init__(self, suit: int, rank: int):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;self.suit: int = suit<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;self.rank: int = rank<br><br>
+
+    &nbsp;&nbsp;def __eq__(self, other: Any) -> bool:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return isinstance(other, Card) and other.suit == self.suit and other.rank == self.rank<br><br>
+
+    &nbsp;&nbsp;def __repr__(self) -> str:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return "Card({}, {})".format(self.suit, self.rank)
+    </code>
+    </p>
+    <p>
+    Die Attribute <code>suit</code> und <code>rank</code> stehen für die Farbe und das Bild der Karte und nehmen jeweils Werte von 1 bis 4
+    beziehungsweise 2 (Karte 2) bis 14 (Ass) an.
+    </p>
+    <h3>Implementierung</h3>
+    <p>
+    Es sollen folgende Methoden implementiert werden:
+    </p>
+    <ul>
+    <li>
+    <code>def can_by_played_on(first_card: Card, second_card: Card) -> bool:</code>
+    <p>
+    Diese Funktion bestimmt, ob die erste Karte aufgrund der Regeln von Mau-Mau auf die zweite gelegt werden kann.
+    </p>
+    </li>
+    <li>
+    <code>def playable_cards(current_card: Card, hand_cards: List[Card]) -> List[Card]:</code>
+    <p>
+    Diese Funktion sucht aus einer Menge an Handkarten diejenigen heraus, die auf die gerade oben liegende gelegt werden
+    können.
+    </p>
+    </li>
+    </ul>
+  status: APPROVED
+
+  functionname: maumau
+  foldername: maumau
+  filename: maumau
+  inputTypes: []
+  outputType: None
+
+  unitTestPart:
+
+    unitTestType: Normal
+
+    unitTestsDescription: >
+
+    unitTestFiles:
+      - path: maumau.py
+        resourcePath: programming/7-classes/2-maumau/maumau_declaration.py
+        fileType: python
+        editable: false
+      - path: test_maumau.py
+        resourcePath: programming/7-classes/2-maumau/test_maumau_declaration.py
+        fileType: python
+        editable: true
+
+    unitTestTestConfigs:
+      - id: 0
+        shouldFail: false
+        description: Musterlösung...
+      - id: 1
+        shouldFail: true
+        description: Die Funktion can_be_played_on soll ebenfalls true zurückgeben, falls die Bilder der beiden Karten übereinstimmen.
+      - id: 2
+        shouldFail: true
+        description: Die Funktion can_be_played_on soll ebenfalls true zurückgeben, falls die Farben der beiden Karten übereinstimmen.
+      - id: 3
+        shouldFail: true
+        description: Die Funktion can_be_played_on soll nur true zurückgeben, falls die Farben der beiden Karten übereinstimmen.
+      - id: 4
+        shouldFail: true
+        description: Die Funktion can_be_played_on soll nur true zurückgeben, falls die Bilder der beiden Karten übereinstimmen.
+      - id: 5
+        shouldFail: true
+        description: Die Funktion can_be_palyed_on soll true zurückgeben, falls entweder die Farben oder die Bilder der beiden Karten übereinstimmen.
+      - id: 6
+        shouldFail: true
+        description: Die Funktion playable_cards soll die Handkarten zurückgeben, die spielbar sind.
+      - id: 7
+        shouldFail: true
+        description: Die Funktion playable_cards soll alle Handkarten zurückgeben, die spielbar sind.
+      - id: 8
+        shouldFail: true
+        description: Die Funktion playable_cards soll eine leere Liste zurückgeben, falls keine Handkarten vorhanden sind.
+    testFileName: test_maumau.py
+    sampleSolFileNames: [test_maumau.py]
+
+  implementationPart:
+    base: |
+      from typing import List, Any
+
+
+      class Card:
+          def __init__(self, suit: int, rank: int):
+              self.suit: int = suit
+              self.rank: int = rank
+
+          def __eq__(self, other: Any) -> bool:
+              return isinstance(other, Card) and other.suit == self.suit and other.rank == self.rank  # pragma: no cover
+
+          def __repr__(self) -> str:
+              return "Card({}, {})".format(self.suit, self.rank)  # pragma: no cover
+
+
+      def can_be_played_on(first_card: Card, second_card: Card) -> bool:
+          pass
+
+
+      def playable_cards(card: Card, hand: List[Card]) -> List[Card]:
+          pass
+    files:
+      - path: test_maumau.py
+        resourcePath: programming/7-classes/2-maumau/test_maumau.py
+        fileType: python
+        editable: false
+      - path: maumau.py
+        resourcePath: programming/7-classes/2-maumau/maumau_declaration.py
+        fileType: python
+        editable: true
+    implFileName: maumau.py
+    sampleSolFileNames: [maumau.py]
+
+  sampleSolutions:
+    - id: 1
+      files:
+        - path: maumau.py
+          resourcePath: programming/7-classes/2-maumau/maumau.py
+          fileType: python
+          editable: false
+        - path: test_maumau.py
+          resourcePath: programming/7-classes/2-maumau/test_maumau.py
+          fileType: python
+          editable: false
+
+  sampleTestData: []
+
+- id: 3
+  collectionId: 7
+  semanticVersion: {major: 1, minor: 0, patch: 0}
+  title: Vektor2D
+  author: bje40dc
+  text: >
+    <p>
+    Hinweise:
+    </p>
+    <ul>
+    <li>
+    Sie sollten bereits die Aufgaben zu Funktionen, Bedingungen, String, Listen und Tuples bzw. Dicts bearbeitet haben.
+    </li>
+    <li>
+    Einige der zu implementierenden Methoden beruhen aufeinander. Es empfiehlt sich daher, diese in der gegebenen
+    Reihenfolge zu implementieren (bis alle Unittests korrekt sind), da so die Wahrscheinlichkeit eines Fehlschlagens eines
+    Unittests aufgrund eines Fehlers in einer aufgerufenen Methode verringert wird.
+    </li>
+    <li>
+    Die einfachen Anführungszeichen bei Type hints mit der eigenen Klasse sind erforderlich, da die Klasse in sich selbst
+    nicht direkt als Type hint referenziert werden kann. Sie haben aber ansonsten keine Wirkung.
+    </li>
+    <li>
+    Die Funktionen <code>__add__</code>, <code>__sub__</code> und <code>__mul__</code> werden jeweils aufgerufen (siehe Unittests),
+    falls
+    <ul>
+    <li>
+    zu einer Instanz mit <code>+</code> addiert wird (<code>__add__</code>)
+    </li>
+    <li>
+    von einer Instanz mit <code>-</code> subtrahiert wird (<code>__sub__</code>)
+    </li>
+    <li>
+    eine Instanz mit <code>*</code> multipliziert wird (<code>__mul__</code>)
+    </li>
+    </ul>
+    </li>
+    </ul>
+    <h3>Vektor2D</h3>
+    <p>
+    In dieser Aufgabe soll eine Klasse <code>Vector2D</code> implementiert werden, die einen zweidimensionalen Vektor repräsentiert.
+    </p>
+    <ul>
+    <li>
+    <code>def __init__(self, x: float, y: float):</code>
+    <p>
+    Der Konstruktor der Klasse bekommt die <code>x</code> und <code>y</code>-Koordinate übergeben und speichert diese unter dem selben Namen ab.
+    </p>
+    </li>
+    <li>
+    <code>def __repr__(self) -> str:</code>
+    <p>
+    Die Funktion <code>__repr__</code> wird benutzt, um eine Instanz einer Klasse genauer zu beschreiben. Überschreiben Sie daher
+    diese Funktion, so dass sie die Korrdinatenrepräsentation des Vektor <code>"(x, y)"</code> zurückgibt.
+    </p>
+    </li>
+    <li>
+    <code>def __eq__(self, other: Any) -> bool:</code>
+    <p>
+    Diese Funktion soll diese Instanz von <code>Vector2D</code> mit einem beliebigen anderen Objekt vergleichen. Sollte das andere
+    Objekt kein Vektor sein, schlägt der Vergleich fehl. Ansonsten müssen für einen erfolgreichen Vergleich die <code>x</code>- und
+    die <code>y</code>-Korrdinate der beiden Vektoren übereinstimmen.
+    </p>
+    <p>
+    Mit der Funktion <code>isinstance(o, t)</code> können Sie überprüfen, ob ein Objekt <code>o</code> eine Instanz einer Klasse <code>t</code> ist.
+    </p>
+    </li>
+    <li>
+    <code>def abs(self) -> float:</code>
+    <p>
+    Diese Funktion berechnet die Länge dieser Instanz.
+    </p>
+    </li>
+    <li>
+    <code>def __add__(self, other: 'Vector2D') -> 'Vector2D':</code>
+    <p>
+    Diese Funktion addiert jeweils die beiden Korrdinaten zweier Vektoren und gibt das Resultat als neuen Vektor zurück.
+    </p>
+    </li>
+    <li>
+    <code>def __sub__(self, other: 'Vecto2D') -> 'Vector2D':</code>
+    <p>
+    Diese Funktion subtrahiert den Vektor <code>other</code> von dieser Instanz und gibt das Ergebnis als neuen Vektor zurück.
+    </p>
+    </li>
+    <li>
+    <code>def __mul__(self, scalar: float) -> 'Vector2D':</code>
+    <p>
+    Diese Funktion multipliziert (skaliert) diesen Vektor mit dem übergebenen Wert <code>scalar</code> und gibt das Ergebnis als
+    neuen Vektor zurück.
+    </p>
+    </li>
+    <li>
+    <code>def dot(self, other: 'Vector2D') -> 'float':</code>
+    <p>
+    Diese Funktion berechnet das Skalarprodukt dieser Instanz und des Vektors <code>other</code>, indem sie die Einträge elementweise
+    multipliziert und addiert.
+    </p>
+    </li>
+    </ul>
+  status: APPROVED
+
+  functionname: vector2d
+  foldername: vector2d
+  filename: vector2d
+  inputTypes: []
+  outputType: None
+
+  unitTestPart:
+
+    unitTestType: Normal
+
+    unitTestsDescription: >
+
+    unitTestFiles:
+      - path: vector2d.py
+        resourcePath: programming/7-classes/3-vector2d/vector2d_declaration.py
+        fileType: python
+        editable: false
+      - path: test_vector2d.py
+        resourcePath: programming/7-classes/3-vector2d/test_vector2d_declaration.py
+        fileType: python
+        editable: true
+
+    unitTestTestConfigs:
+      - id: 0
+        shouldFail: false
+        description: Musterlösung...
+      - id: 1
+        shouldFail: true
+        description: Der Wert des Konstruktorarguments 'x' sollte unter dem selben Namen als Argument zugänglich sein.
+      - id: 2
+        shouldFail: true
+        description: Der Wert des Konstruktorarguments 'y' sollte unter dem selben Namen als Argument zugänglich sein.
+      - id: 3
+        shouldFail: true
+        description: Die Funktion __repr__ soll die korrekte Koordinatenrepräsentation der Koordinate 'x' zurückgeben.
+      - id: 4
+        shouldFail: true
+        description: Die Funktion __repr__ soll die korrekte Koordinatenrepräsentation der Koordinate 'y' zurückgeben.
+      - id: 5
+        shouldFail: true
+        description: Die Funktion __eq__ soll den korrekten booleschen Wert zurückgeben, falls sich zwei Vektoren gleichen.
+      - id: 6
+        shouldFail: true
+        description: Die Funktion __eq__ soll den korrekten booleschen Wert zurückgeben, falls sich zwei Vektoren nicht gleichen.
+      - id: 7
+        shouldFail: true
+        description: Die Funktion __eq__ soll den korrekten booleschen Wert zurückgeben, falls der Vektor2D mit einer Instanz verglichen wird, die kein Vektor2D ist.
+      - id: 8
+        shouldFail: true
+        description: Die Funktion abs soll die korrekte Länge berechnen.
+      - id: 9
+        shouldFail: true
+        description: Die Funktion abs soll die korrekte Länge berechnen.
+      - id: 10
+        shouldFail: true
+        description: Die Funktion __add__ soll jeweils die x- und y-Koordinaten addieren.
+      - id: 11
+        shouldFail: true
+        description: Die Funktion __add__ soll den korrekt berechneten Vektor nach der Addition zurückgeben.
+      - id: 12
+        shouldFail: true
+        description: Die Funktion __sub__ soll jeweils die x- und y-Koordinaten subtrahieren.
+      - id: 13
+        shouldFail: true
+        description: Die Funktion __sub__ soll den korrekt berechneten Vektor nach der Subtraktion zurückgeben.
+      - id: 14
+        shouldFail: true
+        description: Die Funktion __mul__ soll jeweils die x- und y-Koordinaten mit dem übergebenen Wert multiplizieren.
+      - id: 15
+        shouldFail: true
+        description: Die Funktion __mul__ soll den korrekt berechneten Vektor nach der Multiplikation zurückgeben.
+      - id: 16
+        shouldFail: true
+        description: Die Funktion dot soll jeweils die x- und y-Koordinaten multiplizieren und anschließend das Ergebnis addieren.
+      - id: 17
+        shouldFail: true
+        description: Die Funktion dot soll das korrekt berechnete Skalarprodukt zurückgeben.
+    testFileName: test_vector2d.py
+    sampleSolFileNames: [test_vector2d.py]
+
+  implementationPart:
+    base: |
+      from typing import Any
+
+
+      class Vector2D:
+          def __init__(self, x: float, y: float):
+              pass
+
+          def __repr__(self) -> str:
+              pass
+
+          def __eq__(self, other: Any) -> bool:
+              pass
+
+          def abs(self) -> float:
+              pass
+
+          def __add__(self, other: 'Vector2D') -> 'Vector2D':
+              pass
+
+          def __sub__(self, other: 'Vector2D') -> 'Vector2D':
+              pass
+
+          def __mul__(self, scalar: float) -> 'Vector2D':
+              pass
+
+          def dot(self, other: 'Vector2D') -> float:
+              pass
+    files:
+      - path: test_vector2d.py
+        resourcePath: programming/7-classes/3-vector2d/test_vector2d.py
+        fileType: python
+        editable: false
+      - path: vector2d.py
+        resourcePath: programming/7-classes/3-vector2d/vector2d_declaration.py
+        fileType: python
+        editable: true
+    implFileName: vector2d.py
+    sampleSolFileNames: [vector2d.py]
+
+  sampleSolutions:
+    - id: 1
+      files:
+        - path: vector2d.py
+          resourcePath: programming/7-classes/3-vector2d/vector2d.py
+          fileType: python
+          editable: false
+        - path: test_vector2d.py
+          resourcePath: programming/7-classes/3-vector2d/test_vector2d.py
+          fileType: python
+          editable: false
+
+  sampleTestData: []
