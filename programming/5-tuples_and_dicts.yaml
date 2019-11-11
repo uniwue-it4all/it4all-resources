@@ -152,6 +152,12 @@
 
   sampleTestData: []
 
+  tags:
+    - Tuples
+    - Lists
+    - Math
+    - Conditions
+
 - id: 2
   collectionId: 5
   semanticVersion: {major: 1, minor: 0, patch: 0}
@@ -299,6 +305,13 @@
 
   sampleTestData: []
 
+  tags:
+    - Strings
+    - ForLoops
+    - Conditions
+    - Math
+    - Lists
+
 - id: 3
   collectionId: 5
   semanticVersion: {major: 1, minor: 0, patch: 0}
@@ -420,6 +433,13 @@
           editable: false
 
   sampleTestData: []
+
+  tags:
+    - Lists
+    - Tuples
+    - Dictionaries
+    - ForLoops
+    - Conditions
 
 - id: 4
   collectionId: 5
@@ -563,3 +583,8 @@
           editable: false
 
   sampleTestData: []
+
+  tags:
+    - Dictionaries
+    - Math
+    - ForLoops

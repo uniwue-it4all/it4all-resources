@@ -52,6 +52,10 @@
     - {id: 5, inputs: "qwertzuiyiuztrewq", output: true}
     - {id: 6, inputs: "Tacocat", output: true}
 
+  tags:
+    - Strings
+    - ForLoops
+
 - id: 2
   collectionId: 2
   semanticVersion: {major: 1, minor: 0, patch: 0}
@@ -147,6 +151,10 @@
           editable: false
 
   sampleTestData: []
+
+  tags:
+    - Strings
+    - Math
 
 - id: 3
   collectionId: 2
@@ -255,6 +263,10 @@
 
   sampleTestData: []
 
+  tags:
+    - Tuples
+    - Strings
+
 - id: 4
   collectionId: 2
   semanticVersion: {major: 1, minor: 0, patch: 0}
@@ -347,6 +359,12 @@
           editable: false
 
   sampleTestData: []
+
+  tags:
+    - Strings
+    - Lists
+    - Tuples
+    - ForLoops
 
 - id: 5
   collectionId: 2
@@ -452,6 +470,11 @@
           editable: false
 
   sampleTestData: []
+
+  tags:
+    - Strings
+    - Lists
+    - ForLoops
 
 - id: 6
   collectionId: 2
@@ -667,6 +690,11 @@
 
   sampleTestData: []
 
+  tags:
+    - Strings
+    - Math
+    - ForLoops
+
 - id: 7
   collectionId: 2
   semanticVersion: {major: 1, minor: 0, patch: 0}
@@ -818,6 +846,11 @@
           editable: false
 
   sampleTestData: []
+
+  tags:
+    - Strings
+    - ForLoops
+    - Math
 
 - id: 8
   collectionId: 2
@@ -1008,3 +1041,8 @@
           editable: false
 
   sampleTestData: []
+
+  tags:
+    - Math
+    - Strings
+    - Classes

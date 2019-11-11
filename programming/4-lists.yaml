@@ -50,6 +50,10 @@
     - {id: 2, inputs: [1], output: 1.0}
     - {id: 3, inputs: [3, 5, 7], output: 5.0}
 
+  tags:
+    - ForLoops
+    - Math
+
 - id: 2
   collectionId: 4
   semanticVersion: 1.0.0
@@ -102,6 +106,12 @@
     - {id: 2, inputs: ["0"], output: "0"}
     - {id: 3, inputs: ["1", "11", "111"], output: "111"}
     - {id: 4, inputs: ["1", "121", "12321", "232", "3"], output: "12321"}
+
+  tags:
+    - ForLoops
+    - Conditions
+    - Lists
+    - Strings
 
 - id: 3
   collectionId: 4
@@ -306,6 +316,12 @@
 
   sampleTestData: []
 
+  tags:
+    - Lists
+    - ForLoops
+    - Math
+    - Conditions
+
 - id: 4
   collectionId: 4
   semanticVersion: {major: 1, minor: 0, patch: 0}
@@ -444,3 +460,7 @@
           editable: false
 
   sampleTestData: []
+
+  tags:
+    - Lists
+    - Slicing

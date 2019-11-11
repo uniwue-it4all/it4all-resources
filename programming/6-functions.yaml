@@ -164,6 +164,9 @@
 
   sampleTestData: []
 
+  tags:
+    - Math
+
 - id: 2
   collectionId: 6
   semanticVersion: {major: 1, minor: 0, patch: 0}
@@ -352,3 +355,6 @@
           editable: false
 
   sampleTestData: []
+
+  tags:
+    - Math

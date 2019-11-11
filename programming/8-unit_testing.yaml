@@ -109,3 +109,9 @@
           editable: false
 
   sampleTestData: []
+
+  tags:
+    - Exceptions
+    - Classes
+    - ForLoops
+    - Conditions

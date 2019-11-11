@@ -42,12 +42,6 @@
           resourcePath: programming/1-numbers/1-ggt/ggt.py
           fileType: python
           editable: true
-    - id: 2
-      files:
-        - path: ggt.py
-          resourcePath: programming/1-numbers/1-ggt/ggt_2.py
-          fileType: python
-          editable: true
 
   sampleTestData:
     - {id: 1, inputs: [12, 4], output: 4}
@@ -55,6 +49,11 @@
     - {id: 3, inputs: [64, 46], output: 2}
     - {id: 4, inputs: [777, 111], output: 111}
     - {id: 5, inputs: [15, 25], output: 5}
+
+  tags:
+    - ForLoops
+    - Conditions
+    - Math
 
 - id: 2
   collectionId: 1
@@ -141,6 +140,11 @@
           fileType: python
           editable: false
 
+  tags:
+    - Exceptions
+    - Math
+    - ForLoops
+
 - id: 3
   collectionId: 1
   semanticVersion: {major: 0, minor: 0, patch: 1}
@@ -221,7 +225,7 @@
     base: ''
     files:
       - path: test_babylonian_root.py
-        resourcePath: programming/1-numbers/3-babylonian_root/test_babylonian_rootpy
+        resourcePath: programming/1-numbers/3-babylonian_root/test_babylonian_root.py
         fileType: python
         editable: false
       - path: babylonian_root.py
@@ -235,7 +239,7 @@
     - id: 1
       files:
         - path: test_babylonian_root.py
-          resourcePath: programming/1-numbers/3-babylonian_root/test_babylonian_rootpy
+          resourcePath: programming/1-numbers/3-babylonian_root/test_babylonian_root.py
           fileType: python
           editable: false
         - path: babylonian_root.py
@@ -244,6 +248,11 @@
           editable: false
 
   sampleTestData: []
+
+  tags:
+    - Exceptions
+    - ForLoops
+    - Math
 
 - id: 4
   collectionId: 1
@@ -339,3 +348,7 @@
           editable: false
 
   sampleTestData: []
+
+  tags:
+    - Exceptions
+    - Recursion

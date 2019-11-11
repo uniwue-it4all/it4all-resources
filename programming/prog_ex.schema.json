@@ -25,13 +25,31 @@
               "description": "Eine Menge an Musterlösungen (normalerweise nur eine)",
               "items": {"$ref": "#/definitions/ProgSampleSolution"},
               "additionalItems": false
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "ForLoops", "WhileLoops",
+                  "Conditions",
+                  "Classes",
+                  "Exceptions",
+                  "Math",
+                  "Strings",
+                  "Lists", "Tuples", "Dictionaries", "Slicing",
+                  "Recursion"
+                ]
+              },
+              "uniqueItems": true
             }
           },
           "required": [
             "functionname", "foldername", "filename",
             "inputTypes", "outputType",
             "unitTestPart", "implementationPart",
-            "sampleSolutions", "sampleTestData"
+            "sampleSolutions", "sampleTestData",
+            "tags"
           ],
           "additionalProperties": false
         }
@@ -62,7 +80,7 @@
         "unitTestFiles": {
           "type": "array",
           "description": "Dateien, die dem Nutzer bei der Bearbeitung des Erstellen des Unittests angezeigt werden.",
-          "items": {"$ref": "./exercise_file.schema.json"},
+          "items": {"$ref": "../exercise_file.schema.json"},
           "additionalItems": false
         },
         "unitTestTestConfigs": {
@@ -109,7 +127,7 @@
         "files": {
           "type": "array",
           "description": "Dateien, die dem Nutzer bei der Bearbeitung der Implementierung angezeigt werden.",
-          "items": {"$ref": "./exercise_file.schema.json"},
+          "items": {"$ref": "../exercise_file.schema.json"},
           "additionalItems": false
         },
         "implFileName": {"type": "string"},
@@ -130,7 +148,7 @@
         "files": {
           "type": "array",
           "description": "Alle Dateien, die für die Aufgabe bearbeitet werden, als fertige Musterlösung.",
-          "items": {"$ref": "./exercise_file.schema.json"},
+          "items": {"$ref": "../exercise_file.schema.json"},
           "additionalItems": false
         }
       },

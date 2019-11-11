@@ -109,6 +109,12 @@
 
   sampleTestData: []
 
+  tags:
+    - Conditions
+    - Exceptions
+    - Classes
+    - Math
+
 - id: 2
   collectionId: 7
   semanticVersion: {major: 1, minor: 0, patch: 0}
@@ -266,6 +272,12 @@
           editable: false
 
   sampleTestData: []
+
+  tags:
+    - Classes
+    - Conditions
+    - Lists
+    - Strings
 
 - id: 3
   collectionId: 7
@@ -503,3 +515,8 @@
           editable: false
 
   sampleTestData: []
+
+  tags:
+    - Classes
+    - Strings
+    - Math
