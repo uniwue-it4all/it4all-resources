@@ -1,5 +1,5 @@
 - id: 1
-  collectionId: 1
+  collectionId: 2
   semanticVersion: {major: 0, minor: 0, patch: 1}
   title: Heiße Preise
   author: bje40dc
@@ -25,7 +25,7 @@
       toExtract: ['50', '99', '119,99']
 
 - id: 2
-  collectionId: 1
+  collectionId: 2
   semanticVersion: {major: 0, minor: 0, patch: 1}
   title: Kilometerstände
   author: bje40dc
