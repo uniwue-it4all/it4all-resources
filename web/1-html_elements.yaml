@@ -6,7 +6,7 @@
   text: >
     Erstellen Sie eine Liste in HTML, die die Autohersteller Audi, BMW und Mercedes-Benz und Volkswagen enthält.
     Achten Sie dabei für die Korrektur auf eine korrekte Schreibweise der einzelnen Hersteller!
-  status: APPROVED
+  state: APPROVED
   filename: carList.html
 
   files:
@@ -81,7 +81,7 @@
   title: Tabellen in Html
   author: bje40dc
   text: Erstellen Sie eine Tabelle in Html. Benutzen Sie in dieser Aufgabe die Tags <thead> und <tbody> nicht.
-  status: APPROVED
+  state: APPROVED
   filename: production.html
 
   files:
@@ -194,7 +194,7 @@
   title: Hyperlinks und Bilder in HTML
   author: bje40dc
   text: Erstellen Sie ein Bild in HTML, das gleichzeitig ein Link ist.
-  status: APPROVED
+  state: APPROVED
   filename: mustang.html
 
   files:
@@ -264,7 +264,7 @@
   title: Login-Formular
   author: bje40dc
   text: Erstellen Sie ein Login-Formular in HTML
-  status: APPROVED
+  state: APPROVED
   filename: login.html
 
   files:
@@ -351,7 +351,7 @@
   title: Audio in HTML 5
   author: bje40dc
   text: Erstellen Sie ein Audio-Element in Html5!
-  status: APPROVED
+  state: APPROVED
   filename: audio.html
 
   files:

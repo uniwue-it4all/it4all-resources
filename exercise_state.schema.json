@@ -1,0 +1,4 @@
+{
+  "type": "string",
+  "enum": ["RESERVED", "CREATED", "ACCEPTED", "APPROVED"]
+}

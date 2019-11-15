@@ -22,13 +22,31 @@
                     <option name="path" value="exercise_file.schema.json" />
                   </Item>
                   <Item>
-                    <option name="path" value="semantic_version.schema.json" />
-                  </Item>
-                  <Item>
                     <option name="path" value="programming/prog_ex.schema.json" />
                   </Item>
                   <Item>
                     <option name="path" value="rose/rose_ex.schema.json" />
+                  </Item>
+                  <Item>
+                    <option name="path" value="semantic_version.schema.json" />
+                  </Item>
+                </list>
+              </option>
+            </SchemaInfo>
+          </value>
+        </entry>
+        <entry key="collections.schema">
+          <value>
+            <SchemaInfo>
+              <option name="name" value="collections.schema" />
+              <option name="relativePathToSchema" value="collections.schema.json" />
+              <option name="schemaVersion" value="JSON schema version 7" />
+              <option name="patterns">
+                <list>
+                  <Item>
+                    <option name="pattern" value="true" />
+                    <option name="path" value="*/collections.yaml" />
+                    <option name="mappingKind" value="Pattern" />
                   </Item>
                 </list>
               </option>
@@ -45,7 +63,7 @@
                 <list>
                   <Item>
                     <option name="pattern" value="true" />
-                    <option name="path" value="programming/*.yaml" />
+                    <option name="path" value="programming/*-*.yaml" />
                     <option name="mappingKind" value="Pattern" />
                   </Item>
                 </list>
@@ -63,7 +81,7 @@
                 <list>
                   <Item>
                     <option name="pattern" value="true" />
-                    <option name="path" value="regex/*.yaml" />
+                    <option name="path" value="regex/*-*.yaml" />
                     <option name="mappingKind" value="Pattern" />
                   </Item>
                 </list>
@@ -81,7 +99,7 @@
                 <list>
                   <Item>
                     <option name="pattern" value="true" />
-                    <option name="path" value="rose/*.yaml" />
+                    <option name="path" value="rose/*-*.yaml" />
                     <option name="mappingKind" value="Pattern" />
                   </Item>
                 </list>
@@ -99,7 +117,7 @@
                 <list>
                   <Item>
                     <option name="pattern" value="true" />
-                    <option name="path" value="sql/*.yaml" />
+                    <option name="path" value="sql/*-*.yaml" />
                     <option name="mappingKind" value="Pattern" />
                   </Item>
                 </list>
@@ -117,7 +135,7 @@
                 <list>
                   <Item>
                     <option name="pattern" value="true" />
-                    <option name="path" value="uml/*.yaml" />
+                    <option name="path" value="uml/*-*.yaml" />
                     <option name="mappingKind" value="Pattern" />
                   </Item>
                 </list>
@@ -135,7 +153,7 @@
                 <list>
                   <Item>
                     <option name="pattern" value="true" />
-                    <option name="path" value="web/*.yaml" />
+                    <option name="path" value="web/*-*.yaml" />
                     <option name="mappingKind" value="Pattern" />
                   </Item>
                 </list>
@@ -153,7 +171,7 @@
                 <list>
                   <Item>
                     <option name="pattern" value="true" />
-                    <option name="path" value="xml/*.yaml" />
+                    <option name="path" value="xml/*-*.yaml" />
                     <option name="mappingKind" value="Pattern" />
                   </Item>
                 </list>

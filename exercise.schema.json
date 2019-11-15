@@ -7,7 +7,7 @@
     "title": {"type": "string"},
     "author": {"type": "string"},
     "text": {"type": "string"},
-    "state": {"type": "string", "enum": ["RESERVED", "CREATED", "ACCEPTED", "APPROVED"]}
+    "state": {"$ref": "./exercise_state.schema.json"}
   },
   "required": [
     "id", "collectionId", "semanticVersion", "title", "author", "text", "state"

@@ -1,13 +1,15 @@
 - id: 1
+  toolId: web
   title: Html Elemente
   author: bje40dc
   text: TODO
-  status: APPROVED
+  state: APPROVED
   shortName: html_elements
 
 - id: 2
+  toolId: web
   title: Js Basics
   author: bje40dc
   text: TODO
-  status: APPROVED
+  state: APPROVED
   shortName: js_basics

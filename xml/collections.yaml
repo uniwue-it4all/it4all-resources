@@ -1,6 +1,7 @@
 - id: 1
+  toolId: xml
   title: Xml Basics
   author: bje40dc
   text: TODO
-  status: APPROVED
+  state: APPROVED
   shortName: xml_basics

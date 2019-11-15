@@ -4,12 +4,13 @@
     "type": "object",
     "properties": {
       "id": {"type": "number"},
+      "toolId": {"type": "string"},
       "title": {"type": "string"},
       "author": {"type": "string"},
       "text": {"type": "string"},
-      "status": {"type": "string", "enum": ["RESERVED", "CREATED", "ACCEPTED", "APPROVED"]},
+      "state": {"$ref": "./exercise_state.schema.json"},
       "shortName": {"type": "string"}
     },
-    "required": ["id", "title", "author", "text", "status", "shortName"]
+    "required": ["id", "toolId", "title", "author", "text", "state", "shortName"]
   }
 }
