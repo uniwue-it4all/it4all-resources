@@ -10,13 +10,13 @@
   correctionType: MATCHING
 
   matchTestData:
-    - {id: 1, data: '97070', included: true}
-    - {id: 2, data: '90210', included: true}
-    - {id: 3, data: '10115', included: true}
-    - {id: 4, data: '65432', included: true}
-    - {id: 5, data: '01234', included: true}
-    - {id: 6, data: '8911', included: false}
-    - {id: 7, data: '654321', included: false}
+    - {id: 1, data: '97070', isIncluded: true}
+    - {id: 2, data: '90210', isIncluded: true}
+    - {id: 3, data: '10115', isIncluded: true}
+    - {id: 4, data: '65432', isIncluded: true}
+    - {id: 5, data: '01234', isIncluded: true}
+    - {id: 6, data: '8911', isIncluded: false}
+    - {id: 7, data: '654321', isIncluded: false}
 
   extractionTestData: []
 
@@ -40,18 +40,18 @@
   correctionType: MATCHING
 
   matchTestData:
-    - {id: 1, data: '12.01.1999', included: true}
-    - {id: 2, data: '99.17.3006', included: true}
-    - {id: 3, data: '33.11.1931', included: true}
-    - {id: 4, data: '01.01.0700', included: true}
-    - {id: 5, data: '1.1.1999', included: false}
-    - {id: 6, data: '01.01.700', included: false}
-    - {id: 7, data: '3.12.2011', included: false}
-    - {id: 8, data: '29.3.2018', included: false}
-    - {id: 9, data: '12-01-1999', included: false}
-    - {id: 10, data: '1.1.1', included: false}
-    - {id: 11, data: '12.10', included: false}
-    - {id: 12, data: '11.2.',included: false}
+    - {id: 1, data: '12.01.1999', isIncluded: true}
+    - {id: 2, data: '99.17.3006', isIncluded: true}
+    - {id: 3, data: '33.11.1931', isIncluded: true}
+    - {id: 4, data: '01.01.0700', isIncluded: true}
+    - {id: 5, data: '1.1.1999', isIncluded: false}
+    - {id: 6, data: '01.01.700', isIncluded: false}
+    - {id: 7, data: '3.12.2011', isIncluded: false}
+    - {id: 8, data: '29.3.2018', isIncluded: false}
+    - {id: 9, data: '12-01-1999', isIncluded: false}
+    - {id: 10, data: '1.1.1', isIncluded: false}
+    - {id: 11, data: '12.10', isIncluded: false}
+    - {id: 12, data: '11.2.',isIncluded: false}
 
   extractionTestData: []
 
@@ -75,18 +75,18 @@
   correctionType: MATCHING
 
   matchTestData:
-    - {id: 1, data: '12.01.1999', included: true}
-    - {id: 2, data: '99.17.3006', included: true}
-    - {id: 3, data: '33.11.1931', included: true}
-    - {id: 4, data: '1.1.1999', included: true}
-    - {id: 5, data: '01.01.0700', included: true}
-    - {id: 6, data: '01.01.700', included: true}
-    - {id: 7, data: '3.12.2011', included: true}
-    - {id: 8, data: '29.3.2018', included: true}
-    - {id: 9, data: '1.1.1',included: false}
-    - {id: 10, data: '12.10', included: false}
-    - {id: 11, data: '11.2.', included: false}
-    - {id: 12, data: '12-01-1999', included: false}
+    - {id: 1, data: '12.01.1999', isIncluded: true}
+    - {id: 2, data: '99.17.3006', isIncluded: true}
+    - {id: 3, data: '33.11.1931', isIncluded: true}
+    - {id: 4, data: '1.1.1999', isIncluded: true}
+    - {id: 5, data: '01.01.0700', isIncluded: true}
+    - {id: 6, data: '01.01.700', isIncluded: true}
+    - {id: 7, data: '3.12.2011', isIncluded: true}
+    - {id: 8, data: '29.3.2018', isIncluded: true}
+    - {id: 9, data: '1.1.1',isIncluded: false}
+    - {id: 10, data: '12.10', isIncluded: false}
+    - {id: 11, data: '11.2.', isIncluded: false}
+    - {id: 12, data: '12-01-1999', isIncluded: false}
 
   extractionTestData: []
 
@@ -110,15 +110,15 @@
   correctionType: MATCHING
 
   matchTestData:
-    - {id: 1, data: '2.3.5-0041', included: true}
-    - {id: 2, data: '0.0.1', included: true}
-    - {id: 3, data: '1.3.3-7', included: true}
-    - {id: 4, data: '1.12.2-21', included: true}
-    - {id: 5, data: '2.05.7-11', included: true}
-    - {id: 6, data: '1.0', included: false}
-    - {id: 7, data: '1..10', included: false}
-    - {id: 8, data: '1..10', included: false}
-    - {id: 9, data: '1.0-3', included: false}
+    - {id: 1, data: '2.3.5-0041', isIncluded: true}
+    - {id: 2, data: '0.0.1', isIncluded: true}
+    - {id: 3, data: '1.3.3-7', isIncluded: true}
+    - {id: 4, data: '1.12.2-21', isIncluded: true}
+    - {id: 5, data: '2.05.7-11', isIncluded: true}
+    - {id: 6, data: '1.0', isIncluded: false}
+    - {id: 7, data: '1..10', isIncluded: false}
+    - {id: 8, data: '1..10', isIncluded: false}
+    - {id: 9, data: '1.0-3', isIncluded: false}
 
   extractionTestData: []
 
@@ -142,12 +142,12 @@
   correctionType: MATCHING
 
   matchTestData:
-    - {id: 1, data: 'james.bond@mi5.uk', included: true}
-    - {id: 2, data: 'jason_bourne@cia.gov', included: true}
-    - {id: 3, data: 'jack.bauer@24.com', included: true}
-    - {id: 4, data: 'xyz@localhost', included: false}
-    - {id: 5, data: '@web.de', included: false}
-    - {id: 6, data: 'test.net', included: false}
+    - {id: 1, data: 'james.bond@mi5.uk', isIncluded: true}
+    - {id: 2, data: 'jason_bourne@cia.gov', isIncluded: true}
+    - {id: 3, data: 'jack.bauer@24.com', isIncluded: true}
+    - {id: 4, data: 'xyz@localhost', isIncluded: false}
+    - {id: 5, data: '@web.de', isIncluded: false}
+    - {id: 6, data: 'test.net', isIncluded: false}
 
   extractionTestData: []
 

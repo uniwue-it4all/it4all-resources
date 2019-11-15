@@ -34,9 +34,9 @@
       "properties": {
         "id": {"type": "number"},
         "data": {"type": "string"},
-        "included": {"type": "boolean"}
+        "isIncluded": {"type": "boolean"}
       },
-      "required": ["id", "data", "included"],
+      "required": ["id", "data", "isIncluded"],
       "additionalProperties": false
     },
     "RegexExtractionTestData": {
