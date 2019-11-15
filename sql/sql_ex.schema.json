@@ -25,7 +25,7 @@
               }
             }
           },
-          "required": ["exerciseType", "samples"]
+          "required": ["exerciseType", "samples", "tags"]
         }
       ]
     },
