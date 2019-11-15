@@ -223,8 +223,8 @@
             <abteilung>
             </abteilung>
           </bibliothek>
-
-      - id: 2
+    - id: 2
+      sample:
         grammar: |
           <!ELEMENT bibliothek (abteilung+)>
           <!ELEMENT abteilung (titel, buch+)>
