@@ -32,7 +32,7 @@
     5: 50.0% vom Pot
     </li>
     </ul>
-  status: APPROVED
+  state: APPROVED
 
   functionname: lottery
   foldername: lottery
@@ -133,7 +133,7 @@
     Katze, bekommt er 8% Rabatt. Hat er einen Hamster, bekommt er - unabhängig von anderen Rabatten - 2% zusätzlich.
     Implementieren Sie die Funktion, so dass sie für die Kunden die entsprechenden Rabatte berechnet!
     </p>
-  status: APPROVED
+  state: APPROVED
 
   functionname: discount
   foldername: discount
@@ -247,7 +247,7 @@
     21 bis 24: <code>Good night</code>
     </li>
     </ul>
-  status: APPROVED
+  state: APPROVED
 
   functionname: greet
   foldername: greet

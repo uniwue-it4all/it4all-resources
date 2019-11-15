@@ -6,7 +6,7 @@
   text: >
     Implementieren Sie die folgende Funktion ggt(a: int, b -> int) -> int, die den größten gemeinsamen Teiler
     zweier Zahlen berechnet!
-  status: APPROVED
+  state: APPROVED
 
   functionname: ggt
   foldername: ggt
@@ -62,7 +62,7 @@
   author: bje40dc
   text: >
     Implementieren Sie die Funktion factorial(n: int) -> int, die die Fakultät der Zahl n berechnet.
-  status: APPROVED
+  state: APPROVED
 
   functionname: factorial
   foldername: factorial
@@ -166,7 +166,7 @@
       kleiner oder gleich 0 oder das Argument <code>count</code> keine Ganzzahl oder kleiner als 0 ist.
     </p>
 
-  status: APPROVED
+  state: APPROVED
 
   functionname: babylonian_root
   filename: babylonian_root
@@ -268,7 +268,7 @@
       Die Werte der Fibonacci-Folge ergeben sich mit den Startwerten <code>x<sub>0</sub> = x<sub>1</sub> = 1</code>
       nach der Formel <code>x<sub>n</sub> = x<sub>n-1</sub> + x<sub>n-2</sub></code>.
     </p>
-  status: APPROVED
+  state: APPROVED
 
   functionname: fibonacci
   filename: fibonacci

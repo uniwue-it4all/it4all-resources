@@ -4,7 +4,7 @@
   title: PySQL
   author: amh12ry
   text: TODO!
-  status: APPROVED
+  state: APPROVED
 
   functionname: insert
   foldername: pysql

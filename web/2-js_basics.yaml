@@ -4,7 +4,7 @@
   title: Klickzähler
   author: bje40dc
   text: Erstellen Sie einen Zähler der die Klicks auf einen Button zählt!
-  status: APPROVED
+  state: APPROVED
   filename: clickCounter.html
 
   files:
@@ -132,7 +132,7 @@
   title: Verzweigungen und Strings
   author: alg81dm
   text: Erstellen Sie ein Anmeldeformular, das eine einfache Passwort-Qualitätsprüfung durchführt.
-  status: APPROVED
+  state: APPROVED
   filename: pwChecker.html
 
   files:
@@ -244,7 +244,7 @@
   title: Schleifen
   author: alg81dm
   text: Erstellen Sie ein einfaches Formular zur Berechnung der Fakultät einer Zahl n (alle Zahlen von 1 bis n multipliziert).
-  status: APPROVED
+  state: APPROVED
   filename: factorial.html
 
   files:

@@ -4,7 +4,7 @@
   title: Kreise
   author: bje40dc
   text: TODO!
-  status: APPROVED
+  state: APPROVED
 
   functionname: circle
   foldername: circle
@@ -169,7 +169,7 @@
     </p>
     </li>
     </ul>
-  status: APPROVED
+  state: APPROVED
 
   functionname: maumau
   foldername: maumau
@@ -379,7 +379,7 @@
     </p>
     </li>
     </ul>
-  status: APPROVED
+  state: APPROVED
 
   functionname: vector2d
   foldername: vector2d

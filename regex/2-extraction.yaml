@@ -7,7 +7,7 @@
     Schreiben Sie einen regulären Ausdruck, der Preise aus Angeboten extrahiert. Diese sollen aus einer Ganz-
     oder Fließkommazahl mit maximal zwei Nachkommastellen bestehen. Es soll kein Symbol für eine Währungeinheit
     mitextrahiert werden.
-  status: APPROVED
+  state: APPROVED
   maxPoints: 2
   correctionType: EXTRACTION
 
@@ -34,7 +34,7 @@
     aus einer Zahl, einem 'T' für Tausend und der Angabe der Einheit (km). Zwischen der Zahl und dem T und zwischen
     dem T und der Einheit können optional Leerzeichen vorhanden sein. Alle Buchstaben können außerdem groß- und
     klein geschrieben sein.
-  status: APPROVED
+  state: APPROVED
   maxPoints: 5
   correctionType: EXTRACTION
 

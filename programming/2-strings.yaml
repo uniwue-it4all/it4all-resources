@@ -9,7 +9,7 @@
   text: >
     Erstellen Sie ein Skript, das prüft, ob der übergebene String ein Palindrom darstellt! Ein leerer String ist für
     diese Aufgabe auch ein Palindrom. Ihr Programm soll Groß- und Kleinschreibung ignorieren, d. h. 'a' == 'A'.
-  status: APPROVED
+  state: APPROVED
 
   functionname: is_palindrome
   foldername: palindrome
@@ -79,7 +79,7 @@
     <p>
     Hinweis: Bei mehrfacher Division kann es zu Rundungsfehlern kommen.
     </p>
-  status: APPROVED
+  state: APPROVED
 
   functionname: floating_point_exponential
   foldername: floating_point_exponential
@@ -184,7 +184,7 @@
     Es gibt Dateien mit mehreren Endungen (z. B. <code>application.conf.json</code>)
     </li>
     </ul>
-  status: APPROVED
+  state: APPROVED
 
   functionname: file_name_and_ending
   foldername: file_name_and_ending
@@ -287,7 +287,7 @@
     <p>
     Beispiel: Für das Fragmen <code>nn</code> und dem Namen <code>anna</code> soll das Tuple <code>('a', 'a')</code> zurückgegeben werden
     </p>
-  status: APPROVED
+  state: APPROVED
 
   functionname: name_search
   foldername: name_search
@@ -383,7 +383,7 @@
     String <code>line</code> alle Vokale einschließlich der Umlaute ä, ö und ü gegen den angegebenen Vokal <code>target_vowel</code>
     austauschen. Dabei sollen aufeinanderfolgende Vokale auf einen einzigen reduziert werden.
     </p>
-  status: APPROVED
+  state: APPROVED
 
   functionname: three_chinese
   foldername: three_chinese
@@ -573,7 +573,7 @@
     </p>
     </li>
     </ul>
-  status: APPROVED
+  state: APPROVED
 
   functionname: xmas_tree
   foldername: xmas_tree
@@ -748,7 +748,7 @@
     </p>
     </li>
     </ul>
-  status: APPROVED
+  state: APPROVED
 
   functionname: a1z26
   foldername: a1z26
@@ -951,7 +951,7 @@
     </p>
     </li>
     </ul>
-  status: APPROVED
+  state: APPROVED
 
   functionname: ceasar
   foldername: ceasar

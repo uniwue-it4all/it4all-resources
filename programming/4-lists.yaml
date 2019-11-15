@@ -6,7 +6,7 @@
   text: >
     Berechnen Sie den Durchschnittswert aller Elemente als Gleitkommazahl in der übergebenen Liste von (Ganz-)Zahlen!
     Bei einer leeren Liste soll 'None' zurückgegeben werden.
-  status: APPROVED
+  state: APPROVED
 
   functionname: average
   foldername: average
@@ -65,7 +65,7 @@
   text: >
     Suchen Sie aus einer Liste von Zeichenketten jeweils die längste heraus! Bei einer leeren Liste soll 'None' zurückgegeben werden.
     Ignorieren Sie dabei Groß- und Kleinschreibung.
-  status: APPROVED
+  state: APPROVED
 
   functionname: longest_string
   foldername: longest_string
@@ -174,7 +174,7 @@
     </p>
     </li>
     </ul>
-  status: APPROVED
+  state: APPROVED
 
   functionname: general
   foldername: general
@@ -361,7 +361,7 @@
     </p>
     </li>
     </ul>
-  status: APPROVED
+  state: APPROVED
 
   functionname: slicing
   foldername: slicing

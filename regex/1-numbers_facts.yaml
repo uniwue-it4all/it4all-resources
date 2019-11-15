@@ -5,7 +5,7 @@
   author: bje40dc
   text: >
     Schreiben Sie einen regulären Ausdruck, der (deutsche) Postleitzahlen überprüfen kann. Diese bestehen aus 5 Ziffern.
-  status: APPROVED
+  state: APPROVED
   maxPoints: 1
   correctionType: MATCHING
 
@@ -35,7 +35,7 @@
     der Monat jeweils aus zwei und die Jahresangabe aus vier Zahlen bestehen. Als Trennzeichen soll jeweils ein Punkt
     verwendet werden. Eine Validierung auf kalendarische Korrektheit (zum Beispiel, dass der 30.02.2019 oder der
     99.17.3005 nicht existieren) ist nicht erforderlich. Außerdem sind führende Nullen erlaubt.
-  status: APPROVED
+  state: APPROVED
   maxPoints: 2
   correctionType: MATCHING
 
@@ -70,7 +70,7 @@
     der Tag und der Monat jeweils aus ein oder zwei und die Jahresangabe aus zwei bis vier Ziffern bestehen. Als
     Trennzeichen soll jeweils ein Punkt verwendet werden. Eine Validierung auf kalendarische Korrektheit ist nicht
     erforderlich. Führende Nullen sind erlaubt.
-  status: APPROVED
+  state: APPROVED
   maxPoints: 3
   correctionType: MATCHING
 
@@ -105,7 +105,7 @@
     bestehen aus einer Haupt-, einer Neben-, einer Revisions- und einer optionalen Buildnummer, die jeweils mit einem
     Punkt beziehungsweise im Fall der Revisions- und Buildnummer mit einem Minus getrennt werden. Jede der Nummern kann
     mehrstellig sein und führende Nullen besitzen.
-  status: APPROVED
+  state: APPROVED
   maxPoints: 3
   correctionType: MATCHING
 
@@ -137,7 +137,7 @@
     Hostnamen und einer Top-Level-Domain, die durch einen Punkt getrennt sind. Der Einfachkeit halber beschränken wir die
     Zeichen, die in einer Mailadresse vorkommen dürfen, auf alle Klein- und Großbuchstaben, alle Ziffern, Minus,
     Punkt und Unterstrich (_). Jeder Teil besteht aus mindestens einem dieser Zeichen.
-  status: APPROVED
+  state: APPROVED
   maxPoints: 4
   correctionType: MATCHING
 

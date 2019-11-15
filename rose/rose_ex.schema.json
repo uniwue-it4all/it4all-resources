@@ -1,0 +1,22 @@
+{
+  "type": "array",
+  "items": {"$ref": "#/definitions/RoseExercise"},
+  "definitions": {
+    "RoseExercise": {
+      "allOf": [
+        {"$ref": "../exercise.schema.json"},
+        {
+          "properties": {
+            "fieldWidth": {"type": "integer"},
+            "fieldHeight": {"type": "integer"},
+            "isMultiplayer": {"type": "boolean"},
+            "inputTypes": {},
+            "sampleSolutions": {}
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      ]
+    }
+  }
+}

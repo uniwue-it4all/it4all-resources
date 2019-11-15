@@ -47,7 +47,7 @@
     </p>
     </li>
     </ul>
-  status: APPROVED
+  state: APPROVED
 
   functionname: temperatures
   foldername: temperatures
@@ -219,7 +219,7 @@
     <code>def meters_to_inches(length_meters: float) -> float</code>
     </li>
     </ul>
-  status: APPROVED
+  state: APPROVED
 
   functionname: distances
   foldername: distances

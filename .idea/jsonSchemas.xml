@@ -27,6 +27,9 @@
                   <Item>
                     <option name="path" value="programming/prog_ex.schema.json" />
                   </Item>
+                  <Item>
+                    <option name="path" value="rose/rose_ex.schema.json" />
+                  </Item>
                 </list>
               </option>
             </SchemaInfo>
@@ -61,6 +64,24 @@
                   <Item>
                     <option name="pattern" value="true" />
                     <option name="path" value="regex/*.yaml" />
+                    <option name="mappingKind" value="Pattern" />
+                  </Item>
+                </list>
+              </option>
+            </SchemaInfo>
+          </value>
+        </entry>
+        <entry key="rose_ex.schema">
+          <value>
+            <SchemaInfo>
+              <option name="name" value="rose_ex.schema" />
+              <option name="relativePathToSchema" value="rose/rose_ex.schema.json" />
+              <option name="schemaVersion" value="JSON schema version 7" />
+              <option name="patterns">
+                <list>
+                  <Item>
+                    <option name="pattern" value="true" />
+                    <option name="path" value="rose/*.yaml" />
                     <option name="mappingKind" value="Pattern" />
                   </Item>
                 </list>

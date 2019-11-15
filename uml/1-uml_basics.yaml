@@ -12,7 +12,7 @@
     Zinssatz: Für ein Girokonto gibt es keine Zinsen, für ein Sparkonto 1 Prozent und für ein Kreditkonto 3 Prozent. Die Kunden der Bank werden durch
     ihre Kundennummer identifiziert. Es soll außerdem jeweils der komplette Name gespeichert werden. Jeder Kunde kann mehrere Konten besitzen
     und hat die Möglichkeit, sich das Gesamtsaldo aller Konten anzeigen zu lassen und Geld auf ein Konto einzuzahlen.
-  status: APPROVED
+  state: APPROVED
 
   mappings:
     - {key: Konten, value: Konto}
@@ -69,7 +69,7 @@
     Ein Doktor kann dem Patienten ein Rezept mit einer eindeutigen Id verschreiben, das ein oder mehrere Medikamente
     beinhalten kann. Ein Medikament hat eine eindeutige Id und einen Namen und kann Patienten auf verschiedenen Rezepten
     verschrieben werden. Ein Patient wiederum kann in einer Station aufgenommen bzw. entlassen werden.
-  status: APPROVED
+  state: APPROVED
 
   mappings:
     - {key: Stationen, value: Station}

@@ -1,12 +1,12 @@
 - id: 1
   collectionId: 1
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Zeichnen eines Rechtecks
   author: bje40dc
   text: >
     Zeichen Sie ein Rechteck mit der übergebenen Breite und Höhe! Benutzen Sie dazu die API des Roboters
     und zum "Zeichnen" die Markierungsfunktions des Roboters! Ihr Roboter startet im Feld (0, 0).
-  status: APPROVED
+  state: APPROVED
 
   fieldWidth: 8
   fieldHeight: 10
@@ -38,13 +38,13 @@
 
 - id: 2
   collectionId: 1
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Kaninchenjagd
   author: bje40dc
   text: >
     Gehen Sie zum Feld des Kaninchens. Markieren Sie dieses Feld in ihrer Farbe, um das Kaninchen zu fangen. Benutzen Sie dazu die API des Roboters
     und zum "Zeichnen" die Markierungsfunktions des Roboters! Ihr Roboter startet im Feld (0, 0). Die Position des Kaninchens wird übergeben.
-  status: CREATED
+  state: CREATED
 
   fieldWidth: 8
   fieldHeight: 10
