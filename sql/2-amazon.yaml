@@ -1,6 +1,6 @@
 - id: 1
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Alles über die Autoren
   author: bje40dc
   text: Geben Sie alle Spalten der Autorentabelle aus!
@@ -18,7 +18,7 @@
 
 - id: 2
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Nachnamen aller Autoren
   author: bje40dc
   text: Geben Sie die Nachnamen aller Autoren aus!
@@ -32,7 +32,7 @@
 
 - id: 3
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Verlagsnamen
   author: bje40dc
   text: Geben Sie die Namen aller Verlage aus!
@@ -46,7 +46,7 @@
 
 - id: 4
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Namen aller Kunden
   author: bje40dc
   text: Geben Sie die Vor- und Nachnamen aller Kunden aus!
@@ -60,7 +60,7 @@
 
 - id: 5
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Daten über Bücher
   author: bje40dc
   text: Geben Sie für jedes Buch jeweils den Titel das Erscheinungsjahr und die ISBN aus!
@@ -74,7 +74,7 @@
 
 - id: 6
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Titelsuche
   author: bje40dc
   text: Bestimmen Sie den Titel des Buches mit der ISBN '978-3551354051' (ohne Anführungszeichen).
@@ -89,7 +89,7 @@
 
 - id: 7
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Preissuche
   author: bje40dc
   text: Bestimmen Sie den Preis des Buches mit der ISBN '978-3551354068' (ohne Anführungszeichen).
@@ -104,7 +104,7 @@
 
 - id: 8
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Autorensuche
   author: bje40dc
   text: Bestimmen Sie den Vor- und Nachnamen des Autoren mit der ID 3.
@@ -119,7 +119,7 @@
 
 - id: 9
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Der kleine Prinz?
   author: bje40dc
   text: Bestimmen Sie die Autor-ID des Buches 'Der kleine Prinz' (ohne Anführungszeichen).
@@ -134,7 +134,7 @@
 
 - id: 10
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Verlag mit Telefonnummer
   author: bje40dc
   text: Bestimmen Sie den Namen des Verlages der unter der Telefonnummer '+49 2402 / 806341' erreichbar ist.
@@ -149,7 +149,7 @@
 
 - id: 11
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Wer schrieb was?
   author: bje40dc
   text: Ordnen Sie allen Büchern ihre jeweiligen Autoren zu. Geben Sie jeweils den Titel des Buches und den Nachnamen des Autoren aus!
@@ -165,7 +165,7 @@
 
 - id: 12
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Bücher von Carlsen
   author: bje40dc
   text: Bestimmen Sie Titel und Preis aller Bücher die im Verlag 'Carlsen' erschienen sind.
@@ -183,7 +183,7 @@
 
 - id: 13
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Harry Potters Leben
   author: bje40dc
   text: Bestimmen Sie Titel und ISBN sämtlicher Bücher der Autorin 'Rowling' (ohne Anführungszeichen).
@@ -200,7 +200,7 @@
 
 - id: 14
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Wilhards Wertungen
   author: bje40dc
   text: Zeigen Sie die Werte aller Ratings an, die der Kunde mit der Email 'wilhard_1041@web.de' abgegeben hat.
@@ -217,7 +217,7 @@
 
 - id: 15
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Wer hat hier so viel bestellt?
   author: bje40dc
   text: Wie lauten die Nachnamen der Kunden, die mindestens 3 Bestellung aufgegeben haben?
@@ -235,7 +235,7 @@
 
 - id: 16
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: GMX-Kunden
   author: bje40dc
   text: Geben Sie alle Email-Adressen der Kunden aus die mit 'gmx.de' enden.
@@ -251,7 +251,7 @@
 
 - id: 17
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Billige Bücher
   author: bje40dc
   text: Geben Sie die Titel aller Bücher aus die weniger als 10,00 € kosten.
@@ -267,7 +267,7 @@
 
 - id: 18
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Was wird gewünscht?
   author: bje40dc
   text: Geben die die IDs aller Bücher aus, die von Kunden gewünscht werden. Achten Sie darauf, dass eine ID nur einmal vorkommt.
@@ -281,7 +281,7 @@
 
 - id: 19
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Jahrgang 81
   author: bje40dc
   text: Wählen Sie die Vor- und Nachnamen der Kunden aus, die im Jahr 1981 Geburtstag haben.
@@ -297,7 +297,7 @@
 
 - id: 20
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Geringer Bestand oder Preis
   author: bje40dc
   text: Geben Sie die Titel aller Bücher aus, die einen Bestand von weniger als 20.000 Exemplaren oder einen Preis unter 14€ haben.
@@ -319,7 +319,7 @@
 
 - id: 21
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Sterne in der Wüste 1
   author: bje40dc
   text: Wie oft wurde das Buch 'Die Stadt in der Wüste' bewertet? Nennen Sie die Spalte 'Anzahl'.
@@ -336,7 +336,7 @@
 
 - id: 22
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Sterne in der Wüste 2
   author: bje40dc
   text: Welche Durchschnittsbewertung bekam das Buch 'Die Stadt in der Wüste'? Nennen Sie die Spalte 'Durchschnitt'.
@@ -353,7 +353,7 @@
 
 - id: 23
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Harry Potters
   author: bje40dc
   text: Wie hoch ist der Gesamtbestand an Harry Potter-Büchern? Nennen Sie die Spalte 'Gesamtbestand'.
@@ -369,7 +369,7 @@
 
 - id: 24
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Fan oder nicht?
   author: bje40dc
   text: >
@@ -388,7 +388,7 @@
 
 - id: 25
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Durschnittlicher Bestand
   author: bje40dc
   text: Wie hoch ist der durchschnittliche Bestand aller Bücher? Nennen Sie die Spalte 'Durchschnitt'
@@ -403,7 +403,7 @@
 
 - id: 26
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Wunsch des Phönix
   author: bje40dc
   text: Wie lauten die Nachnamen der Kunden die sich das Buch 'Harry Potter und der Orden des Phönix' wünschen?
@@ -421,7 +421,7 @@
 
 - id: 27
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Orwellianisch
   author: bje40dc
   text: Suchen Sie die Titel aller Bücher, deren Autor George Orwell ist. Ordnen Sie die Titel nach Erscheinungsjahr abwärts.
@@ -440,7 +440,7 @@
 
 - id: 28
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Teuer, teuer und teuer
   author: bje40dc
   text: Zeigen sie Titel und Autor-ID der drei teuersten Bücher an. Sortieren Sie die Einträge nach Preis abwärts.
@@ -457,7 +457,7 @@
 
 - id: 29
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Wer will Harry?
   author: bje40dc
   text: >
@@ -477,7 +477,7 @@
 
 - id: 30
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Emails mit G
   author: bje40dc
   text: Geben Sie alle Email-Adressen der Kunden aus die mit 'gmx.de ' oder mit 'gmail.com' enden.
@@ -493,7 +493,7 @@
 
 - id: 31
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Tolkien in Billig
   author: bje40dc
   text: >
@@ -514,7 +514,7 @@
 
 - id: 32
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Billig gekauft
   author: bje40dc
   text: >
@@ -535,7 +535,7 @@
 
 - id: 33
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Kumulierter Bestand
   author: bje40dc
   text: >
@@ -555,7 +555,7 @@
 
 - id: 34
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Februargeburtstag
   author: bje40dc
   text: Wählen Sie alle Kunden aus die im Februar Geburtstag haben und geben Sie den Vornamen, Nachnamen und das Geburtsdatum aus.
@@ -571,7 +571,7 @@
 
 - id: 35
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Ich bin der jüngste!
   author: bje40dc
   text: Geben Sie den Vornamen, Nachnamen und Geburtstag des jüngsten Kunden aus.
@@ -589,7 +589,7 @@
 
 - id: 36
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Passwortupdate!
   author: bje40dc
   text: >
@@ -611,7 +611,7 @@
 
 - id: 37
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Mit allem zufrieden?
   author: bje40dc
   text: >
@@ -631,7 +631,7 @@
 
 - id: 38
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Teure Wünsche...
   author: bje40dc
   text: >
@@ -652,7 +652,7 @@
 
 - id: 39
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Veröffentlichungsjahre
   author: bje40dc
   text: Wählen Sie alle Bücher aus, die in den Jahren 1998, 2001 oder 2011 veröffentlicht wurden.
@@ -666,17 +666,17 @@
 
 - id: 100
   collectionId: 2
-  semanticVersion: 1.0.0
+  semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Aufgestockt
   author: bje40dc
   text: >
     Es sind neue Exemplare des Buches mit dem Titel 1894 eingetroffen. Aktualisieren Sie den Bestand auf den neuen
-    Wert von 15000.
+    Wert von {major: 1, minor: 0, patch: 0}.
   exerciseType: UPDATE
   status: APPROVED
   samples:
     - id: 1
       sample: |
         UPDATE books
-          SET stock = 15000
+          SET stock = {major: 1, minor: 0, patch: 0}
           WHERE title = '1984';

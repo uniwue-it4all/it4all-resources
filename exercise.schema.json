@@ -3,7 +3,7 @@
   "properties": {
     "id": {"type": "number"},
     "collectionId": {"type": "number"},
-    "semanticVersion": {"$ref": "../semantic_version.schema.json"},
+    "semanticVersion": {"$ref": "./semantic_version.schema.json"},
     "title": {"type": "string"},
     "author": {"type": "string"},
     "text": {"type": "string"},
