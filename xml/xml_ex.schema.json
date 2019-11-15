@@ -7,11 +7,11 @@
         {"$ref": "../exercise.schema.json"},
         {
           "properties": {
-            "rootNode": {"type": "string"},
             "grammarDescription": {"type": "string"},
+            "rootNode": {"type": "string"},
             "samples": {"type": "array", "items": {"$ref": "#/definitions/XmlSample"}}
           },
-          "required": ["rootNode", "grammarDescription", "samples"],
+          "required": ["grammarDescription", "rootNode", "samples"],
           "additionalProperties": false
         }
       ]
@@ -20,10 +20,17 @@
       "type": "object",
       "properties": {
         "id": {"type": "number"},
+        "sample": {"$ref": "#/definitions/XmlSolution"}
+      },
+      "required": ["id", "sample"]
+    },
+    "XmlSolution": {
+      "type": "object",
+      "properties": {
         "grammar": {"type": "string"},
         "document": {"type": "string"}
       },
-      "required": ["id", "grammar", "document"]
+      "required": ["grammar", "document"]
     }
   }
 }

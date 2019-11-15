@@ -17,32 +17,33 @@
 
   samples:
     - id: 1
-      grammar: |
-        <!ELEMENT party (gast+)>
-        <!ATTLIST party datum CDATA #REQUIRED>
-        <!ELEMENT gast (vorname, nachname, getraenk+)>
-        <!ELEMENT vorname (#PCDATA)>
-        <!ELEMENT nachname (#PCDATA)>
-        <!ELEMENT getraenk (#PCDATA)>
-        <!ATTLIST gast
-          ledig (true | false) #REQUIRED
-          nuechtern (true | false) #REQUIRED
-        >
-      document: |
-        <?xml version="1.0" encoding="UTF-8"?>
-        <!DOCTYPE party SYSTEM "party.dtd">
-        <party datum="1999-31-12">
-          <gast ledig="false" nuechtern="true">
-            <vorname>Jason</vorname>
-            <nachname>Bourne</nachname>
-            <getraenk>Wasser</getraenk>
-          </gast>
-          <gast ledig="true" nuechtern="false">
-            <vorname>James</vorname>
-            <nachname>Bourne</nachname>
-            <getraenk>Wodka Martini, geschüttelt nicht gerührt</getraenk>
-          </gast>
-        </party>
+      sample:
+        grammar: |
+          <!ELEMENT party (gast+)>
+          <!ATTLIST party datum CDATA #REQUIRED>
+          <!ELEMENT gast (vorname, nachname, getraenk+)>
+          <!ELEMENT vorname (#PCDATA)>
+          <!ELEMENT nachname (#PCDATA)>
+          <!ELEMENT getraenk (#PCDATA)>
+          <!ATTLIST gast
+            ledig (true | false) #REQUIRED
+            nuechtern (true | false) #REQUIRED
+          >
+        document: |
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE party SYSTEM "party.dtd">
+          <party datum="1999-31-12">
+            <gast ledig="false" nuechtern="true">
+              <vorname>Jason</vorname>
+              <nachname>Bourne</nachname>
+              <getraenk>Wasser</getraenk>
+            </gast>
+            <gast ledig="true" nuechtern="false">
+              <vorname>James</vorname>
+              <nachname>Bourne</nachname>
+              <getraenk>Wodka Martini, geschüttelt nicht gerührt</getraenk>
+            </gast>
+          </party>
 
 - id: 2
   collectionId: 1
@@ -65,51 +66,53 @@
 
   samples:
     - id: 1
-      grammar: |
-        <!ELEMENT lecture (lecturer+, date+, student+)>
-        <!ELEMENT lecturer (name)>
-        <!ATTLIST lecturer title CDATA #REQUIRED>
-        <!ELEMENT date (hours)>
-        <!ATTLIST date weekday (mon | tue | wed | thu | fri | sat | sun) #REQUIRED>
-        <!ELEMENT student (name)>
-        <!ATTLIST student matrikel CDATA #REQUIRED>
-        <!ELEMENT name (#PCDATA)>
-        <!ELEMENT hours (#PCDATA)>
-      document: |
-        <?xml version="1.0" encoding="UTF-8"?>
-        <!DOCTYPE lecture SYSTEM "lecture.dtd">
-        <lecture>
-          <lecturer title="Prof.">
-            <name>Jason Bourne</name>
-          </lecturer>
-          <lecturer title="Commander">
-            <name>James Bond</name>
-          </lecturer>
-          <date weekday="mon">
-            <hours>16.00 to 18.00</hours>
-          </date>
-          <student matrikel="173">
-            <name>Jack Bauer</name>
-          </student>
-        </lecture>
+      sample:
+        grammar: |
+          <!ELEMENT lecture (lecturer+, date+, student+)>
+          <!ELEMENT lecturer (name)>
+          <!ATTLIST lecturer title CDATA #REQUIRED>
+          <!ELEMENT date (hours)>
+          <!ATTLIST date weekday (mon | tue | wed | thu | fri | sat | sun) #REQUIRED>
+          <!ELEMENT student (name)>
+          <!ATTLIST student matrikel CDATA #REQUIRED>
+          <!ELEMENT name (#PCDATA)>
+          <!ELEMENT hours (#PCDATA)>
+        document: |
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE lecture SYSTEM "lecture.dtd">
+          <lecture>
+            <lecturer title="Prof.">
+              <name>Jason Bourne</name>
+            </lecturer>
+            <lecturer title="Commander">
+              <name>James Bond</name>
+            </lecturer>
+            <date weekday="mon">
+              <hours>16.00 to 18.00</hours>
+            </date>
+            <student matrikel="173">
+              <name>Jack Bauer</name>
+            </student>
+          </lecture>
 
     - id: 2
-      grammar: |
-        <!ELEMENT lecture (lecturer+, date+, student+)>
-        <!ELEMENT lecturer (name, title)>
-        <!ELEMENT date (hours)>
-        <!ATTLIST date weekday (mon | tue | wed | thu | fri | sat | sun) #REQUIRED>
-        <!ELEMENT student (name, matrikel)>
-        <!ELEMENT name (#PCDATA)>
-        <!ELEMENT hours (#PCDATA)>
-        <!ELEMENT title (#PCDATA)>
-        <!ELEMENT matrikel (#PCDATA)>
-      document: |
-        <?xml version="1.0" encoding="UTF-8"?>
-        <!DOCTYPE lecture SYSTEM "lecture.dtd">
-        <lecture>
-          TODO!
-        </lecture>
+      sample:
+        grammar: |
+          <!ELEMENT lecture (lecturer+, date+, student+)>
+          <!ELEMENT lecturer (name, title)>
+          <!ELEMENT date (hours)>
+          <!ATTLIST date weekday (mon | tue | wed | thu | fri | sat | sun) #REQUIRED>
+          <!ELEMENT student (name, matrikel)>
+          <!ELEMENT name (#PCDATA)>
+          <!ELEMENT hours (#PCDATA)>
+          <!ELEMENT title (#PCDATA)>
+          <!ELEMENT matrikel (#PCDATA)>
+        document: |
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE lecture SYSTEM "lecture.dtd">
+          <lecture>
+            TODO!
+          </lecture>
 
 - id: 3
   collectionId: 1
@@ -131,22 +134,23 @@
 
   samples:
     - id: 1
-      grammar: |
-        <!ELEMENT praxis (arzt+)>
-        <!ELEMENT arzt (name, termin+)>
-        <!ELEMENT name (#PCDATA)>
-        <!ELEMENT termin (datum, uhrzeit, patient, beschreibung?)>
-        <!ATTLIST termin art (untersuchung | behandlung | operation) #REQUIRED>
-        <!ELEMENT datum (#PCDATA)>
-        <!ELEMENT uhrzeit (#PCDATA)>
-        <!ELEMENT patient (#PCDATA)>
-        <!ELEMENT beschreibung (#PCDATA)>
-      document: |
-        <?xml version="1.0" encoding="UTF-8"?>
-        <!DOCTYPE praxis SYSTEM "praxis.dtd">
-        <praxis>
-          TODO!
-        </praxis>
+      sample:
+        grammar: |
+          <!ELEMENT praxis (arzt+)>
+          <!ELEMENT arzt (name, termin+)>
+          <!ELEMENT name (#PCDATA)>
+          <!ELEMENT termin (datum, uhrzeit, patient, beschreibung?)>
+          <!ATTLIST termin art (untersuchung | behandlung | operation) #REQUIRED>
+          <!ELEMENT datum (#PCDATA)>
+          <!ELEMENT uhrzeit (#PCDATA)>
+          <!ELEMENT patient (#PCDATA)>
+          <!ELEMENT beschreibung (#PCDATA)>
+        document: |
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE praxis SYSTEM "praxis.dtd">
+          <praxis>
+            TODO!
+          </praxis>
 
 - id: 4
   collectionId: 1
@@ -167,16 +171,17 @@
 
   samples:
     - id: 1
-      grammar: |
-        <!ELEMENT breakfast (food+)>
-        <!ELEMENT food (name, price, description, calories)>
-        <!ELEMENT name (#PCDATA)>
-        <!ELEMENT price (#PCDATA)>
-        <!ELEMENT description (#PCDATA)>
-        <!ELEMENT calories (#PCDATA)>
-      document: |
-        <?xml version="1.0" encoding="UTF-8"?>
-        <!DOCTYPE lecture SYSTEM "lecture.dtd">
+      sample:
+        grammar: |
+          <!ELEMENT breakfast (food+)>
+          <!ELEMENT food (name, price, description, calories)>
+          <!ELEMENT name (#PCDATA)>
+          <!ELEMENT price (#PCDATA)>
+          <!ELEMENT description (#PCDATA)>
+          <!ELEMENT calories (#PCDATA)>
+        document: |
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE lecture SYSTEM "lecture.dtd">
 
 - id: 5
   collectionId: 1
@@ -198,39 +203,40 @@
 
   samples:
     - id: 1
-      grammar: |
-        <!ELEMENT bibliothek (abteilung+)>
-        <!ELEMENT abteilung (titel, buch+)>
-        <!ELEMENT buch (isbn, titel, autor, coautor*, verlag?, auflage?, jahr)>
-        <!ATTLIST buch id CDATA #REQUIRED>
-        <!ELEMENT isbn (#PCDATA)>
-        <!ELEMENT titel (#PCDATA)>
-        <!ELEMENT autor (#PCDATA)>
-        <!ELEMENT coautor (#PCDATA)>
-        <!ELEMENT verlag (#PCDATA)>
-        <!ELEMENT auflage (#PCDATA)>
-        <!ELEMENT jahr (#PCDATA)>
-      document: |
-        <?xml version="1.0" encoding="UTF-8"?>
-        <!DOCTYPE bibliothek SYSTEM "bibliothek.dtd">
-        <bibliothek>
-          <abteilung>
-          </abteilung>
-        </bibliothek>
+      sample:
+        grammar: |
+          <!ELEMENT bibliothek (abteilung+)>
+          <!ELEMENT abteilung (titel, buch+)>
+          <!ELEMENT buch (isbn, titel, autor, coautor*, verlag?, auflage?, jahr)>
+          <!ATTLIST buch id CDATA #REQUIRED>
+          <!ELEMENT isbn (#PCDATA)>
+          <!ELEMENT titel (#PCDATA)>
+          <!ELEMENT autor (#PCDATA)>
+          <!ELEMENT coautor (#PCDATA)>
+          <!ELEMENT verlag (#PCDATA)>
+          <!ELEMENT auflage (#PCDATA)>
+          <!ELEMENT jahr (#PCDATA)>
+        document: |
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE bibliothek SYSTEM "bibliothek.dtd">
+          <bibliothek>
+            <abteilung>
+            </abteilung>
+          </bibliothek>
 
-    - id: 2
-      grammar: |
-        <!ELEMENT bibliothek (abteilung+)>
-        <!ELEMENT abteilung (titel, buch+)>
-        <!ELEMENT buch (id, isbn, titel, autor, coautor*, verlag?, auflage?, jahr)>
-        <!ELEMENT id (#PCDATA)>
-        <!ELEMENT isbn (#PCDATA)>
-        <!ELEMENT titel (#PCDATA)>
-        <!ELEMENT autor (#PCDATA)>
-        <!ELEMENT coautor (#PCDATA)>
-        <!ELEMENT verlag (#PCDATA)>
-        <!ELEMENT auflage (#PCDATA)>
-        <!ELEMENT jahr (#PCDATA)>
-      document: |
-        <?xml version="1.0" encoding="UTF-8"?>
-        <!DOCTYPE bibliothek SYSTEM "bibliothek.dtd">
+      - id: 2
+        grammar: |
+          <!ELEMENT bibliothek (abteilung+)>
+          <!ELEMENT abteilung (titel, buch+)>
+          <!ELEMENT buch (id, isbn, titel, autor, coautor*, verlag?, auflage?, jahr)>
+          <!ELEMENT id (#PCDATA)>
+          <!ELEMENT isbn (#PCDATA)>
+          <!ELEMENT titel (#PCDATA)>
+          <!ELEMENT autor (#PCDATA)>
+          <!ELEMENT coautor (#PCDATA)>
+          <!ELEMENT verlag (#PCDATA)>
+          <!ELEMENT auflage (#PCDATA)>
+          <!ELEMENT jahr (#PCDATA)>
+        document: |
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE bibliothek SYSTEM "bibliothek.dtd">
