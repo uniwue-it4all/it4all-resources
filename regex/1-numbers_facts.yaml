@@ -20,7 +20,7 @@
 
   extractionTestData: []
 
-  samples:
+  sampleSolutions:
     - {id: 1, sample: '\d{5}'}
     - {id: 2, sample: '[0-9]{5}'}
     - {id: 3, sample: '\d\d\d\d\d'}
@@ -55,7 +55,7 @@
 
   extractionTestData: []
 
-  samples:
+  sampleSolutions:
     - {id: 1, sample: '\d\d\.\d\d\.\d\d\d\d'}
     - {id: 2, sample: '\d{2}\.\d{2}\.\d{4}'}
     - {id: 3, sample: '[0-9]{2}\.[0-9]{2}\.[0-9]{4}'}
@@ -90,7 +90,7 @@
 
   extractionTestData: []
 
-  samples:
+  sampleSolutions:
     - {id: 1, sample: '\d\d?\.\d\d?\.\d\d\d?\d?'}
     - {id: 2, sample: '\d{1,2}\.\d{1,2}\.\d{2,4}'}
     - {id: 3, sample: '[0-9]{1,2}\.[0-9]{1,2}\.[0-9]{2,4}'}
@@ -122,7 +122,7 @@
 
   extractionTestData: []
 
-  samples:
+  sampleSolutions:
     - {id: 1, sample: '\d+\.\d+\.\d+(-\d+)?'}
     - {id: 2, sample: '[0-9]+\.[0-9]+\.[0-9]+(-[0-9]+)?'}
 
@@ -151,5 +151,5 @@
 
   extractionTestData: []
 
-  samples:
+  sampleSolutions:
     - {id: 1, sample: '([a-z]|[A-Z]|[0-9]|_|-|\.)+@([a-z]|[A-Z]|[0-9]|_|-)+\.([a-z]|[A-Z]|[0-9]|_|-|\.)+'}

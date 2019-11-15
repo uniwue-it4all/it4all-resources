@@ -11,11 +11,11 @@
           "properties": {
             "maxPoints": {"type": "number"},
             "correctionType": {"type": "string", "enum": ["MATCHING", "EXTRACTION"]},
-            "samples": {"type": "array", "items": {"$ref": "#/definitions/RegexSample"}},
+            "sampleSolutions": {"type": "array", "items": {"$ref": "#/definitions/RegexSample"}},
             "matchTestData": {"type": "array", "items": {"$ref": "#/definitions/RegexMatchTestData"}},
             "extractionTestData": {"type": "array", "items": {"$ref": "#/definitions/RegexExtractionTestData"}}
           },
-          "required": ["maxPoints", "correctionType", "samples", "matchTestData", "extractionTestData"],
+          "required": ["maxPoints", "correctionType", "sampleSolutions", "matchTestData", "extractionTestData"],
           "additionalProperties": false
         }
       ]

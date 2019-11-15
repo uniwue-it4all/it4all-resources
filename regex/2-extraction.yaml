@@ -11,7 +11,7 @@
   maxPoints: 2
   correctionType: EXTRACTION
 
-  samples:
+  sampleSolutions:
     - {id: 1, sample: '\d+[,\d\d?]?'}
 
   matchTestData: []
@@ -38,7 +38,7 @@
   maxPoints: 5
   correctionType: EXTRACTION
 
-  samples:
+  sampleSolutions:
     - {id: 1, sample: '\d+\s?[Tt]\s?[Kk][Mm]'}
 
   matchTestData: []
