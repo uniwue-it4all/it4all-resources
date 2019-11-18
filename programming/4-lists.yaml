@@ -44,11 +44,13 @@
 
   sampleSolutions:
     - id: 1
-      files:
-        - name: average.py
-          resourcePath: programming/4-lists/1-average/average.py
-          fileType: python
-          editable: false
+      sample:
+        files:
+          - name: average.py
+            resourcePath: programming/4-lists/1-average/average.py
+            fileType: python
+            editable: false
+        testData: []
 
   sampleTestData:
     - {id: 1, inputs: [], output: null}
@@ -109,11 +111,13 @@
 
   sampleSolutions:
     - id: 1
-      files:
-        - name: longest_string.py
-          resourcePath: programming/4-lists/2-longest_string/longest_string.py
-          fileType: python
-          editable: false
+      sample:
+        files:
+          - name: longest_string.py
+            resourcePath: programming/4-lists/2-longest_string/longest_string.py
+            fileType: python
+            editable: false
+        testData: []
 
   sampleTestData:
     - {id: 1, inputs: [], output: null}
@@ -318,15 +322,17 @@
 
   sampleSolutions:
     - id: 1
-      files:
-        - name: general.py
-          resourcePath: programming/4-lists/3-general/general.py
-          fileType: python
-          editable: false
-        - name: test_general.py
-          resourcePath: programming/4-lists/3-general/test_general.py
-          fileType: python
-          editable: false
+      sample:
+        files:
+          - name: general.py
+            resourcePath: programming/4-lists/3-general/general.py
+            fileType: python
+            editable: false
+          - name: test_general.py
+            resourcePath: programming/4-lists/3-general/test_general.py
+            fileType: python
+            editable: false
+        testData: []
 
   sampleTestData: []
 
@@ -463,15 +469,17 @@
 
   sampleSolutions:
     - id: 1
-      files:
-        - name: slicing.py
-          resourcePath: programming/4-lists/4-slicing/slicing.py
-          fileType: python
-          editable: false
-        - name: test_slicing.py
-          resourcePath: programming/4-lists/4-slicing/test_slicing.py
-          fileType: python
-          editable: false
+      sample:
+        files:
+          - name: slicing.py
+            resourcePath: programming/4-lists/4-slicing/slicing.py
+            fileType: python
+            editable: false
+          - name: test_slicing.py
+            resourcePath: programming/4-lists/4-slicing/test_slicing.py
+            fileType: python
+            editable: false
+        testData: []
 
   sampleTestData: []
 

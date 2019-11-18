@@ -42,11 +42,13 @@
 
   sampleSolutions:
     - id: 1
-      files:
-        - name: palindrome.py
-          resourcePath: programming/2-strings/1-palindrome/palindrome.py
-          fileType: python
-          editable: false
+      sample:
+        files:
+          - name: palindrome.py
+            resourcePath: programming/2-strings/1-palindrome/palindrome.py
+            fileType: python
+            editable: false
+        testData: []
 
   sampleTestData:
     - {id: 1, inputs: "anna", output: true}
@@ -144,15 +146,17 @@
 
   sampleSolutions:
     - id: 1
-      files:
-        - name: floating_point_exponential.py
-          resourcePath: programming/2-strings/2-floating_point_exponential/floating_point_exponential.py
-          fileType: python
-          editable: false
-        - name: test_floating_point_exponential.py
-          resourcePath: programming/2-strings/2-floating_point_exponential/test_floating_point_exponential.py
-          fileType: python
-          editable: false
+      sample:
+        files:
+          - name: floating_point_exponential.py
+            resourcePath: programming/2-strings/2-floating_point_exponential/floating_point_exponential.py
+            fileType: python
+            editable: false
+          - name: test_floating_point_exponential.py
+            resourcePath: programming/2-strings/2-floating_point_exponential/test_floating_point_exponential.py
+            fileType: python
+            editable: false
+        testData: []
 
   sampleTestData: []
 
@@ -255,15 +259,17 @@
 
   sampleSolutions:
     - id: 1
-      files:
-        - name: file_name_and_ending.py
-          resourcePath: programming/2-strings/3-file_name_and_ending/file_name_and_ending.py
-          fileType: python
-          editable: false
-        - name: test_file_name_and_ending.py
-          resourcePath: programming/2-strings/3-file_name_and_ending/test_file_name_and_ending.py
-          fileType: python
-          editable: false
+      sample:
+        files:
+          - name: file_name_and_ending.py
+            resourcePath: programming/2-strings/3-file_name_and_ending/file_name_and_ending.py
+            fileType: python
+            editable: false
+          - name: test_file_name_and_ending.py
+            resourcePath: programming/2-strings/3-file_name_and_ending/test_file_name_and_ending.py
+            fileType: python
+            editable: false
+        testData: []
 
   sampleTestData: []
 
@@ -352,15 +358,17 @@
 
   sampleSolutions:
     - id: 1
-      files:
-        - name: name_search.py
-          resourcePath: programming/2-strings/4-name_search/name_search.py
-          fileType: python
-          editable: false
-        - name: test_name_search.py
-          resourcePath: programming/2-strings/4-name_search/test_name_search.py
-          fileType: python
-          editable: false
+      sample:
+        files:
+          - name: name_search.py
+            resourcePath: programming/2-strings/4-name_search/name_search.py
+            fileType: python
+            editable: false
+          - name: test_name_search.py
+            resourcePath: programming/2-strings/4-name_search/test_name_search.py
+            fileType: python
+            editable: false
+        testData: []
 
   sampleTestData: []
 
@@ -463,15 +471,17 @@
 
   sampleSolutions:
     - id: 1
-      files:
-        - name: three_chinese.py
-          resourcePath: programming/2-strings/5-three_chinese/three_chinese.py
-          fileType: python
-          editable: false
-        - name: test_three_chinese.py
-          resourcePath: programming/2-strings/5-three_chinese/test_three_chinese.py
-          fileType: python
-          editable: false
+      sample:
+        files:
+          - name: three_chinese.py
+            resourcePath: programming/2-strings/5-three_chinese/three_chinese.py
+            fileType: python
+            editable: false
+          - name: test_three_chinese.py
+            resourcePath: programming/2-strings/5-three_chinese/test_three_chinese.py
+            fileType: python
+            editable: false
+        testData: []
 
   sampleTestData: []
 
@@ -682,15 +692,17 @@
 
   sampleSolutions:
     - id: 1
-      files:
-        - name: xmas_tree.py
-          resourcePath: programming/2-strings/6-xmas_tree/xmas_tree.py
-          fileType: python
-          editable: false
-        - name: test_xmas_tree.py
-          resourcePath: programming/2-strings/6-xmas_tree/test_xmas_tree.py
-          fileType: python
-          editable: false
+      sample:
+        files:
+          - name: xmas_tree.py
+            resourcePath: programming/2-strings/6-xmas_tree/xmas_tree.py
+            fileType: python
+            editable: false
+          - name: test_xmas_tree.py
+            resourcePath: programming/2-strings/6-xmas_tree/test_xmas_tree.py
+            fileType: python
+            editable: false
+        testData: []
 
   sampleTestData: []
 
@@ -839,15 +851,17 @@
 
   sampleSolutions:
     - id: 1
-      files:
-        - name: a1z26.py
-          resourcePath: programming/2-strings/7-a1z26/a1z26.py
-          fileType: python
-          editable: false
-        - name: test_a1z26.py
-          resourcePath: programming/2-strings/7-a1z26/test_a1z26.py
-          fileType: python
-          editable: false
+      sample:
+        files:
+          - name: a1z26.py
+            resourcePath: programming/2-strings/7-a1z26/a1z26.py
+            fileType: python
+            editable: false
+          - name: test_a1z26.py
+            resourcePath: programming/2-strings/7-a1z26/test_a1z26.py
+            fileType: python
+            editable: false
+        testData: []
 
   sampleTestData: []
 
@@ -1034,15 +1048,17 @@
 
   sampleSolutions:
     - id: 1
-      files:
-        - name: ceasar.py
-          resourcePath: programming/2-strings/8-ceasar/ceasar.py
-          fileType: python
-          editable: false
-        - name: test_ceasar.py
-          resourcePath: programming/2-strings/8-ceasar/test_ceasar.py
-          fileType: python
-          editable: false
+      sample:
+        files:
+          - name: ceasar.py
+            resourcePath: programming/2-strings/8-ceasar/ceasar.py
+            fileType: python
+            editable: false
+          - name: test_ceasar.py
+            resourcePath: programming/2-strings/8-ceasar/test_ceasar.py
+            fileType: python
+            editable: false
+        testData: []
 
   sampleTestData: []
 

@@ -98,15 +98,17 @@
 
   sampleSolutions:
     - id: 1
-      files:
-        - name: table.py
-          resourcePath: programming/8-unit_testing/1-pysql/table.py
-          fileType: python
-          editable: false
-        - name: test_table.py
-          resourcePath: programming/8-unit_testing/1-pysql/test_table.py
-          fileType: python
-          editable: false
+      sample:
+        files:
+          - name: table.py
+            resourcePath: programming/8-unit_testing/1-pysql/table.py
+            fileType: python
+            editable: false
+          - name: test_table.py
+            resourcePath: programming/8-unit_testing/1-pysql/test_table.py
+            fileType: python
+            editable: false
+        testData: []
 
   sampleTestData: []
 

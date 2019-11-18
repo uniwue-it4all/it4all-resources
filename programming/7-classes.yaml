@@ -97,15 +97,17 @@
 
   sampleSolutions:
     - id: 1
-      files:
-        - name: circle.py
-          resourcePath: programming/7-classes/1-circle/circle.py
-          fileType: python
-          editable: false
-        - name: test_circle.py
-          resourcePath: programming/7-classes/1-circle/test_circle.py
-          fileType: python
-          editable: false
+      sample:
+        files:
+          - name: circle.py
+            resourcePath: programming/7-classes/1-circle/circle.py
+            fileType: python
+            editable: false
+          - name: test_circle.py
+            resourcePath: programming/7-classes/1-circle/test_circle.py
+            fileType: python
+            editable: false
+        testData: []
 
   sampleTestData: []
 
@@ -261,15 +263,17 @@
 
   sampleSolutions:
     - id: 1
-      files:
-        - name: maumau.py
-          resourcePath: programming/7-classes/2-maumau/maumau.py
-          fileType: python
-          editable: false
-        - name: test_maumau.py
-          resourcePath: programming/7-classes/2-maumau/test_maumau.py
-          fileType: python
-          editable: false
+      sample:
+        files:
+          - name: maumau.py
+            resourcePath: programming/7-classes/2-maumau/maumau.py
+            fileType: python
+            editable: false
+          - name: test_maumau.py
+            resourcePath: programming/7-classes/2-maumau/test_maumau.py
+            fileType: python
+            editable: false
+        testData: []
 
   sampleTestData: []
 
@@ -504,15 +508,17 @@
 
   sampleSolutions:
     - id: 1
-      files:
-        - name: vector2d.py
-          resourcePath: programming/7-classes/3-vector2d/vector2d.py
-          fileType: python
-          editable: false
-        - name: test_vector2d.py
-          resourcePath: programming/7-classes/3-vector2d/test_vector2d.py
-          fileType: python
-          editable: false
+      sample:
+        files:
+          - name: vector2d.py
+            resourcePath: programming/7-classes/3-vector2d/vector2d.py
+            fileType: python
+            editable: false
+          - name: test_vector2d.py
+            resourcePath: programming/7-classes/3-vector2d/test_vector2d.py
+            fileType: python
+            editable: false
+        testData: []
 
   sampleTestData: []
 

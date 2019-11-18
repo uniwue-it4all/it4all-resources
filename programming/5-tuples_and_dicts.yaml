@@ -140,15 +140,17 @@
 
   sampleSolutions:
     - id: 1
-      files:
-        - name: tuples.py
-          resourcePath: programming/5-tuples_and_dicts/1-tuples/tuples.py
-          fileType: python
-          editable: false
-        - name: test_tuples.py
-          resourcePath: programming/5-tuples_and_dicts/1-tuples/test_tuples.py
-          fileType: python
-          editable: false
+      sample:
+        files:
+          - name: tuples.py
+            resourcePath: programming/5-tuples_and_dicts/1-tuples/tuples.py
+            fileType: python
+            editable: false
+          - name: test_tuples.py
+            resourcePath: programming/5-tuples_and_dicts/1-tuples/test_tuples.py
+            fileType: python
+            editable: false
+        testData: []
 
   sampleTestData: []
 
@@ -293,15 +295,17 @@
 
   sampleSolutions:
     - id: 1
-      files:
-        - name: dicts.py
-          resourcePath: programming/5-tuples_and_dicts/2-dicts/dicts.py
-          fileType: python
-          editable: false
-        - name: test_dicts.py
-          resourcePath: programming/5-tuples_and_dicts/2-dicts/test_dicts.py
-          fileType: python
-          editable: false
+      sample:
+        files:
+          - name: dicts.py
+            resourcePath: programming/5-tuples_and_dicts/2-dicts/dicts.py
+            fileType: python
+            editable: false
+          - name: test_dicts.py
+            resourcePath: programming/5-tuples_and_dicts/2-dicts/test_dicts.py
+            fileType: python
+            editable: false
+        testData: []
 
   sampleTestData: []
 
@@ -422,15 +426,17 @@
 
   sampleSolutions:
     - id: 1
-      files:
-        - name: tuples_and_dicts.py
-          resourcePath: programming/5-tuples_and_dicts/3-tuples_and_dicts/tuples_and_dicts.py
-          fileType: python
-          editable: false
-        - name: test_tuples_and_dicts.py
-          resourcePath: programming/5-tuples_and_dicts/3-tuples_and_dicts/test_tuples_and_dicts.py
-          fileType: python
-          editable: false
+      sample:
+        files:
+          - name: tuples_and_dicts.py
+            resourcePath: programming/5-tuples_and_dicts/3-tuples_and_dicts/tuples_and_dicts.py
+            fileType: python
+            editable: false
+          - name: test_tuples_and_dicts.py
+            resourcePath: programming/5-tuples_and_dicts/3-tuples_and_dicts/test_tuples_and_dicts.py
+            fileType: python
+            editable: false
+        testData: []
 
   sampleTestData: []
 
@@ -572,15 +578,17 @@
 
   sampleSolutions:
     - id: 1
-      files:
-        - name: reindeers.py
-          resourcePath: programming/5-tuples_and_dicts/4-reindeers/reindeers.py
-          fileType: python
-          editable: false
-        - name: test_reindeers.py
-          resourcePath: programming/5-tuples_and_dicts/4-reindeers/test_reindeers.py
-          fileType: python
-          editable: false
+      sample:
+        files:
+          - name: reindeers.py
+            resourcePath: programming/5-tuples_and_dicts/4-reindeers/reindeers.py
+            fileType: python
+            editable: false
+          - name: test_reindeers.py
+            resourcePath: programming/5-tuples_and_dicts/4-reindeers/test_reindeers.py
+            fileType: python
+            editable: false
+        testData: []
 
   sampleTestData: []
 

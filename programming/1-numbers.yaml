@@ -39,11 +39,13 @@
 
   sampleSolutions:
     - id: 1
-      files:
-        - name: ggt.py
-          resourcePath: programming/1-numbers/1-ggt/ggt.py
-          fileType: python
-          editable: true
+      sample:
+        files:
+          - name: ggt.py
+            resourcePath: programming/1-numbers/1-ggt/ggt.py
+            fileType: python
+            editable: true
+        testData: []
 
   sampleTestData:
     - {id: 1, inputs: [12, 4], output: 4}
@@ -133,15 +135,17 @@
 
   sampleSolutions:
     - id: 1
-      files:
-        - name: test_factorial.py
-          resourcePath: programming/1-numbers/2-factorial/test_factorial.py
-          fileType: python
-          editable: false
-        - name: factorial.py
-          resourcePath: programming/1-numbers/2-factorial/factorial.py
-          fileType: python
-          editable: false
+      sample:
+        files:
+          - name: test_factorial.py
+            resourcePath: programming/1-numbers/2-factorial/test_factorial.py
+            fileType: python
+            editable: false
+          - name: factorial.py
+            resourcePath: programming/1-numbers/2-factorial/factorial.py
+            fileType: python
+            editable: false
+        testData: []
 
   tags:
     - Exceptions
@@ -242,15 +246,17 @@
 
   sampleSolutions:
     - id: 1
-      files:
-        - name: test_babylonian_root.py
-          resourcePath: programming/1-numbers/3-babylonian_root/test_babylonian_root.py
-          fileType: python
-          editable: false
-        - name: babylonian_root.py
-          resourcePath: programming/1-numbers/3-babylonian_root/babylonian_root.py
-          fileType: python
-          editable: false
+      sample:
+        files:
+          - name: test_babylonian_root.py
+            resourcePath: programming/1-numbers/3-babylonian_root/test_babylonian_root.py
+            fileType: python
+            editable: false
+          - name: babylonian_root.py
+            resourcePath: programming/1-numbers/3-babylonian_root/babylonian_root.py
+            fileType: python
+            editable: false
+        testData: []
 
   sampleTestData: []
 
@@ -342,15 +348,17 @@
 
   sampleSolutions:
     - id: 1
-      files:
-        - name: test_fibonacci.py
-          resourcePath: programming/1-numbers/4-fibonacci/test_fibonacci.py
-          fileType: python
-          editable: false
-        - name: fibonacci.py
-          resourcePath: programming/1-numbers/4-fibonacci/fibonacci.py
-          fileType: python
-          editable: false
+      sample:
+        files:
+          - name: test_fibonacci.py
+            resourcePath: programming/1-numbers/4-fibonacci/test_fibonacci.py
+            fileType: python
+            editable: false
+          - name: fibonacci.py
+            resourcePath: programming/1-numbers/4-fibonacci/fibonacci.py
+            fileType: python
+            editable: false
+        testData: []
 
   sampleTestData: []
 

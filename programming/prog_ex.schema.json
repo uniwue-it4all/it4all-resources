@@ -159,14 +159,23 @@
       "type": "object",
       "properties": {
         "id": {"type": "number"},
-        "files": {
-          "type": "array",
-          "description": "Alle Dateien, die für die Aufgabe bearbeitet werden, als fertige Musterlösung.",
-          "items": {"$ref": "../exercise_file.schema.json"},
-          "additionalItems": false
+        "sample": {
+          "type": "object",
+          "properties": {
+            "files": {
+              "type": "array",
+              "description": "Alle Dateien, die für die Aufgabe bearbeitet werden, als fertige Musterlösung.",
+              "items": {"$ref": "../exercise_file.schema.json"},
+              "additionalItems": false
+            },
+            "testData": {
+              "type": "array"
+            }
+          },
+          "required": ["files", "testData"]
         }
       },
-      "required": ["id", "files"],
+      "required": ["id"],
       "additionalProperties": false
     },
     "ProgSampleTestData": {

@@ -102,15 +102,17 @@
 
   sampleSolutions:
     - id: 1
-      files:
-        - name: lottery.py
-          resourcePath: programming/3-conditions/1-lottery/lottery.py
-          fileType: python
-          editable: false
-        - name: test_lottery.py
-          resourcePath: programming/3-conditions/1-lottery/test_lottery.py
-          fileType: python
-          editable: false
+      sample:
+        files:
+          - name: lottery.py
+            resourcePath: programming/3-conditions/1-lottery/lottery.py
+            fileType: python
+            editable: false
+          - name: test_lottery.py
+            resourcePath: programming/3-conditions/1-lottery/test_lottery.py
+            fileType: python
+            editable: false
+        testData: []
 
   sampleTestData: []
 
@@ -200,15 +202,17 @@
 
   sampleSolutions:
     - id: 1
-      files:
-        - name: discount.py
-          resourcePath: programming/3-conditions/2-discount/discount.py
-          fileType: python
-          editable: false
-        - name: test_discount.py
-          resourcePath: programming/3-conditions/2-discount/test_discount.py
-          fileType: python
-          editable: false
+      sample:
+        files:
+          - name: discount.py
+            resourcePath: programming/3-conditions/2-discount/discount.py
+            fileType: python
+            editable: false
+          - name: test_discount.py
+            resourcePath: programming/3-conditions/2-discount/test_discount.py
+            fileType: python
+            editable: false
+        testData: []
 
   sampleTestData: []
 
@@ -317,15 +321,17 @@
 
   sampleSolutions:
     - id: 1
-      files:
-        - name: greet.py
-          resourcePath: programming/3-conditions/3-greet/greet.py
-          fileType: python
-          editable: false
-        - name: test_greet.py
-          resourcePath: programming/3-conditions/3-greet/test_greet.py
-          fileType: python
-          editable: false
+      sample:
+        files:
+          - name: greet.py
+            resourcePath: programming/3-conditions/3-greet/greet.py
+            fileType: python
+            editable: false
+          - name: test_greet.py
+            resourcePath: programming/3-conditions/3-greet/test_greet.py
+            fileType: python
+            editable: false
+        testData: []
 
   sampleTestData: []
 
