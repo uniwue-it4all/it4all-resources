@@ -24,11 +24,11 @@
       <code>def area(self) -> float:</code> implementiert werden, die die Fläche des Kreises berechnet.
 
     unitTestFiles:
-      - path: circle.py
+      - name: circle.py
         resourcePath: programming/7-classes/1-circle/circle_declaration.py
         fileType: python
         editable: false
-      - path: test_circle.py
+      - name: test_circle.py
         resourcePath: programming/7-classes/1-circle/test_circle_declaration.py
         fileType: python
         editable: true
@@ -84,11 +84,11 @@
           def area(self) -> float:
               pass
     files:
-      - path: test_circle.py
+      - name: test_circle.py
         resourcePath: programming/7-classes/1-circle/test_circle.py
         fileType: python
         editable: false
-      - path: circle.py
+      - name: circle.py
         resourcePath: programming/7-classes/1-circle/circle_declaration.py
         fileType: python
         editable: true
@@ -98,11 +98,11 @@
   sampleSolutions:
     - id: 1
       files:
-        - path: circle.py
+        - name: circle.py
           resourcePath: programming/7-classes/1-circle/circle.py
           fileType: python
           editable: false
-        - path: test_circle.py
+        - name: test_circle.py
           resourcePath: programming/7-classes/1-circle/test_circle.py
           fileType: python
           editable: false
@@ -184,11 +184,11 @@
     unitTestsDescription: >
 
     unitTestFiles:
-      - path: maumau.py
+      - name: maumau.py
         resourcePath: programming/7-classes/2-maumau/maumau_declaration.py
         fileType: python
         editable: false
-      - path: test_maumau.py
+      - name: test_maumau.py
         resourcePath: programming/7-classes/2-maumau/test_maumau_declaration.py
         fileType: python
         editable: true
@@ -248,11 +248,11 @@
       def playable_cards(card: Card, hand: List[Card]) -> List[Card]:
           pass
     files:
-      - path: test_maumau.py
+      - name: test_maumau.py
         resourcePath: programming/7-classes/2-maumau/test_maumau.py
         fileType: python
         editable: false
-      - path: maumau.py
+      - name: maumau.py
         resourcePath: programming/7-classes/2-maumau/maumau_declaration.py
         fileType: python
         editable: true
@@ -262,11 +262,11 @@
   sampleSolutions:
     - id: 1
       files:
-        - path: maumau.py
+        - name: maumau.py
           resourcePath: programming/7-classes/2-maumau/maumau.py
           fileType: python
           editable: false
-        - path: test_maumau.py
+        - name: test_maumau.py
           resourcePath: programming/7-classes/2-maumau/test_maumau.py
           fileType: python
           editable: false
@@ -394,11 +394,11 @@
     unitTestsDescription: >
 
     unitTestFiles:
-      - path: vector2d.py
+      - name: vector2d.py
         resourcePath: programming/7-classes/3-vector2d/vector2d_declaration.py
         fileType: python
         editable: false
-      - path: test_vector2d.py
+      - name: test_vector2d.py
         resourcePath: programming/7-classes/3-vector2d/test_vector2d_declaration.py
         fileType: python
         editable: true
@@ -491,11 +491,11 @@
           def dot(self, other: 'Vector2D') -> float:
               pass
     files:
-      - path: test_vector2d.py
+      - name: test_vector2d.py
         resourcePath: programming/7-classes/3-vector2d/test_vector2d.py
         fileType: python
         editable: false
-      - path: vector2d.py
+      - name: vector2d.py
         resourcePath: programming/7-classes/3-vector2d/vector2d_declaration.py
         fileType: python
         editable: true
@@ -505,11 +505,11 @@
   sampleSolutions:
     - id: 1
       files:
-        - path: vector2d.py
+        - name: vector2d.py
           resourcePath: programming/7-classes/3-vector2d/vector2d.py
           fileType: python
           editable: false
-        - path: test_vector2d.py
+        - name: test_vector2d.py
           resourcePath: programming/7-classes/3-vector2d/test_vector2d.py
           fileType: python
           editable: false

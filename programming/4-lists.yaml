@@ -35,7 +35,7 @@
       def average(my_list: List[int]) -> float:
           return 0
     files:
-      - path: average.py
+      - name: average.py
         resourcePath: programming/4-lists/1-average/average_declaration.py
         fileType: python
         editable: true
@@ -45,7 +45,7 @@
   sampleSolutions:
     - id: 1
       files:
-        - path: average.py
+        - name: average.py
           resourcePath: programming/4-lists/1-average/average.py
           fileType: python
           editable: false
@@ -100,7 +100,7 @@
       def longest_string(my_list: List[str]) -> str:
           return ''
     files:
-      - path: longest_string.py
+      - name: longest_string.py
         resourcePath: programming/4-lists/2-longest_string/longest_string_declaration.py
         fileType: python
         editable: true
@@ -110,7 +110,7 @@
   sampleSolutions:
     - id: 1
       files:
-        - path: longest_string.py
+        - name: longest_string.py
           resourcePath: programming/4-lists/2-longest_string/longest_string.py
           fileType: python
           editable: false
@@ -200,11 +200,11 @@
     unitTestsDescription: >
 
     unitTestFiles:
-      - path: general.py
+      - name: general.py
         resourcePath: programming/4-lists/3-general/general_declaration.py
         fileType: python
         editable: false
-      - path: test_general.py
+      - name: test_general.py
         resourcePath: programming/4-lists/3-general/test_general_declaration.py
         fileType: python
         editable: true
@@ -305,11 +305,11 @@
       def flatten_lists(list_of_lists: List[List[int]]) -> List[int]:
           pass
     files:
-      - path: test_general.py
+      - name: test_general.py
         resourcePath: programming/4-lists/3-general/test_general.py
         fileType: python
         editable: false
-      - path: general.py
+      - name: general.py
         resourcePath: programming/4-lists/3-general/general_declaration.py
         fileType: python
         editable: true
@@ -319,11 +319,11 @@
   sampleSolutions:
     - id: 1
       files:
-        - path: general.py
+        - name: general.py
           resourcePath: programming/4-lists/3-general/general.py
           fileType: python
           editable: false
-        - path: test_general.py
+        - name: test_general.py
           resourcePath: programming/4-lists/3-general/test_general.py
           fileType: python
           editable: false
@@ -387,11 +387,11 @@
     unitTestsDescription: >
 
     unitTestFiles:
-      - path: slicing.py
+      - name: slicing.py
         resourcePath: programming/4-lists/4-slicing/slicing_declaration.py
         fileType: python
         editable: false
-      - path: test_slicing.py
+      - name: test_slicing.py
         resourcePath: programming/4-lists/4-slicing/test_slicing_declaration.py
         fileType: python
         editable: true
@@ -450,11 +450,11 @@
       def rotate_right(my_list: List[int], count: int) -> List[int]:
           pass
     files:
-      - path: test_slicing.py
+      - name: test_slicing.py
         resourcePath: programming/4-lists/4-slicing/test_slicing.py
         fileType: python
         editable: false
-      - path: slicing.py
+      - name: slicing.py
         resourcePath: programming/4-lists/4-slicing/slicing_declaration.py
         fileType: python
         editable: true
@@ -464,11 +464,11 @@
   sampleSolutions:
     - id: 1
       files:
-        - path: slicing.py
+        - name: slicing.py
           resourcePath: programming/4-lists/4-slicing/slicing.py
           fileType: python
           editable: false
-        - path: test_slicing.py
+        - name: test_slicing.py
           resourcePath: programming/4-lists/4-slicing/test_slicing.py
           fileType: python
           editable: false

@@ -47,11 +47,11 @@
     unitTestsDescription: >
 
     unitTestFiles:
-      - path: lottery.py
+      - name: lottery.py
         resourcePath: programming/3-conditions/1-lottery/lottery_declaration.py
         fileType: python
         editable: false
-      - path: test_lottery.py
+      - name: test_lottery.py
         resourcePath: programming/3-conditions/1-lottery/test_lottery_declaration.py
         fileType: python
         editable: true
@@ -89,11 +89,11 @@
       def calculate_lottery_win(pot: float, win_class: int) -> float:
           pass
     files:
-      - path: test_lottery.py
+      - name: test_lottery.py
         resourcePath: programming/3-conditions/1-lottery/test_lottery.py
         fileType: python
         editable: false
-      - path: lottery.py
+      - name: lottery.py
         resourcePath: programming/3-conditions/1-lottery/lottery_declaration.py
         fileType: python
         editable: true
@@ -103,11 +103,11 @@
   sampleSolutions:
     - id: 1
       files:
-        - path: lottery.py
+        - name: lottery.py
           resourcePath: programming/3-conditions/1-lottery/lottery.py
           fileType: python
           editable: false
-        - path: test_lottery.py
+        - name: test_lottery.py
           resourcePath: programming/3-conditions/1-lottery/test_lottery.py
           fileType: python
           editable: false
@@ -148,11 +148,11 @@
     unitTestsDescription: >
 
     unitTestFiles:
-      - path: discount.py
+      - name: discount.py
         resourcePath: programming/3-conditions/2-discount/discount_declaration.py
         fileType: python
         editable: false
-      - path: test_discount.py
+      - name: test_discount.py
         resourcePath: programming/3-conditions/2-discount/test_discount_declaration.py
         fileType: python
         editable: true
@@ -187,11 +187,11 @@
       def calculate_discount(has_dog: bool, has_cat: bool, has_hamster: bool) -> int:
           pass
     files:
-      - path: test_discount.py
+      - name: test_discount.py
         resourcePath: programming/3-conditions/2-discount/test_discount.py
         fileType: python
         editable: false
-      - path: discount.py
+      - name: discount.py
         resourcePath: programming/3-conditions/2-discount/discount_declaration.py
         fileType: python
         editable: true
@@ -201,11 +201,11 @@
   sampleSolutions:
     - id: 1
       files:
-        - path: discount.py
+        - name: discount.py
           resourcePath: programming/3-conditions/2-discount/discount.py
           fileType: python
           editable: false
-        - path: test_discount.py
+        - name: test_discount.py
           resourcePath: programming/3-conditions/2-discount/test_discount.py
           fileType: python
           editable: false
@@ -262,11 +262,11 @@
     unitTestsDescription: >
 
     unitTestFiles:
-      - path: greet.py
+      - name: greet.py
         resourcePath: programming/3-conditions/3-greet/greet_declaration.py
         fileType: python
         editable: false
-      - path: test_greet.py
+      - name: test_greet.py
         resourcePath: programming/3-conditions/3-greet/test_greet_declaration.py
         fileType: python
         editable: true
@@ -304,11 +304,11 @@
       def greet(hour: int) -> str:
           pass
     files:
-      - path: test_greet.py
+      - name: test_greet.py
         resourcePath: programming/3-conditions/3-greet/test_greet.py
         fileType: python
         editable: false
-      - path: greet.py
+      - name: greet.py
         resourcePath: programming/3-conditions/3-greet/greet_declaration.py
         fileType: python
         editable: true
@@ -318,11 +318,11 @@
   sampleSolutions:
     - id: 1
       files:
-        - path: greet.py
+        - name: greet.py
           resourcePath: programming/3-conditions/3-greet/greet.py
           fileType: python
           editable: false
-        - path: test_greet.py
+        - name: test_greet.py
           resourcePath: programming/3-conditions/3-greet/test_greet.py
           fileType: python
           editable: false

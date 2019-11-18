@@ -71,11 +71,11 @@
     unitTestsDescription: >
 
     unitTestFiles:
-      - path: tuples.py
+      - name: tuples.py
         resourcePath: programming/5-tuples_and_dicts/1-tuples/tuples_declaration.py
         fileType: python
         editable: false
-      - path: test_tuples.py
+      - name: test_tuples.py
         resourcePath: programming/5-tuples_and_dicts/1-tuples/test_tuples_declaration.py
         fileType: python
         editable: true
@@ -127,11 +127,11 @@
       def stock_value(stocks: List[Tuple[str, int]], name: str) -> int:
           pass
     files:
-      - path: test_tuples.py
+      - name: test_tuples.py
         resourcePath: programming/5-tuples_and_dicts/1-tuples/test_tuples.py
         fileType: python
         editable: false
-      - path: tuples.py
+      - name: tuples.py
         resourcePath: programming/5-tuples_and_dicts/1-tuples/tuples_declaration.py
         fileType: python
         editable: true
@@ -141,11 +141,11 @@
   sampleSolutions:
     - id: 1
       files:
-        - path: tuples.py
+        - name: tuples.py
           resourcePath: programming/5-tuples_and_dicts/1-tuples/tuples.py
           fileType: python
           editable: false
-        - path: test_tuples.py
+        - name: test_tuples.py
           resourcePath: programming/5-tuples_and_dicts/1-tuples/test_tuples.py
           fileType: python
           editable: false
@@ -221,11 +221,11 @@
     unitTestsDescription: >
 
     unitTestFiles:
-      - path: dicts.py
+      - name: dicts.py
         resourcePath: programming/5-tuples_and_dicts/2-dicts/dicts_declaration.py
         fileType: python
         editable: false
-      - path: test_dicts.py
+      - name: test_dicts.py
         resourcePath: programming/5-tuples_and_dicts/2-dicts/test_dicts_declaration.py
         fileType: python
         editable: true
@@ -280,11 +280,11 @@
       def merge_dicts_with_add(dict1: Dict[str, int], dict2: Dict[str, int]) -> Dict[str, int]:
           pass
     files:
-      - path: test_dicts.py
+      - name: test_dicts.py
         resourcePath: programming/5-tuples_and_dicts/2-dicts/test_dicts.py
         fileType: python
         editable: false
-      - path: dicts.py
+      - name: dicts.py
         resourcePath: programming/5-tuples_and_dicts/2-dicts/dicts_declaration.py
         fileType: python
         editable: true
@@ -294,11 +294,11 @@
   sampleSolutions:
     - id: 1
       files:
-        - path: dicts.py
+        - name: dicts.py
           resourcePath: programming/5-tuples_and_dicts/2-dicts/dicts.py
           fileType: python
           editable: false
-        - path: test_dicts.py
+        - name: test_dicts.py
           resourcePath: programming/5-tuples_and_dicts/2-dicts/test_dicts.py
           fileType: python
           editable: false
@@ -363,11 +363,11 @@
     unitTestsDescription: >
 
     unitTestFiles:
-      - path: tuples_and_dicts.py
+      - name: tuples_and_dicts.py
         resourcePath: programming/5-tuples_and_dicts/3-tuples_and_dicts/tuples_and_dicts_declaration.py
         fileType: python
         editable: false
-      - path: test_tuples_and_dicts.py
+      - name: test_tuples_and_dicts.py
         resourcePath: programming/5-tuples_and_dicts/3-tuples_and_dicts/test_tuples_and_dicts_declaration.py
         fileType: python
         editable: true
@@ -409,11 +409,11 @@
       def intersect_dicts(dict1: Dict[str, int], dict2: Dict[str, int]) -> Dict[str, Tuple[int, int]]:
           pass
     files:
-      - path: test_tuples_and_dicts.py
+      - name: test_tuples_and_dicts.py
         resourcePath: programming/5-tuples_and_dicts/3-tuples_and_dicts/test_tuples_and_dicts.py
         fileType: python
         editable: false
-      - path: tuples_and_dicts.py
+      - name: tuples_and_dicts.py
         resourcePath: programming/5-tuples_and_dicts/3-tuples_and_dicts/tuples_and_dicts_declaration.py
         fileType: python
         editable: true
@@ -423,11 +423,11 @@
   sampleSolutions:
     - id: 1
       files:
-        - path: tuples_and_dicts.py
+        - name: tuples_and_dicts.py
           resourcePath: programming/5-tuples_and_dicts/3-tuples_and_dicts/tuples_and_dicts.py
           fileType: python
           editable: false
-        - path: test_tuples_and_dicts.py
+        - name: test_tuples_and_dicts.py
           resourcePath: programming/5-tuples_and_dicts/3-tuples_and_dicts/test_tuples_and_dicts.py
           fileType: python
           editable: false
@@ -513,11 +513,11 @@
     unitTestsDescription: >
 
     unitTestFiles:
-      - path: reindeers.py
+      - name: reindeers.py
         resourcePath: programming/5-tuples_and_dicts/4-reindeers/reindeers_declaration.py
         fileType: python
         editable: false
-      - path: test_reindeers.py
+      - name: test_reindeers.py
         resourcePath: programming/5-tuples_and_dicts/4-reindeers/test_reindeers_declaration.py
         fileType: python
         editable: true
@@ -559,11 +559,11 @@
       def calculate_reindeer_bmis(reindeers: Dict[str, Dict[str, int]]) -> Dict[str, float]:
           pass
     files:
-      - path: test_reindeers.py
+      - name: test_reindeers.py
         resourcePath: programming/5-tuples_and_dicts/4-reindeers/test_reindeers.py
         fileType: python
         editable: false
-      - path: reindeers.py
+      - name: reindeers.py
         resourcePath: programming/5-tuples_and_dicts/4-reindeers/reindeers_declaration.py
         fileType: python
         editable: true
@@ -573,11 +573,11 @@
   sampleSolutions:
     - id: 1
       files:
-        - path: reindeers.py
+        - name: reindeers.py
           resourcePath: programming/5-tuples_and_dicts/4-reindeers/reindeers.py
           fileType: python
           editable: false
-        - path: test_reindeers.py
+        - name: test_reindeers.py
           resourcePath: programming/5-tuples_and_dicts/4-reindeers/test_reindeers.py
           fileType: python
           editable: false

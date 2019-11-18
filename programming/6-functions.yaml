@@ -62,11 +62,11 @@
     unitTestsDescription: >
 
     unitTestFiles:
-      - path: temperatures.py
+      - name: temperatures.py
         resourcePath: programming/6-functions/1-temperatures/temperatures_declaration.py
         fileType: python
         editable: false
-      - path: test_temperatures.py
+      - name: test_temperatures.py
         resourcePath: programming/6-functions/1-temperatures/test_temperatures_declaration.py
         fileType: python
         editable: true
@@ -139,11 +139,11 @@
       def kelvin_to_fahrenheit(degrees_kelvin: float) -> float:
           pass
     files:
-      - path: test_temperatures.py
+      - name: test_temperatures.py
         resourcePath: programming/6-functions/1-temperatures/test_temperatures.py
         fileType: python
         editable: false
-      - path: temperatures.py
+      - name: temperatures.py
         resourcePath: programming/6-functions/1-temperatures/temperatures_declaration.py
         fileType: python
         editable: true
@@ -153,11 +153,11 @@
   sampleSolutions:
     - id: 1
       files:
-        - path: temperatures.py
+        - name: temperatures.py
           resourcePath: programming/6-functions/1-temperatures/temperatures.py
           fileType: python
           editable: false
-        - path: test_temperatures.py
+        - name: test_temperatures.py
           resourcePath: programming/6-functions/1-temperatures/test_temperatures.py
           fileType: python
           editable: false
@@ -234,11 +234,11 @@
     unitTestsDescription: >
 
     unitTestFiles:
-      - path: distances.py
+      - name: distances.py
         resourcePath: programming/6-functions/2-distances/distances_declaration.py
         fileType: python
         editable: false
-      - path: test_distances.py
+      - name: test_distances.py
         resourcePath: programming/6-functions/2-distances/test_distances_declaration.py
         fileType: python
         editable: true
@@ -331,11 +331,11 @@
       def meters_to_inches(length_meters: float) -> float:
           pass
     files:
-      - path: test_distances.py
+      - name: test_distances.py
         resourcePath: programming/6-functions/2-distances/test_distances.py
         fileType: python
         editable: false
-      - path: distances.py
+      - name: distances.py
         resourcePath: programming/6-functions/2-distances/distances_declaration.py
         fileType: python
         editable: true
@@ -345,11 +345,11 @@
   sampleSolutions:
     - id: 1
       files:
-        - path: distances.py
+        - name: distances.py
           resourcePath: programming/6-functions/2-distances/distances.py
           fileType: python
           editable: false
-        - path: test_distances.py
+        - name: test_distances.py
           resourcePath: programming/6-functions/2-distances/test_distances.py
           fileType: python
           editable: false

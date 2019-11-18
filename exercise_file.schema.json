@@ -1,11 +1,11 @@
 {
   "type": "object",
   "properties": {
-    "path": {"type": "string"},
+    "name": {"type": "string"},
     "resourcePath": {"type": "string"},
     "fileType": {"type": "string", "enum": ["htmlmixed", "css", "javascript", "python"]},
     "editable": {"type": "boolean"}
   },
-  "required": ["path", "resourcePath", "fileType", "editable"],
+  "required": ["name", "resourcePath", "fileType", "editable"],
   "additionalProperties": false
 }

@@ -27,15 +27,15 @@
       die Zeile hinzugefügt werden und <code>True</code> zurückgegeben werden.
 
     unitTestFiles:
-      - path: table.py
+      - name: table.py
         resourcePath: programming/8-unit_testing/1-pysql/table_declaration.py
         fileType: python
         editable: false
-      - path: raum.csv
+      - name: raum.csv
         resourcePath: programming/8-unit_testing/1-pysql/raum.csv
         fileType: python
         editable: false
-      - path: test_table.py
+      - name: test_table.py
         resourcePath: programming/8-unit_testing/1-pysql/test_table_declaration.py
         fileType: python
         editable: true
@@ -81,15 +81,15 @@
   implementationPart:
     base: ""
     files:
-      - path: test_table.py
+      - name: test_table.py
         resourcePath: programming/8-unit_testing/1-pysql/test_table_declaration.py
         fileType: python
         editable: false
-      - path: table.py
+      - name: table.py
         resourcePath: programming/8-unit_testing/1-pysql/table_declaration.py
         fileType: python
         editable: true
-      - path: raum.csv
+      - name: raum.csv
         resourcePath: programming/8-unit_testing/1-pysql/raum.csv
         fileType: python
         editable: false
@@ -99,11 +99,11 @@
   sampleSolutions:
     - id: 1
       files:
-        - path: table.py
+        - name: table.py
           resourcePath: programming/8-unit_testing/1-pysql/table.py
           fileType: python
           editable: false
-        - path: test_table.py
+        - name: test_table.py
           resourcePath: programming/8-unit_testing/1-pysql/test_table.py
           fileType: python
           editable: false
