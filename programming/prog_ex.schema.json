@@ -5,14 +5,15 @@
   "definitions": {
     "ProgExercise": {
       "allOf": [
-        {"$ref": "../exercise.schema.json"}, {
+        {"$ref": "../exercise.schema.json"},
+        {
           "type": "object",
           "properties": {
             "functionName": {"type": "string"},
             "foldername": {"type": "string"},
             "filename": {"type": "string"},
             "inputTypes": {"type": "array", "items": {"$ref": "#/definitions/ProgInputType"}, "additionalItems": false},
-            "outputType": {"type": "string"},
+            "outputType": {"$ref": "#/definitions/ProgDataType"},
             "sampleTestData": {
               "type": "array",
               "items": {"$ref": "#/definitions/ProgSampleTestData"},
@@ -55,12 +56,25 @@
         }
       ]
     },
+    "ProgDataType": {
+      "anyOf": [
+        {"type": "string", "enum": ["VOID", "BOOLEAN", "INTEGER", "FLOAT", "STRING"]},
+        {
+          "type": "object",
+          "properties": {
+            "genericType": {"type": "string", "enum": ["LIST", "TUPLE", "DICT"]},
+            "subType": {"$ref": "#/definitions/ProgDataType"}
+          },
+          "required": ["genericType", "subType"]
+        }
+      ]
+    },
     "ProgInputType": {
       "type": "object",
       "properties": {
         "id": {"type": "number"},
         "inputName": {"type": "string"},
-        "inputType": {"type": "string"}
+        "inputType": {"$ref": "#/definitions/ProgDataType"}
       },
       "required": ["id", "inputName", "inputType"],
       "additionalProperties": false

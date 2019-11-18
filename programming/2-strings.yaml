@@ -15,8 +15,9 @@
   foldername: palindrome
   filename: palindrome
 
-  inputTypes: [{id: 1, inputName: word, inputType: string}]
-  outputType: boolean
+  inputTypes:
+    - {id: 1, inputName: word, inputType: STRING}
+  outputType: BOOLEAN
 
   unitTestPart:
     unitTestType: Simplified
@@ -85,7 +86,7 @@
   foldername: floating_point_exponential
   filename: floating_point_exponential
   inputTypes: []
-  outputType: None
+  outputType: VOID
 
   unitTestPart:
 
@@ -190,7 +191,7 @@
   foldername: file_name_and_ending
   filename: file_name_and_ending
   inputTypes: []
-  outputType: None
+  outputType: VOID
 
   unitTestPart:
 
@@ -293,7 +294,7 @@
   foldername: name_search
   filename: name_search
   inputTypes: []
-  outputType: None
+  outputType: VOID
 
   unitTestPart:
 
@@ -389,7 +390,7 @@
   foldername: three_chinese
   filename: three_chinese
   inputTypes: []
-  outputType: None
+  outputType: VOID
 
   unitTestPart:
 
@@ -580,7 +581,7 @@
   filename: xmas_tree
 
   inputTypes: []
-  outputType: None
+  outputType: VOID
 
   unitTestPart:
 
@@ -754,7 +755,7 @@
   foldername: a1z26
   filename: a1z26
   inputTypes: []
-  outputType: None
+  outputType: VOID
 
   unitTestPart:
 
@@ -958,7 +959,7 @@
   filename: ceasar
 
   inputTypes: []
-  outputType: None
+  outputType: VOID
 
   unitTestPart:
 

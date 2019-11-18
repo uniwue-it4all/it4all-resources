@@ -11,7 +11,7 @@
   filename: table
 
   inputTypes: []
-  outputType: None
+  outputType: VOID
 
   unitTestPart:
     unitTestType: Normal

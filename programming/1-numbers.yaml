@@ -13,9 +13,9 @@
   filename: ggt
 
   inputTypes:
-    - {id: 1, inputName: a, inputType: int}
-    - {id: 2, inputName: b, inputType: int}
-  outputType: int
+    - {id: 1, inputName: a, inputType: INTEGER}
+    - {id: 2, inputName: b, inputType: INTEGER}
+  outputType: INTEGER
 
   unitTestPart:
     unitTestType: Simplified
@@ -70,8 +70,9 @@
   foldername: factorial
   filename: factorial
 
-  inputTypes: [{id: 1, inputName: n, inputType: int}]
-  outputType: int
+  inputTypes:
+    - {id: 1, inputName: n, inputType: INTEGER}
+  outputType: INTEGER
 
   unitTestPart:
     unitTestType: Normal
@@ -175,9 +176,9 @@
   foldername: babylonian_root
 
   inputTypes:
-    - {id: 1, inputName: number, inputType: float}
-    - {id: 2, inputName: count, inputType: int}
-  outputType: float
+    - {id: 1, inputName: number, inputType: FLOAT}
+    - {id: 2, inputName: count, inputType: INTEGER}
+  outputType: FLOAT
 
   unitTestPart:
     unitTestType: Normal
@@ -278,8 +279,8 @@
   filename: fibonacci
   foldername: fibonacci
 
-  inputTypes: [{id: 1, inputName: number, inputType: int}]
-  outputType: int
+  inputTypes: [{id: 1, inputName: number, inputType: INTEGER}]
+  outputType: INTEGER
 
   unitTestPart:
     unitTestType: Normal

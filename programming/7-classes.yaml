@@ -11,7 +11,7 @@
   filename: circle
 
   inputTypes: []
-  outputType: None
+  outputType: VOID
 
   unitTestPart:
 
@@ -175,7 +175,7 @@
   foldername: maumau
   filename: maumau
   inputTypes: []
-  outputType: None
+  outputType: VOID
 
   unitTestPart:
 
@@ -385,7 +385,7 @@
   foldername: vector2d
   filename: vector2d
   inputTypes: []
-  outputType: None
+  outputType: VOID
 
   unitTestPart:
 

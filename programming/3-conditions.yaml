@@ -38,7 +38,7 @@
   foldername: lottery
   filename: lottery
   inputTypes: []
-  outputType: None
+  outputType: VOID
 
   unitTestPart:
 
@@ -139,7 +139,7 @@
   foldername: discount
   filename: discount
   inputTypes: []
-  outputType: None
+  outputType: VOID
 
   unitTestPart:
 
@@ -253,7 +253,7 @@
   foldername: greet
   filename: greet
   inputTypes: []
-  outputType: None
+  outputType: VOID
 
   unitTestPart:
 

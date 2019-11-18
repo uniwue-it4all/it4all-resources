@@ -12,8 +12,13 @@
   foldername: average
   filename: average
 
-  inputTypes: [{id: 1, inputName: my_list, inputType: list<int>}]
-  outputType: float
+  inputTypes:
+    - id: 1
+      inputName: my_list
+      inputType:
+        genericType: LIST
+        subType: INTEGER
+  outputType: FLOAT
 
   unitTestPart:
     unitTestType: Simplified
@@ -71,8 +76,14 @@
   foldername: longest_string
   filename: longest_string
 
-  inputTypes: [{id: 1, inputName: my_list, inputType: list<string>}]
-  outputType: string
+  inputTypes:
+    - id: 1
+      inputName: my_list
+      inputType:
+        genericType: LIST
+        subType: STRING
+
+  outputType: STRING
 
   unitTestPart:
     unitTestType: Simplified
@@ -180,7 +191,7 @@
   foldername: general
   filename: general
   inputTypes: []
-  outputType: None
+  outputType: VOID
 
   unitTestPart:
 
@@ -367,7 +378,7 @@
   foldername: slicing
   filename: slicing
   inputTypes: []
-  outputType: None
+  outputType: VOID
 
   unitTestPart:
 

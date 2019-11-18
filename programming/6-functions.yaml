@@ -53,7 +53,7 @@
   foldername: temperatures
   filename: temperatures
   inputTypes: []
-  outputType: None
+  outputType: VOID
 
   unitTestPart:
 
@@ -225,7 +225,7 @@
   foldername: distances
   filename: distances
   inputTypes: []
-  outputType: None
+  outputType: VOID
 
   unitTestPart:
 

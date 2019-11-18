@@ -62,7 +62,7 @@
   foldername: tuples
   filename: tuples
   inputTypes: []
-  outputType: None
+  outputType: VOID
 
   unitTestPart:
 
@@ -212,7 +212,7 @@
   foldername: dicts
   filename: dicts
   inputTypes: []
-  outputType: None
+  outputType: VOID
 
   unitTestPart:
 
@@ -354,7 +354,7 @@
   foldername: tuples_and_dicts
   filename: tuples_and_dicts
   inputTypes: []
-  outputType: None
+  outputType: VOID
 
   unitTestPart:
 
@@ -504,7 +504,7 @@
   foldername: reindeers
   filename: reindeers
   inputTypes: []
-  outputType: None
+  outputType: VOID
 
   unitTestPart:
 
