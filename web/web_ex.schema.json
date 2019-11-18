@@ -7,19 +7,9 @@
         {"$ref": "../exercise.schema.json"},
         {
           "properties": {
-            "filename": {"type": "string"},
             "htmlText": {"type": "string"},
-            "htmlTasks": {
-              "type": "array",
-              "items": {"$ref": "#/definitions/HtmlTask"},
-              "additionalItems": false
-            },
             "jsText": {"type": "string"},
-            "jsTasks": {
-              "type": "array",
-              "items": {"$ref": "#/definitions/JsTask"},
-              "additionalItems": false
-            },
+            "siteSpec": {"$ref": "#/definitions/SiteSpec"},
             "files": {
               "type": "array",
               "items": {"$ref": "../exercise_file.schema.json"},
@@ -31,10 +21,27 @@
               "additionalItems": false
             }
           },
-          "required": ["filename", "htmlTasks", "jsTasks", "files"],
+          "required": ["files"],
           "additionalProperties": false
         }
       ]
+    },
+    "SiteSpec": {
+      "type": "object",
+      "properties": {
+        "fileName": {"type": "string"},
+        "htmlTasks": {
+          "type": "array",
+          "items": {"$ref": "#/definitions/HtmlTask"},
+          "additionalItems": false
+        },
+        "jsTasks": {
+          "type": "array",
+          "items": {"$ref": "#/definitions/JsTask"},
+          "additionalItems": false
+        }
+      },
+      "required": ["htmlTasks", "jsTasks"]
     },
     "HtmlTask": {
       "type": "object",
