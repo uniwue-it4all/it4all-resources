@@ -44,13 +44,18 @@
       "required": ["fileName", "htmlTasks", "jsTasks"]
     },
     "HtmlTask": {
-      "type": "object",
-      "properties": {
-        "text": {"type": "string"},
-        "elementSpec": {"$ref": "#/definitions/HtmlElementSpec"}
-      },
-      "required": ["text", "elementSpec"],
-      "additionalProperties": false
+      "allOf": [
+        {"$ref": "#/definitions/HtmlElementSpec"},
+        {
+          "type": "object",
+          "properties": {
+            "id": {"type": "integer"},
+            "text": {"type": "string"}
+          },
+          "required": ["id", "text"],
+          "additionalProperties": false
+        }
+      ]
     },
     "HtmlElementSpec": {
       "type": "object",

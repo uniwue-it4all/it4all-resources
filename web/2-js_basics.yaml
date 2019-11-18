@@ -25,31 +25,28 @@
   siteSpec:
     fileName: clickCounter.html
     htmlTasks:
-      - text: >
+      - id: 1
+        text: >
           Erstellen Sie einen Button auf den geklickt wird. Dieser soll als Text 'Klick mich!' haben. Außerdem soll beim
           Klick die Funktion 'increment()' aufgerufen werden.
-        elementSpec:
-          id: 1
-          xpathQuery: /html/body//button
-          awaitedTag: button
-          attributes: [{key: 'onclick', value: 'increment()'}]
-          awaitedTextContent: Klick mich!
+        xpathQuery: /html/body//button
+        awaitedTag: button
+        attributes: [{key: 'onclick', value: 'increment()'}]
+        awaitedTextContent: Klick mich!
 
-      - text: >
+      - id: 2
+        text: >
           Erstellen Sie einen Span mit der ID 'theSpan' in dem die Anzahl der Klicks angezeigt werden. Zu Anfang soll
           dieser eine 0 anzeigen.
-        elementSpec:
-          id: 2
-          xpathQuery: /html/body//span[@id='theSpan']
-          awaitedTag: span
-          awaitedTextContent: '0'
+        xpathQuery: /html/body//span[@id='theSpan']
+        awaitedTag: span
+        awaitedTextContent: '0'
 
-      - text: Binden Sie die Javascript-Datei 'clickCounter.js' ein.
-        elementSpec:
-          id: 3
-          xpathQuery: /html/head//script
-          awaitedTag: script
-          attributes: [{key: 'src', value: 'clickCounter.js'}]
+      - id: 3
+        text: Binden Sie die Javascript-Datei 'clickCounter.js' ein.
+        xpathQuery: /html/head//script
+        awaitedTag: script
+        attributes: [{key: 'src', value: 'clickCounter.js'}]
 
     jsTasks:
       - id: 1
@@ -159,37 +156,33 @@
   siteSpec:
     fileName: pwChecker.html
     htmlTasks:
-      - text: Erstellen Sie ein Texteingabefeld mit der ID 'name'
-        elementSpec:
-          id: 1
-          xpathQuery: /html/body//input[@id='name']
-          awaitedTag: input
-          attributes:
-            - {key: type, value: text}
+      - id: 1
+        text: Erstellen Sie ein Texteingabefeld mit der ID 'name'
+        xpathQuery: /html/body//input[@id='name']
+        awaitedTag: input
+        attributes:
+          - {key: type, value: text}
 
-      - text: Erstellen Sie ein Passworteingabefeld mit der ID 'password'. Bei Änderung des Passwortfeldes (onchange) soll die Funktion 'passwordStrength()' aufgerufen werden.
-        elementSpec:
-          id: 2
-          xpathQuery: /html/body//input[@id='password']
-          awaitedTag: input
-          attributes:
-            - {key: type, value: password}
-            - {key: onchange, value: passwordStrength()}
+      - id: 2
+        text: Erstellen Sie ein Passworteingabefeld mit der ID 'password'. Bei Änderung des Passwortfeldes (onchange) soll die Funktion 'passwordStrength()' aufgerufen werden.
+        xpathQuery: /html/body//input[@id='password']
+        awaitedTag: input
+        attributes:
+          - {key: type, value: password}
+          - {key: onchange, value: passwordStrength()}
 
-      - text: >
+      - id: 3
+        text: >
           Erstellen Sie einen Span mit der ID 'errors', der später anzeigen soll, wenn das Passwort zu schwach ist. Zu Anfang
           soll dieser leer sein.
-        elementSpec:
-          id: 3
-          xpathQuery: /html/body//span[@id='errors']
-          awaitedTag: span
+        xpathQuery: /html/body//span[@id='errors']
+        awaitedTag: span
 
-      - text: Binden Sie die Javascript-Datei 'pwChecker.js' ein.
-        elementSpec:
-          id: 4
-          xpathQuery: /html/head//script
-          awaitedTag: script
-          attributes: [{key: 'src', value: 'pwChecker.js'}]
+      - id: 4
+        text: Binden Sie die Javascript-Datei 'pwChecker.js' ein.
+        xpathQuery: /html/head//script
+        awaitedTag: script
+        attributes: [{key: 'src', value: 'pwChecker.js'}]
 
     jsTasks:
       - id: 1
@@ -271,25 +264,24 @@
   siteSpec:
     fileName: factorial.html
     htmlTasks:
-      - text: Erstellen Sie ein Zahlen-Eingabefeld mit der ID 'number'. Bei Änderung des Feldes (onchange) soll die Funktion 'fakultaet()' aufgerufen werden.
-        elementSpec:
-          id: 1
-          xpathQuery: /html/body//input[@id='number']
-          awaitedTag: input
-          attributes: [{key: 'type', value: 'number'}, {key: 'onchange', value: 'fakultaet()'}]
+      - id: 1
+        text: Erstellen Sie ein Zahlen-Eingabefeld mit der ID 'number'. Bei Änderung des Feldes (onchange) soll die Funktion 'fakultaet()' aufgerufen werden.
+        xpathQuery: /html/body//input[@id='number']
+        awaitedTag: input
+        attributes:
+          - {key: 'type', value: 'number'}
+          - {key: 'onchange', value: 'fakultaet()'}
 
-      - text: Erstellen Sie einen Span mit der ID 'result', in dem das Ergebnis der Berechnung stehen soll. Zu Anfang soll dieser leer sein.
-        elementSpec:
-          id: 2
-          xpathQuery: /html/body//span[@id='result']
-          awaitedTag: span
+      - id: 2
+        text: Erstellen Sie einen Span mit der ID 'result', in dem das Ergebnis der Berechnung stehen soll. Zu Anfang soll dieser leer sein.
+        xpathQuery: /html/body//span[@id='result']
+        awaitedTag: span
 
-      - text: Binden Sie die Javascript-Datei 'factorial.js' ein.
-        elementSpec:
-          id: 3
-          xpathQuery: /html/head//script
-          awaitedTag: script
-          attributes: [{key: 'src', value: 'factorial.js'}]
+      - id: 3
+        text: Binden Sie die Javascript-Datei 'factorial.js' ein.
+        xpathQuery: /html/head//script
+        awaitedTag: script
+        attributes: [{key: 'src', value: 'factorial.js'}]
 
     jsTasks:
       - id: 1
