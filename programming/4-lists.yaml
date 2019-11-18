@@ -12,7 +12,7 @@
   foldername: average
   filename: average
 
-  inputTypes: [{id: 1, name: my_list, type: list<int>}]
+  inputTypes: [{id: 1, inputName: my_list, inputType: list<int>}]
   outputType: float
 
   unitTestPart:
@@ -71,7 +71,7 @@
   foldername: longest_string
   filename: longest_string
 
-  inputTypes: [{id: 1, name: my_list, type: list<string>}]
+  inputTypes: [{id: 1, inputName: my_list, inputType: list<string>}]
   outputType: string
 
   unitTestPart:

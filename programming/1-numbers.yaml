@@ -12,7 +12,9 @@
   foldername: ggt
   filename: ggt
 
-  inputTypes: [{id: 1, name: a, type: int}, {id: 2, name: b, type: int}]
+  inputTypes:
+    - {id: 1, inputName: a, inputType: int}
+    - {id: 2, inputName: b, inputType: int}
   outputType: int
 
   unitTestPart:
@@ -68,7 +70,7 @@
   foldername: factorial
   filename: factorial
 
-  inputTypes: [{id: 1, name: n, type: int}]
+  inputTypes: [{id: 1, inputName: n, inputType: int}]
   outputType: int
 
   unitTestPart:
@@ -172,7 +174,9 @@
   filename: babylonian_root
   foldername: babylonian_root
 
-  inputTypes: [{id: 1, name: number, type: float}, {id: 2, name: count, type: int}]
+  inputTypes:
+    - {id: 1, inputName: number, inputType: float}
+    - {id: 2, inputName: count, inputType: int}
   outputType: float
 
   unitTestPart:
@@ -274,7 +278,7 @@
   filename: fibonacci
   foldername: fibonacci
 
-  inputTypes: [{id: 1, name: number, type: int}]
+  inputTypes: [{id: 1, inputName: number, inputType: int}]
   outputType: int
 
   unitTestPart:

@@ -15,7 +15,7 @@
   foldername: palindrome
   filename: palindrome
 
-  inputTypes: [{id: 1, name: word, type: string}]
+  inputTypes: [{id: 1, inputName: word, inputType: string}]
   outputType: boolean
 
   unitTestPart:
