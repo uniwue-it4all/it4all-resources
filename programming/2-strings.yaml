@@ -11,7 +11,7 @@
     diese Aufgabe auch ein Palindrom. Ihr Programm soll Groß- und Kleinschreibung ignorieren, d. h. 'a' == 'A'.
   state: APPROVED
 
-  functionname: is_palindrome
+  functionName: is_palindrome
   foldername: palindrome
   filename: palindrome
 
@@ -81,7 +81,7 @@
     </p>
   state: APPROVED
 
-  functionname: floating_point_exponential
+  functionName: floating_point_exponential
   foldername: floating_point_exponential
   filename: floating_point_exponential
   inputTypes: []
@@ -186,7 +186,7 @@
     </ul>
   state: APPROVED
 
-  functionname: file_name_and_ending
+  functionName: file_name_and_ending
   foldername: file_name_and_ending
   filename: file_name_and_ending
   inputTypes: []
@@ -289,7 +289,7 @@
     </p>
   state: APPROVED
 
-  functionname: name_search
+  functionName: name_search
   foldername: name_search
   filename: name_search
   inputTypes: []
@@ -385,7 +385,7 @@
     </p>
   state: APPROVED
 
-  functionname: three_chinese
+  functionName: three_chinese
   foldername: three_chinese
   filename: three_chinese
   inputTypes: []
@@ -575,7 +575,7 @@
     </ul>
   state: APPROVED
 
-  functionname: xmas_tree
+  functionName: xmas_tree
   foldername: xmas_tree
   filename: xmas_tree
 
@@ -750,7 +750,7 @@
     </ul>
   state: APPROVED
 
-  functionname: a1z26
+  functionName: a1z26
   foldername: a1z26
   filename: a1z26
   inputTypes: []
@@ -953,7 +953,7 @@
     </ul>
   state: APPROVED
 
-  functionname: ceasar
+  functionName: ceasar
   foldername: ceasar
   filename: ceasar
 

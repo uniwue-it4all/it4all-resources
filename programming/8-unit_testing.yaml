@@ -6,7 +6,7 @@
   text: TODO!
   state: APPROVED
 
-  functionname: insert
+  functionName: insert
   foldername: pysql
   filename: table
 

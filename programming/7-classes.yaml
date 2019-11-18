@@ -6,7 +6,7 @@
   text: TODO!
   state: APPROVED
 
-  functionname: circle
+  functionName: circle
   foldername: circle
   filename: circle
 
@@ -171,7 +171,7 @@
     </ul>
   state: APPROVED
 
-  functionname: maumau
+  functionName: maumau
   foldername: maumau
   filename: maumau
   inputTypes: []
@@ -381,7 +381,7 @@
     </ul>
   state: APPROVED
 
-  functionname: vector2d
+  functionName: vector2d
   foldername: vector2d
   filename: vector2d
   inputTypes: []

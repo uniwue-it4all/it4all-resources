@@ -8,7 +8,7 @@
     Bei einer leeren Liste soll 'None' zurückgegeben werden.
   state: APPROVED
 
-  functionname: average
+  functionName: average
   foldername: average
   filename: average
 
@@ -67,7 +67,7 @@
     Ignorieren Sie dabei Groß- und Kleinschreibung.
   state: APPROVED
 
-  functionname: longest_string
+  functionName: longest_string
   foldername: longest_string
   filename: longest_string
 
@@ -176,7 +176,7 @@
     </ul>
   state: APPROVED
 
-  functionname: general
+  functionName: general
   foldername: general
   filename: general
   inputTypes: []
@@ -363,7 +363,7 @@
     </ul>
   state: APPROVED
 
-  functionname: slicing
+  functionName: slicing
   foldername: slicing
   filename: slicing
   inputTypes: []

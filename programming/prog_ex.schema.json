@@ -8,7 +8,7 @@
         {"$ref": "../exercise.schema.json"}, {
           "type": "object",
           "properties": {
-            "functionname": {"type": "string"},
+            "functionName": {"type": "string"},
             "foldername": {"type": "string"},
             "filename": {"type": "string"},
             "inputTypes": {"type": "array", "items": {"$ref": "#/definitions/ProgInputType"}, "additionalItems": false},
@@ -45,7 +45,7 @@
             }
           },
           "required": [
-            "functionname", "foldername", "filename",
+            "functionName", "foldername", "filename",
             "inputTypes", "outputType",
             "unitTestPart", "implementationPart",
             "sampleSolutions", "sampleTestData",

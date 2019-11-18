@@ -8,7 +8,7 @@
     zweier Zahlen berechnet!
   state: APPROVED
 
-  functionname: ggt
+  functionName: ggt
   foldername: ggt
   filename: ggt
 
@@ -64,7 +64,7 @@
     Implementieren Sie die Funktion factorial(n: int) -> int, die die Fakultät der Zahl n berechnet.
   state: APPROVED
 
-  functionname: factorial
+  functionName: factorial
   foldername: factorial
   filename: factorial
 
@@ -168,7 +168,7 @@
 
   state: APPROVED
 
-  functionname: babylonian_root
+  functionName: babylonian_root
   filename: babylonian_root
   foldername: babylonian_root
 
@@ -270,7 +270,7 @@
     </p>
   state: APPROVED
 
-  functionname: fibonacci
+  functionName: fibonacci
   filename: fibonacci
   foldername: fibonacci
 

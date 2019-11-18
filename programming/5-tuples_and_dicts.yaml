@@ -58,7 +58,7 @@
     </ul>
   state: APPROVED
 
-  functionname: tuples
+  functionName: tuples
   foldername: tuples
   filename: tuples
   inputTypes: []
@@ -208,7 +208,7 @@
     </ul>
   state: APPROVED
 
-  functionname: dicts
+  functionName: dicts
   foldername: dicts
   filename: dicts
   inputTypes: []
@@ -350,7 +350,7 @@
     </ul>
   state: APPROVED
 
-  functionname: tuples_and_dicts
+  functionName: tuples_and_dicts
   foldername: tuples_and_dicts
   filename: tuples_and_dicts
   inputTypes: []
@@ -500,7 +500,7 @@
     </ul>
   state: APPROVED
 
-  functionname: reindeers
+  functionName: reindeers
   foldername: reindeers
   filename: reindeers
   inputTypes: []

@@ -34,7 +34,7 @@
     </ul>
   state: APPROVED
 
-  functionname: lottery
+  functionName: lottery
   foldername: lottery
   filename: lottery
   inputTypes: []
@@ -135,7 +135,7 @@
     </p>
   state: APPROVED
 
-  functionname: discount
+  functionName: discount
   foldername: discount
   filename: discount
   inputTypes: []
@@ -249,7 +249,7 @@
     </ul>
   state: APPROVED
 
-  functionname: greet
+  functionName: greet
   foldername: greet
   filename: greet
   inputTypes: []
