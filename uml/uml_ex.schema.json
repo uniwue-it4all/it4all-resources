@@ -26,15 +26,13 @@
       "required": ["key", "value"]
     },
     "UmlSampleSolution": {
-      "allOf": [
-        {"$ref": "uml_class_diagram.schema.json"},
-        {
-          "type": "object",
-          "properties": {
-            "id": {"type": "integer"}
-          }
-        }
-      ]
+      "type": "object",
+      "properties": {
+        "id": {"type": "integer"},
+        "sample": {"$ref": "uml_class_diagram.schema.json"}
+      },
+      "required": ["id", "sample"],
+      "additionalProperties": false
     }
   }
 }

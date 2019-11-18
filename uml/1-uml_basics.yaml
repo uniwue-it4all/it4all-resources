@@ -24,36 +24,33 @@
 
   sampleSolutions:
     - id: 1
-      classes:
-        - classType: CLASS
-          name: Kunde
-          attributes:
-            - {visibility: public, name: name, type: String}
-            - {visibility: public, name: kundennummer, type: int}
-          methods:
-            - {visibility: public, name: gesamtGuthaben, parameters: '', type: double}
-        - classType: ABSTRACT
-          name: Konto
-          attributes:
-            - {visibility: public, name: kontonummer, type: int}
-            - {visibility: public, name: vertragsdauerInJahren, type: int}
-            - {visibility: public, name: zinssatz, type: double}
-            - {visibility: public, name: saldo, type: double}
-          methods:
-            - {visibility: public, name: einzahlen, parameters: double, type: void}
-        - {classType: CLASS, name: Sparkonto}
-        - {classType: CLASS, name: Girokonto}
-        - {classType: CLASS, name: Kreditkonto}
-      associations:
-        - assocType: ASSOCIATION
-          firstEnd: Kunde
-          firstMult: SINGLE
-          secondEnd: Konto
-          secondMult: UNBOUND
-      implementations:
-        - {subClass: Girokonto, superClass: Konto}
-        - {subClass: Sparkonto, superClass: Konto}
-        - {subClass: Kreditkonto, superClass: Konto}
+      sample:
+        classes:
+          - classType: CLASS
+            name: Kunde
+            attributes:
+              - {visibility: public, name: name, type: String}
+              - {visibility: public, name: kundennummer, type: int}
+            methods:
+              - {visibility: public, name: gesamtGuthaben, parameters: '', type: double}
+          - classType: ABSTRACT
+            name: Konto
+            attributes:
+              - {visibility: public, name: kontonummer, type: int}
+              - {visibility: public, name: vertragsdauerInJahren, type: int}
+              - {visibility: public, name: zinssatz, type: double}
+              - {visibility: public, name: saldo, type: double}
+            methods:
+              - {visibility: public, name: einzahlen, parameters: double, type: void}
+          - {classType: CLASS, name: Sparkonto}
+          - {classType: CLASS, name: Girokonto}
+          - {classType: CLASS, name: Kreditkonto}
+        associations:
+          - {assocType: ASSOCIATION, firstEnd: Kunde, firstMult: SINGLE, secondEnd: Konto, secondMult: UNBOUND}
+        implementations:
+          - {subClass: Girokonto, superClass: Konto}
+          - {subClass: Sparkonto, superClass: Konto}
+          - {subClass: Kreditkonto, superClass: Konto}
 
 - id: 2
   collectionId: 1
@@ -83,92 +80,59 @@
 
   sampleSolutions:
     - id: 1
-      classes:
-        - classType: ABSTRACT
-          name: Person
-          attributes:
-            - {visibility: public, name: id, type: int}
-            - {visibility: public, name: name, type: String}
+      sample:
+        classes:
+          - classType: ABSTRACT
+            name: Person
+            attributes:
+              - {visibility: public, name: id, type: int}
+              - {visibility: public, name: name, type: String}
 
-        - classType: CLASS
-          name: Doktor
-          methods:
-            - {visibility: public, name: verschreiben, parameters: Patient, type: void}
+          - classType: CLASS
+            name: Doktor
+            methods:
+              - {visibility: public, name: verschreiben, parameters: Patient, type: void}
 
-        - classType: CLASS
-          name: Rezept
-          attributes:
-            - {visibility: public, name: id, type: int}
+          - classType: CLASS
+            name: Rezept
+            attributes:
+              - {visibility: public, name: id, type: int}
 
-        - classType: CLASS
-          name: Patient
-          methods:
-            - {visibility: public, name: entlassen, parameters: Station, type: void}
-            - {visibility: public, name: aufnehmen, parameters: Station, type: void}
+          - classType: CLASS
+            name: Patient
+            methods:
+              - {visibility: public, name: entlassen, parameters: Station, type: void}
+              - {visibility: public, name: aufnehmen, parameters: Station, type: void}
 
-        - classType: CLASS
-          name: Krankenschwester
+          - classType: CLASS
+            name: Krankenschwester
 
-        - classType: CLASS
-          name: Station
-          attributes:
-            - {visibility: public, name: nummer, type: int}
+          - classType: CLASS
+            name: Station
+            attributes:
+              - {visibility: public, name: nummer, type: int}
 
-        - classType: CLASS
-          name: Medikament
-          attributes:
-            - {visibility: public, name: id, type: int}
-            - {visibility: public, name: name, type: String}
+          - classType: CLASS
+            name: Medikament
+            attributes:
+              - {visibility: public, name: id, type: int}
+              - {visibility: public, name: name, type: String}
 
-        - classType: CLASS
-          name: Krankenhaus
-          attributes:
-            - {visibility: public, name: name, type: String}
+          - classType: CLASS
+            name: Krankenhaus
+            attributes:
+              - {visibility: public, name: name, type: String}
 
-      implementations:
-        - {subClass: Patient, superClass: Person}
-        - {subClass: Doktor, superClass: Person}
-        - {subClass: Krankenschwester, superClass: Person}
+        implementations:
+          - {subClass: Patient, superClass: Person}
+          - {subClass: Doktor, superClass: Person}
+          - {subClass: Krankenschwester, superClass: Person}
 
-      associations:
-        - assocType: ASSOCIATION
-          firstEnd: Doktor
-          firstMult: SINGLE
-          secondEnd: Rezept
-          secondMult: UNBOUND
-
-        - assocType: ASSOCIATION
-          firstEnd: Station
-          firstMult: SINGLE
-          secondEnd: Patient
-          secondMult: UNBOUND
-
-        - assocType: ASSOCIATION
-          firstEnd: Station
-          firstMult: SINGLE
-          secondEnd: Krankenschwester
-          secondMult: UNBOUND
-
-        - assocType: ASSOCIATION
-          firstEnd: Station
-          firstMult: SINGLE
-          secondEnd: Doktor
-          secondMult: UNBOUND
-
-        - assocType: ASSOCIATION
-          firstEnd: Patient
-          firstMult: SINGLE
-          secondEnd: Rezept
-          secondMult: UNBOUND
-
-        - assocType: ASSOCIATION
-          firstEnd: Rezept
-          firstMult: UNBOUND
-          secondEnd: Medikament
-          secondMult: UNBOUND
-
-        - assocType: COMPOSITION
-          firstEnd: Station
-          firstMult: UNBOUND
-          secondEnd: Krankenhaus
-          secondMult: SINGLE
+        associations:
+          - {assocType: ASSOCIATION, firstEnd: Doktor, firstMult: SINGLE, secondEnd: Rezept, secondMult: UNBOUND}
+          - {assocType: ASSOCIATION, firstEnd: Station, firstMult: SINGLE, secondEnd: Patient, secondMult: UNBOUND}
+          - {assocType: ASSOCIATION, firstEnd: Station, firstMult: SINGLE, secondEnd: Krankenschwester, secondMult: UNBOUND}
+          - {assocType: ASSOCIATION, firstEnd: Station, firstMult: SINGLE, secondEnd: Doktor, secondMult: UNBOUND}
+          - {assocType: ASSOCIATION, firstEnd: Patient, firstMult: SINGLE, secondEnd: Rezept, secondMult: UNBOUND}
+          - {assocType: ASSOCIATION, firstEnd: Rezept, firstMult: UNBOUND, secondEnd: Medikament, secondMult: UNBOUND}
+          - {assocType: COMPOSITION, firstEnd: Station, firstMult: UNBOUND, secondEnd: Krankenhaus, secondMult: SINGLE}
