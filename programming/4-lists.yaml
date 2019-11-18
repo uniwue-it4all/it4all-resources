@@ -53,9 +53,9 @@
         testData: []
 
   sampleTestData:
-    - {id: 1, inputs: [], output: null}
-    - {id: 2, inputs: [1], output: 1.0}
-    - {id: 3, inputs: [3, 5, 7], output: 5.0}
+    - {id: 1, input: [], output: null}
+    - {id: 2, input: [1], output: 1.0}
+    - {id: 3, input: [3, 5, 7], output: 5.0}
 
   tags:
     - ForLoops
@@ -120,10 +120,10 @@
         testData: []
 
   sampleTestData:
-    - {id: 1, inputs: [], output: null}
-    - {id: 2, inputs: ["0"], output: "0"}
-    - {id: 3, inputs: ["1", "11", "111"], output: "111"}
-    - {id: 4, inputs: ["1", "121", "12321", "232", "3"], output: "12321"}
+    - {id: 1, input: [], output: null}
+    - {id: 2, input: ["0"], output: "0"}
+    - {id: 3, input: ["1", "11", "111"], output: "111"}
+    - {id: 4, input: ["1", "121", "12321", "232", "3"], output: "12321"}
 
   tags:
     - ForLoops

@@ -182,10 +182,10 @@
       "type": "object",
       "properties": {
         "id": {"type": "number"},
-        "inputs": {},
+        "input": {},
         "output": {}
       },
-      "required": ["id", "inputs", "output"],
+      "required": ["id", "input", "output"],
       "additionalProperties": false
     }
   }

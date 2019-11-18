@@ -51,12 +51,12 @@
         testData: []
 
   sampleTestData:
-    - {id: 1, inputs: "anna", output: true}
-    - {id: 2, inputs: "ananas", output: false}
-    - {id: 3, inputs: "", output: true}
-    - {id: 4, inputs: "qwertzuiiuztrewq", output: true}
-    - {id: 5, inputs: "qwertzuiyiuztrewq", output: true}
-    - {id: 6, inputs: "Tacocat", output: true}
+    - {id: 1, input: "anna", output: true}
+    - {id: 2, input: "ananas", output: false}
+    - {id: 3, input: "", output: true}
+    - {id: 4, input: "qwertzuiiuztrewq", output: true}
+    - {id: 5, input: "qwertzuiyiuztrewq", output: true}
+    - {id: 6, input: "Tacocat", output: true}
 
   tags:
     - Strings
