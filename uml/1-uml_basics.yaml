@@ -22,7 +22,7 @@
 
   toIgnore: [Eine, Jedes, Diese, Für, Jeder, Es, Zudem, Die]
 
-  samples:
+  sampleSolutions:
     - id: 1
       classes:
         - classType: CLASS
@@ -81,7 +81,7 @@
     - {key: Rezepten, value: Rezept}
   toIgnore: [Ein, Jede]
 
-  samples:
+  sampleSolutions:
     - id: 1
       classes:
         - classType: ABSTRACT

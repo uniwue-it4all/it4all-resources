@@ -67,7 +67,7 @@
 
   jsTasks: []
 
-  samples:
+  sampleSolutions:
     - id: 1
       files:
         - name: carList.html
@@ -180,7 +180,7 @@
 
   jsTasks: []
 
-  samples:
+  sampleSolutions:
     - id: 1
       files:
         - name: production.html
@@ -250,7 +250,7 @@
 
   jsTasks: []
 
-  samples:
+  sampleSolutions:
     - id: 1
       files:
         - name: mustang.html
@@ -337,7 +337,7 @@
 
   jsTasks: []
 
-  samples:
+  sampleSolutions:
     - id: 1
       files:
         - name: login.html
@@ -386,7 +386,7 @@
 
   jsTasks: []
 
-  samples:
+  sampleSolutions:
     - id: 1
       files:
         - name: audio.html

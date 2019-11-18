@@ -8,24 +8,19 @@
         {
           "properties": {
             "exerciseType": {"type": "string", "enum": ["SELECT", "CREATE", "UPDATE", "INSERT", "DELETE"]},
-            "samples": {"type": "array", "items": {"$ref": "#/definitions/SqlSample"}},
+            "sampleSolutions": {"type": "array", "items": {"$ref": "#/definitions/SqlSample"}},
             "tags": {
               "type": "array",
               "items": {
-                "type": "string",
                 "enum": [
-                  "SQL_JOIN",
-                  "SQL_FUNCTION",
-                  "SQL_ALIAS",
-                  "SQL_DOUBLE_JOIN",
-                  "SQL_ORDER_BY",
-                  "SQL_LIMIT",
-                  "SQL_GROUP_BY"
+                  "SQL_JOIN", "SQL_DOUBLE_JOIN", "SQL_TRIPLE_JOIN",
+                  "SQL_FUNCTION", "SQL_ALIAS",
+                  "SQL_ORDER_BY", "SQL_LIMIT", "SQL_GROUP_BY"
                 ]
               }
             }
           },
-          "required": ["exerciseType", "samples", "tags"]
+          "required": ["exerciseType", "tags"]
         }
       ]
     },

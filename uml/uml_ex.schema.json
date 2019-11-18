@@ -10,9 +10,9 @@
           "properties": {
             "mappings": {"type": "array", "items": {"$ref": "#/definitions/UmlMapping"}},
             "toIgnore": {"type": "array", "items": {"type": "string"}},
-            "samples": {"type": "array", "items": {"$ref": "#/definitions/UmlSampleSolution"}}
+            "sampleSolutions": {"type": "array", "items": {"$ref": "#/definitions/UmlSampleSolution"}}
           },
-          "required": ["mappings", "toIgnore", "samples"],
+          "required": ["mappings", "toIgnore"],
           "additionalProperties": false
         }
       ]

@@ -10,6 +10,6 @@
     "state": {"$ref": "./exercise_state.schema.json"}
   },
   "required": [
-    "id", "collectionId", "semanticVersion", "title", "author", "text", "state"
+    "id", "collectionId", "semanticVersion", "title", "author", "text", "state", "sampleSolutions"
   ]
 }

@@ -114,7 +114,7 @@
           awaitedTag: span
           awaitedTextContent: '4'
 
-  samples:
+  sampleSolutions:
     - id: 1
       files:
         - name: clickCounter.html
@@ -226,7 +226,7 @@
           awaitedTag: span
           awaitedTextContent: ''
 
-  samples:
+  sampleSolutions:
     - id: 1
       files:
         - name: pwChecker.html
@@ -336,7 +336,7 @@
           awaitedTag: span
           awaitedTextContent: '3628800'
 
-  samples:
+  sampleSolutions:
     - id: 1
       files:
         - name: factorial.html

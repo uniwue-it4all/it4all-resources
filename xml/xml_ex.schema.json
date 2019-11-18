@@ -9,9 +9,9 @@
           "properties": {
             "grammarDescription": {"type": "string"},
             "rootNode": {"type": "string"},
-            "samples": {"type": "array", "items": {"$ref": "#/definitions/XmlSample"}}
+            "sampleSolutions": {"type": "array", "items": {"$ref": "#/definitions/XmlSample"}}
           },
-          "required": ["grammarDescription", "rootNode", "samples"],
+          "required": ["grammarDescription", "rootNode"],
           "additionalProperties": false
         }
       ]

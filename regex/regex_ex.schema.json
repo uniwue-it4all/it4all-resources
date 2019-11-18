@@ -15,7 +15,7 @@
             "matchTestData": {"type": "array", "items": {"$ref": "#/definitions/RegexMatchTestData"}},
             "extractionTestData": {"type": "array", "items": {"$ref": "#/definitions/RegexExtractionTestData"}}
           },
-          "required": ["maxPoints", "correctionType", "sampleSolutions", "matchTestData", "extractionTestData"],
+          "required": ["maxPoints", "correctionType", "matchTestData", "extractionTestData"],
           "additionalProperties": false
         }
       ]
