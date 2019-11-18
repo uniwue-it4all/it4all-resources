@@ -20,7 +20,7 @@
       editable: false
 
   siteSpec:
-    filename: carList.html
+    fileName: carList.html
     htmlTasks:
       - text: Erstellen Sie eine passende h1-Überschrift, die das Wort 'Autohersteller' enthält.
         elementSpec: {id: 1, xpathQuery: '/html/body//h1', awaitedTag: 'h1', awaitedTextContent: 'Autohersteller'}
@@ -96,7 +96,7 @@
       editable: false
 
   siteSpec:
-    filename: production.html
+    fileName: production.html
     htmlTasks:
       - text: Erstellen Sie das Grundtag für die Tabelle.
         elementSpec:
@@ -210,7 +210,7 @@
       editable: false
 
   siteSpec:
-    filename: mustang.html
+    fileName: mustang.html
     htmlTasks:
       - text: Erstellen Sie eine passende h1-Überschrift, die 'Ford Mustang' enthält.
         elementSpec:
@@ -280,7 +280,7 @@
       editable: false
 
   siteSpec:
-    filename: login.html
+    fileName: login.html
     htmlTasks:
       - text: >
           Erstellen Sie das Formular-Tag. Geben Sie für die Attribute 'action' und 'method' jeweils die
@@ -365,7 +365,7 @@
       editable: true
 
   siteSpec:
-    filename: audio.html
+    fileName: audio.html
     htmlTasks:
       - text: Erstellen Sie eine passende h1-Überschrift die 'Deutsche Nationalhymne' enthält.
         elementSpec: {id: 1, xpathQuery: '/html/body//h1', awaitedTag: 'h1', awaitedTextContent: 'Deutsche Nationalhymne'}

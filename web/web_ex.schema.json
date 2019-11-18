@@ -41,7 +41,7 @@
           "additionalItems": false
         }
       },
-      "required": ["htmlTasks", "jsTasks"]
+      "required": ["fileName", "htmlTasks", "jsTasks"]
     },
     "HtmlTask": {
       "type": "object",

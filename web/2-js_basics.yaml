@@ -23,7 +23,7 @@
     Sie können die Funktion <code>parseInt(str)</code> verwenden um einen String in eine Ganzzahl umzuwandeln.
 
   siteSpec:
-    filename: clickCounter.html
+    fileName: clickCounter.html
     htmlTasks:
       - text: >
           Erstellen Sie einen Button auf den geklickt wird. Dieser soll als Text 'Klick mich!' haben. Außerdem soll beim
@@ -157,7 +157,7 @@
     'Zu kurz' lauten. Wenn die Eingabe den Teilstring 'passwort' enthält, soll 'Zu einfach' gesetzt werden.
 
   siteSpec:
-    filename: pwChecker.html
+    fileName: pwChecker.html
     htmlTasks:
       - text: Erstellen Sie ein Texteingabefeld mit der ID 'name'
         elementSpec:
@@ -269,7 +269,7 @@
     mit der ID 'result' auf das Ergebnis setzen
 
   siteSpec:
-    filename: factorial.html
+    fileName: factorial.html
     htmlTasks:
       - text: Erstellen Sie ein Zahlen-Eingabefeld mit der ID 'number'. Bei Änderung des Feldes (onchange) soll die Funktion 'fakultaet()' aufgerufen werden.
         elementSpec:
