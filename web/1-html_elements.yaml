@@ -10,11 +10,11 @@
   filename: carList.html
 
   files:
-    - path: carList.html
+    - name: carList.html
       resourcePath: web/1-html_elements/1-carList/carList.html
       fileType: htmlmixed
       editable: true
-    - path: carListStyle.css
+    - name: carListStyle.css
       resourcePath: web/1-html_elements/1-carList/carListStyle.css
       fileType: css
       editable: false
@@ -70,7 +70,7 @@
   samples:
     - id: 1
       files:
-        - path: carList.html
+        - name: carList.html
           fileType: htmlmixed
           resourcePath: web/1-html_elements/1-carList/carListSolution.html
           editable: false
@@ -85,11 +85,11 @@
   filename: production.html
 
   files:
-    - path: production.html
+    - name: production.html
       resourcePath: web/1-html_elements/2-production/production.html
       fileType: htmlmixed
       editable: true
-    - path: productionStyle.css
+    - name: productionStyle.css
       resourcePath: web/1-html_elements/2-production/productionStyle.css
       fileType: css
       editable: false
@@ -183,7 +183,7 @@
   samples:
     - id: 1
       files:
-        - path: production.html
+        - name: production.html
           resourcePath: web/1-html_elements/2-production/productionSolution.html
           fileType: htmlmixed
           editable: false
@@ -198,11 +198,11 @@
   filename: mustang.html
 
   files:
-    - path: mustang.html
+    - name: mustang.html
       resourcePath: web/1-html_elements/3-links_images/mustang.html
       fileType: htmlmixed
       editable: true
-    - path: mustangStyle.css
+    - name: mustangStyle.css
       resourcePath: web/1-html_elements/3-links_images/mustangStyle.css
       fileType: css
       editable: false
@@ -253,7 +253,7 @@
   samples:
     - id: 1
       files:
-        - path: mustang.html
+        - name: mustang.html
           resourcePath: web/1-html_elements/3-links_images/mustangSolution.html
           fileType: htmlmixed
           editable: false
@@ -268,11 +268,11 @@
   filename: login.html
 
   files:
-    - path: login.html
+    - name: login.html
       resourcePath: web/1-html_elements/4-login/login.html
       fileType: htmlmixed
       editable: true
-    - path: loginStyle.css
+    - name: loginStyle.css
       resourcePath: web/1-html_elements/4-login/loginStyle.css
       fileType: css
       editable: false
@@ -340,7 +340,7 @@
   samples:
     - id: 1
       files:
-        - path: login.html
+        - name: login.html
           resourcePath: web/1-html_elements/4-login/loginSolution.html
           fileType: htmlmixed
           editable: false
@@ -355,7 +355,7 @@
   filename: audio.html
 
   files:
-    - path: audio.html
+    - name: audio.html
       resourcePath: web/1-html_elements/5-audio/audio.html
       fileType: htmlmixed
       editable: true
@@ -389,7 +389,7 @@
   samples:
     - id: 1
       files:
-        - path: audio.html
+        - name: audio.html
           resourcePath: web/1-html_elements/5-audio/audioSolution.html
           fileType: htmlmixed
           editable: false

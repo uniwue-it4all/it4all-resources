@@ -8,11 +8,11 @@
   filename: clickCounter.html
 
   files:
-    - path: clickCounter.html
+    - name: clickCounter.html
       resourcePath: web/2-js_basics/1-clickCounter/clickCounter.html
       fileType: htmlmixed
       editable: true
-    - path: clickCounter.js
+    - name: clickCounter.js
       resourcePath: web/2-js_basics/1-clickCounter/clickCounter.js
       fileType: javascript
       editable: true
@@ -117,11 +117,11 @@
   samples:
     - id: 1
       files:
-        - path: clickCounter.html
+        - name: clickCounter.html
           resourcePath: web/2-js_basics/1-clickCounter/clickCounterSolution.html
           fileType: htmlmixed
           editable: false
-        - path: clickCounter.js
+        - name: clickCounter.js
           resourcePath: web/2-js_basics/1-clickCounter/clickCounterSolution.js
           fileType: javascript
           editable: false
@@ -136,11 +136,11 @@
   filename: pwChecker.html
 
   files:
-    - path: pwChecker.html
+    - name: pwChecker.html
       resourcePath: web/2-js_basics/2-branchesStrings/branchesStrings.html
       fileType: htmlmixed
       editable: true
-    - path: pwChecker.js
+    - name: pwChecker.js
       resourcePath: web/2-js_basics/2-branchesStrings/branchesStrings.js
       fileType: javascript
       editable: true
@@ -229,11 +229,11 @@
   samples:
     - id: 1
       files:
-        - path: pwChecker.html
+        - name: pwChecker.html
           resourcePath: web/2-js_basics/2-branchesStrings/branchesStringsSolution.html
           fileType: htmlmixed
           editable: false
-        - path: pwChecker.js
+        - name: pwChecker.js
           resourcePath: web/2-js_basics/2-branchesStrings/branchesStringsSolution.js
           fileType: javascript
           editable: false
@@ -248,11 +248,11 @@
   filename: factorial.html
 
   files:
-    - path: factorial.html
+    - name: factorial.html
       resourcePath: web/2-js_basics/3-loops/factorial.html
       fileType: htmlmixed
       editable: true
-    - path: factorial.js
+    - name: factorial.js
       resourcePath: web/2-js_basics/3-loops/factorial.js
       fileType: javascript
       editable: true
@@ -339,11 +339,11 @@
   samples:
     - id: 1
       files:
-        - path: factorial.html
+        - name: factorial.html
           resourcePath: web/2-js_basics/3-loops/factorialSolution.html
           fileType: htmlmixed
           editable: false
-        - path: factorial.js
+        - name: factorial.js
           resourcePath: web/2-js_basics/3-loops/factorialSolution.js
           fileType: javascript
           editable: false
