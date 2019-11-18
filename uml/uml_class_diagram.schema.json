@@ -17,7 +17,7 @@
         "attributes": {"type": "array", "items": {"$ref": "#/definitions/UmlAttribute"}},
         "methods": {"type": "array", "items": {"$ref": "#/definitions/UmlMethod"}}
       },
-      "required": ["classType", "name"]
+      "required": ["classType", "name", "attributes", "methods"]
     },
     "UmlClassMember": {
       "type": "object",
