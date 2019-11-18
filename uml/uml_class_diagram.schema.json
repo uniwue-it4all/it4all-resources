@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "classes": {"type": "array", "items": {"$ref": "#/definitions/UmlClass"}},
+    "associations": {"type": "array", "items": {"$ref": "#/definitions/UmlAssociation"}},
+    "implementations": {"type": "array", "items": {"$ref": "#/definitions/UmlImplementation"}}
+  },
+  "required": ["classes", "associations", "implementations"],
+  "additionalProperties": false,
+  "definitions": {
+    "UmlClass": {
+      "type": "object",
+      "properties": {
+        "classType": {"type": "string", "enum": ["CLASS", "ABSTRACT", "INTERFACE"]},
+        "name": {"type": "string"},
+        "attributes": {"type": "array", "items": {"$ref": "#/definitions/UmlAttribute"}},
+        "methods": {"type": "array", "items": {"$ref": "#/definitions/UmlMethod"}}
+      },
+      "required": ["classType", "name"]
+    },
+    "UmlAttribute": {
+      "type": "object",
+      "properties": {
+        "visibility": {"enum": ["public", "private", "package", "protected"]},
+        "name": {"type": "string"},
+        "parameters": {"type": "string"},
+        "type": {"enum": ["String", "int", "double"]}
+      },
+      "required": ["visibility", "name", "type"],
+      "additionalProperties": false
+    },
+    "UmlMethod": {
+      "type": "object",
+      "properties": {
+      }
+    },
+    "UmlAssociation": {
+      "type": "object",
+      "properties": {
+        "assocType": {"enum": ["AGGREGATION", "ASSOCIATION", "COMPOSITION"]},
+        "firstEnd": {"type": "string"},
+        "secondEnd": {"type": "string"},
+        "firstMult": {"$ref": "#/definitions/UmlMultiplicity"},
+        "secondMult": {"$ref": "#/definitions/UmlMultiplicity"}
+      },
+      "required": ["assocType", "firstEnd", "secondEnd", "firstMult", "secondMult"],
+      "additionalProperties": false
+    },
+    "UmlImplementation": {
+      "type": "object",
+      "properties": {
+        "subClass": {"type": "string"},
+        "superClass": {"type": "string"}
+      },
+      "required": ["subClass", "superClass"],
+      "additionalProperties": false
+    },
+    "UmlMultiplicity": {
+      "enum": ["SINGLE", "UNBOUND"]
+    }
+  }
+}

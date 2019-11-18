@@ -1,4 +1,5 @@
 {
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "array",
   "items": {"$ref": "#/definitions/UmlExercise"},
   "definitions": {
@@ -8,10 +9,10 @@
         {
           "properties": {
             "mappings": {"type": "array", "items": {"$ref": "#/definitions/UmlMapping"}},
-            "ignoreWords": {"type": "array", "items": {"type": "string"}},
-            "samples": {"type": "array", "items": {"$ref": "#/definitions/UmlClassDiagram"}}
+            "toIgnore": {"type": "array", "items": {"type": "string"}},
+            "samples": {"type": "array", "items": {"$ref": "#/definitions/UmlSampleSolution"}}
           },
-          "required": ["mappings", "ignoreWords", "samples"],
+          "required": ["mappings", "toIgnore", "samples"],
           "additionalProperties": false
         }
       ]
@@ -24,37 +25,16 @@
       },
       "required": ["key", "value"]
     },
-    "UmlClassDiagram": {
-      "type": "object",
-      "properties": {
-        "id": {"type": "number"},
-        "classes": {"type": "array", "items": {"$ref": "#/definitions/UmlClass"}},
-        "associations": {"type": "array", "items": {"$ref": "#/definitions/UmlAssoc"}},
-        "implementations": {"type": "array", "items": {"$ref": "#/definitions/UmlImpls"}}
-      },
-      "required": ["id", "classes", "associations", "implementations"]
-    },
-    "UmlClass": {
-      "type": "object",
-      "properties": {
-        "classType": {"type": "string", "enum": ["CLASS", "ABSTRACT", "INTERFACE"]},
-        "name": {"type": "string"},
-        "attributes": {"type": "array", "items": {"$ref": "#/definitions/UmlAttribute"}},
-        "methods": {"type": "array", "items": {"$ref": "#/definitions/UmlMethod"}}
-      },
-      "required": ["classType", "name"]
-    },
-    "UmlAttribute": {
-      "type": "object",
-      "properties": {
-        "visibility": {
-          "type": "string",
-          "enum": ["public", "private", "package", "protected"]
-        },
-        "name": {"type": "string"},
-        "type": {"type": "string", "enum": ["String", "int", "double"]}
-      },
-      "required": ["visibility", "name", "type"]
+    "UmlSampleSolution": {
+      "allOf": [
+        {"$ref": "uml_class_diagram.schema.json"},
+        {
+          "type": "object",
+          "properties": {
+            "id": {"type": "integer"}
+          }
+        }
+      ]
     }
   }
 }

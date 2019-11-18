@@ -20,7 +20,7 @@
     - {key: Jahren, value: Jahr}
     - {key: Zinsen, value: Zins}
 
-  ignoreWords: [Eine, Jedes, Diese, Für, Jeder, Es, Zudem, Die]
+  toIgnore: [Eine, Jedes, Diese, Für, Jeder, Es, Zudem, Die]
 
   samples:
     - id: 1
@@ -79,7 +79,7 @@
     - {key: Namen, value: Name}
     - {key: Medikamente, value: Medikament}
     - {key: Rezepten, value: Rezept}
-  ignoreWords: [Ein, Jede]
+  toIgnore: [Ein, Jede]
 
   samples:
     - id: 1
