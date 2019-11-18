@@ -12,28 +12,48 @@
     "UmlClass": {
       "type": "object",
       "properties": {
-        "classType": {"type": "string", "enum": ["CLASS", "ABSTRACT", "INTERFACE"]},
+        "classType": {"enum": ["CLASS", "ABSTRACT", "INTERFACE"]},
         "name": {"type": "string"},
         "attributes": {"type": "array", "items": {"$ref": "#/definitions/UmlAttribute"}},
         "methods": {"type": "array", "items": {"$ref": "#/definitions/UmlMethod"}}
       },
       "required": ["classType", "name"]
     },
-    "UmlAttribute": {
+    "UmlClassMember": {
       "type": "object",
       "properties": {
         "visibility": {"enum": ["public", "private", "package", "protected"]},
-        "name": {"type": "string"},
-        "parameters": {"type": "string"},
-        "type": {"enum": ["String", "int", "double"]}
+        "memberName": {"type": "string"},
+        "memberType": {"enum": ["void", "boolean", "int", "float", "string"]},
+        "isStatic": {"type": "boolean", "default": false},
+        "isAbstract": {"type": "boolean", "default": false}
       },
-      "required": ["visibility", "name", "type"],
-      "additionalProperties": false
+      "required": ["visibility", "memberName", "memberType"]
+    },
+    "UmlAttribute": {
+      "allOf": [
+        {"$ref": "#/definitions/UmlClassMember"},
+        {
+          "type": "object",
+          "properties": {
+            "isDerived": {"type": "boolean", "default": false}
+          },
+          "additionalProperties": false
+        }
+      ]
     },
     "UmlMethod": {
-      "type": "object",
-      "properties": {
-      }
+      "allOf": [
+        {"$ref": "#/definitions/UmlClassMember"},
+        {
+          "type": "object",
+          "properties": {
+            "parameters": {"type": "string"}
+          },
+          "required": ["parameters"],
+          "additionalProperties": false
+        }
+      ]
     },
     "UmlAssociation": {
       "type": "object",
