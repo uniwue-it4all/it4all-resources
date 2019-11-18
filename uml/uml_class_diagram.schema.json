@@ -28,7 +28,7 @@
         "isStatic": {"type": "boolean", "default": false},
         "isAbstract": {"type": "boolean", "default": false}
       },
-      "required": ["visibility", "memberName", "memberType"]
+      "required": ["visibility", "memberName", "memberType", "isStatic", "isAbstract"]
     },
     "UmlAttribute": {
       "allOf": [
@@ -38,6 +38,7 @@
           "properties": {
             "isDerived": {"type": "boolean", "default": false}
           },
+          "required": ["isDerived"],
           "additionalProperties": false
         }
       ]

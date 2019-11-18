@@ -29,19 +29,19 @@
           - classType: CLASS
             name: Kunde
             attributes:
-              - {visibility: public, memberName: name, memberType: string}
-              - {visibility: public, memberName: kundennummer, memberType: int}
+              - {visibility: public, memberName: name, memberType: string, isAbstract: false, isDerived: false, isStatic: false}
+              - {visibility: public, memberName: kundennummer, memberType: int, isAbstract: false, isDerived: false, isStatic: false}
             methods:
-              - {visibility: public, memberName: gesamtGuthaben, parameters: '', memberType: float}
+              - {visibility: public, memberName: gesamtGuthaben, parameters: '', memberType: float, isAbstract: false, isStatic: false}
           - classType: ABSTRACT
             name: Konto
             attributes:
-              - {visibility: public, memberName: kontonummer, memberType: int}
-              - {visibility: public, memberName: vertragsdauerInJahren, memberType: int}
-              - {visibility: public, memberName: zinssatz, memberType: float}
-              - {visibility: public, memberName: saldo, memberType: float}
+              - {visibility: public, memberName: kontonummer, memberType: int, isAbstract: false, isDerived: false, isStatic: false}
+              - {visibility: public, memberName: vertragsdauerInJahren, memberType: int, isAbstract: false, isDerived: false, isStatic: false}
+              - {visibility: public, memberName: zinssatz, memberType: float, isAbstract: false, isDerived: false, isStatic: false}
+              - {visibility: public, memberName: saldo, memberType: float, isAbstract: false, isDerived: false, isStatic: false}
             methods:
-              - {visibility: public, memberName: einzahlen, parameters: double, memberType: void}
+              - {visibility: public, memberName: einzahlen, parameters: double, memberType: void, isAbstract: false, isStatic: false}
           - {classType: CLASS, name: Sparkonto}
           - {classType: CLASS, name: Girokonto}
           - {classType: CLASS, name: Kreditkonto}
@@ -85,24 +85,24 @@
           - classType: ABSTRACT
             name: Person
             attributes:
-              - {visibility: public, memberName: id, memberType: int}
-              - {visibility: public, memberName: name, memberType: string}
+              - {visibility: public, memberName: id, memberType: int, isAbstract: false, isDerived: false, isStatic: false}
+              - {visibility: public, memberName: name, memberType: string, isAbstract: false, isDerived: false, isStatic: false}
 
           - classType: CLASS
             name: Doktor
             methods:
-              - {visibility: public, memberName: verschreiben, parameters: Patient, memberType: void}
+              - {visibility: public, memberName: verschreiben, parameters: Patient, memberType: void, isAbstract: false, isStatic: false}
 
           - classType: CLASS
             name: Rezept
             attributes:
-              - {visibility: public, memberName: id, memberType: int}
+              - {visibility: public, memberName: id, memberType: int, isAbstract: false, isDerived: false, isStatic: false}
 
           - classType: CLASS
             name: Patient
             methods:
-              - {visibility: public, memberName: entlassen, parameters: Station, memberType: void}
-              - {visibility: public, memberName: aufnehmen, parameters: Station, memberType: void}
+              - {visibility: public, memberName: entlassen, parameters: Station, memberType: void, isAbstract: false, isStatic: false}
+              - {visibility: public, memberName: aufnehmen, parameters: Station, memberType: void, isAbstract: false, isStatic: false}
 
           - classType: CLASS
             name: Krankenschwester
@@ -110,18 +110,18 @@
           - classType: CLASS
             name: Station
             attributes:
-              - {visibility: public, memberName: nummer, memberType: int}
+              - {visibility: public, memberName: nummer, memberType: int, isAbstract: false, isDerived: false, isStatic: false}
 
           - classType: CLASS
             name: Medikament
             attributes:
-              - {visibility: public, memberName: id, memberType: int}
-              - {visibility: public, memberName: name, memberType: string}
+              - {visibility: public, memberName: id, memberType: int, isAbstract: false, isDerived: false, isStatic: false}
+              - {visibility: public, memberName: name, memberType: string, isAbstract: false, isDerived: false, isStatic: false}
 
           - classType: CLASS
             name: Krankenhaus
             attributes:
-              - {visibility: public, memberName: name, memberType: string}
+              - {visibility: public, memberName: name, memberType: string, isAbstract: false, isDerived: false, isStatic: false}
 
         implementations:
           - {subClass: Patient, superClass: Person}
