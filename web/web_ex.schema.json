@@ -70,9 +70,7 @@
             {"type": "null"}
           ]
         },
-        "attributes": {
-          "type": "array", "items": {"$ref": "#/definitions/HtmlAttribute"}
-        }
+        "attributes": {"$ref": "../key_value_object_map.schema.json"}
       },
       "required": ["id", "xpathQuery", "awaitedTagName", "awaitedTextContent", "attributes"],
       "additionalProperties": false

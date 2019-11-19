@@ -3,41 +3,6 @@
   <component name="JsonSchemaMappingsProjectConfiguration">
     <state>
       <map>
-        <entry key="JSON schema v7">
-          <value>
-            <SchemaInfo>
-              <option name="name" value="JSON schema v7" />
-              <option name="relativePathToSchema" value="http://json-schema.org/draft-07/schema" />
-              <option name="schemaVersion" value="JSON schema version 7" />
-              <option name="applicationDefined" value="true" />
-              <option name="patterns">
-                <list>
-                  <Item>
-                    <option name="path" value="collections.schema.json" />
-                  </Item>
-                  <Item>
-                    <option name="path" value="exercise.schema.json" />
-                  </Item>
-                  <Item>
-                    <option name="path" value="exercise_file.schema.json" />
-                  </Item>
-                  <Item>
-                    <option name="path" value="programming/prog_ex.schema.json" />
-                  </Item>
-                  <Item>
-                    <option name="path" value="rose/rose_ex.schema.json" />
-                  </Item>
-                  <Item>
-                    <option name="path" value="semantic_version.schema.json" />
-                  </Item>
-                  <Item>
-                    <option name="path" value="key_value_object_map.schema.json" />
-                  </Item>
-                </list>
-              </option>
-            </SchemaInfo>
-          </value>
-        </entry>
         <entry key="collections.schema">
           <value>
             <SchemaInfo>

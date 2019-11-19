@@ -1,10 +1,16 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "type": "object",
-  "properties": {
-    "key": {"type": "string"},
-    "value": {"type": "string"}
-  },
-  "required": ["key", "value"],
-  "additionalProperties": false
+  "type": "array",
+  "items": {"$ref": "#/definitions/KeyValueObject"},
+  "definitions": {
+    "KeyValueObject": {
+      "type": "object",
+      "properties": {
+        "key": {"type": "string"},
+        "value": {"type": "string"}
+      },
+      "required": ["key", "value"],
+      "additionalProperties": false
+    }
+  }
 }

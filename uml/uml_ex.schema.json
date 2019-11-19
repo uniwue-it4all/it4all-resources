@@ -8,7 +8,7 @@
         {"$ref": "../exercise.schema.json"},
         {
           "properties": {
-            "mappings": {"type": "array", "items": {"$ref": "#/definitions/UmlMapping"}},
+            "mappings": {"$ref": "../key_value_object_map.schema.json"},
             "toIgnore": {"type": "array", "items": {"type": "string"}},
             "sampleSolutions": {"type": "array", "items": {"$ref": "#/definitions/UmlSampleSolution"}}
           },
@@ -16,14 +16,6 @@
           "additionalProperties": false
         }
       ]
-    },
-    "UmlMapping": {
-      "type": "object",
-      "properties": {
-        "key": {"type": "string"},
-        "value": {"type": "string"}
-      },
-      "required": ["key", "value"]
     },
     "UmlSampleSolution": {
       "type": "object",
