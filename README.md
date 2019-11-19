@@ -1,1 +1,1 @@
-# Ressources für it4all
+# Resources for it4all

@@ -8,7 +8,7 @@
       "toolId": {"type": "string"},
       "title": {"type": "string"},
       "author": {"type": "string"},
-      "text": {"type": "string"},
+      "text": {"$ref": "./long_text.schema.json"},
       "state": {"$ref": "./exercise_state.schema.json"},
       "shortName": {"type": "string"}
     },

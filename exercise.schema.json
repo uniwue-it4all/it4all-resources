@@ -7,7 +7,7 @@
     "semanticVersion": {"$ref": "./semantic_version.schema.json"},
     "title": {"type": "string"},
     "author": {"type": "string"},
-    "text": {"type": "string"},
+    "text": {"$ref": "./long_text.schema.json"},
     "state": {"$ref": "./exercise_state.schema.json"}
   },
   "required": [

@@ -6,12 +6,8 @@
     patch: 0
   title: Tutorial Konto
   author: bje40dc
-  text: >
-    Eine Bank verwaltet die Konten ihrer Kunden. Jedes Konto wird durch die Kontonummer identifiziert und speichert das momentane Saldo sowie die
-    Vertragsdauer (in Jahren). Diese Konten können entweder ein Girokonto, ein Sparkonto oder ein Kreditkonto sein. Für jeden Typ von Konto gilt ein anderer
-    Zinssatz: Für ein Girokonto gibt es keine Zinsen, für ein Sparkonto 1 Prozent und für ein Kreditkonto 3 Prozent. Die Kunden der Bank werden durch
-    ihre Kundennummer identifiziert. Es soll außerdem jeweils der komplette Name gespeichert werden. Jeder Kunde kann mehrere Konten besitzen
-    und hat die Möglichkeit, sich das Gesamtsaldo aller Konten anzeigen zu lassen und Geld auf ein Konto einzuzahlen.
+  text:
+    relativePath: uml/1-uml_basics/1-text.txt
   state: APPROVED
 
   mappings:
@@ -74,12 +70,8 @@
     patch: 0
   title: Krankenhaus
   author: bje40dc
-  text: >
-    Ein Krankenhaus hat einen Namen und besteht aus Stationen mit einer eindeutigen Nummer. Jede Station hat einen oder
-    mehrere Doktoren, Krankenschwestern und Patienten. Jede Person hat jeweils eine eindeutige Id und einen Namen.
-    Ein Doktor kann dem Patienten ein Rezept mit einer eindeutigen Id verschreiben, das ein oder mehrere Medikamente
-    beinhalten kann. Ein Medikament hat eine eindeutige Id und einen Namen und kann Patienten auf verschiedenen Rezepten
-    verschrieben werden. Ein Patient wiederum kann in einer Station aufgenommen bzw. entlassen werden.
+  text:
+    relativePath: uml/1-uml_basics/2-text.txt
   state: APPROVED
 
   mappings:
