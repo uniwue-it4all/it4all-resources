@@ -30,6 +30,9 @@
                   <Item>
                     <option name="path" value="semantic_version.schema.json" />
                   </Item>
+                  <Item>
+                    <option name="path" value="key_value_object_map.schema.json" />
+                  </Item>
                 </list>
               </option>
             </SchemaInfo>
