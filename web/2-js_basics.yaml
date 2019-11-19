@@ -30,7 +30,7 @@
           Erstellen Sie einen Button auf den geklickt wird. Dieser soll als Text 'Klick mich!' haben. Außerdem soll beim
           Klick die Funktion 'increment()' aufgerufen werden.
         xpathQuery: /html/body//button
-        awaitedTag: button
+        awaitedTagName: button
         attributes: [{key: 'onclick', value: 'increment()'}]
         awaitedTextContent: Klick mich!
 
@@ -39,13 +39,13 @@
           Erstellen Sie einen Span mit der ID 'theSpan' in dem die Anzahl der Klicks angezeigt werden. Zu Anfang soll
           dieser eine 0 anzeigen.
         xpathQuery: /html/body//span[@id='theSpan']
-        awaitedTag: span
+        awaitedTagName: span
         awaitedTextContent: '0'
 
       - id: 3
         text: Binden Sie die Javascript-Datei 'clickCounter.js' ein.
         xpathQuery: /html/head//script
-        awaitedTag: script
+        awaitedTagName: script
         attributes: [{key: 'src', value: 'clickCounter.js'}]
 
     jsTasks:
@@ -54,7 +54,7 @@
         preConditions:
           - id: 1
             xpathQuery: /html/body//span[@id='theSpan']
-            awaitedTag: span
+            awaitedTagName: span
             awaitedTextContent: '0'
         action:
           xpathQuery: /html/body//button
@@ -62,7 +62,7 @@
         postConditions:
           - id: 1
             xpathQuery: /html/body//span[@id='theSpan']
-            awaitedTag: span
+            awaitedTagName: span
             awaitedTextContent: '1'
 
       - id: 2
@@ -70,7 +70,7 @@
         preConditions:
           - id: 1
             xpathQuery: /html/body//span[@id='theSpan']
-            awaitedTag: span
+            awaitedTagName: span
             awaitedTextContent: '1'
         action:
           xpathQuery: /html/body//button
@@ -78,7 +78,7 @@
         postConditions:
           - id: 1
             xpathQuery: /html/body//span[@id='theSpan']
-            awaitedTag: span
+            awaitedTagName: span
             awaitedTextContent: '2'
 
       - id: 3
@@ -86,7 +86,7 @@
         preConditions:
           - id: 1
             xpathQuery: /html/body//span[@id='theSpan']
-            awaitedTag: span
+            awaitedTagName: span
             awaitedTextContent: '2'
         action:
           xpathQuery: /html/body//button
@@ -94,7 +94,7 @@
         postConditions:
           - id: 1
             xpathQuery: /html/body//span[@id='theSpan']
-            awaitedTag: span
+            awaitedTagName: span
             awaitedTextContent: '3'
 
       - id: 4
@@ -102,7 +102,7 @@
         preConditions:
           - id: 1
             xpathQuery: /html/body//span[@id='theSpan']
-            awaitedTag: span
+            awaitedTagName: span
             awaitedTextContent: '3'
         action:
           xpathQuery: /html/body//button
@@ -110,7 +110,7 @@
         postConditions:
           - id: 1
             xpathQuery: /html/body//span[@id='theSpan']
-            awaitedTag: span
+            awaitedTagName: span
             awaitedTextContent: '4'
 
   sampleSolutions:
@@ -159,14 +159,14 @@
       - id: 1
         text: Erstellen Sie ein Texteingabefeld mit der ID 'name'
         xpathQuery: /html/body//input[@id='name']
-        awaitedTag: input
+        awaitedTagName: input
         attributes:
           - {key: type, value: text}
 
       - id: 2
         text: Erstellen Sie ein Passworteingabefeld mit der ID 'password'. Bei Änderung des Passwortfeldes (onchange) soll die Funktion 'passwordStrength()' aufgerufen werden.
         xpathQuery: /html/body//input[@id='password']
-        awaitedTag: input
+        awaitedTagName: input
         attributes:
           - {key: type, value: password}
           - {key: onchange, value: passwordStrength()}
@@ -176,12 +176,12 @@
           Erstellen Sie einen Span mit der ID 'errors', der später anzeigen soll, wenn das Passwort zu schwach ist. Zu Anfang
           soll dieser leer sein.
         xpathQuery: /html/body//span[@id='errors']
-        awaitedTag: span
+        awaitedTagName: span
 
       - id: 4
         text: Binden Sie die Javascript-Datei 'pwChecker.js' ein.
         xpathQuery: /html/head//script
-        awaitedTag: script
+        awaitedTagName: script
         attributes: [{key: 'src', value: 'pwChecker.js'}]
 
     jsTasks:
@@ -195,7 +195,7 @@
         postConditions:
           - id: 1
             xpathQuery: /html/body//span[@id='errors']
-            awaitedTag: span
+            awaitedTagName: span
             awaitedTextContent: Zu kurz
 
       - id: 2
@@ -208,7 +208,7 @@
         postConditions:
           - id: 1
             xpathQuery: /html/body//span[@id='errors']
-            awaitedTag: span
+            awaitedTagName: span
             awaitedTextContent: Zu einfach
 
       - id: 3
@@ -221,7 +221,7 @@
         postConditions:
           - id: 1
             xpathQuery: /html/body//span[@id='errors']
-            awaitedTag: span
+            awaitedTagName: span
             awaitedTextContent: ''
 
   sampleSolutions:
@@ -267,7 +267,7 @@
       - id: 1
         text: Erstellen Sie ein Zahlen-Eingabefeld mit der ID 'number'. Bei Änderung des Feldes (onchange) soll die Funktion 'fakultaet()' aufgerufen werden.
         xpathQuery: /html/body//input[@id='number']
-        awaitedTag: input
+        awaitedTagName: input
         attributes:
           - {key: 'type', value: 'number'}
           - {key: 'onchange', value: 'fakultaet()'}
@@ -275,12 +275,12 @@
       - id: 2
         text: Erstellen Sie einen Span mit der ID 'result', in dem das Ergebnis der Berechnung stehen soll. Zu Anfang soll dieser leer sein.
         xpathQuery: /html/body//span[@id='result']
-        awaitedTag: span
+        awaitedTagName: span
 
       - id: 3
         text: Binden Sie die Javascript-Datei 'factorial.js' ein.
         xpathQuery: /html/head//script
-        awaitedTag: script
+        awaitedTagName: script
         attributes: [{key: 'src', value: 'factorial.js'}]
 
     jsTasks:
@@ -294,7 +294,7 @@
         postConditions:
           - id: 1
             xpathQuery: /html/body//span[@id='result']
-            awaitedTag: span
+            awaitedTagName: span
             awaitedTextContent: '1'
 
       - id: 2
@@ -307,7 +307,7 @@
         postConditions:
           - id: 1
             xpathQuery: /html/body//span[@id='result']
-            awaitedTag: span
+            awaitedTagName: span
             awaitedTextContent: '6'
 
       - id: 3
@@ -320,7 +320,7 @@
         postConditions:
           - id: 1
             xpathQuery: /html/body//span[@id='result']
-            awaitedTag: span
+            awaitedTagName: span
             awaitedTextContent: '720'
 
       - id: 4
@@ -333,7 +333,7 @@
         postConditions:
           - id: 1
             xpathQuery: /html/body//span[@id='result']
-            awaitedTag: span
+            awaitedTagName: span
             awaitedTextContent: '3628800'
 
   sampleSolutions:

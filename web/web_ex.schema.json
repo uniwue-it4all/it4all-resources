@@ -62,13 +62,13 @@
       "properties": {
         "id": {"type": "integer"},
         "xpathQuery": {"type": "string"},
-        "awaitedTag": {"type": "string"},
+        "awaitedTagName": {"type": "string"},
         "awaitedTextContent": {"type": "string"},
         "attributes": {
           "type": "array", "items": {"$ref": "#/definitions/HtmlAttribute"}
         }
       },
-      "required": ["id", "xpathQuery", "awaitedTag"],
+      "required": ["id", "xpathQuery", "awaitedTagName"],
       "additionalProperties": false
     },
     "HtmlAttribute": {
