@@ -63,12 +63,17 @@
         "id": {"type": "integer"},
         "xpathQuery": {"type": "string"},
         "awaitedTagName": {"type": "string"},
-        "awaitedTextContent": {"type": "string"},
+        "awaitedTextContent": {
+          "anyOf": [
+            {"type": "string"},
+            {"type": "null"}
+          ]
+        },
         "attributes": {
           "type": "array", "items": {"$ref": "#/definitions/HtmlAttribute"}
         }
       },
-      "required": ["id", "xpathQuery", "awaitedTagName"],
+      "required": ["id", "xpathQuery", "awaitedTagName", "awaitedTextContent", "attributes"],
       "additionalProperties": false
     },
     "HtmlAttribute": {

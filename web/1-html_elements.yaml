@@ -27,6 +27,7 @@
         xpathQuery: '/html/body//h1'
         awaitedTagName: 'h1'
         awaitedTextContent: 'Autohersteller'
+        attributes: []
 
       - id: 2
         text: >
@@ -34,30 +35,36 @@
           Geben Sie dieser Liste die Klasse 'list-group'.
         xpathQuery: '/html/body//ul'
         awaitedTagName: 'ul'
+        awaitedTextContent: null
+        attributes: []
 
       - id: 3
         text: Erstellen Sie ein Listenelement mit dem Text 'Audi'.
         xpathQuery: /html/body//ul/li[contains(text(), 'Audi')]
         awaitedTagName: li
         awaitedTextContent: Audi
+        attributes: []
 
       - id: 4
         text: Erstellen Sie ein Listenelement mit dem Text 'BMW'.
         xpathQuery: /html/body//ul/li[contains(text(), 'BMW')]
         awaitedTagName: li
         awaitedTextContent: BMW
+        attributes: []
 
       - id: 5
         text: Erstellen Sie ein Listenelement mit dem Text 'Mercedes'.
         xpathQuery: /html/body//ul/li[contains(text(), 'Mercedes')]
         awaitedTagName: li
         awaitedTextContent: Mercedes
+        attributes: []
 
       - id: 6
         text: Erstellen Sie ein Listenelement mit dem Text 'Volkswagen'.
         xpathQuery: /html/body//ul/li[contains(text(), 'Volkswagen')]
         awaitedTagName: li
         awaitedTextContent: Volkswagen
+        attributes: []
 
       - id: 7
         text: >
@@ -65,7 +72,10 @@
           'carListStyle.css' zu finden. Setzen Sie auch den entsprechenden Wert für das Attribut 'rel'!
         xpathQuery: /html/head/link
         awaitedTagName: link
-        attributes: [{key: 'href', value: 'carListStyle.css'}, {key: 'rel', value: 'stylesheet'}]
+        awaitedTextContent: null
+        attributes:
+          - {key: 'href', value: 'carListStyle.css'}
+          - {key: 'rel', value: 'stylesheet'}
 
     jsTasks: []
 
@@ -102,74 +112,92 @@
         text: Erstellen Sie das Grundtag für die Tabelle.
         xpathQuery: /html/body//table
         awaitedTagName: table
+        awaitedTextContent: null
+        attributes: []
 
       - id: 2
         text: Erstellen Sie die erste Zeile für die Überschriften.
         xpathQuery: '/html/body//table//tr[1]'
         awaitedTagName: 'tr'
+        awaitedTextContent: null
+        attributes: []
 
       - id: 3
         text: Erstellen Sie die erste Zelle für die Überschrift. Diese soll als Inhalt 'Jahr' haben.
         xpathQuery: html/body//table//tr[1]/th[1]
         awaitedTagName: th
         awaitedTextContent: Jahr
+        attributes: []
 
       - id: 4
         text: Erstellen Sie die zweite Zelle für die Überschrift. Diese soll als Inhalt 'Produktion' haben.
         xpathQuery: html/body//table//tr[1]/th[2]
         awaitedTagName: th
         awaitedTextContent: Produktion
+        attributes: []
 
       - id: 5
         text: Erstellen Sie die zweite Zeile in der Tabelle
         xpathQuery: '/html/body//table//tr[2]'
         awaitedTagName: 'tr'
+        awaitedTextContent: null
+        attributes: []
 
       - id: 6
         text: Erstellen Sie die erste Zelle in der zweiten Zeile. Diese soll als Inhalt '1900' haben.
         xpathQuery: html/body//table//tr[2]/td[1]
         awaitedTagName: td
         awaitedTextContent: '1900'
+        attributes: []
 
       - id: 7
         text: Erstellen Sie die zweite Zelle in der zweiten Zeile. Diese soll als Inhalt '9504' haben.
         xpathQuery: html/body//table//tr[2]/td[2]
         awaitedTagName: td
         awaitedTextContent: '9504'
+        attributes: []
 
       - id: 8
         text: Erstellen Sie die dritte Zeile in der Tabelle
         xpathQuery: '/html/body//table//tr[3]'
         awaitedTagName: 'tr'
+        awaitedTextContent: null
+        attributes: []
 
       - id: 9
         text: Erstellen Sie die erste Zelle in der dritten Zeile. Diese soll als Inhalt '1950' haben.
         xpathQuery: html/body//table//tr[3]/td[1]
         awaitedTagName: td
         awaitedTextContent: '1950'
+        attributes: []
 
       - id: 10
         text: Erstellen Sie die zweite Zelle in der dritten Zeile. Diese soll als Inhalt '10577426' haben.
         xpathQuery: html/body//table//tr[3]/td[2]
         awaitedTagName: td
         awaitedTextContent: '10577426'
+        attributes: []
 
       - id: 11
         text: Erstellen Sie die vierte Zeile in der Tabelle.
         xpathQuery: /html/body//table//tr[4]
         awaitedTagName: td
+        awaitedTextContent: null
+        attributes: []
 
       - id: 12
         text: Erstellen Sie die erste Zelle in der vierten Zeile. Diese soll als Inhalt '2000' haben.
         xpathQuery: html/body//table//tr[4]/td[1]
         awaitedTagName: td
         awaitedTextContent: '2000'
+        attributes: []
 
       - id: 13
         text: Erstellen Sie die zweite Zelle in der vierten Zeile. Diese soll als Inhalt '58374162' haben
         xpathQuery: 'html/body//table//tr[4]/td[2]'
         awaitedTagName: 'td'
         awaitedTextContent: '58374162'
+        attributes: []
 
       - id: 14
         text: >
@@ -177,7 +205,10 @@
           'productionStyle.css' zu finden. Setzen Sie auch den entsprechenden Wert für das Attribut 'rel'.
         xpathQuery: /html/head//link
         awaitedTagName: link
-        attributes: [{key: href, value: productionStyle.css}, {key: rel, value: stylesheet}]
+        awaitedTextContent: null
+        attributes:
+          - {key: href, value: productionStyle.css}
+          - {key: rel, value: stylesheet}
 
 
     jsTasks: []
@@ -216,6 +247,7 @@
         xpathQuery: /html/body//h1
         awaitedTagName: h1
         awaitedTextContent: Ford Mustang
+        attributes: []
 
       - id: 2
         text: >
@@ -223,7 +255,9 @@
           'https://de.wikipedia.org/wiki/Ford_Mustang' an.
         xpathQuery: /html/body//a
         awaitedTagName: a
-        attributes: [{key: href, value: 'https://de.wikipedia.org/wiki/Ford_Mustang'}]
+        awaitedTextContent: null
+        attributes:
+          - {key: href, value: 'https://de.wikipedia.org/wiki/Ford_Mustang'}
 
       - id: 3
         text: >
@@ -232,6 +266,7 @@
           'Ford Mustang' an. Geben Sie außerdem eine Breite von 250 und eine Höhe von 188 an, um das Bild zu skalieren.
         xpathQuery: /html/body//a//img
         awaitedTagName: img
+        awaitedTextContent: null
         attributes:
           - {key: src, value: 'https://upload.wikimedia.org/wikipedia/commons/2/2d/1964_12_Ford_Mustang.jpg'}
           - {key: alt, value: 'Ford Mustang'}
@@ -244,7 +279,10 @@
           'mustangStyle.css' zu finden. Setzen Sie auch den entsprechenden Wert für das Attribut 'rel'.
         xpathQuery: /html/head//link
         awaitedTagName: link
-        attributes: [{key: rel, value: stylesheet}, {key: href, value: mustangStyle.css}]
+        awaitedTextContent: null
+        attributes:
+          - {key: rel, value: stylesheet}
+          - {key: href, value: mustangStyle.css}
 
     jsTasks: []
 
@@ -283,13 +321,17 @@
           Werte '/test.php' und 'post' an.
         xpathQuery: /html/body//form
         awaitedTagName: form
-        attributes: [{key: 'action', value: '/test.php'}, {key: 'method', value: 'post'}]
+        awaitedTextContent: null
+        attributes:
+          - {key: 'action', value: '/test.php'}
+          - {key: 'method', value: 'post'}
 
       - id: 2
         text: Erstellen Sie ein Label mit dem Inhalt 'Email' für das Eingabefeld mit der ID 'email'.
         xpathQuery: /html/body//form//label[@for='email']
         awaitedTagName: label
         awaitedTextContent: Email
+        attributes: []
 
       - id: 3
         text: >
@@ -297,6 +339,7 @@
           und geben Sie den Attributen 'name' und 'id' jeweils den Wert 'email'. Die Eingabe soll außerdem required sein.
         xpathQuery: /html/body//form//input[@type='email']
         awaitedTagName: input
+        awaitedTextContent: null
         attributes:
           - {key: 'name', value: 'email'}
           - {key: 'id', value: 'email'}
@@ -307,6 +350,7 @@
         xpathQuery: /html/body//form//label[@for='passwort']
         awaitedTagName: label
         awaitedTextContent: Passwort
+        attributes: []
 
       - id: 5
         text: >
@@ -314,12 +358,18 @@
           geben Sie dem Attribut 'name' den Wert 'passwort'. Die Eingabe soll außerdem verpflichtend sein.
         xpathQuery: /html/body//form//input[@type='password']
         awaitedTagName: input
-        attributes: [{key: 'name', value: 'passwort'}, {key: 'id', value: 'passwort'}, {key: 'required', value: 'true'}]
+        awaitedTextContent: null
+        attributes:
+          - {key: 'name', value: 'passwort'}
+          - {key: 'id', value: 'passwort'}
+          - {key: 'required', value: 'true'}
 
       - id: 6
         text: Erstellen Sie einen Knopf (input, kein button) um das Formular abzusenden.
         xpathQuery: /html/body//form//input[@type='submit']
         awaitedTagName: input
+        awaitedTextContent: null
+        attributes: []
 
       - id: 7
         text: >
@@ -327,6 +377,7 @@
           'loginStyle.css' zu finden. Setzen Sie auch den entsprechenden Wert für das Attribut 'rel'.
         xpathQuery: /html/head//link
         awaitedTagName: link
+        awaitedTextContent: null
         attributes:
           - {key: 'rel', value: 'stylesheet'}
           - {key: 'href', value: 'loginStyle.css'}
@@ -364,6 +415,7 @@
         xpathQuery: '/html/body//h1'
         awaitedTagName: 'h1'
         awaitedTextContent: 'Deutsche Nationalhymne'
+        attributes: []
 
       - id: 2
         text: >
@@ -380,6 +432,7 @@
           'https://upload.wikimedia.org/wikipedia/commons/c/cb/National_anthem_of_Germany_-_U.S._Army_1st_Armored_Division_Band.ogg'
         xpathQuery: /html/body//audio/source
         awaitedTagName: source
+        awaitedTextContent: null
         attributes:
           - {key: 'type', value: 'audio/ogg'}
           - {key: src, value: 'https://upload.wikimedia.org/wikipedia/commons/c/cb/National_anthem_of_Germany_-_U.S._Army_1st_Armored_Division_Band.ogg'}
