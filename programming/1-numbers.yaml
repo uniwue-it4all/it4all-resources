@@ -3,9 +3,8 @@
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Größter gemeinsamer Teiler
   author: bje40dc
-  text: >
-    Implementieren Sie die folgende Funktion ggt(a: int, b -> int) -> int, die den größten gemeinsamen Teiler
-    zweier Zahlen berechnet!
+  text:
+    relativePath: programming/1-numbers/1-text.html
   state: APPROVED
 
   functionName: ggt
