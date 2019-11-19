@@ -55,12 +55,8 @@
     patch: 0
 
   rootNode: lecture
-  grammarDescription: >
-    In den XML-Dateien soll eine Vorlesung [lecture] beschrieben werden. Diese hat mindestens einen Dozenten [lecturer],
-    mindestens einen Vorlesungszeitraum [date] und es nimmt mindestens ein Student [student] teil. Ein Dozent hat einen
-    Namen [name] und einen Titel [title]. Ein Vorlesungszeitraum besteht aus einer Zeit [hours] und einem
-    Wochentag [weekday] mit Werten von Montag bis Sonntag ("mon", "tue", "wed", "thu", "fri", "sat", "sun"). Ein
-    Student hat einen Namen und eine Matrikelnummer [matrikel].
+  grammarDescription:
+    relativePath: xml/1-xml_basics/2-grammarDescription.txt
 
   sampleSolutions:
     - id: 1
@@ -124,11 +120,8 @@
     patch: 0
 
   rootNode: praxis
-  grammarDescription: >
-    In dieser XML-Datei soll eine Praxis [praxis] beschrieben werden. In dieser arbeitet mindestens ein Arzt [arzt].
-    Ein Arzt hat einen Namen [name] und mindestens einen Termin [termin]. Ein Termin besteht aus einem Datum [datum], einer
-    Uhrzeit [uhrzeit], einem Patienten und einer (optionalen) Beschreibung [beschreibung]. Außerdem wird für jeden Termin
-    gespeichert [art], ob es eine Untersuchung [untersuchung], Behandlung [behandlung] oder eine Operation [operation] ist.
+  grammarDescription:
+    relativePath: xml/1-xml_basics/3-grammarDescription.txt
 
   sampleSolutions:
     - id: 1
@@ -162,10 +155,8 @@
     patch: 0
 
   rootNode: breakfast
-  grammarDescription: >
-    Mit dieser DTD sollen XML-Dokumente erstellt werden, die das Frühstücksmenü eines Restaurants darstellen. Auf der
-    Frühstückskarte [breakfast] werden mehrere Speißen [food] angeboten. Jede Speiße hat einen Namen [food],
-    einen Preis [price], eine Beschreibung [description] und eine Anzahl an Kalorien [calories].
+  grammarDescription:
+    relativePath: xml/1-xml_basics/4-grammarDescription.txt
 
   sampleSolutions:
     - id: 1
@@ -193,11 +184,8 @@
     patch: 0
 
   rootNode: bibliothek
-  grammarDescription: >
-    In dieser Aufgabe soll eine XML-Grammatik für die Beschreibung einer Bibliothek [bibliothek] erstellt werden. Diese
-    besteht aus mehreren Abteilung, die jeweils einen Titel [titel] und Bücher [buch] enthalten. Die Bücher wiederum
-    besitzen eine ISBN [isbn], einen Titel, einen Autor [autor], eventuell mehrere Co-Autoren [coautor], und ein
-    Veröffentlichungsjahr [jahr]. Außerdem kann optional ein Verlag [verlag] bzw. eine Auflage [auflage] angegeben sein.
+  grammarDescription:
+    relativePath: xml/1-xml_basics/5-grammarDescription.txt
 
   sampleSolutions:
     - id: 1
