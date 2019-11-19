@@ -11,7 +11,7 @@
 
   rootNode: party
   grammarDescription:
-    relativePath: ./1-xml_basics/1-grammarDescription.txt
+    relativePath: xml/1-xml_basics/1-grammarDescription.txt
 
   sampleSolutions:
     - id: 1
