@@ -1,5 +1,6 @@
 - id: 1
   collectionId: 8
+  toolId: programming
   semanticVersion: {major: 0, minor: 0, patch: 0}
   title: PySQL
   author: amh12ry

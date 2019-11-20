@@ -1,5 +1,6 @@
 - id: 1
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Alles über die Autoren
   author: bje40dc
@@ -19,6 +20,7 @@
 
 - id: 2
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Nachnamen aller Autoren
   author: bje40dc
@@ -34,6 +36,7 @@
 
 - id: 3
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Verlagsnamen
   author: bje40dc
@@ -49,6 +52,7 @@
 
 - id: 4
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Namen aller Kunden
   author: bje40dc
@@ -64,6 +68,7 @@
 
 - id: 5
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Daten über Bücher
   author: bje40dc
@@ -79,6 +84,7 @@
 
 - id: 6
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Titelsuche
   author: bje40dc
@@ -95,6 +101,7 @@
 
 - id: 7
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Preissuche
   author: bje40dc
@@ -111,6 +118,7 @@
 
 - id: 8
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Autorensuche
   author: bje40dc
@@ -127,6 +135,7 @@
 
 - id: 9
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Der kleine Prinz?
   author: bje40dc
@@ -143,6 +152,7 @@
 
 - id: 10
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Verlag mit Telefonnummer
   author: bje40dc
@@ -159,6 +169,7 @@
 
 - id: 11
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Wer schrieb was?
   author: bje40dc
@@ -175,6 +186,7 @@
 
 - id: 12
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Bücher von Carlsen
   author: bje40dc
@@ -193,6 +205,7 @@
 
 - id: 13
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Harry Potters Leben
   author: bje40dc
@@ -210,6 +223,7 @@
 
 - id: 14
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Wilhards Wertungen
   author: bje40dc
@@ -227,6 +241,7 @@
 
 - id: 15
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Wer hat hier so viel bestellt?
   author: bje40dc
@@ -245,6 +260,7 @@
 
 - id: 16
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: GMX-Kunden
   author: bje40dc
@@ -262,6 +278,7 @@
 
 - id: 17
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Billige Bücher
   author: bje40dc
@@ -279,6 +296,7 @@
 
 - id: 18
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Was wird gewünscht?
   author: bje40dc
@@ -294,6 +312,7 @@
 
 - id: 19
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Jahrgang 81
   author: bje40dc
@@ -311,6 +330,7 @@
 
 - id: 20
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Geringer Bestand oder Preis
   author: bje40dc
@@ -334,6 +354,7 @@
 
 - id: 21
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Sterne in der Wüste 1
   author: bje40dc
@@ -351,6 +372,7 @@
 
 - id: 22
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Sterne in der Wüste 2
   author: bje40dc
@@ -368,6 +390,7 @@
 
 - id: 23
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Harry Potters
   author: bje40dc
@@ -384,6 +407,7 @@
 
 - id: 24
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Fan oder nicht?
   author: bje40dc
@@ -403,6 +427,7 @@
 
 - id: 25
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Durschnittlicher Bestand
   author: bje40dc
@@ -418,6 +443,7 @@
 
 - id: 26
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Wunsch des Phönix
   author: bje40dc
@@ -436,6 +462,7 @@
 
 - id: 27
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Orwellianisch
   author: bje40dc
@@ -455,6 +482,7 @@
 
 - id: 28
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Teuer, teuer und teuer
   author: bje40dc
@@ -472,6 +500,7 @@
 
 - id: 29
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Wer will Harry?
   author: bje40dc
@@ -492,6 +521,7 @@
 
 - id: 30
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Emails mit G
   author: bje40dc
@@ -509,6 +539,7 @@
 
 - id: 31
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Tolkien in Billig
   author: bje40dc
@@ -530,6 +561,7 @@
 
 - id: 32
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Billig gekauft
   author: bje40dc
@@ -551,6 +583,7 @@
 
 - id: 33
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Kumulierter Bestand
   author: bje40dc
@@ -571,6 +604,7 @@
 
 - id: 34
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Februargeburtstag
   author: bje40dc
@@ -588,6 +622,7 @@
 
 - id: 35
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Ich bin der jüngste!
   author: bje40dc
@@ -606,6 +641,7 @@
 
 - id: 36
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Passwortupdate!
   author: bje40dc
@@ -628,6 +664,7 @@
 
 - id: 37
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Mit allem zufrieden?
   author: bje40dc
@@ -648,6 +685,7 @@
 
 - id: 38
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Teure Wünsche...
   author: bje40dc
@@ -669,6 +707,7 @@
 
 - id: 39
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Veröffentlichungsjahre
   author: bje40dc
@@ -684,6 +723,7 @@
 
 - id: 100
   collectionId: 2
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Aufgestockt
   author: bje40dc

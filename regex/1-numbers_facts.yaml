@@ -1,5 +1,6 @@
 - id: 1
   collectionId: 1
+  toolId: regex
   semanticVersion: {major: 0, minor: 0, patch: 1}
   title: Postleitzahlen
   author: bje40dc
@@ -27,6 +28,7 @@
 
 - id: 2
   collectionId: 1
+  toolId: regex
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Einfache Datumsangaben
   author: bje40dc
@@ -62,6 +64,7 @@
 
 - id: 3
   collectionId: 1
+  toolId: regex
   semanticVersion: {major: 0, minor: 0, patch: 1}
   title: Komlexe Datumsangaben
   author: bje40dc
@@ -97,6 +100,7 @@
 
 - id: 4
   collectionId: 1
+  toolId: regex
   semanticVersion: {major: 0, minor: 0, patch: 1}
   title: Semantische Versionierung
   author: bje40dc
@@ -128,6 +132,7 @@
 
 - id: 5
   collectionId: 1
+  toolId: regex
   semanticVersion: {major: 0, minor: 0, patch: 1}
   title: E-Mail-Adressen
   author: bje40dc

@@ -1,5 +1,6 @@
 - id: 1
   collectionId: 2
+  toolId: regex
   semanticVersion: {major: 0, minor: 0, patch: 1}
   title: Heiße Preise
   author: bje40dc
@@ -26,6 +27,7 @@
 
 - id: 2
   collectionId: 2
+  toolId: regex
   semanticVersion: {major: 0, minor: 0, patch: 1}
   title: Kilometerstände
   author: bje40dc

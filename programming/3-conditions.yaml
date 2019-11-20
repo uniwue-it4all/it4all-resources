@@ -1,5 +1,6 @@
 - id: 1
   collectionId: 3
+  toolId: programming
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Lotterie
   author: bje40dc
@@ -122,6 +123,7 @@
 
 - id: 2
   collectionId: 3
+  toolId: programming
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Rabatt
   author: bje40dc
@@ -222,6 +224,7 @@
 
 - id: 3
   collectionId: 3
+  toolId: programming
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Grußformel
   author: bje40dc

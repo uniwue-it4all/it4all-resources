@@ -1,5 +1,6 @@
 - id: 1
   collectionId: 1
+  toolId: xml
   semanticVersion:
     major: 1
     minor: 0
@@ -45,6 +46,7 @@
 
 - id: 2
   collectionId: 1
+  toolId: xml
   title: Vorlesung
   author: bje40dc
   text: Erstellen Sie zu dieser DTD ein passendes Xml-Dokument
@@ -110,6 +112,7 @@
 
 - id: 3
   collectionId: 1
+  toolId: xml
   title: Krankenhaus
   author: bje40dc
   text: Erstellen Sie zu dieser DTD ein passendes Xml-Dokument
@@ -145,6 +148,7 @@
 
 - id: 4
   collectionId: 1
+  toolId: xml
   title: Frühstück
   author: bje40dc
   text: Erstellen Sie für dieses Xml-Dokument eine passende DTD
@@ -174,6 +178,7 @@
 
 - id: 5
   collectionId: 1
+  toolId: xml
   title: Bibliothek
   author: bje40dc
   text: Erstellen Sie für dieses Xml-Dokument eine passende DTD

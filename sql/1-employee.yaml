@@ -1,5 +1,6 @@
 - id: 1
   collectionId: 1
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Anzahl der Angestellten
   author: bje40dc
@@ -19,6 +20,7 @@
 
 - id: 2
   collectionId: 1
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Angestelltennummer
   author: bje40dc
@@ -36,6 +38,7 @@
 
 - id: 3
   collectionId: 1
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Emailadresse
   author: bje40dc
@@ -67,6 +70,7 @@
 
 - id: 4
   collectionId: 1
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Nutzernamen
   author: bje40dc
@@ -83,6 +87,7 @@
 
 - id: 5
   collectionId: 1
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Anzahl der Untergebenen
   author: bje40dc
@@ -100,6 +105,7 @@
 
 - id: 6
   collectionId: 1
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: TODO!
   author: bje40dc
@@ -121,6 +127,7 @@
 
 - id: 7
   collectionId: 1
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: TODO!
   author: bje40dc
@@ -137,6 +144,7 @@
 
 - id: 8
   collectionId: 1
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: TODO!
   author: bje40dc
@@ -152,6 +160,7 @@
 
 - id: 9
   collectionId: 1
+  toolId: sql
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: TODO!
   author: bje40dc

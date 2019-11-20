@@ -1,5 +1,6 @@
 - id: 1
   collectionId: 1
+  toolId: web
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Listen in Html
   author: bje40dc
@@ -89,6 +90,7 @@
 
 - id: 2
   collectionId: 1
+  toolId: web
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Tabellen in Html
   author: bje40dc
@@ -223,6 +225,7 @@
 
 - id: 3
   collectionId: 1
+  toolId: web
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Hyperlinks und Bilder in HTML
   author: bje40dc
@@ -296,6 +299,7 @@
 
 - id: 4
   collectionId: 1
+  toolId: web
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Login-Formular
   author: bje40dc
@@ -394,6 +398,7 @@
 
 - id: 5
   collectionId: 1
+  toolId: web
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Audio in HTML 5
   author: bje40dc

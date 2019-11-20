@@ -1,5 +1,6 @@
 - id: 1
   collectionId: 4
+  toolId: programming
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Durchschnitt
   author: bje40dc
@@ -63,6 +64,7 @@
 
 - id: 2
   collectionId: 4
+  toolId: programming
   semanticVersion:
     major: 1
     minor: 0
@@ -133,6 +135,7 @@
 
 - id: 3
   collectionId: 4
+  toolId: programming
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Allgemeine Aufgaben
   author: bje40dc
@@ -344,6 +347,7 @@
 
 - id: 4
   collectionId: 4
+  toolId: programming
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Slicing
   author: bje40dc

@@ -1,5 +1,6 @@
 - id: 1
   collectionId: 2
+  toolId: web
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Klickzähler
   author: bje40dc
@@ -138,6 +139,7 @@
 
 - id: 2
   collectionId: 2
+  toolId: web
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Verzweigungen und Strings
   author: alg81dm
@@ -258,6 +260,7 @@
 
 - id: 3
   collectionId: 2
+  toolId: web
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Schleifen
   author: alg81dm

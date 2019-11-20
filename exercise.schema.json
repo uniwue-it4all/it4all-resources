@@ -4,6 +4,7 @@
   "properties": {
     "id": {"type": "number"},
     "collectionId": {"type": "number"},
+    "toolId": {"type": "string"},
     "semanticVersion": {"$ref": "./semantic_version.schema.json"},
     "title": {"type": "string"},
     "author": {"type": "string"},
@@ -11,6 +12,6 @@
     "state": {"$ref": "./exercise_state.schema.json"}
   },
   "required": [
-    "id", "collectionId", "semanticVersion", "title", "author", "text", "state", "sampleSolutions"
+    "id", "collectionId", "toolId", "semanticVersion", "title", "author", "text", "state", "sampleSolutions"
   ]
 }
