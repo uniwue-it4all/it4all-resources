@@ -12,6 +12,6 @@
     "state": {"$ref": "./exercise_state.schema.json"}
   },
   "required": [
-    "id", "collectionId", "toolId", "semanticVersion", "title", "author", "text", "state", "sampleSolutions"
+    "id", "collectionId", "toolId", "semanticVersion", "title", "author", "text", "state", "content"
   ]
 }

@@ -7,135 +7,136 @@
   text: Erstellen Sie einen Zähler der die Klicks auf einen Button zählt!
   state: APPROVED
 
-  files:
-    - name: clickCounter.html
-      resourcePath: web/2-js_basics/1-clickCounter/clickCounter.html
-      fileType: htmlmixed
-      editable: true
-    - name: clickCounter.js
-      resourcePath: web/2-js_basics/1-clickCounter/clickCounter.js
-      fileType: javascript
-      editable: true
+  content:
+    files:
+      - name: clickCounter.html
+        resourcePath: web/2-js_basics/1-clickCounter/clickCounter.html
+        fileType: htmlmixed
+        editable: true
+      - name: clickCounter.js
+        resourcePath: web/2-js_basics/1-clickCounter/clickCounter.js
+        fileType: javascript
+        editable: true
 
-  htmlText: Erstellen Sie zunächst den Rumpf der Seite in HTML.
-  jsText: >
-    Implementieren Sie nun die Funktion <code>increment()</code> die aufgerufen wird wenn auf den Knopf
-    gedrückt wird. Sie soll den Inhalt (innerHTML) des Elementes mit der id 'theSpan' auslesen und um 1 erhöhen.
-    Sie können die Funktion <code>parseInt(str)</code> verwenden um einen String in eine Ganzzahl umzuwandeln.
+    htmlText: Erstellen Sie zunächst den Rumpf der Seite in HTML.
+    jsText: >
+      Implementieren Sie nun die Funktion <code>increment()</code> die aufgerufen wird wenn auf den Knopf
+      gedrückt wird. Sie soll den Inhalt (innerHTML) des Elementes mit der id 'theSpan' auslesen und um 1 erhöhen.
+      Sie können die Funktion <code>parseInt(str)</code> verwenden um einen String in eine Ganzzahl umzuwandeln.
 
-  siteSpec:
-    fileName: clickCounter.html
-    htmlTasks:
+    siteSpec:
+      fileName: clickCounter.html
+      htmlTasks:
+        - id: 1
+          text: >
+            Erstellen Sie einen Button auf den geklickt wird. Dieser soll als Text 'Klick mich!' haben. Außerdem soll beim
+            Klick die Funktion 'increment()' aufgerufen werden.
+          xpathQuery: /html/body//button
+          awaitedTagName: button
+          attributes: [{key: 'onclick', value: 'increment()'}]
+          awaitedTextContent: Klick mich!
+
+        - id: 2
+          text: >
+            Erstellen Sie einen Span mit der ID 'theSpan' in dem die Anzahl der Klicks angezeigt werden. Zu Anfang soll
+            dieser eine 0 anzeigen.
+          xpathQuery: /html/body//span[@id='theSpan']
+          awaitedTagName: span
+          awaitedTextContent: '0'
+          attributes: []
+
+        - id: 3
+          text: Binden Sie die Javascript-Datei 'clickCounter.js' ein.
+          xpathQuery: /html/head//script
+          awaitedTagName: script
+          awaitedTextContent: null
+          attributes:
+            - {key: 'src', value: 'clickCounter.js'}
+
+      jsTasks:
+        - id: 1
+          text: Test 1
+          preConditions:
+            - id: 1
+              xpathQuery: /html/body//span[@id='theSpan']
+              awaitedTagName: span
+              awaitedTextContent: '0'
+              attributes: []
+          action:
+            xpathQuery: /html/body//button
+            actionType: Click
+          postConditions:
+            - id: 1
+              xpathQuery: /html/body//span[@id='theSpan']
+              awaitedTagName: span
+              awaitedTextContent: '1'
+              attributes: []
+
+        - id: 2
+          text: Test 2
+          preConditions:
+            - id: 1
+              xpathQuery: /html/body//span[@id='theSpan']
+              awaitedTagName: span
+              awaitedTextContent: '1'
+              attributes: []
+          action:
+            xpathQuery: /html/body//button
+            actionType: Click
+          postConditions:
+            - id: 1
+              xpathQuery: /html/body//span[@id='theSpan']
+              awaitedTagName: span
+              awaitedTextContent: '2'
+              attributes: []
+
+        - id: 3
+          text: Test 3
+          preConditions:
+            - id: 1
+              xpathQuery: /html/body//span[@id='theSpan']
+              awaitedTagName: span
+              awaitedTextContent: '2'
+              attributes: []
+          action:
+            xpathQuery: /html/body//button
+            actionType: Click
+          postConditions:
+            - id: 1
+              xpathQuery: /html/body//span[@id='theSpan']
+              awaitedTagName: span
+              awaitedTextContent: '3'
+              attributes: []
+
+        - id: 4
+          text: Test 4
+          preConditions:
+            - id: 1
+              xpathQuery: /html/body//span[@id='theSpan']
+              awaitedTagName: span
+              awaitedTextContent: '3'
+              attributes: []
+          action:
+            xpathQuery: /html/body//button
+            actionType: Click
+          postConditions:
+            - id: 1
+              xpathQuery: /html/body//span[@id='theSpan']
+              awaitedTagName: span
+              awaitedTextContent: '4'
+              attributes: []
+
+    sampleSolutions:
       - id: 1
-        text: >
-          Erstellen Sie einen Button auf den geklickt wird. Dieser soll als Text 'Klick mich!' haben. Außerdem soll beim
-          Klick die Funktion 'increment()' aufgerufen werden.
-        xpathQuery: /html/body//button
-        awaitedTagName: button
-        attributes: [{key: 'onclick', value: 'increment()'}]
-        awaitedTextContent: Klick mich!
-
-      - id: 2
-        text: >
-          Erstellen Sie einen Span mit der ID 'theSpan' in dem die Anzahl der Klicks angezeigt werden. Zu Anfang soll
-          dieser eine 0 anzeigen.
-        xpathQuery: /html/body//span[@id='theSpan']
-        awaitedTagName: span
-        awaitedTextContent: '0'
-        attributes: []
-
-      - id: 3
-        text: Binden Sie die Javascript-Datei 'clickCounter.js' ein.
-        xpathQuery: /html/head//script
-        awaitedTagName: script
-        awaitedTextContent: null
-        attributes:
-          - {key: 'src', value: 'clickCounter.js'}
-
-    jsTasks:
-      - id: 1
-        text: Test 1
-        preConditions:
-          - id: 1
-            xpathQuery: /html/body//span[@id='theSpan']
-            awaitedTagName: span
-            awaitedTextContent: '0'
-            attributes: []
-        action:
-          xpathQuery: /html/body//button
-          actionType: Click
-        postConditions:
-          - id: 1
-            xpathQuery: /html/body//span[@id='theSpan']
-            awaitedTagName: span
-            awaitedTextContent: '1'
-            attributes: []
-
-      - id: 2
-        text: Test 2
-        preConditions:
-          - id: 1
-            xpathQuery: /html/body//span[@id='theSpan']
-            awaitedTagName: span
-            awaitedTextContent: '1'
-            attributes: []
-        action:
-          xpathQuery: /html/body//button
-          actionType: Click
-        postConditions:
-          - id: 1
-            xpathQuery: /html/body//span[@id='theSpan']
-            awaitedTagName: span
-            awaitedTextContent: '2'
-            attributes: []
-
-      - id: 3
-        text: Test 3
-        preConditions:
-          - id: 1
-            xpathQuery: /html/body//span[@id='theSpan']
-            awaitedTagName: span
-            awaitedTextContent: '2'
-            attributes: []
-        action:
-          xpathQuery: /html/body//button
-          actionType: Click
-        postConditions:
-          - id: 1
-            xpathQuery: /html/body//span[@id='theSpan']
-            awaitedTagName: span
-            awaitedTextContent: '3'
-            attributes: []
-
-      - id: 4
-        text: Test 4
-        preConditions:
-          - id: 1
-            xpathQuery: /html/body//span[@id='theSpan']
-            awaitedTagName: span
-            awaitedTextContent: '3'
-            attributes: []
-        action:
-          xpathQuery: /html/body//button
-          actionType: Click
-        postConditions:
-          - id: 1
-            xpathQuery: /html/body//span[@id='theSpan']
-            awaitedTagName: span
-            awaitedTextContent: '4'
-            attributes: []
-
-  sampleSolutions:
-    - id: 1
-      files:
-        - name: clickCounter.html
-          resourcePath: web/2-js_basics/1-clickCounter/clickCounterSolution.html
-          fileType: htmlmixed
-          editable: false
-        - name: clickCounter.js
-          resourcePath: web/2-js_basics/1-clickCounter/clickCounterSolution.js
-          fileType: javascript
-          editable: false
+        files:
+          - name: clickCounter.html
+            resourcePath: web/2-js_basics/1-clickCounter/clickCounterSolution.html
+            fileType: htmlmixed
+            editable: false
+          - name: clickCounter.js
+            resourcePath: web/2-js_basics/1-clickCounter/clickCounterSolution.js
+            fileType: javascript
+            editable: false
 
 - id: 2
   collectionId: 2
@@ -146,117 +147,118 @@
   text: Erstellen Sie ein Anmeldeformular, das eine einfache Passwort-Qualitätsprüfung durchführt.
   state: APPROVED
 
-  files:
-    - name: pwChecker.html
-      resourcePath: web/2-js_basics/2-branchesStrings/branchesStrings.html
-      fileType: htmlmixed
-      editable: true
-    - name: pwChecker.js
-      resourcePath: web/2-js_basics/2-branchesStrings/branchesStrings.js
-      fileType: javascript
-      editable: true
+  content:
+    files:
+      - name: pwChecker.html
+        resourcePath: web/2-js_basics/2-branchesStrings/branchesStrings.html
+        fileType: htmlmixed
+        editable: true
+      - name: pwChecker.js
+        resourcePath: web/2-js_basics/2-branchesStrings/branchesStrings.js
+        fileType: javascript
+        editable: true
 
-  htmlText: Erstellen Sie zunächst den Rumpf der Seite in HTML.
+    htmlText: Erstellen Sie zunächst den Rumpf der Seite in HTML.
 
-  jsText: >
-    Implementieren Sie nun die Funktion <code>passwordStrength()</code>, die bei Änderung des Felds aufgerufen wird. Sie
-    soll den Inhalt (value) des Passwortfeldes auslesen und verschiedene Tests durchführen. Bei fehlgeschlagenen Tests
-    soll der Inhalt des Elements mit der ID 'errors' auf den entsprechenden Text gesetzt werden. Es soll immer nur der
-    erste fehlgeschlagene Test (in der Reihenfolge der Teilaufgaben) beachtet werden. Wenn kein Test fehlschlägt,
-    soll der Fehlertext gelöscht werden (auf '' setzen). Wenn das Passwort unter 8 Zeichen lang ist, soll der Fehlertext
-    'Zu kurz' lauten. Wenn die Eingabe den Teilstring 'passwort' enthält, soll 'Zu einfach' gesetzt werden.
+    jsText: >
+      Implementieren Sie nun die Funktion <code>passwordStrength()</code>, die bei Änderung des Felds aufgerufen wird. Sie
+      soll den Inhalt (value) des Passwortfeldes auslesen und verschiedene Tests durchführen. Bei fehlgeschlagenen Tests
+      soll der Inhalt des Elements mit der ID 'errors' auf den entsprechenden Text gesetzt werden. Es soll immer nur der
+      erste fehlgeschlagene Test (in der Reihenfolge der Teilaufgaben) beachtet werden. Wenn kein Test fehlschlägt,
+      soll der Fehlertext gelöscht werden (auf '' setzen). Wenn das Passwort unter 8 Zeichen lang ist, soll der Fehlertext
+      'Zu kurz' lauten. Wenn die Eingabe den Teilstring 'passwort' enthält, soll 'Zu einfach' gesetzt werden.
 
-  siteSpec:
-    fileName: pwChecker.html
-    htmlTasks:
+    siteSpec:
+      fileName: pwChecker.html
+      htmlTasks:
+        - id: 1
+          text: Erstellen Sie ein Texteingabefeld mit der ID 'name'
+          xpathQuery: /html/body//input[@id='name']
+          awaitedTagName: input
+          awaitedTextContent: null
+          attributes:
+            - {key: type, value: text}
+
+        - id: 2
+          text: Erstellen Sie ein Passworteingabefeld mit der ID 'password'. Bei Änderung des Passwortfeldes (onchange) soll die Funktion 'passwordStrength()' aufgerufen werden.
+          xpathQuery: /html/body//input[@id='password']
+          awaitedTagName: input
+          awaitedTextContent: null
+          attributes:
+            - {key: type, value: password}
+            - {key: onchange, value: passwordStrength()}
+
+        - id: 3
+          text: >
+            Erstellen Sie einen Span mit der ID 'errors', der später anzeigen soll, wenn das Passwort zu schwach ist. Zu Anfang
+            soll dieser leer sein.
+          xpathQuery: /html/body//span[@id='errors']
+          awaitedTagName: span
+          awaitedTextContent: null
+          attributes: []
+
+        - id: 4
+          text: Binden Sie die Javascript-Datei 'pwChecker.js' ein.
+          xpathQuery: /html/head//script
+          awaitedTagName: script
+          awaitedTextContent: null
+          attributes:
+            - {key: 'src', value: 'pwChecker.js'}
+
+      jsTasks:
+        - id: 1
+          text: Wenn das Passwort unter 8 Zeichen lang ist, setze den Fehlertext auf 'Zu kurz'
+          preConditions: []
+          action:
+            xpathQuery: /html/body//input[@id='password']
+            actionType: FillOut
+            keysToSend: '123'
+          postConditions:
+            - id: 1
+              xpathQuery: /html/body//span[@id='errors']
+              awaitedTagName: span
+              awaitedTextContent: Zu kurz
+              attributes: []
+
+        - id: 2
+          text: Wenn das Passwort 'passwort' enthält, setze den Fehlertext auf 'Zu einfach'
+          preConditions: []
+          action:
+            xpathQuery: /html/body//input[@id='password']
+            actionType: FillOut
+            keysToSend: meinpasswort
+          postConditions:
+            - id: 1
+              xpathQuery: /html/body//span[@id='errors']
+              awaitedTagName: span
+              awaitedTextContent: Zu einfach
+              attributes: []
+
+        - id: 3
+          text: Für alle anderen Passwörter soll das Fehlerfeld geleert (auf '' gesetzt) werden
+          preConditions: []
+          action:
+            actionType: FillOut
+            xpathQuery: /html/body//input[@id='password']
+            keysToSend: GanzGanzSicherUndGeheim
+          postConditions:
+            - id: 1
+              xpathQuery: /html/body//span[@id='errors']
+              awaitedTagName: span
+              awaitedTextContent: ''
+              attributes: []
+
+    sampleSolutions:
       - id: 1
-        text: Erstellen Sie ein Texteingabefeld mit der ID 'name'
-        xpathQuery: /html/body//input[@id='name']
-        awaitedTagName: input
-        awaitedTextContent: null
-        attributes:
-          - {key: type, value: text}
-
-      - id: 2
-        text: Erstellen Sie ein Passworteingabefeld mit der ID 'password'. Bei Änderung des Passwortfeldes (onchange) soll die Funktion 'passwordStrength()' aufgerufen werden.
-        xpathQuery: /html/body//input[@id='password']
-        awaitedTagName: input
-        awaitedTextContent: null
-        attributes:
-          - {key: type, value: password}
-          - {key: onchange, value: passwordStrength()}
-
-      - id: 3
-        text: >
-          Erstellen Sie einen Span mit der ID 'errors', der später anzeigen soll, wenn das Passwort zu schwach ist. Zu Anfang
-          soll dieser leer sein.
-        xpathQuery: /html/body//span[@id='errors']
-        awaitedTagName: span
-        awaitedTextContent: null
-        attributes: []
-
-      - id: 4
-        text: Binden Sie die Javascript-Datei 'pwChecker.js' ein.
-        xpathQuery: /html/head//script
-        awaitedTagName: script
-        awaitedTextContent: null
-        attributes:
-          - {key: 'src', value: 'pwChecker.js'}
-
-    jsTasks:
-      - id: 1
-        text: Wenn das Passwort unter 8 Zeichen lang ist, setze den Fehlertext auf 'Zu kurz'
-        preConditions: []
-        action:
-          xpathQuery: /html/body//input[@id='password']
-          actionType: FillOut
-          keysToSend: '123'
-        postConditions:
-          - id: 1
-            xpathQuery: /html/body//span[@id='errors']
-            awaitedTagName: span
-            awaitedTextContent: Zu kurz
-            attributes: []
-
-      - id: 2
-        text: Wenn das Passwort 'passwort' enthält, setze den Fehlertext auf 'Zu einfach'
-        preConditions: []
-        action:
-          xpathQuery: /html/body//input[@id='password']
-          actionType: FillOut
-          keysToSend: meinpasswort
-        postConditions:
-          - id: 1
-            xpathQuery: /html/body//span[@id='errors']
-            awaitedTagName: span
-            awaitedTextContent: Zu einfach
-            attributes: []
-
-      - id: 3
-        text: Für alle anderen Passwörter soll das Fehlerfeld geleert (auf '' gesetzt) werden
-        preConditions: []
-        action:
-          actionType: FillOut
-          xpathQuery: /html/body//input[@id='password']
-          keysToSend: GanzGanzSicherUndGeheim
-        postConditions:
-          - id: 1
-            xpathQuery: /html/body//span[@id='errors']
-            awaitedTagName: span
-            awaitedTextContent: ''
-            attributes: []
-
-  sampleSolutions:
-    - id: 1
-      files:
-        - name: pwChecker.html
-          resourcePath: web/2-js_basics/2-branchesStrings/branchesStringsSolution.html
-          fileType: htmlmixed
-          editable: false
-        - name: pwChecker.js
-          resourcePath: web/2-js_basics/2-branchesStrings/branchesStringsSolution.js
-          fileType: javascript
-          editable: false
+        files:
+          - name: pwChecker.html
+            resourcePath: web/2-js_basics/2-branchesStrings/branchesStringsSolution.html
+            fileType: htmlmixed
+            editable: false
+          - name: pwChecker.js
+            resourcePath: web/2-js_basics/2-branchesStrings/branchesStringsSolution.js
+            fileType: javascript
+            editable: false
 
 - id: 3
   collectionId: 2
@@ -267,115 +269,115 @@
   text: Erstellen Sie ein einfaches Formular zur Berechnung der Fakultät einer Zahl n (alle Zahlen von 1 bis n multipliziert).
   state: APPROVED
 
+  content:
+    files:
+      - name: factorial.html
+        resourcePath: web/2-js_basics/3-loops/factorial.html
+        fileType: htmlmixed
+        editable: true
+      - name: factorial.js
+        resourcePath: web/2-js_basics/3-loops/factorial.js
+        fileType: javascript
+        editable: true
 
-  files:
-    - name: factorial.html
-      resourcePath: web/2-js_basics/3-loops/factorial.html
-      fileType: htmlmixed
-      editable: true
-    - name: factorial.js
-      resourcePath: web/2-js_basics/3-loops/factorial.js
-      fileType: javascript
-      editable: true
+    htmlText: Erstellen Sie zunächst den Rumpf der Seite in HTML.
+    jsText: >
+      Implementieren Sie nun die Funktion <code>fakultaet()</code>, die bei Änderung des Felds aufgerufen wird. Sie soll
+      den Inhalt (value) des Eingabefeldes auslesen, die Fakultät davon berechnen und den Inhalt (textContent) des Elements
+      mit der ID 'result' auf das Ergebnis setzen
 
-  htmlText: Erstellen Sie zunächst den Rumpf der Seite in HTML.
-  jsText: >
-    Implementieren Sie nun die Funktion <code>fakultaet()</code>, die bei Änderung des Felds aufgerufen wird. Sie soll
-    den Inhalt (value) des Eingabefeldes auslesen, die Fakultät davon berechnen und den Inhalt (textContent) des Elements
-    mit der ID 'result' auf das Ergebnis setzen
+    siteSpec:
+      fileName: factorial.html
+      htmlTasks:
+        - id: 1
+          text: Erstellen Sie ein Zahlen-Eingabefeld mit der ID 'number'. Bei Änderung des Feldes (onchange) soll die Funktion 'fakultaet()' aufgerufen werden.
+          xpathQuery: /html/body//input[@id='number']
+          awaitedTagName: input
+          awaitedTextContent: null
+          attributes:
+            - {key: 'type', value: 'number'}
+            - {key: 'onchange', value: 'fakultaet()'}
 
-  siteSpec:
-    fileName: factorial.html
-    htmlTasks:
+        - id: 2
+          text: Erstellen Sie einen Span mit der ID 'result', in dem das Ergebnis der Berechnung stehen soll. Zu Anfang soll dieser leer sein.
+          xpathQuery: /html/body//span[@id='result']
+          awaitedTagName: span
+          awaitedTextContent: null
+          attributes: []
+
+        - id: 3
+          text: Binden Sie die Javascript-Datei 'factorial.js' ein.
+          xpathQuery: /html/head//script
+          awaitedTagName: script
+          awaitedTextContent: null
+          attributes:
+            - {key: 'src', value: 'factorial.js'}
+
+      jsTasks:
+        - id: 1
+          text: Fakultät von 1 muss 1 sein
+          preConditions: []
+          action:
+            actionType: FillOut
+            xpathQuery: /html/body//input[@id='number']
+            keysToSend: '1'
+          postConditions:
+            - id: 1
+              xpathQuery: /html/body//span[@id='result']
+              awaitedTagName: span
+              awaitedTextContent: '1'
+              attributes: []
+
+        - id: 2
+          text: Fakultät von 3 muss 6 sein
+          preConditions: []
+          action:
+            actionType: FillOut
+            xpathQuery: /html/body//input[@id='number']
+            keysToSend: '3'
+          postConditions:
+            - id: 1
+              xpathQuery: /html/body//span[@id='result']
+              awaitedTagName: span
+              awaitedTextContent: '6'
+              attributes: []
+
+        - id: 3
+          text: Fakultät von 6 muss 720 sein
+          preConditions: []
+          action:
+            actionType: FillOut
+            xpathQuery: /html/body//input[@id='number']
+            keysToSend: '6'
+          postConditions:
+            - id: 1
+              xpathQuery: /html/body//span[@id='result']
+              awaitedTagName: span
+              awaitedTextContent: '720'
+              attributes: []
+
+        - id: 4
+          text: Fakultät von 10 muss 3628800 sein
+          preConditions: []
+          action:
+            actionType: FillOut
+            xpathQuery: /html/body//input[@id='number']
+            keysToSend: '10'
+          postConditions:
+            - id: 1
+              xpathQuery: /html/body//span[@id='result']
+              awaitedTagName: span
+              awaitedTextContent: '3628800'
+              attributes: []
+
+    sampleSolutions:
       - id: 1
-        text: Erstellen Sie ein Zahlen-Eingabefeld mit der ID 'number'. Bei Änderung des Feldes (onchange) soll die Funktion 'fakultaet()' aufgerufen werden.
-        xpathQuery: /html/body//input[@id='number']
-        awaitedTagName: input
-        awaitedTextContent: null
-        attributes:
-          - {key: 'type', value: 'number'}
-          - {key: 'onchange', value: 'fakultaet()'}
-
-      - id: 2
-        text: Erstellen Sie einen Span mit der ID 'result', in dem das Ergebnis der Berechnung stehen soll. Zu Anfang soll dieser leer sein.
-        xpathQuery: /html/body//span[@id='result']
-        awaitedTagName: span
-        awaitedTextContent: null
-        attributes: []
-
-      - id: 3
-        text: Binden Sie die Javascript-Datei 'factorial.js' ein.
-        xpathQuery: /html/head//script
-        awaitedTagName: script
-        awaitedTextContent: null
-        attributes:
-          - {key: 'src', value: 'factorial.js'}
-
-    jsTasks:
-      - id: 1
-        text: Fakultät von 1 muss 1 sein
-        preConditions: []
-        action:
-          actionType: FillOut
-          xpathQuery: /html/body//input[@id='number']
-          keysToSend: '1'
-        postConditions:
-          - id: 1
-            xpathQuery: /html/body//span[@id='result']
-            awaitedTagName: span
-            awaitedTextContent: '1'
-            attributes: []
-
-      - id: 2
-        text: Fakultät von 3 muss 6 sein
-        preConditions: []
-        action:
-          actionType: FillOut
-          xpathQuery: /html/body//input[@id='number']
-          keysToSend: '3'
-        postConditions:
-          - id: 1
-            xpathQuery: /html/body//span[@id='result']
-            awaitedTagName: span
-            awaitedTextContent: '6'
-            attributes: []
-
-      - id: 3
-        text: Fakultät von 6 muss 720 sein
-        preConditions: []
-        action:
-          actionType: FillOut
-          xpathQuery: /html/body//input[@id='number']
-          keysToSend: '6'
-        postConditions:
-          - id: 1
-            xpathQuery: /html/body//span[@id='result']
-            awaitedTagName: span
-            awaitedTextContent: '720'
-            attributes: []
-
-      - id: 4
-        text: Fakultät von 10 muss 3628800 sein
-        preConditions: []
-        action:
-          actionType: FillOut
-          xpathQuery: /html/body//input[@id='number']
-          keysToSend: '10'
-        postConditions:
-          - id: 1
-            xpathQuery: /html/body//span[@id='result']
-            awaitedTagName: span
-            awaitedTextContent: '3628800'
-            attributes: []
-
-  sampleSolutions:
-    - id: 1
-      files:
-        - name: factorial.html
-          resourcePath: web/2-js_basics/3-loops/factorialSolution.html
-          fileType: htmlmixed
-          editable: false
-        - name: factorial.js
-          resourcePath: web/2-js_basics/3-loops/factorialSolution.js
-          fileType: javascript
-          editable: false
+        files:
+          - name: factorial.html
+            resourcePath: web/2-js_basics/3-loops/factorialSolution.html
+            fileType: htmlmixed
+            editable: false
+          - name: factorial.js
+            resourcePath: web/2-js_basics/3-loops/factorialSolution.js
+            fileType: javascript
+            editable: false

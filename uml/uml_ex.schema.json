@@ -8,14 +8,22 @@
         {"$ref": "../exercise.schema.json"},
         {
           "properties": {
-            "mappings": {"$ref": "../key_value_object_map.schema.json"},
-            "toIgnore": {"type": "array", "items": {"type": "string"}},
-            "sampleSolutions": {"type": "array", "items": {"$ref": "#/definitions/UmlSampleSolution"}}
+            "content": {"$ref": "#/definitions/UmlExerciseContent"}
           },
-          "required": ["mappings", "toIgnore"],
+          "required": ["content"],
           "additionalProperties": false
         }
       ]
+    },
+    "UmlExerciseContent": {
+      "type": "object",
+      "properties": {
+        "mappings": {"$ref": "../key_value_object_map.schema.json"},
+        "toIgnore": {"type": "array", "items": {"type": "string"}},
+        "sampleSolutions": {"type": "array", "items": {"$ref": "#/definitions/UmlSampleSolution"}}
+      },
+      "required": ["mappings", "toIgnore", "sampleSolutions"],
+      "additionalProperties": false
     },
     "UmlSampleSolution": {
       "type": "object",

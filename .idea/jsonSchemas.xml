@@ -133,7 +133,7 @@
           <value>
             <SchemaInfo>
               <option name="name" value="xml_ex.schema" />
-              <option name="relativePathToSchema" value="xml/xml_ex.schema.json" />
+              <option name="relativePathToSchema" value="xml/xml_ex_content.schema.json" />
               <option name="schemaVersion" value="JSON schema version 7" />
               <option name="patterns">
                 <list>

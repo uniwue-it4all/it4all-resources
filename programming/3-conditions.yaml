@@ -4,122 +4,96 @@
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Lotterie
   author: bje40dc
-  text: >
-    <p>
-    <code>def calculate_lottery_win(pot: float, win_class: int) -> float:</code>
-    </p>
-    <p>
-    Diese Funktion soll den Gewinn in einer fiktiven Lotterie mit den Gewinnstufen 0 bis 5 berechnen. Der Gewinn
-    berechnet sich in Abhängigkeit vom Pot nach folgendem Schlüssel. Bei der Eingabe einer falschen Stufe (negative
-    Zahl, Zahl größer als 5) soll die Gewinnstufe 0 angenommen werden.
-    </p>
-    <ul>
-    <li>
-    0: 0.0% vom Pot
-    </li>
-    <li>
-    1:  0.1% vom Pot
-    </li>
-    <li>
-    2:  0.5% vom Pot
-    </li>
-    <li>
-    3:  2.0% vom Pot
-    </li>
-    <li>
-    4: 12.5% vom Pot
-    </li>
-    <li>
-    5: 50.0% vom Pot
-    </li>
-    </ul>
+  text:
+    relativePath: programming/3-conditions/1-text.html
   state: APPROVED
 
-  functionName: lottery
-  foldername: lottery
-  filename: lottery
-  inputTypes: []
-  outputType: VOID
+  content:
+    functionName: lottery
+    foldername: lottery
+    filename: lottery
+    inputTypes: []
+    outputType: VOID
 
-  unitTestPart:
+    unitTestPart:
 
-    unitTestType: Normal
+      unitTestType: Normal
 
-    unitTestsDescription: >
+      unitTestsDescription: >
 
-    unitTestFiles:
-      - name: lottery.py
-        resourcePath: programming/3-conditions/1-lottery/lottery_declaration.py
-        fileType: python
-        editable: false
-      - name: test_lottery.py
-        resourcePath: programming/3-conditions/1-lottery/test_lottery_declaration.py
-        fileType: python
-        editable: true
+      unitTestFiles:
+        - name: lottery.py
+          resourcePath: programming/3-conditions/1-lottery/lottery_declaration.py
+          fileType: python
+          editable: false
+        - name: test_lottery.py
+          resourcePath: programming/3-conditions/1-lottery/test_lottery_declaration.py
+          fileType: python
+          editable: true
 
-    unitTestTestConfigs:
-      - id: 0
-        shouldFail: false
-        description: Musterlösung...
+      unitTestTestConfigs:
+        - id: 0
+          shouldFail: false
+          description: Musterlösung...
+        - id: 1
+          shouldFail: true
+          description: Bei Gewinnstufe 0 soll der korrekte Gewinn zurückgegeben werden.
+        - id: 2
+          shouldFail: true
+          description: Bei Gewinnstufe 1 soll der korrekte Gewinn zurückgegeben werden.
+        - id: 3
+          shouldFail: true
+          description: Bei Gewinnstufe 2 soll der korrekte Gewinn zurückgegeben werden.
+        - id: 4
+          shouldFail: true
+          description: Bei Gewinnstufe 3 soll der korrekte Gewinn zurückgegeben werden.
+        - id: 5
+          shouldFail: true
+          description: Bei Gewinnstufe 4 soll der korrekte Gewinn zurückgegeben werden.
+        - id: 6
+          shouldFail: true
+          description: Bei Gewinnstufe 5 soll der korrekte Gewinn zurückgegeben werden.
+        - id: 7
+          shouldFail: true
+          description: Bei einer Gewinnststufe kleiner 0 oder größer 5 soll die Gewinnstufe 0 angenommen werden.
+      testFileName: test_lottery.py
+      sampleSolFileNames: [test_lottery.py]
+
+    implementationPart:
+      base: |
+        def calculate_lottery_win(pot: float, win_class: int) -> float:
+            pass
+      files:
+        - name: test_lottery.py
+          resourcePath: programming/3-conditions/1-lottery/test_lottery.py
+          fileType: python
+          editable: false
+        - name: lottery.py
+          resourcePath: programming/3-conditions/1-lottery/lottery_declaration.py
+          fileType: python
+          editable: true
+      implFileName: lottery.py
+      sampleSolFileNames: [lottery.py]
+
+    sampleSolutions:
       - id: 1
-        shouldFail: true
-        description: Bei Gewinnstufe 0 soll der korrekte Gewinn zurückgegeben werden.
-      - id: 2
-        shouldFail: true
-        description: Bei Gewinnstufe 1 soll der korrekte Gewinn zurückgegeben werden.
-      - id: 3
-        shouldFail: true
-        description: Bei Gewinnstufe 2 soll der korrekte Gewinn zurückgegeben werden.
-      - id: 4
-        shouldFail: true
-        description: Bei Gewinnstufe 3 soll der korrekte Gewinn zurückgegeben werden.
-      - id: 5
-        shouldFail: true
-        description: Bei Gewinnstufe 4 soll der korrekte Gewinn zurückgegeben werden.
-      - id: 6
-        shouldFail: true
-        description: Bei Gewinnstufe 5 soll der korrekte Gewinn zurückgegeben werden.
-      - id: 7
-        shouldFail: true
-        description: Bei einer Gewinnststufe kleiner 0 oder größer 5 soll die Gewinnstufe 0 angenommen werden.
-    testFileName: test_lottery.py
-    sampleSolFileNames: [test_lottery.py]
+        sample:
+          files:
+            - name: lottery.py
+              resourcePath: programming/3-conditions/1-lottery/lottery.py
+              fileType: python
+              editable: false
+            - name: test_lottery.py
+              resourcePath: programming/3-conditions/1-lottery/test_lottery.py
+              fileType: python
+              editable: false
+          testData: []
 
-  implementationPart:
-    base: |
-      def calculate_lottery_win(pot: float, win_class: int) -> float:
-          pass
-    files:
-      - name: test_lottery.py
-        resourcePath: programming/3-conditions/1-lottery/test_lottery.py
-        fileType: python
-        editable: false
-      - name: lottery.py
-        resourcePath: programming/3-conditions/1-lottery/lottery_declaration.py
-        fileType: python
-        editable: true
-    implFileName: lottery.py
-    sampleSolFileNames: [lottery.py]
+    sampleTestData: []
 
-  sampleSolutions:
-    - id: 1
-      sample:
-        files:
-          - name: lottery.py
-            resourcePath: programming/3-conditions/1-lottery/lottery.py
-            fileType: python
-            editable: false
-          - name: test_lottery.py
-            resourcePath: programming/3-conditions/1-lottery/test_lottery.py
-            fileType: python
-            editable: false
-        testData: []
-
-  sampleTestData: []
-
-  tags:
-    - Conditions
-    - Math
+    tags:
+      - Conditions
+      - Math
 
 - id: 2
   collectionId: 3
@@ -127,100 +101,93 @@
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Rabatt
   author: bje40dc
-  text: >
-    <p>
-    <code>def calculate_discount(has_dog: bool, has_cat: bool, has_hamster: bool) -> int:</code>
-    </p>
-    <p>
-    Eine neue Tierhandlung möchte zum Kundengewinn Rabatte gewähren. Dazu werden die Kunden gefragt, welche Tiere sie
-    besitzen. Sollte der Kunde einen Hund oder eine Katze haben, bekommt er 5% Rabatt. Hat er einen Hund und eine
-    Katze, bekommt er 8% Rabatt. Hat er einen Hamster, bekommt er - unabhängig von anderen Rabatten - 2% zusätzlich.
-    Implementieren Sie die Funktion, so dass sie für die Kunden die entsprechenden Rabatte berechnet!
-    </p>
+  text:
+    relativePath: programming/3-conditions/2-text.html
   state: APPROVED
 
-  functionName: discount
-  foldername: discount
-  filename: discount
-  inputTypes: []
-  outputType: VOID
+  content:
+    functionName: discount
+    foldername: discount
+    filename: discount
+    inputTypes: []
+    outputType: VOID
 
-  unitTestPart:
+    unitTestPart:
 
-    unitTestType: Normal
+      unitTestType: Normal
 
-    unitTestsDescription: >
+      unitTestsDescription: >
 
-    unitTestFiles:
-      - name: discount.py
-        resourcePath: programming/3-conditions/2-discount/discount_declaration.py
-        fileType: python
-        editable: false
-      - name: test_discount.py
-        resourcePath: programming/3-conditions/2-discount/test_discount_declaration.py
-        fileType: python
-        editable: true
+      unitTestFiles:
+        - name: discount.py
+          resourcePath: programming/3-conditions/2-discount/discount_declaration.py
+          fileType: python
+          editable: false
+        - name: test_discount.py
+          resourcePath: programming/3-conditions/2-discount/test_discount_declaration.py
+          fileType: python
+          editable: true
 
-    unitTestTestConfigs:
-      - id: 0
-        shouldFail: false
-        description: Musterlösung...
+      unitTestTestConfigs:
+        - id: 0
+          shouldFail: false
+          description: Musterlösung...
+        - id: 1
+          shouldFail: true
+          description: Falls der Kunde einen Hund besitzt, soll der korrekte Rabatt gewährt werden.
+        - id: 2
+          shouldFail: true
+          description: Falls der Kunde eine Katze besitzt, soll der korrekte Rabatt gewährt werden.
+        - id: 3
+          shouldFail: true
+          description: Falls der Kunde einen Hund und eine Katze besitzt, soll der korrekte Rabatt gewährt werden.
+        - id: 4
+          shouldFail: true
+          description: Falls der Kunde keinen Hund und keine Katze besitzt, soll der korrekte Rabatt gewährt werden.
+        - id: 5
+          shouldFail: true
+          description: Falls der Kunde einen Hamster besitzt, soll der korrekte Rabatt gewährt werden.
+        - id: 6
+          shouldFail: true
+          description: Falls der Kunde keinen Hamster besitzt, soll der korrekte Rabatt gewährt werden.
+      testFileName: test_discount.py
+      sampleSolFileNames: [test_discount.py]
+
+    implementationPart:
+      base: |
+        def calculate_discount(has_dog: bool, has_cat: bool, has_hamster: bool) -> int:
+            pass
+      files:
+        - name: test_discount.py
+          resourcePath: programming/3-conditions/2-discount/test_discount.py
+          fileType: python
+          editable: false
+        - name: discount.py
+          resourcePath: programming/3-conditions/2-discount/discount_declaration.py
+          fileType: python
+          editable: true
+      implFileName: discount.py
+      sampleSolFileNames: [discount.py]
+
+    sampleSolutions:
       - id: 1
-        shouldFail: true
-        description: Falls der Kunde einen Hund besitzt, soll der korrekte Rabatt gewährt werden.
-      - id: 2
-        shouldFail: true
-        description: Falls der Kunde eine Katze besitzt, soll der korrekte Rabatt gewährt werden.
-      - id: 3
-        shouldFail: true
-        description: Falls der Kunde einen Hund und eine Katze besitzt, soll der korrekte Rabatt gewährt werden.
-      - id: 4
-        shouldFail: true
-        description: Falls der Kunde keinen Hund und keine Katze besitzt, soll der korrekte Rabatt gewährt werden.
-      - id: 5
-        shouldFail: true
-        description: Falls der Kunde einen Hamster besitzt, soll der korrekte Rabatt gewährt werden.
-      - id: 6
-        shouldFail: true
-        description: Falls der Kunde keinen Hamster besitzt, soll der korrekte Rabatt gewährt werden.
-    testFileName: test_discount.py
-    sampleSolFileNames: [test_discount.py]
+        sample:
+          files:
+            - name: discount.py
+              resourcePath: programming/3-conditions/2-discount/discount.py
+              fileType: python
+              editable: false
+            - name: test_discount.py
+              resourcePath: programming/3-conditions/2-discount/test_discount.py
+              fileType: python
+              editable: false
+          testData: []
 
-  implementationPart:
-    base: |
-      def calculate_discount(has_dog: bool, has_cat: bool, has_hamster: bool) -> int:
-          pass
-    files:
-      - name: test_discount.py
-        resourcePath: programming/3-conditions/2-discount/test_discount.py
-        fileType: python
-        editable: false
-      - name: discount.py
-        resourcePath: programming/3-conditions/2-discount/discount_declaration.py
-        fileType: python
-        editable: true
-    implFileName: discount.py
-    sampleSolFileNames: [discount.py]
+    sampleTestData: []
 
-  sampleSolutions:
-    - id: 1
-      sample:
-        files:
-          - name: discount.py
-            resourcePath: programming/3-conditions/2-discount/discount.py
-            fileType: python
-            editable: false
-          - name: test_discount.py
-            resourcePath: programming/3-conditions/2-discount/test_discount.py
-            fileType: python
-            editable: false
-        testData: []
-
-  sampleTestData: []
-
-  tags:
-    - Conditions
-    - Math
+    tags:
+      - Conditions
+      - Math
 
 - id: 3
   collectionId: 3
@@ -228,116 +195,93 @@
   semanticVersion: {major: 1, minor: 0, patch: 0}
   title: Grußformel
   author: bje40dc
-  text: >
-    <p>
-    <code>def greet(hour: int) -> str:</code>
-    </p>
-    <p>
-    Diese Funktion soll eine zur Uhrzeit passenden Grußformel zurückgeben. Falls eine ungültige Zeit (kleiner als 0,
-    größer als 24) angegeben wird soll <code>I do not know this time.</code> zurückgegeben werden. Zu folgenden Zeiten (Start
-    einschließlich, Ende ausschließlich) sollen folgende Strings zurückgegeben werden:
-    </p>
-    <ul>
-    <li>
-    0 bis 6: <code>Good night</code>
-    </li>
-    <li>
-    6 bis 12: <code>Good morning</code>
-    </li>
-    <li>
-    12 bis 18: <code>Good afternoon</code>
-    </li>
-    <li>
-    18 bis 21: <code>Good evening</code>
-    </li>
-    <li>
-    21 bis 24: <code>Good night</code>
-    </li>
-    </ul>
+  text:
+    relativePath: programming/3-conditions/3-text.html
   state: APPROVED
 
-  functionName: greet
-  foldername: greet
-  filename: greet
-  inputTypes: []
-  outputType: VOID
+  content:
+    functionName: greet
+    foldername: greet
+    filename: greet
+    inputTypes: []
+    outputType: VOID
 
-  unitTestPart:
+    unitTestPart:
 
-    unitTestType: Normal
+      unitTestType: Normal
 
-    unitTestsDescription: >
+      unitTestsDescription: >
 
-    unitTestFiles:
-      - name: greet.py
-        resourcePath: programming/3-conditions/3-greet/greet_declaration.py
-        fileType: python
-        editable: false
-      - name: test_greet.py
-        resourcePath: programming/3-conditions/3-greet/test_greet_declaration.py
-        fileType: python
-        editable: true
+      unitTestFiles:
+        - name: greet.py
+          resourcePath: programming/3-conditions/3-greet/greet_declaration.py
+          fileType: python
+          editable: false
+        - name: test_greet.py
+          resourcePath: programming/3-conditions/3-greet/test_greet_declaration.py
+          fileType: python
+          editable: true
 
-    unitTestTestConfigs:
-      - id: 0
-        shouldFail: false
-        description: Musterlösung...
+      unitTestTestConfigs:
+        - id: 0
+          shouldFail: false
+          description: Musterlösung...
+        - id: 1
+          shouldFail: true
+          description: Für die Zeit von 0 bis 6 Uhr soll die korrekte Grußformel zurückgegeben werden.
+        - id: 2
+          shouldFail: true
+          description: Für die Zeit von 6 bis 12 Uhr soll die korrekte Grußformel zurückgegeben werden.
+        - id: 3
+          shouldFail: true
+          description: Für die Zeit von 12 bis 18 Uhr soll die korrekte Grußformel zurückgegeben werden.
+        - id: 4
+          shouldFail: true
+          description: Für die Zeit von 18 bis 21 Uhr soll die korrekte Grußformel zurückgegeben werden.
+        - id: 5
+          shouldFail: true
+          description: Für die Zeit von 21 bis 24 Uhr soll die korrekte Grußformel zurückgegeben werden.
+        - id: 6
+          shouldFail: true
+          description: Für eine ungültige Zeit kleiner als 0 soll 'I do not know this time' zurückgegeben werden.
+        - id: 7
+          shouldFail: true
+          description: Für eine ungültige Zeit größer als 24 soll 'I do not know this time' zurückgegeben werden.
+      testFileName: test_greet.py
+      sampleSolFileNames: [test_greet.py]
+
+    implementationPart:
+      base: |
+        def greet(hour: int) -> str:
+            pass
+      files:
+        - name: test_greet.py
+          resourcePath: programming/3-conditions/3-greet/test_greet.py
+          fileType: python
+          editable: false
+        - name: greet.py
+          resourcePath: programming/3-conditions/3-greet/greet_declaration.py
+          fileType: python
+          editable: true
+      implFileName: greet.py
+      sampleSolFileNames: [greet.py]
+
+    sampleSolutions:
       - id: 1
-        shouldFail: true
-        description: Für die Zeit von 0 bis 6 Uhr soll die korrekte Grußformel zurückgegeben werden.
-      - id: 2
-        shouldFail: true
-        description: Für die Zeit von 6 bis 12 Uhr soll die korrekte Grußformel zurückgegeben werden.
-      - id: 3
-        shouldFail: true
-        description: Für die Zeit von 12 bis 18 Uhr soll die korrekte Grußformel zurückgegeben werden.
-      - id: 4
-        shouldFail: true
-        description: Für die Zeit von 18 bis 21 Uhr soll die korrekte Grußformel zurückgegeben werden.
-      - id: 5
-        shouldFail: true
-        description: Für die Zeit von 21 bis 24 Uhr soll die korrekte Grußformel zurückgegeben werden.
-      - id: 6
-        shouldFail: true
-        description: Für eine ungültige Zeit kleiner als 0 soll 'I do not know this time' zurückgegeben werden.
-      - id: 7
-        shouldFail: true
-        description: Für eine ungültige Zeit größer als 24 soll 'I do not know this time' zurückgegeben werden.
-    testFileName: test_greet.py
-    sampleSolFileNames: [test_greet.py]
+        sample:
+          files:
+            - name: greet.py
+              resourcePath: programming/3-conditions/3-greet/greet.py
+              fileType: python
+              editable: false
+            - name: test_greet.py
+              resourcePath: programming/3-conditions/3-greet/test_greet.py
+              fileType: python
+              editable: false
+          testData: []
 
-  implementationPart:
-    base: |
-      def greet(hour: int) -> str:
-          pass
-    files:
-      - name: test_greet.py
-        resourcePath: programming/3-conditions/3-greet/test_greet.py
-        fileType: python
-        editable: false
-      - name: greet.py
-        resourcePath: programming/3-conditions/3-greet/greet_declaration.py
-        fileType: python
-        editable: true
-    implFileName: greet.py
-    sampleSolFileNames: [greet.py]
+    sampleTestData: []
 
-  sampleSolutions:
-    - id: 1
-      sample:
-        files:
-          - name: greet.py
-            resourcePath: programming/3-conditions/3-greet/greet.py
-            fileType: python
-            editable: false
-          - name: test_greet.py
-            resourcePath: programming/3-conditions/3-greet/test_greet.py
-            fileType: python
-            editable: false
-        testData: []
-
-  sampleTestData: []
-
-  tags:
-    - Conditions
-    - Strings
+    tags:
+      - Conditions
+      - Strings

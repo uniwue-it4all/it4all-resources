@@ -8,24 +8,40 @@
         {"$ref": "../exercise.schema.json"},
         {
           "properties": {
-            "htmlText": {"type": "string"},
-            "jsText": {"type": "string"},
-            "siteSpec": {"$ref": "#/definitions/SiteSpec"},
-            "files": {
-              "type": "array",
-              "items": {"$ref": "../exercise_file.schema.json"},
-              "additionalItems": false
-            },
-            "sampleSolutions": {
-              "type": "array",
-              "items": {"$ref": "#/definitions/WebSample"},
-              "additionalItems": false
-            }
-          },
-          "required": ["files"],
-          "additionalProperties": false
+            "content": {"$ref": "#/definitions/WebExerciseContent"}
+          }
         }
       ]
+    },
+    "WebExerciseContent": {
+      "type": "object",
+      "properties": {
+        "htmlText": {
+          "anyOf": [
+            {"type": "string"},
+            {"type": "null"}
+          ]
+        },
+        "jsText": {
+          "anyOf": [
+            {"type": "string"},
+            {"type": "null"}
+          ]
+        },
+        "siteSpec": {"$ref": "#/definitions/SiteSpec"},
+        "files": {
+          "type": "array",
+          "items": {"$ref": "../exercise_file.schema.json"},
+          "additionalItems": false
+        },
+        "sampleSolutions": {
+          "type": "array",
+          "items": {"$ref": "#/definitions/WebSample"},
+          "additionalItems": false
+        }
+      },
+      "required": ["htmlText", "jsText", "siteSpec", "files", "sampleSolutions"],
+      "additionalProperties": false
     },
     "SiteSpec": {
       "type": "object",

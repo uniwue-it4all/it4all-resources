@@ -9,33 +9,34 @@
     und zum "Zeichnen" die Markierungsfunktions des Roboters! Ihr Roboter startet im Feld (0, 0).
   state: APPROVED
 
-  fieldWidth: 8
-  fieldHeight: 10
-  isMultiplayer: false
+  content:
+    fieldWidth: 8
+    fieldHeight: 10
+    isMultiplayer: false
 
-  inputTypes:
-    - {id: 1, name: width, type: int}
-    - {id: 2, name: height, type: int}
+    inputTypes:
+      - {id: 1, name: width, type: int}
+      - {id: 2, name: height, type: int}
 
-  sampleSolutions:
-    - language: PYTHON_3
-      id: 1
-      sample: |
-        for h in range(height - 1):
-            self.mark()
-            self.go_up()
+    sampleSolutions:
+      - language: PYTHON_3
+        id: 1
+        sample: |
+          for h in range(height - 1):
+              self.mark()
+              self.go_up()
 
-        for w in range(width - 1):
-            self.mark()
-            self.go_right()
+          for w in range(width - 1):
+              self.mark()
+              self.go_right()
 
-        for h in range(height - 1):
-            self.mark()
-            self.go_down()
+          for h in range(height - 1):
+              self.mark()
+              self.go_down()
 
-        for w in range(width - 1):
-            self.mark()
-            self.go_left()
+          for w in range(width - 1):
+              self.mark()
+              self.go_left()
 
 - id: 2
   collectionId: 1
@@ -48,21 +49,22 @@
     und zum "Zeichnen" die Markierungsfunktions des Roboters! Ihr Roboter startet im Feld (0, 0). Die Position des Kaninchens wird übergeben.
   state: CREATED
 
-  fieldWidth: 8
-  fieldHeight: 10
-  isMultiplayer: false
+  content:
+    fieldWidth: 8
+    fieldHeight: 10
+    isMultiplayer: false
 
-  inputTypes:
-    - {id: 1, name: rabbit_x, type: int}
-    - {id: 2, name: rabbit_y, type: int}
+    inputTypes:
+      - {id: 1, name: rabbit_x, type: int}
+      - {id: 2, name: rabbit_y, type: int}
 
-  sampleSolutions:
-    - language: PYTHON_3
-      sample: |
-        for h in range(rabbit_x - 1):
-          self.go_up()
+    sampleSolutions:
+      - language: PYTHON_3
+        sample: |
+          for h in range(rabbit_x - 1):
+            self.go_up()
 
-        for w in range(rabbit_y - 1):
-          self.go_right()
+          for w in range(rabbit_y - 1):
+            self.go_right()
 
-        self.mark()
+          self.mark()

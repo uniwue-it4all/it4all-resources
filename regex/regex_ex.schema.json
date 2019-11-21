@@ -10,16 +10,24 @@
         {"$ref": "../exercise.schema.json"},
         {
           "properties": {
-            "maxPoints": {"type": "number"},
-            "correctionType": {"type": "string", "enum": ["MATCHING", "EXTRACTION"]},
-            "sampleSolutions": {"type": "array", "items": {"$ref": "#/definitions/RegexSample"}},
-            "matchTestData": {"type": "array", "items": {"$ref": "#/definitions/RegexMatchTestData"}},
-            "extractionTestData": {"type": "array", "items": {"$ref": "#/definitions/RegexExtractionTestData"}}
+            "content": {"$ref": "#/definitions/RegexExerciseContent"}
           },
-          "required": ["maxPoints", "correctionType", "matchTestData", "extractionTestData"],
+          "required": ["content"],
           "additionalProperties": false
         }
       ]
+    },
+    "RegexExerciseContent": {
+      "type": "object",
+      "properties": {
+        "maxPoints": {"type": "number"},
+        "correctionType": {"type": "string", "enum": ["MATCHING", "EXTRACTION"]},
+        "sampleSolutions": {"type": "array", "items": {"$ref": "#/definitions/RegexSample"}},
+        "matchTestData": {"type": "array", "items": {"$ref": "#/definitions/RegexMatchTestData"}},
+        "extractionTestData": {"type": "array", "items": {"$ref": "#/definitions/RegexExtractionTestData"}}
+      },
+      "required": ["maxPoints", "correctionType", "matchTestData", "extractionTestData", "sampleSolutions"],
+      "additionalProperties": false
     },
     "RegexSample": {
       "type": "object",

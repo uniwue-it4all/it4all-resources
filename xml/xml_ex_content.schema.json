@@ -8,14 +8,22 @@
         {"$ref": "../exercise.schema.json"},
         {
           "properties": {
-            "grammarDescription": {"$ref": "../long_text.schema.json"},
-            "rootNode": {"type": "string"},
-            "sampleSolutions": {"type": "array", "items": {"$ref": "#/definitions/XmlSample"}}
+            "content": {"$ref": "#/definitions/XmlExerciseContent"}
           },
-          "required": ["grammarDescription", "rootNode"],
+          "required": ["content"],
           "additionalProperties": false
         }
       ]
+    },
+    "XmlExerciseContent": {
+      "type": "object",
+      "properties": {
+        "grammarDescription": {"$ref": "../long_text.schema.json"},
+        "rootNode": {"type": "string"},
+        "sampleSolutions": {"type": "array", "items": {"$ref": "#/definitions/XmlSample"}}
+      },
+      "required": ["grammarDescription", "rootNode", "sampleSolutions"],
+      "additionalProperties": false
     },
     "XmlSample": {
       "type": "object",

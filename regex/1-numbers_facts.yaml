@@ -7,24 +7,26 @@
   text: >
     Schreiben Sie einen regulären Ausdruck, der (deutsche) Postleitzahlen überprüfen kann. Diese bestehen aus 5 Ziffern.
   state: APPROVED
-  maxPoints: 1
-  correctionType: MATCHING
 
-  matchTestData:
-    - {id: 1, data: '97070', isIncluded: true}
-    - {id: 2, data: '90210', isIncluded: true}
-    - {id: 3, data: '10115', isIncluded: true}
-    - {id: 4, data: '65432', isIncluded: true}
-    - {id: 5, data: '01234', isIncluded: true}
-    - {id: 6, data: '8911', isIncluded: false}
-    - {id: 7, data: '654321', isIncluded: false}
+  content:
+    maxPoints: 1
+    correctionType: MATCHING
 
-  extractionTestData: []
+    matchTestData:
+      - {id: 1, data: '97070', isIncluded: true}
+      - {id: 2, data: '90210', isIncluded: true}
+      - {id: 3, data: '10115', isIncluded: true}
+      - {id: 4, data: '65432', isIncluded: true}
+      - {id: 5, data: '01234', isIncluded: true}
+      - {id: 6, data: '8911', isIncluded: false}
+      - {id: 7, data: '654321', isIncluded: false}
 
-  sampleSolutions:
-    - {id: 1, sample: '\d{5}'}
-    - {id: 2, sample: '[0-9]{5}'}
-    - {id: 3, sample: '\d\d\d\d\d'}
+    extractionTestData: []
+
+    sampleSolutions:
+      - {id: 1, sample: '\d{5}'}
+      - {id: 2, sample: '[0-9]{5}'}
+      - {id: 3, sample: '\d\d\d\d\d'}
 
 - id: 2
   collectionId: 1
@@ -38,29 +40,31 @@
     verwendet werden. Eine Validierung auf kalendarische Korrektheit (zum Beispiel, dass der 30.02.2019 oder der
     99.17.3005 nicht existieren) ist nicht erforderlich. Außerdem sind führende Nullen erlaubt.
   state: APPROVED
-  maxPoints: 2
-  correctionType: MATCHING
 
-  matchTestData:
-    - {id: 1, data: '12.01.1999', isIncluded: true}
-    - {id: 2, data: '99.17.3006', isIncluded: true}
-    - {id: 3, data: '33.11.1931', isIncluded: true}
-    - {id: 4, data: '01.01.0700', isIncluded: true}
-    - {id: 5, data: '1.1.1999', isIncluded: false}
-    - {id: 6, data: '01.01.700', isIncluded: false}
-    - {id: 7, data: '3.12.2011', isIncluded: false}
-    - {id: 8, data: '29.3.2018', isIncluded: false}
-    - {id: 9, data: '12-01-1999', isIncluded: false}
-    - {id: 10, data: '1.1.1', isIncluded: false}
-    - {id: 11, data: '12.10', isIncluded: false}
-    - {id: 12, data: '11.2.',isIncluded: false}
+  content:
+    maxPoints: 2
+    correctionType: MATCHING
 
-  extractionTestData: []
+    matchTestData:
+      - {id: 1, data: '12.01.1999', isIncluded: true}
+      - {id: 2, data: '99.17.3006', isIncluded: true}
+      - {id: 3, data: '33.11.1931', isIncluded: true}
+      - {id: 4, data: '01.01.0700', isIncluded: true}
+      - {id: 5, data: '1.1.1999', isIncluded: false}
+      - {id: 6, data: '01.01.700', isIncluded: false}
+      - {id: 7, data: '3.12.2011', isIncluded: false}
+      - {id: 8, data: '29.3.2018', isIncluded: false}
+      - {id: 9, data: '12-01-1999', isIncluded: false}
+      - {id: 10, data: '1.1.1', isIncluded: false}
+      - {id: 11, data: '12.10', isIncluded: false}
+      - {id: 12, data: '11.2.',isIncluded: false}
 
-  sampleSolutions:
-    - {id: 1, sample: '\d\d\.\d\d\.\d\d\d\d'}
-    - {id: 2, sample: '\d{2}\.\d{2}\.\d{4}'}
-    - {id: 3, sample: '[0-9]{2}\.[0-9]{2}\.[0-9]{4}'}
+    extractionTestData: []
+
+    sampleSolutions:
+      - {id: 1, sample: '\d\d\.\d\d\.\d\d\d\d'}
+      - {id: 2, sample: '\d{2}\.\d{2}\.\d{4}'}
+      - {id: 3, sample: '[0-9]{2}\.[0-9]{2}\.[0-9]{4}'}
 
 - id: 3
   collectionId: 1
@@ -74,29 +78,31 @@
     Trennzeichen soll jeweils ein Punkt verwendet werden. Eine Validierung auf kalendarische Korrektheit ist nicht
     erforderlich. Führende Nullen sind erlaubt.
   state: APPROVED
-  maxPoints: 3
-  correctionType: MATCHING
 
-  matchTestData:
-    - {id: 1, data: '12.01.1999', isIncluded: true}
-    - {id: 2, data: '99.17.3006', isIncluded: true}
-    - {id: 3, data: '33.11.1931', isIncluded: true}
-    - {id: 4, data: '1.1.1999', isIncluded: true}
-    - {id: 5, data: '01.01.0700', isIncluded: true}
-    - {id: 6, data: '01.01.700', isIncluded: true}
-    - {id: 7, data: '3.12.2011', isIncluded: true}
-    - {id: 8, data: '29.3.2018', isIncluded: true}
-    - {id: 9, data: '1.1.1',isIncluded: false}
-    - {id: 10, data: '12.10', isIncluded: false}
-    - {id: 11, data: '11.2.', isIncluded: false}
-    - {id: 12, data: '12-01-1999', isIncluded: false}
+  content:
+    maxPoints: 3
+    correctionType: MATCHING
 
-  extractionTestData: []
+    matchTestData:
+      - {id: 1, data: '12.01.1999', isIncluded: true}
+      - {id: 2, data: '99.17.3006', isIncluded: true}
+      - {id: 3, data: '33.11.1931', isIncluded: true}
+      - {id: 4, data: '1.1.1999', isIncluded: true}
+      - {id: 5, data: '01.01.0700', isIncluded: true}
+      - {id: 6, data: '01.01.700', isIncluded: true}
+      - {id: 7, data: '3.12.2011', isIncluded: true}
+      - {id: 8, data: '29.3.2018', isIncluded: true}
+      - {id: 9, data: '1.1.1',isIncluded: false}
+      - {id: 10, data: '12.10', isIncluded: false}
+      - {id: 11, data: '11.2.', isIncluded: false}
+      - {id: 12, data: '12-01-1999', isIncluded: false}
 
-  sampleSolutions:
-    - {id: 1, sample: '\d\d?\.\d\d?\.\d\d\d?\d?'}
-    - {id: 2, sample: '\d{1,2}\.\d{1,2}\.\d{2,4}'}
-    - {id: 3, sample: '[0-9]{1,2}\.[0-9]{1,2}\.[0-9]{2,4}'}
+    extractionTestData: []
+
+    sampleSolutions:
+      - {id: 1, sample: '\d\d?\.\d\d?\.\d\d\d?\d?'}
+      - {id: 2, sample: '\d{1,2}\.\d{1,2}\.\d{2,4}'}
+      - {id: 3, sample: '[0-9]{1,2}\.[0-9]{1,2}\.[0-9]{2,4}'}
 
 - id: 4
   collectionId: 1
@@ -110,25 +116,27 @@
     Punkt beziehungsweise im Fall der Revisions- und Buildnummer mit einem Minus getrennt werden. Jede der Nummern kann
     mehrstellig sein und führende Nullen besitzen.
   state: APPROVED
-  maxPoints: 3
-  correctionType: MATCHING
 
-  matchTestData:
-    - {id: 1, data: '2.3.5-0041', isIncluded: true}
-    - {id: 2, data: '0.0.1', isIncluded: true}
-    - {id: 3, data: '1.3.3-7', isIncluded: true}
-    - {id: 4, data: '1.12.2-21', isIncluded: true}
-    - {id: 5, data: '2.05.7-11', isIncluded: true}
-    - {id: 6, data: '1.0', isIncluded: false}
-    - {id: 7, data: '1..10', isIncluded: false}
-    - {id: 8, data: '1..10', isIncluded: false}
-    - {id: 9, data: '1.0-3', isIncluded: false}
+  content:
+    maxPoints: 3
+    correctionType: MATCHING
 
-  extractionTestData: []
+    matchTestData:
+      - {id: 1, data: '2.3.5-0041', isIncluded: true}
+      - {id: 2, data: '0.0.1', isIncluded: true}
+      - {id: 3, data: '1.3.3-7', isIncluded: true}
+      - {id: 4, data: '1.12.2-21', isIncluded: true}
+      - {id: 5, data: '2.05.7-11', isIncluded: true}
+      - {id: 6, data: '1.0', isIncluded: false}
+      - {id: 7, data: '1..10', isIncluded: false}
+      - {id: 8, data: '1..10', isIncluded: false}
+      - {id: 9, data: '1.0-3', isIncluded: false}
 
-  sampleSolutions:
-    - {id: 1, sample: '\d+\.\d+\.\d+(-\d+)?'}
-    - {id: 2, sample: '[0-9]+\.[0-9]+\.[0-9]+(-[0-9]+)?'}
+    extractionTestData: []
+
+    sampleSolutions:
+      - {id: 1, sample: '\d+\.\d+\.\d+(-\d+)?'}
+      - {id: 2, sample: '[0-9]+\.[0-9]+\.[0-9]+(-[0-9]+)?'}
 
 - id: 5
   collectionId: 1
@@ -143,18 +151,20 @@
     Zeichen, die in einer Mailadresse vorkommen dürfen, auf alle Klein- und Großbuchstaben, alle Ziffern, Minus,
     Punkt und Unterstrich (_). Jeder Teil besteht aus mindestens einem dieser Zeichen.
   state: APPROVED
-  maxPoints: 4
-  correctionType: MATCHING
 
-  matchTestData:
-    - {id: 1, data: 'james.bond@mi5.uk', isIncluded: true}
-    - {id: 2, data: 'jason_bourne@cia.gov', isIncluded: true}
-    - {id: 3, data: 'jack.bauer@24.com', isIncluded: true}
-    - {id: 4, data: 'xyz@localhost', isIncluded: false}
-    - {id: 5, data: '@web.de', isIncluded: false}
-    - {id: 6, data: 'test.net', isIncluded: false}
+  content:
+    maxPoints: 4
+    correctionType: MATCHING
 
-  extractionTestData: []
+    matchTestData:
+      - {id: 1, data: 'james.bond@mi5.uk', isIncluded: true}
+      - {id: 2, data: 'jason_bourne@cia.gov', isIncluded: true}
+      - {id: 3, data: 'jack.bauer@24.com', isIncluded: true}
+      - {id: 4, data: 'xyz@localhost', isIncluded: false}
+      - {id: 5, data: '@web.de', isIncluded: false}
+      - {id: 6, data: 'test.net', isIncluded: false}
 
-  sampleSolutions:
-    - {id: 1, sample: '([a-z]|[A-Z]|[0-9]|_|-|\.)+@([a-z]|[A-Z]|[0-9]|_|-)+\.([a-z]|[A-Z]|[0-9]|_|-|\.)+'}
+    extractionTestData: []
+
+    sampleSolutions:
+      - {id: 1, sample: '([a-z]|[A-Z]|[0-9]|_|-|\.)+@([a-z]|[A-Z]|[0-9]|_|-)+\.([a-z]|[A-Z]|[0-9]|_|-|\.)+'}

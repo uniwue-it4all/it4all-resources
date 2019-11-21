@@ -8,53 +8,53 @@
       "allOf": [
         {"$ref": "../exercise.schema.json"},
         {
-          "type": "object",
           "properties": {
-            "functionName": {"type": "string"},
-            "foldername": {"type": "string"},
-            "filename": {"type": "string"},
-            "inputTypes": {"type": "array", "items": {"$ref": "#/definitions/ProgInputType"}, "additionalItems": false},
-            "outputType": {"$ref": "#/definitions/ProgDataType"},
-            "sampleTestData": {
-              "type": "array",
-              "items": {"$ref": "#/definitions/ProgSampleTestData"},
-              "additionalItems": false
-            },
-            "unitTestPart": {"$ref": "#/definitions/UnitTestPart"},
-            "implementationPart": {"$ref": "#/definitions/ImplementationPart"},
-            "sampleSolutions": {
-              "type": "array",
-              "description": "Eine Menge an Musterlösungen (normalerweise nur eine)",
-              "items": {"$ref": "#/definitions/ProgSampleSolution"},
-              "additionalItems": false
-            },
-            "tags": {
-              "type": "array",
-              "items": {
-                "type": "string",
-                "enum": [
-                  "ForLoops", "WhileLoops",
-                  "Conditions",
-                  "Classes",
-                  "Exceptions",
-                  "Math",
-                  "Strings",
-                  "Lists", "Tuples", "Dictionaries", "Slicing",
-                  "Recursion"
-                ]
-              },
-              "uniqueItems": true
-            }
+            "content": {"$ref": "#/definitions/ProgExerciseContent"}
           },
-          "required": [
-            "functionName", "foldername", "filename",
-            "inputTypes", "outputType",
-            "unitTestPart", "implementationPart",
-            "sampleSolutions", "sampleTestData",
-            "tags"
-          ],
+          "required": ["content"],
           "additionalProperties": false
         }
+      ]
+    },
+    "ProgExerciseContent": {
+      "type": "object",
+      "properties": {
+        "functionName": {"type": "string"},
+        "foldername": {"type": "string"},
+        "filename": {"type": "string"},
+        "inputTypes": {"type": "array", "items": {"$ref": "#/definitions/ProgInputType"}, "additionalItems": false},
+        "outputType": {"$ref": "#/definitions/ProgDataType"},
+        "sampleTestData": {
+          "type": "array", "items": {"$ref": "#/definitions/ProgSampleTestData"}, "additionalItems": false
+        },
+        "unitTestPart": {"$ref": "#/definitions/UnitTestPart"},
+        "implementationPart": {"$ref": "#/definitions/ImplementationPart"},
+        "sampleSolutions": {
+          "type": "array", "items": {"$ref": "#/definitions/ProgSampleSolution"}, "additionalItems": false
+        },
+        "tags": {
+          "type": "array", "items": {"$ref": "#/definitions/ProgExerciseTag"}, "uniqueItems": true
+        }
+      },
+      "required": [
+        "functionName", "foldername", "filename",
+        "inputTypes", "outputType",
+        "unitTestPart", "implementationPart",
+        "sampleSolutions", "sampleTestData",
+        "tags"
+      ],
+      "additionalProperties": false
+    },
+    "ProgExerciseTag": {
+      "enum": [
+        "ForLoops", "WhileLoops",
+        "Conditions",
+        "Classes",
+        "Exceptions",
+        "Math",
+        "Strings",
+        "Lists", "Tuples", "Dictionaries", "Slicing",
+        "Recursion"
       ]
     },
     "ProgDataType": {

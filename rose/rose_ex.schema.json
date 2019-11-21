@@ -8,16 +8,24 @@
         {"$ref": "../exercise.schema.json"},
         {
           "properties": {
-            "fieldWidth": {"type": "integer"},
-            "fieldHeight": {"type": "integer"},
-            "isMultiplayer": {"type": "boolean"},
-            "inputTypes": {},
-            "sampleSolutions": {}
+            "content": {"$ref": "#/definitions/RoseExerciseContent"}
           },
-          "required": [],
+          "required": ["content"],
           "additionalProperties": false
         }
       ]
+    },
+    "RoseExerciseContent": {
+      "type": "object",
+      "properties": {
+        "fieldWidth": {"type": "integer"},
+        "fieldHeight": {"type": "integer"},
+        "isMultiplayer": {"type": "boolean"},
+        "inputTypes": {},
+        "sampleSolutions": {}
+      },
+      "required": ["fieldHeight", "fieldWidth", "isMultiplayer", "inputTypes", "sampleSolutions"],
+      "additionalProperties": false
     }
   }
 }
