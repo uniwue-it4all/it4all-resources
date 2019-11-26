@@ -126,13 +126,7 @@
       "properties": {
         "id": {"type": "number"},
         "sample": {
-          "type": "object",
-          "properties": {
-            "files": {
-              "type": "array", "items": {"$ref": "../exercise_file.schema.json"}, "additionalItems": false
-            }
-          },
-          "required": ["files"]
+          "type": "array", "items": {"$ref": "../exercise_file.schema.json"}, "additionalItems": false
         }
       },
       "required": ["id", "sample"],
