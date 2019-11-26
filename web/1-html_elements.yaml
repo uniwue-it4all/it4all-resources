@@ -84,11 +84,12 @@
 
     sampleSolutions:
       - id: 1
-        files:
-          - name: carList.html
-            fileType: htmlmixed
-            resourcePath: web/1-html_elements/1-carList/carListSolution.html
-            editable: false
+        sample:
+          files:
+            - name: carList.html
+              fileType: htmlmixed
+              resourcePath: web/1-html_elements/1-carList/carListSolution.html
+              editable: false
 
 - id: 2
   collectionId: 1
@@ -222,11 +223,12 @@
 
     sampleSolutions:
       - id: 1
-        files:
-          - name: production.html
-            resourcePath: web/1-html_elements/2-production/productionSolution.html
-            fileType: htmlmixed
-            editable: false
+        sample:
+          files:
+            - name: production.html
+              resourcePath: web/1-html_elements/2-production/productionSolution.html
+              fileType: htmlmixed
+              editable: false
 
 - id: 3
   collectionId: 1
@@ -299,11 +301,12 @@
 
     sampleSolutions:
       - id: 1
-        files:
-          - name: mustang.html
-            resourcePath: web/1-html_elements/3-links_images/mustangSolution.html
-            fileType: htmlmixed
-            editable: false
+        sample:
+          files:
+            - name: mustang.html
+              resourcePath: web/1-html_elements/3-links_images/mustangSolution.html
+              fileType: htmlmixed
+              editable: false
 
 - id: 4
   collectionId: 1
@@ -401,11 +404,12 @@
 
     sampleSolutions:
       - id: 1
-        files:
-          - name: login.html
-            resourcePath: web/1-html_elements/4-login/loginSolution.html
-            fileType: htmlmixed
-            editable: false
+        sample:
+          files:
+            - name: login.html
+              resourcePath: web/1-html_elements/4-login/loginSolution.html
+              fileType: htmlmixed
+              editable: false
 
 - id: 5
   collectionId: 1
@@ -459,8 +463,9 @@
 
     sampleSolutions:
       - id: 1
-        files:
-          - name: audio.html
-            resourcePath: web/1-html_elements/5-audio/audioSolution.html
-            fileType: htmlmixed
-            editable: false
+        sample:
+          files:
+            - name: audio.html
+              resourcePath: web/1-html_elements/5-audio/audioSolution.html
+              fileType: htmlmixed
+              editable: false

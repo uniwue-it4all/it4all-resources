@@ -125,13 +125,17 @@
       "type": "object",
       "properties": {
         "id": {"type": "number"},
-        "files": {
-          "type": "array",
-          "items": {"$ref": "../exercise_file.schema.json"},
-          "additionalItems": false
+        "sample": {
+          "type": "object",
+          "properties": {
+            "files": {
+              "type": "array", "items": {"$ref": "../exercise_file.schema.json"}, "additionalItems": false
+            }
+          },
+          "required": ["files"]
         }
       },
-      "required": ["id", "files"],
+      "required": ["id", "sample"],
       "additionalProperties": false
     }
   }

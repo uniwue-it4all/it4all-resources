@@ -128,15 +128,16 @@
 
     sampleSolutions:
       - id: 1
-        files:
-          - name: clickCounter.html
-            resourcePath: web/2-js_basics/1-clickCounter/clickCounterSolution.html
-            fileType: htmlmixed
-            editable: false
-          - name: clickCounter.js
-            resourcePath: web/2-js_basics/1-clickCounter/clickCounterSolution.js
-            fileType: javascript
-            editable: false
+        sample:
+          files:
+            - name: clickCounter.html
+              resourcePath: web/2-js_basics/1-clickCounter/clickCounterSolution.html
+              fileType: htmlmixed
+              editable: false
+            - name: clickCounter.js
+              resourcePath: web/2-js_basics/1-clickCounter/clickCounterSolution.js
+              fileType: javascript
+              editable: false
 
 - id: 2
   collectionId: 2
@@ -250,15 +251,16 @@
 
     sampleSolutions:
       - id: 1
-        files:
-          - name: pwChecker.html
-            resourcePath: web/2-js_basics/2-branchesStrings/branchesStringsSolution.html
-            fileType: htmlmixed
-            editable: false
-          - name: pwChecker.js
-            resourcePath: web/2-js_basics/2-branchesStrings/branchesStringsSolution.js
-            fileType: javascript
-            editable: false
+        sample:
+          files:
+            - name: pwChecker.html
+              resourcePath: web/2-js_basics/2-branchesStrings/branchesStringsSolution.html
+              fileType: htmlmixed
+              editable: false
+            - name: pwChecker.js
+              resourcePath: web/2-js_basics/2-branchesStrings/branchesStringsSolution.js
+              fileType: javascript
+              editable: false
 
 - id: 3
   collectionId: 2
@@ -372,12 +374,13 @@
 
     sampleSolutions:
       - id: 1
-        files:
-          - name: factorial.html
-            resourcePath: web/2-js_basics/3-loops/factorialSolution.html
-            fileType: htmlmixed
-            editable: false
-          - name: factorial.js
-            resourcePath: web/2-js_basics/3-loops/factorialSolution.js
-            fileType: javascript
-            editable: false
+        sample:
+          files:
+            - name: factorial.html
+              resourcePath: web/2-js_basics/3-loops/factorialSolution.html
+              fileType: htmlmixed
+              editable: false
+            - name: factorial.js
+              resourcePath: web/2-js_basics/3-loops/factorialSolution.js
+              fileType: javascript
+              editable: false
