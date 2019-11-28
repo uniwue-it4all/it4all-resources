@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {"$ref": "#/definitions/UmlExercise"},
+  "definitions": {
+    "UmlExercise": {
+      "allOf": [
+        {"$ref": "../../exercise.schema.json"},
+        {
+          "properties": {
+            "content": {"$ref": "#/definitions/UmlExerciseContent"}
+          },
+          "required": ["content"],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "UmlExerciseContent": {
+      "type": "object",
+      "properties": {
+        "mappings": {"$ref": "../../key_value_object_map.schema.json"},
+        "toIgnore": {"type": "array", "items": {"type": "string"}},
+        "sampleSolutions": {"type": "array", "items": {"$ref": "#/definitions/UmlSampleSolution"}}
+      },
+      "required": ["mappings", "toIgnore", "sampleSolutions"],
+      "additionalProperties": false
+    },
+    "UmlSampleSolution": {
+      "type": "object",
+      "properties": {
+        "id": {"type": "integer"},
+        "sample": {"$ref": "uml_class_diagram.schema.json"}
+      },
+      "required": ["id", "sample"],
+      "additionalProperties": false
+    }
+  }
+}

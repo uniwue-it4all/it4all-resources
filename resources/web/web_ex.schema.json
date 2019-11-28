@@ -1,0 +1,136 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {"$ref": "#/definitions/WebExercise"},
+  "definitions": {
+    "WebExercise": {
+      "allOf": [
+        {"$ref": "../../exercise.schema.json"},
+        {
+          "properties": {
+            "content": {"$ref": "#/definitions/WebExerciseContent"}
+          }
+        }
+      ]
+    },
+    "WebExerciseContent": {
+      "type": "object",
+      "properties": {
+        "htmlText": {
+          "anyOf": [
+            {"type": "string"},
+            {"type": "null"}
+          ]
+        },
+        "jsText": {
+          "anyOf": [
+            {"type": "string"},
+            {"type": "null"}
+          ]
+        },
+        "siteSpec": {"$ref": "#/definitions/SiteSpec"},
+        "files": {
+          "type": "array",
+          "items": {"$ref": "../../exercise_file.schema.json"},
+          "additionalItems": false
+        },
+        "sampleSolutions": {
+          "type": "array",
+          "items": {"$ref": "#/definitions/WebSample"},
+          "additionalItems": false
+        }
+      },
+      "required": ["htmlText", "jsText", "siteSpec", "files", "sampleSolutions"],
+      "additionalProperties": false
+    },
+    "SiteSpec": {
+      "type": "object",
+      "properties": {
+        "fileName": {"type": "string"},
+        "htmlTasks": {
+          "type": "array",
+          "items": {"$ref": "#/definitions/HtmlTask"},
+          "additionalItems": false
+        },
+        "jsTasks": {
+          "type": "array",
+          "items": {"$ref": "#/definitions/JsTask"},
+          "additionalItems": false
+        }
+      },
+      "required": ["fileName", "htmlTasks", "jsTasks"]
+    },
+    "HtmlTask": {
+      "allOf": [
+        {"$ref": "#/definitions/HtmlElementSpec"},
+        {
+          "type": "object",
+          "properties": {
+            "id": {"type": "integer"},
+            "text": {"type": "string"}
+          },
+          "required": ["id", "text"],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "HtmlElementSpec": {
+      "type": "object",
+      "properties": {
+        "id": {"type": "integer"},
+        "xpathQuery": {"type": "string"},
+        "awaitedTagName": {"type": "string"},
+        "awaitedTextContent": {
+          "anyOf": [
+            {"type": "string"},
+            {"type": "null"}
+          ]
+        },
+        "attributes": {"$ref": "../../key_value_object_map.schema.json"}
+      },
+      "required": ["id", "xpathQuery", "awaitedTagName", "awaitedTextContent", "attributes"],
+      "additionalProperties": false
+    },
+    "HtmlAttribute": {
+      "type": "object",
+      "properties": {
+        "key": {"type": "string"},
+        "value": {"type": "string"}
+      },
+      "required": ["key", "value"]
+    },
+    "JsTask": {
+      "type": "object",
+      "properties": {
+        "id": {"type": "number"},
+        "text": {"type": "string"},
+        "preConditions": {"type": "array", "items": {"$ref": "#/definitions/HtmlElementSpec"}},
+        "action": {"$ref": "#/definitions/JsAction"},
+        "postConditions": {"type": "array", "items": {"$ref": "#/definitions/HtmlElementSpec"}}
+      },
+      "required": ["id", "text", "preConditions", "action", "postConditions"],
+      "additionalProperties": false
+    },
+    "JsAction": {
+      "type": "object",
+      "properties": {
+        "xpathQuery": {"type": "string"},
+        "keysToSend": {"type": "string"},
+        "actionType": {"type": "string", "enum": ["Click", "FillOut"]}
+      },
+      "required": ["xpathQuery", "actionType"],
+      "additionalProperties": false
+    },
+    "WebSample": {
+      "type": "object",
+      "properties": {
+        "id": {"type": "number"},
+        "sample": {
+          "type": "array", "items": {"$ref": "../../exercise_file.schema.json"}, "additionalItems": false
+        }
+      },
+      "required": ["id", "sample"],
+      "additionalProperties": false
+    }
+  }
+}

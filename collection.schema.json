@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "id": {"type": "number"},
+    "toolId": {"type": "string"},
+    "title": {"type": "string"},
+    "author": {"type": "string"},
+    "text": {"$ref": "./long_text.schema.json"},
+    "state": {"$ref": "./exercise_state.schema.json"},
+    "shortName": {"type": "string"}
+  },
+  "required": ["id", "toolId", "title", "author", "text", "state", "shortName"]
+}

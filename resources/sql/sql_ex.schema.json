@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {"$ref": "#/definitions/SqlExercise"},
+  "definitions": {
+    "SqlExercise": {
+      "allOf": [
+        {"$ref": "../../exercise.schema.json"},
+        {
+          "properties": {
+            "content": {"$ref": "#/definitions/SqlExerciseContent"}
+          },
+          "required": ["content"],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "SqlExerciseContent": {
+      "type": "object",
+      "properties": {
+        "exerciseType": {"type": "string", "enum": ["SELECT", "CREATE", "UPDATE", "INSERT", "DELETE"]},
+        "sampleSolutions": {"type": "array", "items": {"$ref": "#/definitions/SqlSample"}},
+        "tags": {"type": "array", "items": {"$ref": "#/definitions/SqlExerciseTag"}},
+        "hint": {
+          "anyOf": [
+            {"type": "string"},
+            {"type": "null"}
+          ]
+        }
+      },
+      "required": ["exerciseType", "hint", "sampleSolutions", "tags"]
+    },
+    "SqlExerciseTag": {
+      "enum": [
+        "SQL_JOIN", "SQL_DOUBLE_JOIN", "SQL_TRIPLE_JOIN",
+        "SQL_FUNCTION", "SQL_ALIAS",
+        "SQL_ORDER_BY", "SQL_LIMIT", "SQL_GROUP_BY"
+      ]
+    },
+    "SqlSample": {
+      "type": "object",
+      "properties": {
+        "id": {"type": "number"},
+        "sample": {"type": "string"}
+      },
+      "required": ["id", "sample"]
+    }
+  }
+}

@@ -2,3 +2,6 @@
 !.idea/jsonSchemas.xml
 
 .mypy_cache/
+
+venv/
+__pycache__/

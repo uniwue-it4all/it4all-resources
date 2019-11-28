@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {"$ref": "#/definitions/RoseExercise"},
+  "definitions": {
+    "RoseExercise": {
+      "allOf": [
+        {"$ref": "../../exercise.schema.json"},
+        {
+          "properties": {
+            "content": {"$ref": "#/definitions/RoseExerciseContent"}
+          },
+          "required": ["content"],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "RoseExerciseContent": {
+      "type": "object",
+      "properties": {
+        "fieldWidth": {"type": "integer"},
+        "fieldHeight": {"type": "integer"},
+        "isMultiplayer": {"type": "boolean"},
+        "inputTypes": {},
+        "sampleSolutions": {}
+      },
+      "required": ["fieldHeight", "fieldWidth", "isMultiplayer", "inputTypes", "sampleSolutions"],
+      "additionalProperties": false
+    }
+  }
+}
