@@ -4,7 +4,8 @@
   semanticVersion: {major: 0, minor: 0, patch: 1}
   title: Kreise
   author: bje40dc
-  text: TODO!
+  text:
+    relativePath: programming/7-classes/1-text.html
   state: APPROVED
 
   content:
