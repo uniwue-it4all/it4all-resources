@@ -1,0 +1,36 @@
+!Exercise
+id: 3
+collectionId: 1
+toolId: xml
+title: Krankenhaus
+author: bje40dc
+text:
+  !LongText
+  relativePath: xml/1/3/text.html
+state: APPROVED
+semanticVersion: {major: 1, minor: 0, patch: 0}
+
+content:
+  rootNode: praxis
+  grammarDescription:
+    relativePath: xml/1/3-grammarDescription.txt
+
+  sampleSolutions:
+    - id: 1
+      sample:
+        grammar: |
+          <!ELEMENT praxis (arzt+)>
+          <!ELEMENT arzt (name, termin+)>
+          <!ELEMENT name (#PCDATA)>
+          <!ELEMENT termin (datum, uhrzeit, patient, beschreibung?)>
+          <!ATTLIST termin art (untersuchung | behandlung | operation) #REQUIRED>
+          <!ELEMENT datum (#PCDATA)>
+          <!ELEMENT uhrzeit (#PCDATA)>
+          <!ELEMENT patient (#PCDATA)>
+          <!ELEMENT beschreibung (#PCDATA)>
+        document: |
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE praxis SYSTEM "praxis.dtd">
+          <praxis>
+            TODO!
+          </praxis>

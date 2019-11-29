@@ -1,0 +1,121 @@
+id: 3
+collectionId: 2
+toolId: web
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Schleifen
+author: alg81dm
+text: Erstellen Sie ein einfaches Formular zur Berechnung der Fakultät einer Zahl n (alle Zahlen von 1 bis n multipliziert).
+state: APPROVED
+
+content:
+  files:
+    - name: factorial.html
+      resourcePath: web/2/3/factorial.html
+      fileType: htmlmixed
+      editable: true
+    - name: factorial.js
+      resourcePath: web/2/3/factorial.js
+      fileType: javascript
+      editable: true
+
+  htmlText: Erstellen Sie zunächst den Rumpf der Seite in HTML.
+  jsText: >
+    Implementieren Sie nun die Funktion <code>fakultaet()</code>, die bei Änderung des Felds aufgerufen wird. Sie soll
+    den Inhalt (value) des Eingabefeldes auslesen, die Fakultät davon berechnen und den Inhalt (textContent) des Elements
+    mit der ID 'result' auf das Ergebnis setzen
+
+  siteSpec:
+    fileName: factorial.html
+    htmlTasks:
+      - id: 1
+        text: Erstellen Sie ein Zahlen-Eingabefeld mit der ID 'number'. Bei Änderung des Feldes (onchange) soll die Funktion 'fakultaet()' aufgerufen werden.
+        xpathQuery: /html/body//input[@id='number']
+        awaitedTagName: input
+        awaitedTextContent: null
+        attributes:
+          - {key: 'type', value: 'number'}
+          - {key: 'onchange', value: 'fakultaet()'}
+
+      - id: 2
+        text: Erstellen Sie einen Span mit der ID 'result', in dem das Ergebnis der Berechnung stehen soll. Zu Anfang soll dieser leer sein.
+        xpathQuery: /html/body//span[@id='result']
+        awaitedTagName: span
+        awaitedTextContent: null
+        attributes: []
+
+      - id: 3
+        text: Binden Sie die Javascript-Datei 'factorial.js' ein.
+        xpathQuery: /html/head//script
+        awaitedTagName: script
+        awaitedTextContent: null
+        attributes:
+          - {key: 'src', value: 'factorial.js'}
+
+    jsTasks:
+      - id: 1
+        text: Fakultät von 1 muss 1 sein
+        preConditions: []
+        action:
+          actionType: FillOut
+          xpathQuery: /html/body//input[@id='number']
+          keysToSend: '1'
+        postConditions:
+          - id: 1
+            xpathQuery: /html/body//span[@id='result']
+            awaitedTagName: span
+            awaitedTextContent: '1'
+            attributes: []
+
+      - id: 2
+        text: Fakultät von 3 muss 6 sein
+        preConditions: []
+        action:
+          actionType: FillOut
+          xpathQuery: /html/body//input[@id='number']
+          keysToSend: '3'
+        postConditions:
+          - id: 1
+            xpathQuery: /html/body//span[@id='result']
+            awaitedTagName: span
+            awaitedTextContent: '6'
+            attributes: []
+
+      - id: 3
+        text: Fakultät von 6 muss 720 sein
+        preConditions: []
+        action:
+          actionType: FillOut
+          xpathQuery: /html/body//input[@id='number']
+          keysToSend: '6'
+        postConditions:
+          - id: 1
+            xpathQuery: /html/body//span[@id='result']
+            awaitedTagName: span
+            awaitedTextContent: '720'
+            attributes: []
+
+      - id: 4
+        text: Fakultät von 10 muss 3628800 sein
+        preConditions: []
+        action:
+          actionType: FillOut
+          xpathQuery: /html/body//input[@id='number']
+          keysToSend: '10'
+        postConditions:
+          - id: 1
+            xpathQuery: /html/body//span[@id='result']
+            awaitedTagName: span
+            awaitedTextContent: '3628800'
+            attributes: []
+
+  sampleSolutions:
+    - id: 1
+      sample:
+        - name: factorial.html
+          resourcePath: web/2/3/factorialSolution.html
+          fileType: htmlmixed
+          editable: false
+        - name: factorial.js
+          resourcePath: web/2/3/factorialSolution.js
+          fileType: javascript
+          editable: false

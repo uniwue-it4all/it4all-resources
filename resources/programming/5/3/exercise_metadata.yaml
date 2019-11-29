@@ -1,0 +1,105 @@
+!Exercise
+id: 3
+collectionId: 5
+toolId: programming
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Tupel und Dictionaries
+author: bje40dc
+text:
+  !LongText
+  relativePath: programming/5/3/text.html
+state: APPROVED
+
+content:
+  functionName: tuples_and_dicts
+  foldername: tuples_and_dicts
+  filename: tuples_and_dicts
+  inputTypes: []
+  outputType: VOID
+
+  unitTestPart:
+
+    unitTestType: Normal
+
+    unitTestsDescription: >
+
+    unitTestFiles:
+      - name: tuples_and_dicts.py
+        resourcePath: programming/5/3/tuples_and_dicts_declaration.py
+        fileType: python
+        editable: false
+      - name: test_tuples_and_dicts.py
+        resourcePath: programming/5/3/test_tuples_and_dicts_declaration.py
+        fileType: python
+        editable: true
+
+    unitTestTestConfigs:
+      - id: 0
+        shouldFail: false
+        description: Musterlösung...
+      - id: 1
+        shouldFail: true
+        description: Die Funktion tuple_list_to_dict soll den ersten Eintrag im Tupel als Schlüssel und den zweiten Eintrag als Wert setzen.
+      - id: 2
+        shouldFail: true
+        description: Die Funktion tuple_list_to_dict soll den ersten Wert verwenden, falls ein Schlüssel mehrmals vorkommt.
+      - id: 3
+        shouldFail: true
+        description: Die Funktion tuple_list_to_dict soll ein leeres Dictionary zurückgeben, falls eine leere Liste übergeben wird.
+      - id: 4
+        shouldFail: true
+        description: Die Funktion intersect_dicts soll ein leeres Dictionary zurückgeben, falls keine übereinstimmenden Schlüsseln in den übergebenen Dictionaries existieren.
+      - id: 5
+        shouldFail: true
+        description: Die Funktion intersect_dicts soll ein Dictionary mit den korrekten Werten bei übereinstimmenden Schlüsseln zurückgeben.
+      - id: 6
+        shouldFail: true
+        description: Die Funktion intersect_dicts soll ein leeres Dictionary zurückgeben, falls die beiden übergebenen Dictionaries leer sind.
+    testFileName: test_tuples_and_dicts.py
+    sampleSolFileNames: [test_tuples_and_dicts.py]
+
+  implementationPart:
+    base: |
+      from typing import Dict, List, Tuple
+
+
+      def tuple_list_to_dict(my_list: List[Tuple[str, int]]) -> Dict[str, int]:
+          pass
+
+
+      def intersect_dicts(dict1: Dict[str, int], dict2: Dict[str, int]) -> Dict[str, Tuple[int, int]]:
+          pass
+    files:
+      - name: test_tuples_and_dicts.py
+        resourcePath: programming/5/3/test_tuples_and_dicts.py
+        fileType: python
+        editable: false
+      - name: tuples_and_dicts.py
+        resourcePath: programming/5/3/tuples_and_dicts_declaration.py
+        fileType: python
+        editable: true
+    implFileName: tuples_and_dicts.py
+    sampleSolFileNames: [tuples_and_dicts.py]
+
+  sampleSolutions:
+    - id: 1
+      sample:
+        files:
+          - name: tuples_and_dicts.py
+            resourcePath: programming/5/3/tuples_and_dicts.py
+            fileType: python
+            editable: false
+          - name: test_tuples_and_dicts.py
+            resourcePath: programming/5/3/test_tuples_and_dicts.py
+            fileType: python
+            editable: false
+        testData: []
+
+  sampleTestData: []
+
+  tags:
+    - Lists
+    - Tuples
+    - Dictionaries
+    - ForLoops
+    - Conditions

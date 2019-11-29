@@ -1,0 +1,24 @@
+!Exercise
+id: 36
+collectionId: 2
+toolId: sql
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Passwortupdate!
+author: bje40dc
+text: >
+  Sie möchten ihre Kunden dazu motivieren sichere Passwörter zu verwenden. Alle Kunden, die als Kennwort 'Passwort'
+  verwenden, sollen beim nächsten Login über eine Meldung aufgefordert werden sich was neues auszudenken. Geben Sie
+  die ID und die Email-Adresse der faulen Kunden aus.
+state: APPROVED
+content:
+  exerciseType: SELECT
+  sampleSolutions:
+    - id: 1
+      sample: |
+        SELECT id, email
+          FROM customers
+          WHERE password = '3e45af4ca27ea2b03fc6183af40ea112';
+  tags: []
+  hint: >
+    Die Passwörter der Kunden sind als MD5-Hash-String in der Tabelle 'customers' gespeichert. Der MD5-Hashstring
+    zu 'Passwort' lautet '3e45af4ca27ea2b03fc6183af40ea112'.

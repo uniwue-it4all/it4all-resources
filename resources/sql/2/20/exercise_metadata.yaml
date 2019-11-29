@@ -1,0 +1,26 @@
+!Exercise
+id: 20
+collectionId: 2
+toolId: sql
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Geringer Bestand oder Preis
+author: bje40dc
+text: Geben Sie die Titel aller Bücher aus, die einen Bestand von weniger als 20.000 Exemplaren oder einen Preis unter 14€ haben.
+state: APPROVED
+content:
+  exerciseType: SELECT
+  sampleSolutions:
+    - id: 1
+      sample: |
+        SELECT title
+          FROM books
+          WHERE stock < 20000
+             OR price < 14.00;
+    - id: 2
+      sample: |
+        SELECT title
+          FROM books
+          WHERE stock < 20000
+             OR price < 14;
+  tags: []
+  hint: null

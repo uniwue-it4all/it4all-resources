@@ -1,0 +1,19 @@
+!Exercise
+id: 23
+collectionId: 2
+toolId: sql
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Harry Potters
+author: bje40dc
+text: Wie hoch ist der Gesamtbestand an Harry Potter-Büchern? Nennen Sie die Spalte 'Gesamtbestand'.
+state: APPROVED
+content:
+  exerciseType: SELECT
+  sampleSolutions:
+    - id: 1
+      sample: |
+        SELECT SUM(stock) AS Gesamtbestand
+          FROM books
+          WHERE title like 'Harry Potter%';
+  tags: [SQL_FUNCTION, SQL_ALIAS]
+  hint: null

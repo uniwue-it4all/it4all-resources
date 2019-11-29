@@ -1,0 +1,2 @@
+Es gibt eine neue Angestellte mit Namen Tina Sattler. Diese arbeitet für die Person mit der OID 2 und soll als
+OID 9 und als Nutzernamen tina_sattler bekommen.

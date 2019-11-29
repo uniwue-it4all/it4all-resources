@@ -1,0 +1,119 @@
+!Exercise
+id: 4
+collectionId: 4
+toolId: programming
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Slicing
+author: bje40dc
+text:
+  !LongText
+  relativePath: programming/4/4/text.html
+state: APPROVED
+
+content:
+  functionName: slicing
+  foldername: slicing
+  filename: slicing
+  inputTypes: []
+  outputType: VOID
+
+  unitTestPart:
+
+    unitTestType: Normal
+
+    unitTestsDescription: >
+
+    unitTestFiles:
+      - name: slicing.py
+        resourcePath: programming/4/4/slicing_declaration.py
+        fileType: python
+        editable: false
+      - name: test_slicing.py
+        resourcePath: programming/4/4/test_slicing_declaration.py
+        fileType: python
+        editable: true
+
+    unitTestTestConfigs:
+      - id: 0
+        shouldFail: false
+        description: Musterlösung...
+      - id: 1
+        shouldFail: true
+        description: Die Funktion even_indexes soll alle Elemente an geraden Indizes zurückgeben.
+      - id: 2
+        shouldFail: true
+        description: Die Funktion even_indexes soll alle Elemente an geraden Indizes und nicht an ungeraden Indizes zurückgeben.
+      - id: 3
+        shouldFail: true
+        description: Die Funktion even_indexes soll alle Elemente an gerade Indizes und nicht am 0. Index zurückgeben.
+      - id: 4
+        shouldFail: true
+        description: Die Funktion reversed_special soll vom vorletzten Element aus beginnen.
+      - id: 5
+        shouldFail: true
+        description: Die Funktion reversed_special soll jedes dritte Element, vom vorletzten Element aus beginnend, ausgeben.
+      - id: 6
+        shouldFail: true
+        description: Die Funktion first_half soll die erste Hälfte der Liste zurückgeben.
+      - id: 7
+        shouldFail: true
+        description: Die Funktion first_half soll bei ungeraden Längen abrunden.
+      - id: 8
+        shouldFail: true
+        description: Die Funktion rotate_right soll für jede Umdrehung das letzte Element der Liste an den Anfang der Liste setzen.
+      - id: 9
+        shouldFail: true
+        description: Die Funktion rotate_right soll die korrekte Anzahl an übergebenen Umdrehungen durchführen.
+    testFileName: test_slicing.py
+    sampleSolFileNames: [test_slicing.py]
+
+  implementationPart:
+    base: |
+      from typing import List
+
+
+      def even_indexes(my_list: List[int]) -> List[int]:
+          pass
+
+
+      def reversed_special(my_list: List[int]) -> List[int]:
+          pass
+
+
+      def first_half(my_list: List[int]) -> List[int]:
+          pass
+
+
+      def rotate_right(my_list: List[int], count: int) -> List[int]:
+          pass
+    files:
+      - name: test_slicing.py
+        resourcePath: programming/4/4/test_slicing.py
+        fileType: python
+        editable: false
+      - name: slicing.py
+        resourcePath: programming/4/4/slicing_declaration.py
+        fileType: python
+        editable: true
+    implFileName: slicing.py
+    sampleSolFileNames: [slicing.py]
+
+  sampleSolutions:
+    - id: 1
+      sample:
+        files:
+          - name: slicing.py
+            resourcePath: programming/4/4/slicing.py
+            fileType: python
+            editable: false
+          - name: test_slicing.py
+            resourcePath: programming/4/4/test_slicing.py
+            fileType: python
+            editable: false
+        testData: []
+
+  sampleTestData: []
+
+  tags:
+    - Lists
+    - Slicing

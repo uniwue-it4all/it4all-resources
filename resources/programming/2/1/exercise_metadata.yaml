@@ -1,0 +1,66 @@
+!Exercise
+id: 1
+collectionId: 2
+toolId: programming
+semanticVersion:
+  major: 1
+  minor: 0
+  patch: 0
+title: Palindrom
+author: bje40dc
+text: >
+  Erstellen Sie ein Skript, das prüft, ob der übergebene String ein Palindrom darstellt! Ein leerer String ist für
+  diese Aufgabe auch ein Palindrom. Ihr Programm soll Groß- und Kleinschreibung ignorieren, d. h. 'a' == 'A'.
+state: APPROVED
+
+content:
+  functionName: is_palindrome
+  foldername: palindrome
+  filename: palindrome
+
+  inputTypes:
+    - {id: 1, inputName: word, inputType: STRING}
+  outputType: BOOLEAN
+
+  unitTestPart:
+    unitTestType: Simplified
+    unitTestsDescription: TODO!
+    unitTestFiles: []
+    unitTestTestConfigs: []
+    testFileName: test_palindrome.py
+    sampleSolFileNames: []
+
+  implementationPart:
+    base: |
+      def is_palindrome(word: str) -> bool:
+          return False
+    files:
+      - name: palindrome.py
+        resourcePath: programming/2/1/palindrome_declaration.py
+        fileType: python
+        editable: true
+    implFileName: palindrome.py
+    sampleSolFileNames: [palindrome.py]
+
+
+  sampleSolutions:
+    - id: 1
+      sample:
+        files:
+          - name: palindrome.py
+            resourcePath: programming/2/1/palindrome.py
+            fileType: python
+            editable: false
+        testData: []
+
+  sampleTestData:
+    - {id: 1, input: "anna", output: true}
+    - {id: 2, input: "ananas", output: false}
+    - {id: 3, input: "", output: true}
+    - {id: 4, input: "qwertzuiiuztrewq", output: true}
+    - {id: 5, input: "qwertzuiyiuztrewq", output: true}
+    - {id: 6, input: "Tacocat", output: true}
+
+  tags:
+    - Strings
+    - ForLoops

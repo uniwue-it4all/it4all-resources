@@ -1,0 +1,20 @@
+!Exercise
+id: 30
+collectionId: 2
+toolId: sql
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Emails mit G
+author: bje40dc
+text: Geben Sie alle Email-Adressen der Kunden aus die mit 'gmx.de ' oder mit 'gmail.com' enden.
+state: APPROVED
+content:
+  exerciseType: SELECT
+  sampleSolutions:
+    - id: 1
+      sample: |
+        SELECT email
+          FROM customers
+          WHERE email LIKE '%gmx.de'
+          OR email LIKE '%gmail.com';
+  tags: []
+  hint: null

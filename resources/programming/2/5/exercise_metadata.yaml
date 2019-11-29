@@ -1,0 +1,108 @@
+!Exercise
+id: 5
+collectionId: 2
+toolId: programming
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Drei Chinesen
+author: bje40dc
+text:
+  !LongText
+  relativePath: programming/2/5/text.html
+state: APPROVED
+
+content:
+  functionName: three_chinese
+  foldername: three_chinese
+  filename: three_chinese
+  inputTypes: []
+  outputType: VOID
+
+  unitTestPart:
+
+    unitTestType: Normal
+
+    unitTestsDescription: >
+
+    unitTestFiles:
+      - name: three_chinese.py
+        resourcePath: programming/2/5/three_chinese_declaration.py
+        fileType: python
+        editable: false
+      - name: test_three_chinese.py
+        resourcePath: programming/2/5/test_three_chinese_declaration.py
+        fileType: python
+        editable: true
+
+    unitTestTestConfigs:
+      - id: 0
+        shouldFail: false
+        description: Musterlösung...
+      - id: 1
+        shouldFail: true
+        description: Die Vokale sollen durch den übergebenen Vokal ersetzt werden.
+      - id: 2
+        shouldFail: true
+        description: Aufeinanderfolgende Vokale sollen auf einen einzigen Vokal reduziert werden.
+      - id: 3
+        shouldFail: true
+        description: Der Vokal A bzw. a soll durch den übergebenen Vokal ersetzt werden.
+      - id: 4
+        shouldFail: true
+        description: Der Vokal E bzw. e soll durch den übergebenen Vokal ersetzt werden.
+      - id: 5
+        shouldFail: true
+        description: Der Vokal I bzw. i soll durch den übergebenen Vokal ersetzt werden.
+      - id: 6
+        shouldFail: true
+        description: Der Vokal O bzw. o soll durch den übergebenen Vokal ersetzt werden.
+      - id: 7
+        shouldFail: true
+        description: Der Vokal U bzw. u soll durch den übergebenen Vokal ersetzt werden.
+      - id: 8
+        shouldFail: true
+        description: Der Umlaut Ä bzw. ä soll durch den übergebenen Vokal ersetzt werden.
+      - id: 9
+        shouldFail: true
+        description: Der Umlaut Ö bzw. ö soll durch den übergebenen Vokal ersetzt werden.
+      - id: 10
+        shouldFail: true
+        description: Der Umlaut Ü bzw. ü soll durch den übergebenen Vokal ersetzt werden.
+    testFileName: test_three_chinese.py
+    sampleSolFileNames: [test_three_chinese.py]
+
+  implementationPart:
+    base: |
+      def three_chinese(line: str, target_vowel: str) -> str:
+          pass
+    files:
+      - name: test_three_chinese.py
+        resourcePath: programming/2/5/test_three_chinese.py
+        fileType: python
+        editable: false
+      - name: three_chinese.py
+        resourcePath: programming/2/5/three_chinese_declaration.py
+        fileType: python
+        editable: true
+    implFileName: three_chinese.py
+    sampleSolFileNames: [three_chinese.py]
+
+  sampleSolutions:
+    - id: 1
+      sample:
+        files:
+          - name: three_chinese.py
+            resourcePath: programming/2/5/three_chinese.py
+            fileType: python
+            editable: false
+          - name: test_three_chinese.py
+            resourcePath: programming/2/5/test_three_chinese.py
+            fileType: python
+            editable: false
+        testData: []
+
+  sampleTestData: []
+
+  tags:
+    - Strings
+    - Lists
+    - ForLoops

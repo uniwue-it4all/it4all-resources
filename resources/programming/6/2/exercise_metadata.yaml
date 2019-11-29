@@ -1,0 +1,152 @@
+!Exercise
+id: 2
+collectionId: 6
+toolId: programming
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Längen
+author: bje40dc
+text:
+  !LongText
+  relativePath: programming/6/2/text.html
+state: APPROVED
+
+content:
+  functionName: distances
+  foldername: distances
+  filename: distances
+  inputTypes: []
+  outputType: VOID
+
+  unitTestPart:
+
+    unitTestType: Normal
+
+    unitTestsDescription: >
+
+    unitTestFiles:
+      - name: distances.py
+        resourcePath: programming/6/2/distances_declaration.py
+        fileType: python
+        editable: false
+      - name: test_distances.py
+        resourcePath: programming/6/2/test_distances_declaration.py
+        fileType: python
+        editable: true
+
+    unitTestTestConfigs:
+      - id: 0
+        shouldFail: false
+        description: Musterlösung...
+      - id: 1
+        shouldFail: true
+        description: Die Funktion yards_to_meters soll die Distanz korrekt von Yards in Meter umrechnen.
+      - id: 2
+        shouldFail: true
+        description: Die Funktion yards_to_meters soll die Distanz korrekt von Yards in Meter umrechnen.
+      - id: 3
+        shouldFail: true
+        description: Die Funktion meters_to_yards soll die Distanz korrekt von Meter in Yards umrechnen.
+      - id: 4
+        shouldFail: true
+        description: Die Funktion meters_to_yards soll die Distanz korrekt von Meter in Yards umrechnen.
+      - id: 5
+        shouldFail: true
+        description: Die Funktion miles_to_meters soll die Distanz korrekt von Meilen in Meter umrechnen.
+      - id: 6
+        shouldFail: true
+        description: Die Funktion miles_to_meters soll die Distanz korrekt von Meilen in Meter umrechnen.
+      - id: 7
+        shouldFail: true
+        description: Die Funktion meters_to_miles soll die Distanz korrekt von Meter in Meilen umrechnen.
+      - id: 8
+        shouldFail: true
+        description: Die Funktion meters_to_miles soll die Distanz korrekt von Meter in Meilen umrechnen.
+      - id: 9
+        shouldFail: true
+        description: Die Funktion seamiles_to_meters soll die Distanz korrekt von Seemeilen in Meter umrechnen.
+      - id: 10
+        shouldFail: true
+        description: Die Funktion seamiles_to_meters soll die Distanz korrekt von Seemeilen in Meter umrechnen.
+      - id: 11
+        shouldFail: true
+        description: Die Funktion meters_to_seamiles soll die Distanz korrekt von Meter in Seemeilen umrechnen.
+      - id: 12
+        shouldFail: true
+        description: Die Funktion meters_to_seamiles soll die Distanz korrekt von Meter in Seemeilen umrechnen.
+      - id: 13
+        shouldFail: true
+        description: Die Funktion inches_to_meters soll die Distanz korrekt von Zoll in Meter umrechnen.
+      - id: 14
+        shouldFail: true
+        description: Die Funktion inches_to_meters soll die Distanz korrekt von Zoll in Meter umrechnen.
+      - id: 15
+        shouldFail: true
+        description: Die Funktion meters_to_inches soll die Distanz korrekt von Meter in Zoll umrechnen.
+      - id: 16
+        shouldFail: true
+        description: Die Funktion meters_to_inches soll die Distanz korrekt von Meter in Zoll umrechnen.
+    testFileName: test_distances.py
+    sampleSolFileNames: [test_distances.py]
+
+  implementationPart:
+    base: |
+      def yards_to_meters(length_yards: float) -> float:
+          pass
+
+
+      def meters_to_yards(length_meters: float) -> float:
+          pass
+
+
+      def miles_to_meters(length_miles: float) -> float:
+          pass
+
+
+      def meters_to_miles(length_meters: float) -> float:
+          pass
+
+
+      def seamiles_to_meters(length_sea_miles: float) -> float:
+          pass
+
+
+      def meters_to_seamiles(length_meters: float) -> float:
+          pass
+
+
+      def inches_to_meters(length_inches: float) -> float:
+          pass
+
+
+      def meters_to_inches(length_meters: float) -> float:
+          pass
+    files:
+      - name: test_distances.py
+        resourcePath: programming/6/2/test_distances.py
+        fileType: python
+        editable: false
+      - name: distances.py
+        resourcePath: programming/6/2/distances_declaration.py
+        fileType: python
+        editable: true
+    implFileName: distances.py
+    sampleSolFileNames: [distances.py]
+
+  sampleSolutions:
+    - id: 1
+      sample:
+        files:
+          - name: distances.py
+            resourcePath: programming/6/2/distances.py
+            fileType: python
+            editable: false
+          - name: test_distances.py
+            resourcePath: programming/6/2/test_distances.py
+            fileType: python
+            editable: false
+        testData: []
+
+  sampleTestData: []
+
+  tags:
+    - Math

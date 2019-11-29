@@ -1,0 +1,23 @@
+!Exercise
+id: 29
+collectionId: 2
+toolId: sql
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Wer will Harry?
+author: bje40dc
+text: >
+  Wählen Sie alle Bestellungen aus, die das Buch 'Harry Potter und der Halbblutprinz' enthalten. Geben Sie für diese
+  Bestellungen jeweils das Datum und die Anzahl der bestellten Exemplare des Buches aus.
+state: APPROVED
+content:
+  exerciseType: SELECT
+  sampleSolutions:
+    - id: 1
+      sample: |
+        SELECT date, amount
+         FROM orders
+            JOIN order_positions ON orders.id = order_id
+            JOIN books ON books.id = book_id
+            WHERE title = 'Harry Potter und der Halbblutprinz';
+  tags: [SQL_DOUBLE_JOIN]
+  hint: null

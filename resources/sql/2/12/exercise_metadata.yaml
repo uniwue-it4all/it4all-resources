@@ -1,0 +1,20 @@
+!Exercise
+id: 12
+collectionId: 2
+toolId: sql
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Bücher von Carlsen
+author: bje40dc
+text: Bestimmen Sie Titel und Preis aller Bücher die im Verlag 'Carlsen' erschienen sind.
+state: APPROVED
+content:
+  exerciseType: SELECT
+  sampleSolutions:
+    - id: 1
+      sample: |
+        SELECT title, price
+          FROM books
+            JOIN publishers ON publisher_id = publishers.id
+          WHERE name = 'Carlsen';
+  tags: [SQL_JOIN]
+  hint: Die Zuordnung von Verlag-Id zu Verlag-Name befindet sich in der Tabelle 'publishers'.

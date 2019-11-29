@@ -1,0 +1,22 @@
+!Exercise
+id: 33
+collectionId: 2
+toolId: sql
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Kumulierter Bestand
+author: bje40dc
+text: >
+  Erfassen Sie die ID aller Autoren und den kumulierten Bestand ihrer Bücher. Ordnen Sie die Einträge nach kumulierten
+  Bestand abwärts. Benennen Sie die Spalte des kumulierten Bestandes 'stock_sum' (ohne Anführungszeichen).
+state: APPROVED
+content:
+  exerciseType: SELECT
+  sampleSolutions:
+    - id: 1
+      sample: |
+        SELECT author_id, sum(stock) AS stock_sum
+          FROM books
+          GROUP BY author_id
+          ORDER BY stock_sum DESC;
+  tags: [SQL_FUNCTION, SQL_GROUP_BY, SQL_ORDER_BY]
+  hint: Verwenden Sie den Sum-Operator und das Schlüsselwort AS.

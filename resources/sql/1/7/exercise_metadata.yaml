@@ -1,0 +1,21 @@
+!Exercise
+id: 7
+collectionId: 1
+toolId: sql
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: TODO!
+author: bje40dc
+text:
+  !LongText
+  relativePath: sql/1/7/text.txt
+state: APPROVED
+content:
+  exerciseType: UPDATE
+  sampleSolutions:
+    - id: 1
+      sample: |
+        UPDATE employee
+          SET chef_id = 3
+          WHERE id = 8
+  tags: []
+  hint: null

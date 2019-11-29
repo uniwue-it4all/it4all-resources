@@ -1,0 +1,98 @@
+!Exercise
+id: 3
+collectionId: 2
+toolId: programming
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Dateinamen und Endung
+author: bje40dc
+text:
+  !LongText
+  relativePath: programming/2/3/text.html
+state: APPROVED
+
+content:
+  functionName: file_name_and_ending
+  foldername: file_name_and_ending
+  filename: file_name_and_ending
+  inputTypes: []
+  outputType: VOID
+
+  unitTestPart:
+
+    unitTestType: Normal
+
+    unitTestsDescription: >
+
+    unitTestFiles:
+      - name: file_name_and_ending.py
+        resourcePath: programming/2/3/file_name_and_ending_declaration.py
+        fileType: python
+        editable: false
+      - name: test_file_name_and_ending.py
+        resourcePath: programming/2/3/test_file_name_and_ending_declaration.py
+        fileType: python
+        editable: true
+
+    unitTestTestConfigs:
+      - id: 0
+        shouldFail: false
+        description: Musterlösung...
+      - id: 1
+        shouldFail: true
+        description: Bei Dateien ohne Endung soll nur der Dateiname und ein leerer String zurückgegeben werden.
+      - id: 2
+        shouldFail: true
+        description: Bei versteckten Dateien soll der Dateiname mit einem vorangestellten Punkt und ein leerer String zurückgegeben werden.
+      - id: 3
+        shouldFail: true
+        description: Bei versteckten Dateien soll nur der Dateiname mit einem vorangstellten Punkt und ein leerer String zurückgegeben werden.
+      - id: 4
+        shouldFail: true
+        description: Bei normalen Dateien soll der Dateiname und die Dateiendung zurückgegeben werden.
+      - id: 5
+        shouldFail: true
+        description: Bei normalen Dateien soll der Dateiname und die Endung in der korrekten Reihenfolge zurückgegeben werden.
+      - id: 6
+        shouldFail: true
+        description: Bei Dateien mit mehreren Endungen soll der Dateiname mit allen Endungen außer der letzten und die letzte Endung ausgegeben werden.
+    testFileName: test_file_name_and_ending.py
+    sampleSolFileNames: [test_file_name_and_ending.py]
+
+  implementationPart:
+    base: |
+      from typing import Tuple
+
+
+      def file_name_and_ending(filename: str) -> Tuple[str, str]:
+          pass
+    files:
+      - name: test_file_name_and_ending.py
+        resourcePath: programming/2/3/test_file_name_and_ending.py
+        fileType: python
+        editable: false
+      - name: file_name_and_ending.py
+        resourcePath: programming/2/3/file_name_and_ending_declaration.py
+        fileType: python
+        editable: true
+    implFileName: file_name_and_ending.py
+    sampleSolFileNames: [file_name_and_ending.py]
+
+  sampleSolutions:
+    - id: 1
+      sample:
+        files:
+          - name: file_name_and_ending.py
+            resourcePath: programming/2/3/file_name_and_ending.py
+            fileType: python
+            editable: false
+          - name: test_file_name_and_ending.py
+            resourcePath: programming/2/3/test_file_name_and_ending.py
+            fileType: python
+            editable: false
+        testData: []
+
+  sampleTestData: []
+
+  tags:
+    - Tuples
+    - Strings

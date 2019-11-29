@@ -1,0 +1,122 @@
+!Exercise
+id: 2
+collectionId: 7
+toolId: programming
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Mau-Mau
+author: bje40dc
+text:
+  !LongText
+  relativePath: programming/7/2/text.html
+state: APPROVED
+
+content:
+  functionName: maumau
+  foldername: maumau
+  filename: maumau
+  inputTypes: []
+  outputType: VOID
+
+  unitTestPart:
+
+    unitTestType: Normal
+
+    unitTestsDescription: >
+
+    unitTestFiles:
+      - name: maumau.py
+        resourcePath: programming/7/2/maumau_declaration.py
+        fileType: python
+        editable: false
+      - name: test_maumau.py
+        resourcePath: programming/7/2/test_maumau_declaration.py
+        fileType: python
+        editable: true
+
+    unitTestTestConfigs:
+      - id: 0
+        shouldFail: false
+        description: Musterlösung...
+      - id: 1
+        shouldFail: true
+        description: Die Funktion can_be_played_on soll ebenfalls true zurückgeben, falls die Bilder der beiden Karten übereinstimmen.
+      - id: 2
+        shouldFail: true
+        description: Die Funktion can_be_played_on soll ebenfalls true zurückgeben, falls die Farben der beiden Karten übereinstimmen.
+      - id: 3
+        shouldFail: true
+        description: Die Funktion can_be_played_on soll nur true zurückgeben, falls die Farben der beiden Karten übereinstimmen.
+      - id: 4
+        shouldFail: true
+        description: Die Funktion can_be_played_on soll nur true zurückgeben, falls die Bilder der beiden Karten übereinstimmen.
+      - id: 5
+        shouldFail: true
+        description: Die Funktion can_be_palyed_on soll true zurückgeben, falls entweder die Farben oder die Bilder der beiden Karten übereinstimmen.
+      - id: 6
+        shouldFail: true
+        description: Die Funktion playable_cards soll die Handkarten zurückgeben, die spielbar sind.
+      - id: 7
+        shouldFail: true
+        description: Die Funktion playable_cards soll alle Handkarten zurückgeben, die spielbar sind.
+      - id: 8
+        shouldFail: true
+        description: Die Funktion playable_cards soll eine leere Liste zurückgeben, falls keine Handkarten vorhanden sind.
+    testFileName: test_maumau.py
+    sampleSolFileNames: [test_maumau.py]
+
+  implementationPart:
+    base: |
+      from typing import List, Any
+
+
+      class Card:
+          def __init__(self, suit: int, rank: int):
+              self.suit: int = suit
+              self.rank: int = rank
+
+          def __eq__(self, other: Any) -> bool:
+              return isinstance(other, Card) and other.suit == self.suit and other.rank == self.rank  # pragma: no cover
+
+          def __repr__(self) -> str:
+              return "Card({}, {})".format(self.suit, self.rank)  # pragma: no cover
+
+
+      def can_be_played_on(first_card: Card, second_card: Card) -> bool:
+          pass
+
+
+      def playable_cards(card: Card, hand: List[Card]) -> List[Card]:
+          pass
+    files:
+      - name: test_maumau.py
+        resourcePath: programming/7/2/test_maumau.py
+        fileType: python
+        editable: false
+      - name: maumau.py
+        resourcePath: programming/7/2/maumau_declaration.py
+        fileType: python
+        editable: true
+    implFileName: maumau.py
+    sampleSolFileNames: [maumau.py]
+
+  sampleSolutions:
+    - id: 1
+      sample:
+        files:
+          - name: maumau.py
+            resourcePath: programming/7/2/maumau.py
+            fileType: python
+            editable: false
+          - name: test_maumau.py
+            resourcePath: programming/7/2/test_maumau.py
+            fileType: python
+            editable: false
+        testData: []
+
+  sampleTestData: []
+
+  tags:
+    - Classes
+    - Conditions
+    - Lists
+    - Strings

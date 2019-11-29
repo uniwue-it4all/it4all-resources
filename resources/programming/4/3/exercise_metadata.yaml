@@ -1,0 +1,163 @@
+!Exercise
+id: 3
+collectionId: 4
+toolId: programming
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Allgemeine Aufgaben
+author: bje40dc
+text:
+  !LongText
+  relativePath: programming/4/3/text.html
+state: APPROVED
+
+content:
+  functionName: general
+  foldername: general
+  filename: general
+  inputTypes: []
+  outputType: VOID
+
+  unitTestPart:
+
+    unitTestType: Normal
+
+    unitTestsDescription: >
+
+    unitTestFiles:
+      - name: general.py
+        resourcePath: programming/4/3/general_declaration.py
+        fileType: python
+        editable: false
+      - name: test_general.py
+        resourcePath: programming/4/3/test_general_declaration.py
+        fileType: python
+        editable: true
+
+    unitTestTestConfigs:
+      - id: 0
+        shouldFail: false
+        description: Musterlösung...
+      - id: 1
+        shouldFail: true
+        description: Die Funktion filter_greater soll nur die Zahlen in einer Liste zurückgeben, die größer als die übergebene Zahl sind.
+      - id: 2
+        shouldFail: true
+        description: Die Funktion filter_greater soll eine leere Liste zurückgeben, falls keine Zahl größer als die übergebene Zahl ist.
+      - id: 3
+        shouldFail: true
+        description: Die Funktion count_lower soll die Zahlen zählen, welche kleiner als die übergebene Zahl sind.
+      - id: 4
+        shouldFail: true
+        description: Die Funktion count_lower soll 0 zurückgeben, falls keine Zahl kleiner als die übergebene Zahl ist.
+      - id: 5
+        shouldFail: true
+        description: Die Funktion bank_card_security_value soll die Zahlen mit den Inidzes multiplizieren.
+      - id: 6
+        shouldFail: true
+        description: Die Funktion bank_card_security_value soll die Zahlen mit den korrekten Indizes mutltiplizieren.
+      - id: 7
+        shouldFail: true
+        description: Die Funktion bank_card_security_value soll 0 zurückgeben, falls die übergebene Liste leer ist.
+      - id: 8
+        shouldFail: true
+        description: Die Funktion vector_length soll alle Einträge zuerst quadrieren.
+      - id: 9
+        shouldFail: true
+        description: Die Funktion vector_length soll alle quadrierten Einträge addieren.
+      - id: 10
+        shouldFail: true
+        description: Die Funktion vector_length soll die Wurzel der quadrierten und addierten Einträge zurückgeben.
+      - id: 11
+        shouldFail: true
+        description: Die Funktion vector_length soll 0 zurückgeben, falls die übergebene Liste leer ist.
+      - id: 12
+        shouldFail: true
+        description: Die Funktion vector_scalar soll den übergebenen Skalarwert zu jedem Element im Originalvektor addieren.
+      - id: 13
+        shouldFail: true
+        description: Die Funktion vector_scalar soll den korrekten übergebenen Skalarwert zu jedem Element im Originalvektor addieren.
+      - id: 14
+        shouldFail: true
+        description: Die Funktion vector_scalar soll eine leere Liste zurückgeben, falls die übergebene Liste leer ist.
+      - id: 15
+        shouldFail: true
+        description: Die Funktion vector_add_vector soll eine leere Liste zurückgeben, falls die Längen der beiden übergebenen Listen nicht übereinstimmen.
+      - id: 16
+        shouldFail: true
+        description: Die Funktion vector_add_vector soll die beiden Vektoren korrekt addieren.
+      - id: 17
+        shouldFail: true
+        description: Die Funktion vector_add_vector soll eine leere Liste zurückgeben, falls beide übergebenen Listen leer sind.
+      - id: 18
+        shouldFail: true
+        description: Die Funktion flatten_lists soll alle Listen korrekt in einer neuen Liste vereinen.
+      - id: 19
+        shouldFail: true
+        description: Die Funktion flatten_lists soll eine leere Liste zurückgeben, falls die übergebene Liste leer ist.
+    testFileName: test_general.py
+    sampleSolFileNames: [test_general.py]
+
+  implementationPart:
+    base: |
+      from typing import List
+
+
+      def filter_greater(vector: List[int], x: int) -> List[int]:
+          pass
+
+
+      def count_lower(vector: List[int], x: int) -> int:
+          pass
+
+
+      def bank_card_security_value(digits: List[int]) -> int:
+          pass
+
+
+      def vector_length(vector: List[int]) -> float:
+          pass
+
+
+      def vector_add_scalar(vector: List[int], scalar: int) -> List[int]:
+          pass
+
+
+      def vector_add_vector(vector1: List[int], vector2: List[int]) -> List[int]:
+          pass
+
+
+      def flatten_lists(list_of_lists: List[List[int]]) -> List[int]:
+          pass
+    files:
+      - name: test_general.py
+        resourcePath: programming/4/3/test_general.py
+        fileType: python
+        editable: false
+      - name: general.py
+        resourcePath: programming/4/3/general_declaration.py
+        fileType: python
+        editable: true
+    implFileName: general.py
+    sampleSolFileNames: [general.py]
+
+  sampleSolutions:
+    - id: 1
+      sample:
+        files:
+          - name: general.py
+            resourcePath: programming/4/3/general.py
+            fileType: python
+            editable: false
+          - name: test_general.py
+            resourcePath: programming/4/3/test_general.py
+            fileType: python
+            editable: false
+        testData: []
+
+  sampleTestData: []
+
+  tags:
+    - Lists
+    - ForLoops
+    - Math
+    - Conditions

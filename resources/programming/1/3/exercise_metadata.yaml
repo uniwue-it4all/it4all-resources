@@ -1,0 +1,102 @@
+!Exercise
+id: 3
+collectionId: 1
+toolId: programming
+semanticVersion: {major: 0, minor: 0, patch: 1}
+title: Babylonisches Wurzelziehen
+author: bje40dc
+text:
+  !LongText
+  relativePath: programming/1/3/text.html
+state: APPROVED
+
+content:
+  functionName: babylonian_root
+  filename: babylonian_root
+  foldername: babylonian_root
+
+  inputTypes:
+    - {id: 1, inputName: number, inputType: FLOAT}
+    - {id: 2, inputName: count, inputType: INTEGER}
+  outputType: FLOAT
+
+  unitTestPart:
+    unitTestType: Normal
+
+    unitTestsDescription: ''
+
+    unitTestFiles:
+      - name: babylonian_root.py
+        resourcePath: programming/1/3/babylonian_root_declaration.py
+        fileType: python
+        editable: false
+      - name: test_babylonian_root.py
+        resourcePath: programming/1/3/test_babylonian_root_declaration.py
+        fileType: python
+        editable: true
+
+    unitTestTestConfigs:
+      - id: 0
+        shouldFail: false
+        cause: ''
+        description: Diese Implementierung ist korrekt und sollte alle Tests bestehen.
+      - id: 1
+        shouldFail: true
+        cause: ''
+        description:  Falls das Funktionsargument 'count' keine Ganzzahl ist, soll eine Exception geworfen werden.
+      - id: 2
+        shouldFail: true
+        cause: ''
+        description: Falls das Argument 'count' kleiner als 0 ist, soll eine Exception geworfen werden.
+      - id: 3
+        shouldFail: true
+        cause: ''
+        description: Falls das Argument 'number' keine Zahl ist, soll eine Exception geworfen werden.
+      - id: 4
+        shouldFail: true
+        cause: ''
+        description: Falls das Argument 'number' kleiner oder gleich 0 ist, soll eine Exception geworfen werden.
+      - id: 5
+        shouldFail: true
+        cause: ''
+        description: >
+          Die Funktion sollte das korrekte Ergebnis liefern, indem sie die korrekte Anzahl an Iterationen durchführt.
+
+    testFileName: test_babylonian_root.py
+
+    sampleSolFileNames: [test_babylonian_root.py]
+
+  implementationPart:
+    base: ''
+    files:
+      - name: test_babylonian_root.py
+        resourcePath: programming/1/3/test_babylonian_root.py
+        fileType: python
+        editable: false
+      - name: babylonian_root.py
+        resourcePath: programming/1/3/babylonian_root_declaration.py
+        fileType: python
+        editable: true
+    implFileName: babylonian_root.py
+    sampleSolFileNames: [babylonian_root.py]
+
+  sampleSolutions:
+    - id: 1
+      sample:
+        files:
+          - name: test_babylonian_root.py
+            resourcePath: programming/1/3/test_babylonian_root.py
+            fileType: python
+            editable: false
+          - name: babylonian_root.py
+            resourcePath: programming/1/3/babylonian_root.py
+            fileType: python
+            editable: false
+        testData: []
+
+  sampleTestData: []
+
+  tags:
+    - Exceptions
+    - ForLoops
+    - Math

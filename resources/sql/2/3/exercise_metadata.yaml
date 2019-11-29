@@ -1,0 +1,20 @@
+!Exercise
+id: 3
+collectionId: 2
+toolId: sql
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Verlagsnamen
+author: bje40dc
+text:
+  !LongText
+  relativePath: sql/2/3/text.txt
+state: APPROVED
+content:
+  exerciseType: SELECT
+  sampleSolutions:
+    - id: 1
+      sample: |
+        SELECT name
+          FROM publishers;
+  tags: []
+  hint: null

@@ -1,1 +1,4 @@
 flask==1.1.1
+simplejson==3.17.0
+pyyaml==5.1.2
+mypy==0.740

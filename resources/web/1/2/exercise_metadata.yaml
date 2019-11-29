@@ -1,0 +1,140 @@
+!Exercise
+id: 2
+collectionId: 1
+toolId: web
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Tabellen in Html
+author: bje40dc
+text:
+  !LongText
+  relativePath: web/1/2/text.html
+state: APPROVED
+
+content:
+  htmlText: null
+  jsText: null
+  files:
+    - name: production.html
+      resourcePath: web/1/2/production.html
+      fileType: htmlmixed
+      editable: true
+    - name: productionStyle.css
+      resourcePath: web/1/2/productionStyle.css
+      fileType: css
+      editable: false
+
+  siteSpec:
+    fileName: production.html
+    htmlTasks:
+      - id: 1
+        text: Erstellen Sie das Grundtag für die Tabelle.
+        xpathQuery: /html/body//table
+        awaitedTagName: table
+        awaitedTextContent: null
+        attributes: []
+
+      - id: 2
+        text: Erstellen Sie die erste Zeile für die Überschriften.
+        xpathQuery: '/html/body//table//tr[1]'
+        awaitedTagName: 'tr'
+        awaitedTextContent: null
+        attributes: []
+
+      - id: 3
+        text: Erstellen Sie die erste Zelle für die Überschrift. Diese soll als Inhalt 'Jahr' haben.
+        xpathQuery: html/body//table//tr[1]/th[1]
+        awaitedTagName: th
+        awaitedTextContent: Jahr
+        attributes: []
+
+      - id: 4
+        text: Erstellen Sie die zweite Zelle für die Überschrift. Diese soll als Inhalt 'Produktion' haben.
+        xpathQuery: html/body//table//tr[1]/th[2]
+        awaitedTagName: th
+        awaitedTextContent: Produktion
+        attributes: []
+
+      - id: 5
+        text: Erstellen Sie die zweite Zeile in der Tabelle
+        xpathQuery: '/html/body//table//tr[2]'
+        awaitedTagName: 'tr'
+        awaitedTextContent: null
+        attributes: []
+
+      - id: 6
+        text: Erstellen Sie die erste Zelle in der zweiten Zeile. Diese soll als Inhalt '1900' haben.
+        xpathQuery: html/body//table//tr[2]/td[1]
+        awaitedTagName: td
+        awaitedTextContent: '1900'
+        attributes: []
+
+      - id: 7
+        text: Erstellen Sie die zweite Zelle in der zweiten Zeile. Diese soll als Inhalt '9504' haben.
+        xpathQuery: html/body//table//tr[2]/td[2]
+        awaitedTagName: td
+        awaitedTextContent: '9504'
+        attributes: []
+
+      - id: 8
+        text: Erstellen Sie die dritte Zeile in der Tabelle
+        xpathQuery: '/html/body//table//tr[3]'
+        awaitedTagName: 'tr'
+        awaitedTextContent: null
+        attributes: []
+
+      - id: 9
+        text: Erstellen Sie die erste Zelle in der dritten Zeile. Diese soll als Inhalt '1950' haben.
+        xpathQuery: html/body//table//tr[3]/td[1]
+        awaitedTagName: td
+        awaitedTextContent: '1950'
+        attributes: []
+
+      - id: 10
+        text: Erstellen Sie die zweite Zelle in der dritten Zeile. Diese soll als Inhalt '10577426' haben.
+        xpathQuery: html/body//table//tr[3]/td[2]
+        awaitedTagName: td
+        awaitedTextContent: '10577426'
+        attributes: []
+
+      - id: 11
+        text: Erstellen Sie die vierte Zeile in der Tabelle.
+        xpathQuery: /html/body//table//tr[4]
+        awaitedTagName: td
+        awaitedTextContent: null
+        attributes: []
+
+      - id: 12
+        text: Erstellen Sie die erste Zelle in der vierten Zeile. Diese soll als Inhalt '2000' haben.
+        xpathQuery: html/body//table//tr[4]/td[1]
+        awaitedTagName: td
+        awaitedTextContent: '2000'
+        attributes: []
+
+      - id: 13
+        text: Erstellen Sie die zweite Zelle in der vierten Zeile. Diese soll als Inhalt '58374162' haben
+        xpathQuery: 'html/body//table//tr[4]/td[2]'
+        awaitedTagName: 'td'
+        awaitedTextContent: '58374162'
+        attributes: []
+
+      - id: 14
+        text: >
+          Binden Sie die vorgegebene CSS-Datei 'productionStyle.css' ein. Die entsprechende Datei ist unter der URL
+          'productionStyle.css' zu finden. Setzen Sie auch den entsprechenden Wert für das Attribut 'rel'.
+        xpathQuery: /html/head//link
+        awaitedTagName: link
+        awaitedTextContent: null
+        attributes:
+          - {key: href, value: productionStyle.css}
+          - {key: rel, value: stylesheet}
+
+
+    jsTasks: []
+
+  sampleSolutions:
+    - id: 1
+      sample:
+        - name: production.html
+          resourcePath: web/1/2/productionSolution.html
+          fileType: htmlmixed
+          editable: false

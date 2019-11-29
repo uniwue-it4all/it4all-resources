@@ -1,0 +1,92 @@
+!Exercise
+id: 2
+collectionId: 2
+toolId: programming
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Fließkommazahl in Exponentialschreibweise
+author: bje40dc
+text:
+  !LongText
+  relativePath: programming/2/2/text.html
+state: APPROVED
+
+content:
+  functionName: floating_point_exponential
+  foldername: floating_point_exponential
+  filename: floating_point_exponential
+  inputTypes: []
+  outputType: VOID
+
+  unitTestPart:
+
+    unitTestType: Normal
+
+    unitTestsDescription: >
+
+    unitTestFiles:
+      - name: floating_point_exponential.py
+        resourcePath: programming/2/2/floating_point_exponential_declaration.py
+        fileType: python
+        editable: false
+      - name: test_floating_point_exponential.py
+        resourcePath: programming/2/2/test_floating_point_exponential_declaration.py
+        fileType: python
+        editable: true
+
+    unitTestTestConfigs:
+      - id: 0
+        shouldFail: false
+        description: Musterlösung...
+      - id: 1
+        shouldFail: true
+        description: Die Mantisse soll alle Dezimalstellen beinhalten.
+      - id: 2
+        shouldFail: true
+        description: Die Zahl 10 soll mit der Variable <code>exponent</code> potenziert und nicht multipliziert werden.
+      - id: 3
+        shouldFail: true
+        description: Die Zahl 10 soll mit der Variable <code>exponent</code> potenziert werden.
+      - id: 4
+        shouldFail: true
+        description: Die Ausgabe soll richtig formatiert sein {Mantisse}e{Exponent}.
+    testFileName: test_floating_point_exponential.py
+    sampleSolFileNames: [test_floating_point_exponential.py]
+
+  implementationPart:
+    base: |
+      from math import log10
+
+
+      def format_floating_point_exponential(number: float) -> str:
+          pass
+    files:
+      - name: test_floating_point_exponential.py
+        resourcePath: programming/2/2/test_floating_point_exponential.py
+        fileType: python
+        editable: false
+      - name: floating_point_exponential.py
+        resourcePath: programming/2/2/floating_point_exponential_declaration.py
+        fileType: python
+        editable: true
+    implFileName: floating_point_exponential.py
+    sampleSolFileNames: [floating_point_exponential.py]
+
+  sampleSolutions:
+    - id: 1
+      sample:
+        files:
+          - name: floating_point_exponential.py
+            resourcePath: programming/2/2/floating_point_exponential.py
+            fileType: python
+            editable: false
+          - name: test_floating_point_exponential.py
+            resourcePath: programming/2/2/test_floating_point_exponential.py
+            fileType: python
+            editable: false
+        testData: []
+
+  sampleTestData: []
+
+  tags:
+    - Strings
+    - Math

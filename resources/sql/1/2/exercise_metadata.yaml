@@ -1,0 +1,22 @@
+!Exercise
+id: 2
+collectionId: 1
+toolId: sql
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Angestelltennummer
+author: bje40dc
+text:
+  !LongText
+  relativePath: sql/1/1/text.txt
+state: APPROVED
+content:
+  exerciseType: SELECT
+  sampleSolutions:
+    - id: 1
+      sample: |
+        SELECT id
+          FROM employee
+          WHERE firstname = 'Max'
+            AND lastname = 'Becker';
+  tags: []
+  hint: null

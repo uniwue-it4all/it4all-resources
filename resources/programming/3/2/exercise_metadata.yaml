@@ -1,0 +1,95 @@
+!Exercise
+id: 2
+collectionId: 3
+toolId: programming
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Rabatt
+author: bje40dc
+text:
+  !LongText
+  relativePath: programming/3/2/text.html
+state: APPROVED
+
+content:
+  functionName: discount
+  foldername: discount
+  filename: discount
+  inputTypes: []
+  outputType: VOID
+
+  unitTestPart:
+
+    unitTestType: Normal
+
+    unitTestsDescription: >
+
+    unitTestFiles:
+      - name: discount.py
+        resourcePath: programming/3/2/discount_declaration.py
+        fileType: python
+        editable: false
+      - name: test_discount.py
+        resourcePath: programming/3/2/test_discount_declaration.py
+        fileType: python
+        editable: true
+
+    unitTestTestConfigs:
+      - id: 0
+        shouldFail: false
+        description: Musterlösung...
+      - id: 1
+        shouldFail: true
+        description: Falls der Kunde einen Hund besitzt, soll der korrekte Rabatt gewährt werden.
+      - id: 2
+        shouldFail: true
+        description: Falls der Kunde eine Katze besitzt, soll der korrekte Rabatt gewährt werden.
+      - id: 3
+        shouldFail: true
+        description: Falls der Kunde einen Hund und eine Katze besitzt, soll der korrekte Rabatt gewährt werden.
+      - id: 4
+        shouldFail: true
+        description: Falls der Kunde keinen Hund und keine Katze besitzt, soll der korrekte Rabatt gewährt werden.
+      - id: 5
+        shouldFail: true
+        description: Falls der Kunde einen Hamster besitzt, soll der korrekte Rabatt gewährt werden.
+      - id: 6
+        shouldFail: true
+        description: Falls der Kunde keinen Hamster besitzt, soll der korrekte Rabatt gewährt werden.
+    testFileName: test_discount.py
+    sampleSolFileNames: [test_discount.py]
+
+  implementationPart:
+    base: |
+      def calculate_discount(has_dog: bool, has_cat: bool, has_hamster: bool) -> int:
+          pass
+    files:
+      - name: test_discount.py
+        resourcePath: programming/3/2/test_discount.py
+        fileType: python
+        editable: false
+      - name: discount.py
+        resourcePath: programming/3/2/discount_declaration.py
+        fileType: python
+        editable: true
+    implFileName: discount.py
+    sampleSolFileNames: [discount.py]
+
+  sampleSolutions:
+    - id: 1
+      sample:
+        files:
+          - name: discount.py
+            resourcePath: programming/3/2/discount.py
+            fileType: python
+            editable: false
+          - name: test_discount.py
+            resourcePath: programming/3/2/test_discount.py
+            fileType: python
+            editable: false
+        testData: []
+
+  sampleTestData: []
+
+  tags:
+    - Conditions
+    - Math

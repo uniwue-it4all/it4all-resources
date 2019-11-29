@@ -1,0 +1,79 @@
+!Exercise
+id: 3
+collectionId: 1
+toolId: web
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Hyperlinks und Bilder in HTML
+author: bje40dc
+text:
+  !LongText
+  relativePath: web/1/3/text.html
+state: APPROVED
+
+content:
+  htmlText: null
+  jsText: null
+  files:
+    - name: mustang.html
+      resourcePath: web/1/3/mustang.html
+      fileType: htmlmixed
+      editable: true
+    - name: mustangStyle.css
+      resourcePath: web/1/3/mustangStyle.css
+      fileType: css
+      editable: false
+
+  siteSpec:
+    fileName: mustang.html
+    htmlTasks:
+      - id: 1
+        text: Erstellen Sie eine passende h1-Überschrift, die 'Ford Mustang' enthält.
+        xpathQuery: /html/body//h1
+        awaitedTagName: h1
+        awaitedTextContent: Ford Mustang
+        attributes: []
+
+      - id: 2
+        text: >
+          Erstellen Sie den Link auf der Seite, der auf Wikipedia verweist. Geben Sie als Ziel die URL
+          'https://de.wikipedia.org/wiki/Ford_Mustang' an.
+        xpathQuery: /html/body//a
+        awaitedTagName: a
+        awaitedTextContent: null
+        attributes:
+          - {key: href, value: 'https://de.wikipedia.org/wiki/Ford_Mustang'}
+
+      - id: 3
+        text: >
+          Erstellen Sie im Link das Bild des Ford Mustang. Geben Sie als Quelle des Bildes die URL
+          'https://upload.wikimedia.org/wikipedia/commons/2/2d/1964_12_Ford_Mustang.jpg' und als alternative Beschreibung
+          'Ford Mustang' an. Geben Sie außerdem eine Breite von 250 und eine Höhe von 188 an, um das Bild zu skalieren.
+        xpathQuery: /html/body//a//img
+        awaitedTagName: img
+        awaitedTextContent: null
+        attributes:
+          - {key: src, value: 'https://upload.wikimedia.org/wikipedia/commons/2/2d/1964_12_Ford_Mustang.jpg'}
+          - {key: alt, value: 'Ford Mustang'}
+          - {key: width, value: '250'}
+          - {key: height, value: '188'}
+
+      - id: 4
+        text: >
+          Binden Sie die vorgegebene CSS-Datei 'mustangStyle.css' ein. Die entsprechende Datei ist unter der URL
+          'mustangStyle.css' zu finden. Setzen Sie auch den entsprechenden Wert für das Attribut 'rel'.
+        xpathQuery: /html/head//link
+        awaitedTagName: link
+        awaitedTextContent: null
+        attributes:
+          - {key: rel, value: stylesheet}
+          - {key: href, value: mustangStyle.css}
+
+    jsTasks: []
+
+  sampleSolutions:
+    - id: 1
+      sample:
+        - name: mustang.html
+          resourcePath: web/1/3/mustangSolution.html
+          fileType: htmlmixed
+          editable: false

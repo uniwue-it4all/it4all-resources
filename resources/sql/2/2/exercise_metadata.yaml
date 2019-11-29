@@ -1,0 +1,20 @@
+!Exercise
+id: 2
+collectionId: 2
+toolId: sql
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Nachnamen aller Autoren
+author: bje40dc
+text:
+  !LongText
+  relativePath: sql/2/2/text.txt
+state: APPROVED
+content:
+  exerciseType: SELECT
+  sampleSolutions:
+    - id: 1
+      sample: |
+        SELECT family_name
+          FROM authors;
+  tags: []
+  hint: null

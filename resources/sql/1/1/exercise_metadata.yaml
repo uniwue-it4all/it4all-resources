@@ -1,0 +1,24 @@
+!Exercise
+id: 1
+collectionId: 1
+toolId: sql
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Anzahl der Angestellten
+author: bje40dc
+text:
+  !LongText
+  relativePath: sql/1/1/text.txt
+state: APPROVED
+content:
+  exerciseType: SELECT
+  sampleSolutions:
+    - id: 1
+      sample: |
+        SELECT COUNT(*) AS Anzahl
+          FROM employee;
+    - id: 2
+      sample: |
+        SELECT COUNT(id) AS Anzahl
+          FROM employee;
+  tags: []
+  hint: null

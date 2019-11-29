@@ -1,0 +1,132 @@
+!Exercise
+id: 1
+collectionId: 6
+toolId: programming
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Temperaturen
+author: bje40dc
+text:
+  !LongText
+  relativePath: programming/6/1/text.html
+state: APPROVED
+
+content:
+  functionName: temperatures
+  foldername: temperatures
+  filename: temperatures
+  inputTypes: []
+  outputType: VOID
+
+  unitTestPart:
+
+    unitTestType: Normal
+
+    unitTestsDescription: >
+
+    unitTestFiles:
+      - name: temperatures.py
+        resourcePath: programming/6/1/temperatures_declaration.py
+        fileType: python
+        editable: false
+      - name: test_temperatures.py
+        resourcePath: programming/6/1/test_temperatures_declaration.py
+        fileType: python
+        editable: true
+
+    unitTestTestConfigs:
+      - id: 0
+        shouldFail: false
+        description: Musterlösung...
+      - id: 1
+        shouldFail: true
+        description: Die Funktion celsius_to_fahrenheit soll die Temperatur korrekt von Celsius in Fahrenheit umrechnen.
+      - id: 2
+        shouldFail: true
+        description: Die Funktion celsius_to_fahrenheit soll die Temperatur korrekt von Celsius in Fahrenheit umrechnen.
+      - id: 3
+        shouldFail: true
+        description: Die Funktion celsius_to_kelvin soll die Temperatur korrekt von Celsius in Kelvin umrechnen.
+      - id: 4
+        shouldFail: true
+        description: Die Funktion celsius_to_kelvin soll die Temperatur korrekt von Celsius in Kelvin umrechnen.
+      - id: 5
+        shouldFail: true
+        description: Die Funktion fahrenheit_to_celsius soll die Temperatur korrekt von Fahrenheit in Celsius umrechnen.
+      - id: 6
+        shouldFail: true
+        description: Die Funktion fahrenheit_to_celsius soll die Temperatur korrekt von Fahrenheit in Celsius umrechnen.
+      - id: 7
+        shouldFail: true
+        description: Die Funktion fahrenheit_to_kelvin soll die Temperatur korrekt von Fahrenheit in Kelvin umrechnen.
+      - id: 8
+        shouldFail: true
+        description: Die Funktion fahrenheit_to_kelvin soll die Temperatur korrekt von Fahrenheit in Kelvin umrechnen.
+      - id: 9
+        shouldFail: true
+        description: Die Funktion kelvin_to_celsius soll die Temperatur korrekt von Kelvin in Celsius umrechnen.
+      - id: 10
+        shouldFail: true
+        description: Die Funktion kelvin_to_celsius soll die Temperatur korrekt von Kelvin in Celsius umrechnen.
+      - id: 11
+        shouldFail: true
+        description: Die Funktion kelvin_to_fahrenheit soll die Temperatur korrekt von Kelvin in Fahrenheit umrechnen.
+      - id: 12
+        shouldFail: true
+        description: Die Funktion kelvin_to_fahrenheit soll die Temperatur korrekt von Kelvin in Fahrenheit umrechnen.
+    testFileName: test_temperatures.py
+    sampleSolFileNames: [test_temperatures.py]
+
+  implementationPart:
+    base: |
+      def celsius_to_fahrenheit(degrees_celsius: float) -> float:
+          pass
+
+
+      def celsius_to_kelvin(degrees_celsius: float) -> float:
+          pass
+
+
+      def fahrenheit_to_celsius(degrees_fahrenheit: float) -> float:
+          pass
+
+
+      def fahrenheit_to_kelvin(degrees_fahrenheit: float) -> float:
+          pass
+
+
+      def kelvin_to_celsius(degrees_kelvin: float) -> float:
+          pass
+
+
+      def kelvin_to_fahrenheit(degrees_kelvin: float) -> float:
+          pass
+    files:
+      - name: test_temperatures.py
+        resourcePath: programming/6/1/test_temperatures.py
+        fileType: python
+        editable: false
+      - name: temperatures.py
+        resourcePath: programming/6/1/temperatures_declaration.py
+        fileType: python
+        editable: true
+    implFileName: temperatures.py
+    sampleSolFileNames: [temperatures.py]
+
+  sampleSolutions:
+    - id: 1
+      sample:
+        files:
+          - name: temperatures.py
+            resourcePath: programming/6/1/temperatures.py
+            fileType: python
+            editable: false
+          - name: test_temperatures.py
+            resourcePath: programming/6/1/test_temperatures.py
+            fileType: python
+            editable: false
+        testData: []
+
+  sampleTestData: []
+
+  tags:
+    - Math

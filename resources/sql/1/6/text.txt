@@ -1,0 +1,1 @@
+Erstellen Sie das CREATE TABLE-Skript für die Tabelle employee!

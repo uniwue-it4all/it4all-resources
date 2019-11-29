@@ -1,0 +1,22 @@
+!Exercise
+id: 24
+collectionId: 2
+toolId: sql
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Fan oder nicht?
+author: bje40dc
+text: >
+  Geben Sie jeweils die schlechteste und beste Bewertung des Buches 'Harry Potter und der Halbblutprinz' aus. Nennen Sie
+  die Spalten jeweils 'Schlechteste' und 'Beste'.
+state: APPROVED
+content:
+  exerciseType: SELECT
+  sampleSolutions:
+    - id: 1
+      sample: |
+        SELECT min(rating) AS Schlechteste, max(rating) AS Beste
+          FROM books
+            JOIN ratings ON books.id = ratings.book_id
+          WHERE title = 'Harry Potter und der Halbblutprinz';
+  tags: [SQL_FUNCTION, SQL_ALIAS, SQL_JOIN]
+  hint: null

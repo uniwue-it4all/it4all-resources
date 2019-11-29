@@ -43,13 +43,13 @@
           <value>
             <SchemaInfo>
               <option name="name" value="prog_ex.schema" />
-              <option name="relativePathToSchema" value="programming/prog_ex.schema.json" />
+              <option name="relativePathToSchema" value="resources/programming/prog_ex.schema.json" />
               <option name="schemaVersion" value="JSON schema version 7" />
               <option name="patterns">
                 <list>
                   <Item>
                     <option name="pattern" value="true" />
-                    <option name="path" value="programming/*-*.yaml" />
+                    <option name="path" value="resources/programming/*/*/exercise_metadata.yaml" />
                     <option name="mappingKind" value="Pattern" />
                   </Item>
                 </list>
@@ -61,13 +61,13 @@
           <value>
             <SchemaInfo>
               <option name="name" value="regex_ex.schema" />
-              <option name="relativePathToSchema" value="regex/regex_ex.schema.json" />
+              <option name="relativePathToSchema" value="resources/regex/regex_ex.schema.json" />
               <option name="schemaVersion" value="JSON schema version 7" />
               <option name="patterns">
                 <list>
                   <Item>
                     <option name="pattern" value="true" />
-                    <option name="path" value="regex/*-*.yaml" />
+                    <option name="path" value="resources/regex/*/*/exercise_metadata.yaml" />
                     <option name="mappingKind" value="Pattern" />
                   </Item>
                 </list>
@@ -79,13 +79,13 @@
           <value>
             <SchemaInfo>
               <option name="name" value="rose_ex.schema" />
-              <option name="relativePathToSchema" value="rose/rose_ex.schema.json" />
+              <option name="relativePathToSchema" value="resources/rose/rose_ex.schema.json" />
               <option name="schemaVersion" value="JSON schema version 7" />
               <option name="patterns">
                 <list>
                   <Item>
                     <option name="pattern" value="true" />
-                    <option name="path" value="rose/*-*.yaml" />
+                    <option name="path" value="resources/rose/*/*/exercise_metadata.yaml" />
                     <option name="mappingKind" value="Pattern" />
                   </Item>
                 </list>
@@ -97,13 +97,13 @@
           <value>
             <SchemaInfo>
               <option name="name" value="sql_ex.schema" />
-              <option name="relativePathToSchema" value="sql/sql_ex.schema.json" />
+              <option name="relativePathToSchema" value="resources/sql/sql_ex.schema.json" />
               <option name="schemaVersion" value="JSON schema version 7" />
               <option name="patterns">
                 <list>
                   <Item>
                     <option name="pattern" value="true" />
-                    <option name="path" value="sql/*-*.yaml" />
+                    <option name="path" value="resources/sql/*/*/exercise_metadata.yaml" />
                     <option name="mappingKind" value="Pattern" />
                   </Item>
                 </list>
@@ -115,13 +115,13 @@
           <value>
             <SchemaInfo>
               <option name="name" value="uml_ex.schema" />
-              <option name="relativePathToSchema" value="uml/uml_ex.schema.json" />
+              <option name="relativePathToSchema" value="resources/uml/uml_ex.schema.json" />
               <option name="schemaVersion" value="JSON schema version 7" />
               <option name="patterns">
                 <list>
                   <Item>
                     <option name="pattern" value="true" />
-                    <option name="path" value="uml/*-*.yaml" />
+                    <option name="path" value="resources/uml/*/*/exercise_metadata.yaml" />
                     <option name="mappingKind" value="Pattern" />
                   </Item>
                 </list>
@@ -133,13 +133,13 @@
           <value>
             <SchemaInfo>
               <option name="name" value="web_ex.schema" />
-              <option name="relativePathToSchema" value="web/web_ex.schema.json" />
+              <option name="relativePathToSchema" value="resources/web/web_ex.schema.json" />
               <option name="schemaVersion" value="JSON schema version 7" />
               <option name="patterns">
                 <list>
                   <Item>
                     <option name="pattern" value="true" />
-                    <option name="path" value="web/*-*.yaml" />
+                    <option name="path" value="resources/web/*/*/exercise_metadata.yaml" />
                     <option name="mappingKind" value="Pattern" />
                   </Item>
                 </list>
@@ -151,13 +151,13 @@
           <value>
             <SchemaInfo>
               <option name="name" value="xml_ex.schema" />
-              <option name="relativePathToSchema" value="xml/xml_ex_content.schema.json" />
+              <option name="relativePathToSchema" value="resources/xml/xml_ex_content.schema.json" />
               <option name="schemaVersion" value="JSON schema version 7" />
               <option name="patterns">
                 <list>
                   <Item>
                     <option name="pattern" value="true" />
-                    <option name="path" value="xml/*-*.yaml" />
+                    <option name="path" value="resources/xml/*/*/exercise_metadata.yaml" />
                     <option name="mappingKind" value="Pattern" />
                   </Item>
                 </list>

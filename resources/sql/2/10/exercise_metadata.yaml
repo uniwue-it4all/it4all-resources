@@ -1,0 +1,19 @@
+!Exercise
+id: 10
+collectionId: 2
+toolId: sql
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Verlag mit Telefonnummer
+author: bje40dc
+text: Bestimmen Sie den Namen des Verlages der unter der Telefonnummer '+49 2402 / 806341' erreichbar ist.
+state: APPROVED
+content:
+  exerciseType: SELECT
+  sampleSolutions:
+    - id: 1
+      sample: |
+        SELECT name
+          FROM publishers
+          WHERE phone = '+49 2402 / 806341';
+  tags: []
+  hint: null

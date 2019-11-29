@@ -1,14 +1,13 @@
+!Exercise
 id: 1
 collectionId: 1
 toolId: uml
-semanticVersion:
-  major: 1
-  minor: 0
-  patch: 0
+semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Tutorial Konto
 author: bje40dc
 text:
-  relativePath: uml/1/1-text.txt
+  !LongText
+  relativePath: uml/1/1/1-text.txt
 state: APPROVED
 
 content:
@@ -63,95 +62,3 @@ content:
           - {subClass: Girokonto, superClass: Konto}
           - {subClass: Sparkonto, superClass: Konto}
           - {subClass: Kreditkonto, superClass: Konto}
-
-  - id: 2
-    collectionId: 1
-    toolId: uml
-    semanticVersion:
-      major: 1
-      minor: 0
-      patch: 0
-    title: Krankenhaus
-    author: bje40dc
-    text:
-      relativePath: uml/1/2-text.txt
-    state: APPROVED
-
-    content:
-      mappings:
-        - {key: Stationen, value: Station}
-        - {key: Doktoren, value: Doktor}
-        - {key: Krankenschwestern, value: Krankenschwester}
-        - {key: Patienten, value: Patient}
-        - {key: Namen, value: Name}
-        - {key: Medikamente, value: Medikament}
-        - {key: Rezepten, value: Rezept}
-      toIgnore: [Ein, Jede]
-
-      sampleSolutions:
-        - id: 1
-          sample:
-            classes:
-              - classType: ABSTRACT
-                name: Person
-                attributes:
-                  - {visibility: public, memberName: id, memberType: int, isAbstract: false, isDerived: false, isStatic: false}
-                  - {visibility: public, memberName: name, memberType: string, isAbstract: false, isDerived: false, isStatic: false}
-                methods: []
-
-              - classType: CLASS
-                name: Doktor
-                attributes: []
-                methods:
-                  - {visibility: public, memberName: verschreiben, parameters: Patient, memberType: void, isAbstract: false, isStatic: false}
-
-              - classType: CLASS
-                name: Rezept
-                attributes:
-                  - {visibility: public, memberName: id, memberType: int, isAbstract: false, isDerived: false, isStatic: false}
-                methods: []
-
-              - classType: CLASS
-                name: Patient
-                attributes: []
-                methods:
-                  - {visibility: public, memberName: entlassen, parameters: Station, memberType: void, isAbstract: false, isStatic: false}
-                  - {visibility: public, memberName: aufnehmen, parameters: Station, memberType: void, isAbstract: false, isStatic: false}
-
-              - classType: CLASS
-                name: Krankenschwester
-                attributes: []
-                methods: []
-
-              - classType: CLASS
-                name: Station
-                attributes:
-                  - {visibility: public, memberName: nummer, memberType: int, isAbstract: false, isDerived: false, isStatic: false}
-                methods: []
-
-              - classType: CLASS
-                name: Medikament
-                attributes:
-                  - {visibility: public, memberName: id, memberType: int, isAbstract: false, isDerived: false, isStatic: false}
-                  - {visibility: public, memberName: name, memberType: string, isAbstract: false, isDerived: false, isStatic: false}
-                methods: []
-
-              - classType: CLASS
-                name: Krankenhaus
-                attributes:
-                  - {visibility: public, memberName: name, memberType: string, isAbstract: false, isDerived: false, isStatic: false}
-                methods: []
-
-            implementations:
-              - {subClass: Patient, superClass: Person}
-              - {subClass: Doktor, superClass: Person}
-              - {subClass: Krankenschwester, superClass: Person}
-
-            associations:
-              - {assocType: ASSOCIATION, firstEnd: Doktor, firstMult: SINGLE, secondEnd: Rezept, secondMult: UNBOUND}
-              - {assocType: ASSOCIATION, firstEnd: Station, firstMult: SINGLE, secondEnd: Patient, secondMult: UNBOUND}
-              - {assocType: ASSOCIATION, firstEnd: Station, firstMult: SINGLE, secondEnd: Krankenschwester, secondMult: UNBOUND}
-              - {assocType: ASSOCIATION, firstEnd: Station, firstMult: SINGLE, secondEnd: Doktor, secondMult: UNBOUND}
-              - {assocType: ASSOCIATION, firstEnd: Patient, firstMult: SINGLE, secondEnd: Rezept, secondMult: UNBOUND}
-              - {assocType: ASSOCIATION, firstEnd: Rezept, firstMult: UNBOUND, secondEnd: Medikament, secondMult: UNBOUND}
-              - {assocType: COMPOSITION, firstEnd: Station, firstMult: UNBOUND, secondEnd: Krankenhaus, secondMult: SINGLE}

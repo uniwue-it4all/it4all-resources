@@ -1,0 +1,19 @@
+!Exercise
+id: 9
+collectionId: 2
+toolId: sql
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Der kleine Prinz?
+author: bje40dc
+text: Bestimmen Sie die Autor-ID des Buches 'Der kleine Prinz' (ohne Anführungszeichen).
+state: APPROVED
+content:
+  exerciseType: SELECT
+  sampleSolutions:
+    - id: 1
+      sample: |
+        SELECT author_id
+          FROM books
+          WHERE title = 'Der kleine Prinz';
+  tags: []
+  hint: null

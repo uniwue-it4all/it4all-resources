@@ -1,7 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "type": "array",
-  "items": {"$ref": "#/definitions/XmlExercise"},
+  "$ref": "#/definitions/XmlExercise",
   "definitions": {
     "XmlExercise": {
       "allOf": [

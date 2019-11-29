@@ -1,0 +1,48 @@
+--- !Exercise
+id: 1
+collectionId: 1
+toolId: xml
+semanticVersion:
+  major: 1
+  minor: 0
+  patch: 0
+title: Party
+author: bje40dc
+text:
+  !LongText
+  relativePath: xml/1/1/text.html
+state: APPROVED
+
+content:
+  rootNode: party
+  grammarDescription:
+    relativePath: xml/1/1/grammarDescription.txt
+  sampleSolutions:
+    - id: 1
+      sample:
+        grammar: |
+          <!ELEMENT party (gast+)>
+          <!ATTLIST party datum CDATA #REQUIRED>
+          <!ELEMENT gast (vorname, nachname, getraenk+)>
+          <!ELEMENT vorname (#PCDATA)>
+          <!ELEMENT nachname (#PCDATA)>
+          <!ELEMENT getraenk (#PCDATA)>
+          <!ATTLIST gast
+            ledig (true | false) #REQUIRED
+            nuechtern (true | false) #REQUIRED
+          >
+        document: |
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE party SYSTEM "party.dtd">
+          <party datum="1999-31-12">
+            <gast ledig="false" nuechtern="true">
+              <vorname>Jason</vorname>
+              <nachname>Bourne</nachname>
+              <getraenk>Wasser</getraenk>
+            </gast>
+            <gast ledig="true" nuechtern="false">
+              <vorname>James</vorname>
+              <nachname>Bourne</nachname>
+              <getraenk>Wodka Martini, geschüttelt nicht gerührt</getraenk>
+            </gast>
+          </party>

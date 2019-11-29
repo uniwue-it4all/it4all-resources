@@ -1,0 +1,118 @@
+!Exercise
+id: 2
+collectionId: 5
+toolId: programming
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Dictionaries
+author: bje40dc
+text:
+  !LongText
+  relativePath: programming/5/2/text.html
+state: APPROVED
+
+content:
+  functionName: dicts
+  foldername: dicts
+  filename: dicts
+  inputTypes: []
+  outputType: VOID
+
+  unitTestPart:
+
+    unitTestType: Normal
+
+    unitTestsDescription: >
+
+    unitTestFiles:
+      - name: dicts.py
+        resourcePath: programming/5/2/dicts_declaration.py
+        fileType: python
+        editable: false
+      - name: test_dicts.py
+        resourcePath: programming/5/2/test_dicts_declaration.py
+        fileType: python
+        editable: true
+
+    unitTestTestConfigs:
+      - id: 0
+        shouldFail: false
+        description: Musterlösung...
+      - id: 1
+        shouldFail: true
+        description: Die Funktion count_char_occurences soll nicht zwischen Groß- und Kleinschreibung unterscheiden.
+      - id: 2
+        shouldFail: true
+        description: Die Funktion count_char_occurences soll die einzelnen Buchstaben korrekt zählen.
+      - id: 3
+        shouldFail: true
+        description: Falls der übergebene String leer ist, soll die Funktion count_char_occurences ein leeres Dictionary zurückgeben.
+      - id: 4
+        shouldFail: true
+        description: Die Funktion word_position_list soll die korrekten Indizes der Wörter angeben.
+      - id: 5
+        shouldFail: true
+        description: Die Funktion word_position_list soll alle Indizes angeben, falls ein Wort mehrmals vorkommt.
+      - id: 6
+        shouldFail: true
+        description: Falls der übergebene String leer ist, soll die Funktion word_position_list ein leeres Dictionary zurückgeben. !!!TODO - Falls der Test self.assertEqual({}, word_position_list("")) eingefügt wird, werden auch alle anderen Tests der anderen Methoden grün!!!
+      - id: 7
+        shouldFail: true
+        description: Die Funktion merge_dicts_with_add soll die beiden Dictionaries zusammenfügen.
+      - id: 8
+        shouldFail: true
+        description: Die Funktion merge_dicts_with_add soll die Werte im Ergebnisdictionary, bei gleichen Schlüsseln in den Ausgangsdictionaries, addieren.
+      - id: 9
+        shouldFail: true
+        description: Falls beide Ausgangsdictionaries leer sind, soll die Funktion merge_dicts_with_add ein leeres Dictionary zurückgeben.
+    testFileName: test_dicts.py
+    sampleSolFileNames: [test_dicts.py]
+
+  implementationPart:
+    base: |
+      from typing import Dict, List
+
+
+      def count_char_occurrences(my_str: str) -> Dict[str, int]:
+          pass
+
+
+      def word_position_list(my_str: str) -> Dict[str, List[int]]:
+          pass
+
+
+      def merge_dicts_with_add(dict1: Dict[str, int], dict2: Dict[str, int]) -> Dict[str, int]:
+          pass
+    files:
+      - name: test_dicts.py
+        resourcePath: programming/5/2/test_dicts.py
+        fileType: python
+        editable: false
+      - name: dicts.py
+        resourcePath: programming/5/2/dicts_declaration.py
+        fileType: python
+        editable: true
+    implFileName: dicts.py
+    sampleSolFileNames: [dicts.py]
+
+  sampleSolutions:
+    - id: 1
+      sample:
+        files:
+          - name: dicts.py
+            resourcePath: programming/5/2/dicts.py
+            fileType: python
+            editable: false
+          - name: test_dicts.py
+            resourcePath: programming/5/2/test_dicts.py
+            fileType: python
+            editable: false
+        testData: []
+
+  sampleTestData: []
+
+  tags:
+    - Strings
+    - ForLoops
+    - Conditions
+    - Math
+    - Lists

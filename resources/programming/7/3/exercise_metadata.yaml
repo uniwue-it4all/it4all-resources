@@ -1,0 +1,154 @@
+!Exercise
+id: 3
+collectionId: 7
+toolId: programming
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Vektor2D
+author: bje40dc
+text:
+  !LongText
+  relativePath: programming/7/3/text.html
+state: APPROVED
+
+content:
+  functionName: vector2d
+  foldername: vector2d
+  filename: vector2d
+  inputTypes: []
+  outputType: VOID
+
+  unitTestPart:
+
+    unitTestType: Normal
+
+    unitTestsDescription: >
+
+    unitTestFiles:
+      - name: vector2d.py
+        resourcePath: programming/7/3/vector2d_declaration.py
+        fileType: python
+        editable: false
+      - name: test_vector2d.py
+        resourcePath: programming/7/3/test_vector2d_declaration.py
+        fileType: python
+        editable: true
+
+    unitTestTestConfigs:
+      - id: 0
+        shouldFail: false
+        description: Musterlösung...
+      - id: 1
+        shouldFail: true
+        description: Der Wert des Konstruktorarguments 'x' sollte unter dem selben Namen als Argument zugänglich sein.
+      - id: 2
+        shouldFail: true
+        description: Der Wert des Konstruktorarguments 'y' sollte unter dem selben Namen als Argument zugänglich sein.
+      - id: 3
+        shouldFail: true
+        description: Die Funktion __repr__ soll die korrekte Koordinatenrepräsentation der Koordinate 'x' zurückgeben.
+      - id: 4
+        shouldFail: true
+        description: Die Funktion __repr__ soll die korrekte Koordinatenrepräsentation der Koordinate 'y' zurückgeben.
+      - id: 5
+        shouldFail: true
+        description: Die Funktion __eq__ soll den korrekten booleschen Wert zurückgeben, falls sich zwei Vektoren gleichen.
+      - id: 6
+        shouldFail: true
+        description: Die Funktion __eq__ soll den korrekten booleschen Wert zurückgeben, falls sich zwei Vektoren nicht gleichen.
+      - id: 7
+        shouldFail: true
+        description: Die Funktion __eq__ soll den korrekten booleschen Wert zurückgeben, falls der Vektor2D mit einer Instanz verglichen wird, die kein Vektor2D ist.
+      - id: 8
+        shouldFail: true
+        description: Die Funktion abs soll die korrekte Länge berechnen.
+      - id: 9
+        shouldFail: true
+        description: Die Funktion abs soll die korrekte Länge berechnen.
+      - id: 10
+        shouldFail: true
+        description: Die Funktion __add__ soll jeweils die x- und y-Koordinaten addieren.
+      - id: 11
+        shouldFail: true
+        description: Die Funktion __add__ soll den korrekt berechneten Vektor nach der Addition zurückgeben.
+      - id: 12
+        shouldFail: true
+        description: Die Funktion __sub__ soll jeweils die x- und y-Koordinaten subtrahieren.
+      - id: 13
+        shouldFail: true
+        description: Die Funktion __sub__ soll den korrekt berechneten Vektor nach der Subtraktion zurückgeben.
+      - id: 14
+        shouldFail: true
+        description: Die Funktion __mul__ soll jeweils die x- und y-Koordinaten mit dem übergebenen Wert multiplizieren.
+      - id: 15
+        shouldFail: true
+        description: Die Funktion __mul__ soll den korrekt berechneten Vektor nach der Multiplikation zurückgeben.
+      - id: 16
+        shouldFail: true
+        description: Die Funktion dot soll jeweils die x- und y-Koordinaten multiplizieren und anschließend das Ergebnis addieren.
+      - id: 17
+        shouldFail: true
+        description: Die Funktion dot soll das korrekt berechnete Skalarprodukt zurückgeben.
+    testFileName: test_vector2d.py
+    sampleSolFileNames: [test_vector2d.py]
+
+  implementationPart:
+    base: |
+      from typing import Any
+
+
+      class Vector2D:
+          def __init__(self, x: float, y: float):
+              pass
+
+          def __repr__(self) -> str:
+              pass
+
+          def __eq__(self, other: Any) -> bool:
+              pass
+
+          def abs(self) -> float:
+              pass
+
+          def __add__(self, other: 'Vector2D') -> 'Vector2D':
+              pass
+
+          def __sub__(self, other: 'Vector2D') -> 'Vector2D':
+              pass
+
+          def __mul__(self, scalar: float) -> 'Vector2D':
+              pass
+
+          def dot(self, other: 'Vector2D') -> float:
+              pass
+    files:
+      - name: test_vector2d.py
+        resourcePath: programming/7/3/test_vector2d.py
+        fileType: python
+        editable: false
+      - name: vector2d.py
+        resourcePath: programming/7/3/vector2d_declaration.py
+        fileType: python
+        editable: true
+    implFileName: vector2d.py
+    sampleSolFileNames: [vector2d.py]
+
+  sampleSolutions:
+    - id: 1
+      sample:
+        files:
+          - name: vector2d.py
+            resourcePath: programming/7/3/vector2d.py
+            fileType: python
+            editable: false
+          - name: test_vector2d.py
+            resourcePath: programming/7/3/test_vector2d.py
+            fileType: python
+            editable: false
+        testData: []
+
+  sampleTestData: []
+
+  tags:
+    - Classes
+    - Strings
+    - Math

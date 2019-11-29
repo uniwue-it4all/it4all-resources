@@ -1,0 +1,99 @@
+!Exercise
+id: 1
+collectionId: 3
+toolId: programming
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Lotterie
+author: bje40dc
+text:
+  !LongText
+  relativePath: programming/3/1/text.html
+state: APPROVED
+
+content:
+  functionName: lottery
+  foldername: lottery
+  filename: lottery
+  inputTypes: []
+  outputType: VOID
+
+  unitTestPart:
+
+    unitTestType: Normal
+
+    unitTestsDescription: >
+
+    unitTestFiles:
+      - name: lottery.py
+        resourcePath: programming/3/1/lottery_declaration.py
+        fileType: python
+        editable: false
+      - name: test_lottery.py
+        resourcePath: programming/3/1/test_lottery_declaration.py
+        fileType: python
+        editable: true
+
+    unitTestTestConfigs:
+      - id: 0
+        shouldFail: false
+        description: Musterlösung...
+      - id: 1
+        shouldFail: true
+        description: Bei Gewinnstufe 0 soll der korrekte Gewinn zurückgegeben werden.
+      - id: 2
+        shouldFail: true
+        description: Bei Gewinnstufe 1 soll der korrekte Gewinn zurückgegeben werden.
+      - id: 3
+        shouldFail: true
+        description: Bei Gewinnstufe 2 soll der korrekte Gewinn zurückgegeben werden.
+      - id: 4
+        shouldFail: true
+        description: Bei Gewinnstufe 3 soll der korrekte Gewinn zurückgegeben werden.
+      - id: 5
+        shouldFail: true
+        description: Bei Gewinnstufe 4 soll der korrekte Gewinn zurückgegeben werden.
+      - id: 6
+        shouldFail: true
+        description: Bei Gewinnstufe 5 soll der korrekte Gewinn zurückgegeben werden.
+      - id: 7
+        shouldFail: true
+        description: Bei einer Gewinnststufe kleiner 0 oder größer 5 soll die Gewinnstufe 0 angenommen werden.
+    testFileName: test_lottery.py
+    sampleSolFileNames: [test_lottery.py]
+
+  implementationPart:
+    base: |
+      def calculate_lottery_win(pot: float, win_class: int) -> float:
+          pass
+    files:
+      - name: test_lottery.py
+        resourcePath: programming/3/1/test_lottery.py
+        fileType: python
+        editable: false
+      - name: lottery.py
+        resourcePath: programming/3/1/lottery_declaration.py
+        fileType: python
+        editable: true
+    implFileName: lottery.py
+    sampleSolFileNames: [lottery.py]
+
+  sampleSolutions:
+    - id: 1
+      sample:
+        files:
+          - name: lottery.py
+            resourcePath: programming/3/1/lottery.py
+            fileType: python
+            editable: false
+          - name: test_lottery.py
+            resourcePath: programming/3/1/test_lottery.py
+            fileType: python
+            editable: false
+        testData: []
+
+  sampleTestData: []
+
+  tags:
+    - Conditions
+    - Math
+

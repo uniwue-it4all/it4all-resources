@@ -1,0 +1,18 @@
+!Exercise
+id: 18
+collectionId: 2
+toolId: sql
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Was wird gewünscht?
+author: bje40dc
+text: Geben die die IDs aller Bücher aus, die von Kunden gewünscht werden. Achten Sie darauf, dass eine ID nur einmal vorkommt.
+state: APPROVED
+content:
+  exerciseType: SELECT
+  sampleSolutions:
+    - id: 1
+      sample: |
+        SELECT DISTINCT book_id
+          FROM wishlists;
+  tags: []
+  hint: null

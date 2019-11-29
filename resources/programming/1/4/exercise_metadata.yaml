@@ -1,0 +1,97 @@
+!Exercise
+id: 4
+collectionId: 1
+toolId: programming
+semanticVersion: {major: 0, minor: 0, patch: 1}
+title: Fibonacci
+author: bje40dc
+text:
+  !LongText
+  relativePath: programming/1/4/text.html
+state: APPROVED
+
+content:
+  functionName: fibonacci
+  filename: fibonacci
+  foldername: fibonacci
+
+  inputTypes: [{id: 1, inputName: number, inputType: INTEGER}]
+  outputType: INTEGER
+
+  unitTestPart:
+    unitTestType: Normal
+
+    unitTestsDescription: ''
+
+    unitTestFiles:
+      - name: fibonacci.py
+        resourcePath: programming/1/4/fibonacci_declaration.py
+        fileType: python
+        editable: true
+      - name: test_fibonacci.py
+        resourcePath: programming/1/4/test_fibonacci_declaration.py
+        fileType: python
+        editable: true
+
+    unitTestTestConfigs:
+      - id: 0
+        shouldFail: false
+        cause: ''
+        description: Diese Implementierun ist korrekt und sollte alle Tests bestehen.
+      - id: 1
+        shouldFail: true
+        cause: ''
+        description: Falls das Argument 'number' keine Zahl ist, soll eine Exception geworfen werden.
+      - id: 2
+        shouldFail: true
+        cause: ''
+        description: Falls das Argument 'number' kleiner als 0 ist, soll eine Exception geworfen werden.
+      - id: 3
+        shouldFail: true
+        cause: ''
+        description: Die Funktion sollte den richtigen Startwert für 0 benutzen.
+      - id: 4
+        shouldFail: true
+        cause: ''
+        description: Die Funktion sollte den richtigen Startwert für 1 benutzen.
+      - id: 5
+        shouldFail: true
+        cause: ''
+        description: Die Funktion sollte das richtige Ergebnis berechnen.
+
+    testFileName: test_fibonacci.py
+    sampleSolFileNames: [test_fibonacci.py]
+
+  implementationPart:
+    base:  ''
+    files:
+      - name: test_fibonacci.py
+        resourcePath: programming/1/4/test_fibonacci.py
+        fileType: python
+        editable: false
+      - name: fibonacci.py
+        resourcePath: programming/1/4/fibonacci_declaration.py
+        fileType: python
+        editable: true
+    implFileName: fibonacci.py
+    sampleSolFileNames: [fibonacci.py]
+
+  sampleSolutions:
+    - id: 1
+      sample:
+        files:
+          - name: test_fibonacci.py
+            resourcePath: programming/1/4/test_fibonacci.py
+            fileType: python
+            editable: false
+          - name: fibonacci.py
+            resourcePath: programming/1/4/fibonacci.py
+            fileType: python
+            editable: false
+        testData: []
+
+  sampleTestData: []
+
+  tags:
+    - Exceptions
+    - Recursion

@@ -1,0 +1,92 @@
+!Exercise
+id: 1
+collectionId: 1
+toolId: web
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Listen in Html
+author: bje40dc
+text:
+  !LongText
+  relativePath: web/1/1/text.html
+state: APPROVED
+
+content:
+  htmlText: null
+  jsText: null
+  files:
+    - name: carList.html
+      resourcePath: web/1/1/carList.html
+      fileType: htmlmixed
+      editable: true
+    - name: carListStyle.css
+      resourcePath: web/1/1/carListStyle.css
+      fileType: css
+      editable: false
+
+  siteSpec:
+    fileName: carList.html
+    htmlTasks:
+      - id: 1
+        text: Erstellen Sie eine passende h1-Überschrift, die das Wort 'Autohersteller' enthält.
+        xpathQuery: '/html/body//h1'
+        awaitedTagName: 'h1'
+        awaitedTextContent: 'Autohersteller'
+        attributes: []
+
+      - id: 2
+        text: >
+          Erstellen Sie eine ungeordnete Liste auf der Seite, die dann die einzelnen Hersteller enthalten wird.
+          Geben Sie dieser Liste die Klasse 'list-group'.
+        xpathQuery: '/html/body//ul'
+        awaitedTagName: 'ul'
+        awaitedTextContent: null
+        attributes: []
+
+      - id: 3
+        text: Erstellen Sie ein Listenelement mit dem Text 'Audi'.
+        xpathQuery: /html/body//ul/li[contains(text(), 'Audi')]
+        awaitedTagName: li
+        awaitedTextContent: Audi
+        attributes: []
+
+      - id: 4
+        text: Erstellen Sie ein Listenelement mit dem Text 'BMW'.
+        xpathQuery: /html/body//ul/li[contains(text(), 'BMW')]
+        awaitedTagName: li
+        awaitedTextContent: BMW
+        attributes: []
+
+      - id: 5
+        text: Erstellen Sie ein Listenelement mit dem Text 'Mercedes'.
+        xpathQuery: /html/body//ul/li[contains(text(), 'Mercedes')]
+        awaitedTagName: li
+        awaitedTextContent: Mercedes
+        attributes: []
+
+      - id: 6
+        text: Erstellen Sie ein Listenelement mit dem Text 'Volkswagen'.
+        xpathQuery: /html/body//ul/li[contains(text(), 'Volkswagen')]
+        awaitedTagName: li
+        awaitedTextContent: Volkswagen
+        attributes: []
+
+      - id: 7
+        text: >
+          Binden Sie die vorgegebene Style-Datei 'carListStyle.css' ein. Die entsprechende Datei ist unter der URL
+          'carListStyle.css' zu finden. Setzen Sie auch den entsprechenden Wert für das Attribut 'rel'!
+        xpathQuery: /html/head/link
+        awaitedTagName: link
+        awaitedTextContent: null
+        attributes:
+          - {key: 'href', value: 'carListStyle.css'}
+          - {key: 'rel', value: 'stylesheet'}
+
+    jsTasks: []
+
+  sampleSolutions:
+    - id: 1
+      sample:
+        - name: carList.html
+          fileType: htmlmixed
+          resourcePath: web/1/1/carListSolution.html
+          editable: false

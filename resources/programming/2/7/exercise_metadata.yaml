@@ -1,0 +1,119 @@
+!Exercise
+id: 7
+collectionId: 2
+toolId: programming
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: A1Z26-Verschlüsselung
+author: bje40dc
+text:
+  !LongText
+  relativePath: programming/2/7/text.html
+state: APPROVED
+
+content:
+  functionName: a1z26
+  foldername: a1z26
+  filename: a1z26
+  inputTypes: []
+  outputType: VOID
+
+  unitTestPart:
+
+    unitTestType: Normal
+
+    unitTestsDescription: >
+
+    unitTestFiles:
+      - name: a1z26.py
+        resourcePath: programming/2/7/a1z26_declaration.py
+        fileType: python
+        editable: false
+      - name: test_a1z26.py
+        resourcePath: programming/2/7/test_a1z26_declaration.py
+        fileType: python
+        editable: true
+
+    unitTestTestConfigs:
+      - id: 0
+        shouldFail: false
+        description: Musterlösung...
+      - id: 1
+        shouldFail: true
+        description: encrypt_letter soll den übergebenen Buchstaben durch die korrekte Ganzzahl verschlüsseln.
+      - id: 2
+        shouldFail: true
+        description: decrypt_letter soll die übergebene Ganzzahl in den korrekten Buchstaben entschlüsseln.
+      - id: 3
+        shouldFail: true
+        description: encrypt_word soll jeden Buchstaben des übergebenen Wortes verschlüsseln und alle Ganzzahlen in der Liste zurückgegeben.
+      - id: 4
+        shouldFail: true
+        description: encrpyt_word soll die richtigen, im übergebenen Wort enthaltenen, Buchstaben verschlüsseln
+      - id: 5
+        shouldFail: true
+        description: encrypt_word soll bei einem leeren String eine leere Liste zurückgeben.
+      - id: 6
+        shouldFail: true
+        description: decrypt_word soll das gesamte entschlüsselte Wort zurückgeben.
+      - id: 7
+        shouldFail: true
+        description: decrypt_word soll die korrekte Ganzzahl entschlüsseln.
+      - id: 8
+        shouldFail: true
+        description: decrypt_word soll bei einer leeren Liste einen leeren String zurückgeben.
+    testFileName: test_a1z26.py
+    sampleSolFileNames: [test_a1z26.py]
+
+  implementationPart:
+    base: |
+      from typing import List
+
+      ord_a: int = ord('a')
+
+
+      def encrypt_letter(letter: str) -> int:
+          pass
+
+
+      def decrypt_letter(letter: int) -> str:
+          pass
+
+
+      def encrypt_word(word: str) -> List[int]:
+          pass
+
+
+      def decrypt_word(word: List[int]) -> str:
+          pass
+    files:
+      - name: test_a1z26.py
+        resourcePath: programming/2/7/test_a1z26.py
+        fileType: python
+        editable: false
+      - name: a1z26.py
+        resourcePath: programming/2/7/a1z26_declaration.py
+        fileType: python
+        editable: true
+    implFileName: a1z26.py
+    sampleSolFileNames: [a1z26.py]
+
+  sampleSolutions:
+    - id: 1
+      sample:
+        files:
+          - name: a1z26.py
+            resourcePath: programming/2/7/a1z26.py
+            fileType: python
+            editable: false
+          - name: test_a1z26.py
+            resourcePath: programming/2/7/test_a1z26.py
+            fileType: python
+            editable: false
+        testData: []
+
+  sampleTestData: []
+
+  tags:
+    - Strings
+    - ForLoops
+    - Math

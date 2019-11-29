@@ -1,0 +1,24 @@
+!Exercise
+id: 31
+collectionId: 2
+toolId: sql
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Tolkien in Billig
+author: bje40dc
+text: >
+  Bestimmen Sie Titel und Preis aller Bücher des Autors 'Tolkien' deren Preis über 10€ liegt. Ordnen Sie die
+  Einträge nach Erscheinungsjahr abwärts.
+state: APPROVED
+content:
+  exerciseType: SELECT
+  sampleSolutions:
+    - id: 1
+      sample: |
+        SELECT title, price
+          FROM books
+            JOIN authors on authors.id = books.author_id
+          WHERE authors.family_name = 'Tolkien'
+          AND price > 10
+          ORDER BY year DESC;
+  tags: [SQL_ORDER_BY]
+  hint: null

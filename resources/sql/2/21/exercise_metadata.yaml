@@ -1,0 +1,20 @@
+!Exercise
+id: 21
+collectionId: 2
+toolId: sql
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Sterne in der Wüste 1
+author: bje40dc
+text: Wie oft wurde das Buch 'Die Stadt in der Wüste' bewertet? Nennen Sie die Spalte 'Anzahl'.
+state: APPROVED
+content:
+  exerciseType: SELECT
+  sampleSolutions:
+    - id: 1
+      sample: |
+        SELECT COUNT(*) AS Anzahl
+          FROM ratings
+            JOIN books ON books.id = ratings.book_id
+          WHERE title = 'Die Stadt in der Wüste';
+  tags: [SQL_FUNCTION, SQL_JOIN, SQL_ALIAS]
+  hint: null

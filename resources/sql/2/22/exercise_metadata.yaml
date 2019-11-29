@@ -1,0 +1,20 @@
+!Exercise
+id: 22
+collectionId: 2
+toolId: sql
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Sterne in der Wüste 2
+author: bje40dc
+text: Welche Durchschnittsbewertung bekam das Buch 'Die Stadt in der Wüste'? Nennen Sie die Spalte 'Durchschnitt'.
+state: APPROVED
+content:
+  exerciseType: SELECT
+  sampleSolutions:
+    - id: 1
+      sample: |
+        SELECT AVG(rating) AS Durchschnitt
+          FROM ratings
+            JOIN books ON books.id = ratings.book_id
+          WHERE title = 'Die Stadt in der Wüste';
+  tags: [SQL_FUNCTION, SQL_JOIN, SQL_ALIAS]
+  hint: null

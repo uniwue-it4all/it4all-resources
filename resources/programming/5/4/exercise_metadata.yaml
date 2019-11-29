@@ -1,0 +1,103 @@
+!Exercise
+id: 4
+collectionId: 5
+toolId: programming
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Fitnessprogramm
+author: bje40dc
+text:
+  !LongText
+  relativePath: programming/5/4/text.html
+state: APPROVED
+
+content:
+  functionName: reindeers
+  foldername: reindeers
+  filename: reindeers
+  inputTypes: []
+  outputType: VOID
+
+  unitTestPart:
+
+    unitTestType: Normal
+
+    unitTestsDescription: >
+
+    unitTestFiles:
+      - name: reindeers.py
+        resourcePath: programming/5/4/reindeers_declaration.py
+        fileType: python
+        editable: false
+      - name: test_reindeers.py
+        resourcePath: programming/5/4/test_reindeers_declaration.py
+        fileType: python
+        editable: true
+
+    unitTestTestConfigs:
+      - id: 0
+        shouldFail: false
+        description: Musterlösung...
+      - id: 1
+        shouldFail: true
+        description: Die Funktion calculate_bmi soll den korrekten BMI berechnen.
+      - id: 2
+        shouldFail: true
+        description: Die Funktion calculate_bmi soll den korrekten BMI berechnen.
+      - id: 3
+        shouldFail: true
+        description: Die Funktion calculate_bmi soll den korrekten BMI berechnen.
+      - id: 4
+        shouldFail: true
+        description: Die Funktion calculate_reindeer_bmis soll den korrekten BMI für jedes Rentier zurückgeben.
+      - id: 5
+        shouldFail: true
+        description: Die Funktion calculate_reindeer_bmis soll den korrekten Namen für jedes Rentier zurückgeben.
+      - id: 6
+        shouldFail: true
+        description: Die Funktion calculate_reindeer_bmis soll ein leeres Dictionary zurückgeben, falls das übergebene Dictionary leer ist.
+    testFileName: test_reindeers.py
+    sampleSolFileNames: [test_reindeers.py]
+
+  implementationPart:
+    base: |
+      from typing import Dict
+
+
+      def calculate_bmi(height_cm: int, weight_kg: int) -> float:
+          pass
+
+
+      def calculate_reindeer_bmis(reindeers: Dict[str, Dict[str, int]]) -> Dict[str, float]:
+          pass
+    files:
+      - name: test_reindeers.py
+        resourcePath: programming/5/4/test_reindeers.py
+        fileType: python
+        editable: false
+      - name: reindeers.py
+        resourcePath: programming/5/4/reindeers_declaration.py
+        fileType: python
+        editable: true
+    implFileName: reindeers.py
+    sampleSolFileNames: [reindeers.py]
+
+  sampleSolutions:
+    - id: 1
+      sample:
+        files:
+          - name: reindeers.py
+            resourcePath: programming/5/4/reindeers.py
+            fileType: python
+            editable: false
+          - name: test_reindeers.py
+            resourcePath: programming/5/4/test_reindeers.py
+            fileType: python
+            editable: false
+        testData: []
+
+  sampleTestData: []
+
+  tags:
+    - Dictionaries
+    - Math
+    - ForLoops
