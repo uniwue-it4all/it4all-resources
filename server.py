@@ -1,14 +1,12 @@
 from typing import List, Optional, Dict, Any
 
-from flask import Flask, jsonify, url_for, redirect
+from flask import Flask, jsonify, url_for, redirect, request
 
 from model import get_tool_ids, get_collection_ids_for_tool, get_collection_metadata, get_exercise_ids_for_collection, \
     tool_exists, collection_exists, get_exercise_metadata
 from models.exercise import Exercise
 
 app = Flask(__name__)
-
-base_url: str = 'http://localhost:5000'
 
 
 @app.route('/')
@@ -21,7 +19,7 @@ def route_tools():
     tools: List[Dict[str, str]] = [
         {
             'id': tool_id,
-            'toolUrl': base_url + url_for('route_tool', tool_id=tool_id)
+            'toolUrl': request.host_url[:-1] + url_for('route_tool', tool_id=tool_id)
         } for tool_id in get_tool_ids()
     ]
 
@@ -36,10 +34,10 @@ def route_tool(tool_id: str):
         return redirect(parent_url)
 
     return jsonify({
-        'parentUrl': base_url + parent_url,
+        'parentUrl': request.host_url[:-1] + parent_url,
         'tool_id': tool_id,
         'lessonsUrl': '',
-        'collectionsUrl': base_url + url_for('route_collections', tool_id=tool_id)
+        'collectionsUrl': request.host_url[:-1] + url_for('route_collections', tool_id=tool_id)
     })
 
 
@@ -48,12 +46,12 @@ def route_collections(tool_id: str):
     collection_ids = [
         {
             'id': coll_id,
-            'collectionUrl': base_url + url_for('route_collection', tool_id=tool_id, coll_id=coll_id)
+            'collectionUrl': request.host_url[:-1] + url_for('route_collection', tool_id=tool_id, coll_id=coll_id)
         } for coll_id in get_collection_ids_for_tool(tool_id)
     ]
 
     return jsonify({
-        'parentUrl': base_url + url_for('route_tool', tool_id=tool_id),
+        'parentUrl': request.host_url[:-1] + url_for('route_tool', tool_id=tool_id),
         'collections': collection_ids
     })
 
@@ -68,9 +66,9 @@ def route_collection(tool_id: str, coll_id: int):
         return redirect(parent_url)
 
     return jsonify({
-        'parentUrl': base_url + parent_url,
+        'parentUrl': request.host_url[:-1] + parent_url,
         'metaData': collection_metadata,
-        'exercisesUrl': base_url + url_for('route_exercises', tool_id=tool_id, coll_id=coll_id)
+        'exercisesUrl': request.host_url[:-1] + url_for('route_exercises', tool_id=tool_id, coll_id=coll_id)
     })
 
 
@@ -84,12 +82,13 @@ def route_exercises(tool_id: str, coll_id: int):
     exercise_ids_for_collection: List[Dict[str, Any]] = [
         {
             'id': ex_id,
-            'exerciseUrl': base_url + url_for('route_exercise', tool_id=tool_id, coll_id=coll_id, ex_id=ex_id)
+            'exerciseUrl': request.host_url[:-1] + url_for('route_exercise', tool_id=tool_id, coll_id=coll_id,
+                                                           ex_id=ex_id)
         } for ex_id in get_exercise_ids_for_collection(tool_id, coll_id)
     ]
 
     return jsonify({
-        'parentUrl': base_url + parent_url,
+        'parentUrl': request.host_url[:-1] + parent_url,
         'exercises': exercise_ids_for_collection
     })
 
@@ -106,7 +105,7 @@ def route_exercise(tool_id: str, coll_id: int, ex_id: int):
         return redirect(parent_url)
 
     return jsonify({
-        'parentUrl': base_url + parent_url,
+        'parentUrl': request.host_url[:-1] + parent_url,
         'metaData': exercise_metadata.to_json()
     })
 
