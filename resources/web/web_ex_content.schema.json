@@ -4,7 +4,7 @@
   "definitions": {
     "WebExercise": {
       "allOf": [
-        {"$ref": "../../exercise.schema.json"},
+        {"$ref": "../../schemas/exercise.schema.json"},
         {
           "properties": {
             "content": {"$ref": "#/definitions/WebExerciseContent"}
@@ -30,7 +30,7 @@
         "siteSpec": {"$ref": "#/definitions/SiteSpec"},
         "files": {
           "type": "array",
-          "items": {"$ref": "../../exercise_file.schema.json"},
+          "items": {"$ref": "../../schemas/exercise_file.schema.json"},
           "additionalItems": false
         },
         "sampleSolutions": {
@@ -79,15 +79,10 @@
         "id": {"type": "integer"},
         "xpathQuery": {"type": "string"},
         "awaitedTagName": {"type": "string"},
-        "awaitedTextContent": {
-          "anyOf": [
-            {"type": "string"},
-            {"type": "null"}
-          ]
-        },
-        "attributes": {"$ref": "../../key_value_object_map.schema.json"}
+        "awaitedTextContent": {"type": "string"},
+        "attributes": {"$ref": "../../schemas/key_value_object_map.schema.json"}
       },
-      "required": ["id", "xpathQuery", "awaitedTagName", "awaitedTextContent", "attributes"],
+      "required": ["id", "xpathQuery", "awaitedTagName"],
       "additionalProperties": false
     },
     "HtmlAttribute": {
@@ -125,7 +120,7 @@
       "properties": {
         "id": {"type": "number"},
         "sample": {
-          "type": "array", "items": {"$ref": "../../exercise_file.schema.json"}, "additionalItems": false
+          "type": "array", "items": {"$ref": "../../schemas/exercise_file.schema.json"}, "additionalItems": false
         }
       },
       "required": ["id", "sample"],

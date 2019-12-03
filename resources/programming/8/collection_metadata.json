@@ -2,7 +2,7 @@
   "id": 8,
   "toolId": "programming",
   "title": "Unit Testing",
-  "author": "bje40dc",
+  "author": ["bje40dc"],
   "text": "TODO",
   "state": "APPROVED",
   "shortName": "unit_testing"

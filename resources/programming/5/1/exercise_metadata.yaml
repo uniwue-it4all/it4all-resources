@@ -1,4 +1,3 @@
-!Exercise
 id: 1
 collectionId: 5
 toolId: programming
@@ -6,7 +5,6 @@ semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Tupel
 author: bje40dc
 text:
-  !LongText
   relativePath: programming/5/1/text.html
 state: APPROVED
 

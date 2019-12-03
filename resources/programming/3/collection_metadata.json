@@ -2,7 +2,7 @@
   "id": 3,
   "toolId": "programming",
   "title": "Bedingte Anweisungen",
-  "author": "bje40dc",
+  "author": ["bje40dc"],
   "text": "TODO",
   "state": "APPROVED",
   "shortName": "conditions"

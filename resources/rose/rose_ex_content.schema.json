@@ -4,13 +4,12 @@
   "definitions": {
     "RoseExercise": {
       "allOf": [
-        {"$ref": "../../exercise.schema.json"},
+        {"$ref": "../../schemas/exercise.schema.json"},
         {
           "properties": {
             "content": {"$ref": "#/definitions/RoseExerciseContent"}
           },
-          "required": ["content"],
-          "additionalProperties": false
+          "required": ["content"]
         }
       ]
     },

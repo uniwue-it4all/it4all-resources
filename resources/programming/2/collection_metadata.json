@@ -2,7 +2,7 @@
   "id": 2,
   "toolId": "programming",
   "title": "Strings",
-  "author": "bje40dc",
+  "author": ["bje40dc"],
   "text": "TODO",
   "state": "APPROVED",
   "shortName": "strings"

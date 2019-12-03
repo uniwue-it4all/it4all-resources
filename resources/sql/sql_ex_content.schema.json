@@ -4,13 +4,12 @@
   "definitions": {
     "SqlExercise": {
       "allOf": [
-        {"$ref": "../../exercise.schema.json"},
+        {"$ref": "../../schemas/exercise.schema.json"},
         {
           "properties": {
             "content": {"$ref": "#/definitions/SqlExerciseContent"}
           },
-          "required": ["content"],
-          "additionalProperties": false
+          "required": ["content"]
         }
       ]
     },

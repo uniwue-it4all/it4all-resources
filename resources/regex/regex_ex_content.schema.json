@@ -4,13 +4,12 @@
   "definitions": {
     "RegexExercise": {
       "allOf": [
-        {"$ref": "../../exercise.schema.json"},
+        {"$ref": "../../schemas/exercise.schema.json"},
         {
           "properties": {
             "content": {"$ref": "#/definitions/RegexExerciseContent"}
           },
-          "required": ["content"],
-          "additionalProperties": false
+          "required": ["content"]
         }
       ]
     },

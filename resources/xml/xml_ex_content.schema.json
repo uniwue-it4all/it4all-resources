@@ -4,20 +4,19 @@
   "definitions": {
     "XmlExercise": {
       "allOf": [
-        {"$ref": "../../exercise.schema.json"},
+        {"$ref": "../../schemas/exercise.schema.json"},
         {
           "properties": {
             "content": {"$ref": "#/definitions/XmlExerciseContent"}
           },
-          "required": ["content"],
-          "additionalProperties": false
+          "required": ["content"]
         }
       ]
     },
     "XmlExerciseContent": {
       "type": "object",
       "properties": {
-        "grammarDescription": {"$ref": "../../long_text.schema.json"},
+        "grammarDescription": {"$ref": "../../schemas/long_text.schema.json"},
         "rootNode": {"type": "string"},
         "sampleSolutions": {"type": "array", "items": {"$ref": "#/definitions/XmlSample"}}
       },

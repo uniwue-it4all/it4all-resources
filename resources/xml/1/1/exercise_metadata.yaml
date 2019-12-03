@@ -1,4 +1,3 @@
---- !Exercise
 id: 1
 collectionId: 1
 toolId: xml
@@ -9,7 +8,6 @@ semanticVersion:
 title: Party
 author: bje40dc
 text:
-  !LongText
   relativePath: xml/1/1/text.html
 state: APPROVED
 

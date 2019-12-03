@@ -2,7 +2,7 @@
   "id": 1,
   "toolId": "xml",
   "title": "Xml Basics",
-  "author": "bje40dc",
+  "author": ["bje40dc"],
   "text": "TODO",
   "state": "APPROVED",
   "shortName": "xml_basics"

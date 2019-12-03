@@ -1,4 +1,3 @@
-!Exercise
 id: 2
 collectionId: 4
 toolId: programming
@@ -9,7 +8,6 @@ semanticVersion:
 title: Längste Zeichenkette
 author: bje40dc
 text:
-  !LongText
   relativePath: programming/4/2/text.html
 state: APPROVED
 

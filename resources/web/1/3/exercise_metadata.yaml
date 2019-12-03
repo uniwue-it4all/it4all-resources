@@ -1,4 +1,3 @@
-!Exercise
 id: 3
 collectionId: 1
 toolId: web
@@ -6,7 +5,6 @@ semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Hyperlinks und Bilder in HTML
 author: bje40dc
 text:
-  !LongText
   relativePath: web/1/3/text.html
 state: APPROVED
 
@@ -31,7 +29,6 @@ content:
         xpathQuery: /html/body//h1
         awaitedTagName: h1
         awaitedTextContent: Ford Mustang
-        attributes: []
 
       - id: 2
         text: >
@@ -39,7 +36,6 @@ content:
           'https://de.wikipedia.org/wiki/Ford_Mustang' an.
         xpathQuery: /html/body//a
         awaitedTagName: a
-        awaitedTextContent: null
         attributes:
           - {key: href, value: 'https://de.wikipedia.org/wiki/Ford_Mustang'}
 
@@ -50,7 +46,6 @@ content:
           'Ford Mustang' an. Geben Sie außerdem eine Breite von 250 und eine Höhe von 188 an, um das Bild zu skalieren.
         xpathQuery: /html/body//a//img
         awaitedTagName: img
-        awaitedTextContent: null
         attributes:
           - {key: src, value: 'https://upload.wikimedia.org/wikipedia/commons/2/2d/1964_12_Ford_Mustang.jpg'}
           - {key: alt, value: 'Ford Mustang'}
@@ -63,7 +58,6 @@ content:
           'mustangStyle.css' zu finden. Setzen Sie auch den entsprechenden Wert für das Attribut 'rel'.
         xpathQuery: /html/head//link
         awaitedTagName: link
-        awaitedTextContent: null
         attributes:
           - {key: rel, value: stylesheet}
           - {key: href, value: mustangStyle.css}

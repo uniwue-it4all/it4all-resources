@@ -1,4 +1,3 @@
-!Exercise
 id: 3
 collectionId: 5
 toolId: programming
@@ -6,7 +5,6 @@ semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Tupel und Dictionaries
 author: bje40dc
 text:
-  !LongText
   relativePath: programming/5/3/text.html
 state: APPROVED
 

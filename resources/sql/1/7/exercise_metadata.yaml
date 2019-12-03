@@ -1,4 +1,3 @@
-!Exercise
 id: 7
 collectionId: 1
 toolId: sql
@@ -6,7 +5,6 @@ semanticVersion: {major: 1, minor: 0, patch: 0}
 title: TODO!
 author: bje40dc
 text:
-  !LongText
   relativePath: sql/1/7/text.txt
 state: APPROVED
 content:

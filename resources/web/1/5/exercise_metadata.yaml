@@ -1,4 +1,3 @@
-!Exercise
 id: 5
 collectionId: 1
 toolId: web
@@ -6,7 +5,6 @@ semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Audio in HTML 5
 author: bje40dc
 text:
-  !LongText
   relativePath: web/1/5/text.html
 state: APPROVED
 
@@ -27,7 +25,6 @@ content:
         xpathQuery: '/html/body//h1'
         awaitedTagName: 'h1'
         awaitedTextContent: 'Deutsche Nationalhymne'
-        attributes: []
 
       - id: 2
         text: >
@@ -36,7 +33,8 @@ content:
         xpathQuery: /html/body//audio
         awaitedTagName: audio
         awaitedTextContent: Ihr Browser unterstützt kein Audio!
-        attributes: [{key: 'controls', value: 'true'}]
+        attributes:
+          - {key: 'controls', value: 'true'}
 
       - id: 3
         text: >
@@ -44,7 +42,6 @@ content:
           'https://upload.wikimedia.org/wikipedia/commons/c/cb/National_anthem_of_Germany_-_U.S._Army_1st_Armored_Division_Band.ogg'
         xpathQuery: /html/body//audio/source
         awaitedTagName: source
-        awaitedTextContent: null
         attributes:
           - {key: 'type', value: 'audio/ogg'}
           - {key: src, value: 'https://upload.wikimedia.org/wikipedia/commons/c/cb/National_anthem_of_Germany_-_U.S._Army_1st_Armored_Division_Band.ogg'}

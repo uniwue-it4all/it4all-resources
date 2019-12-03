@@ -1,113 +1,21 @@
-from typing import List, Optional, Dict, Any
+from flask import Flask, url_for, redirect
 
-from flask import Flask, jsonify, url_for, redirect, request
-
-from model import get_tool_ids, get_collection_ids_for_tool, get_collection_metadata, get_exercise_ids_for_collection, \
-    tool_exists, collection_exists, get_exercise_metadata
-from models.exercise import Exercise
+from blueprints.collection_routes import coll_blueprint
+from blueprints.exercise_routes import exes_blueprint
+from blueprints.tool_routes import tool_blueprint
 
 app = Flask(__name__)
+
+app.register_blueprint(tool_blueprint, url_prefix='/tools')
+
+app.register_blueprint(coll_blueprint, url_prefix='/tools/<string:tool_id>')
+
+app.register_blueprint(exes_blueprint, url_prefix='/tools/<string:tool_id>/collections/<int:coll_id>/')
 
 
 @app.route('/')
 def route_index():
-    return redirect(url_for('route_tools'))
-
-
-@app.route('/tools')
-def route_tools():
-    tools: List[Dict[str, str]] = [
-        {
-            'id': tool_id,
-            'toolUrl': request.host_url[:-1] + url_for('route_tool', tool_id=tool_id)
-        } for tool_id in get_tool_ids()
-    ]
-
-    return jsonify({'tools': tools})
-
-
-@app.route('/tools/<string:tool_id>')
-def route_tool(tool_id: str):
-    parent_url: str = url_for('route_tools')
-
-    if not tool_exists(tool_id):
-        return redirect(parent_url)
-
-    return jsonify({
-        'parentUrl': request.host_url[:-1] + parent_url,
-        'tool_id': tool_id,
-        'lessonsUrl': '',
-        'collectionsUrl': request.host_url[:-1] + url_for('route_collections', tool_id=tool_id)
-    })
-
-
-@app.route('/tools/<string:tool_id>/collections')
-def route_collections(tool_id: str):
-    collection_ids = [
-        {
-            'id': coll_id,
-            'collectionUrl': request.host_url[:-1] + url_for('route_collection', tool_id=tool_id, coll_id=coll_id)
-        } for coll_id in get_collection_ids_for_tool(tool_id)
-    ]
-
-    return jsonify({
-        'parentUrl': request.host_url[:-1] + url_for('route_tool', tool_id=tool_id),
-        'collections': collection_ids
-    })
-
-
-@app.route('/tools/<string:tool_id>/collections/<int:coll_id>')
-def route_collection(tool_id: str, coll_id: int):
-    parent_url: str = url_for('route_collections', tool_id=tool_id)
-
-    collection_metadata: Optional[Dict] = get_collection_metadata(tool_id, coll_id)
-
-    if not collection_metadata:
-        return redirect(parent_url)
-
-    return jsonify({
-        'parentUrl': request.host_url[:-1] + parent_url,
-        'metaData': collection_metadata,
-        'exercisesUrl': request.host_url[:-1] + url_for('route_exercises', tool_id=tool_id, coll_id=coll_id)
-    })
-
-
-@app.route('/tools/<string:tool_id>/collections/<int:coll_id>/exercises')
-def route_exercises(tool_id: str, coll_id: int):
-    parent_url: str = url_for('route_collection', tool_id=tool_id, coll_id=coll_id)
-
-    if not collection_exists(tool_id, coll_id):
-        return redirect(parent_url)
-
-    exercise_ids_for_collection: List[Dict[str, Any]] = [
-        {
-            'id': ex_id,
-            'exerciseUrl': request.host_url[:-1] + url_for('route_exercise', tool_id=tool_id, coll_id=coll_id,
-                                                           ex_id=ex_id)
-        } for ex_id in get_exercise_ids_for_collection(tool_id, coll_id)
-    ]
-
-    return jsonify({
-        'parentUrl': request.host_url[:-1] + parent_url,
-        'exercises': exercise_ids_for_collection
-    })
-
-
-@app.route('/tools/<string:tool_id>/collections/<int:coll_id>/exercises/<int:ex_id>')
-def route_exercise(tool_id: str, coll_id: int, ex_id: int):
-    parent_url: str = url_for('route_exercises', tool_id=tool_id, coll_id=coll_id)
-
-    exercise_metadata: Optional[Exercise] = get_exercise_metadata(tool_id, coll_id, ex_id)
-
-    # FIXME: load LongText column!
-
-    if not exercise_metadata:
-        return redirect(parent_url)
-
-    return jsonify({
-        'parentUrl': request.host_url[:-1] + parent_url,
-        'metaData': exercise_metadata.to_json()
-    })
+    return redirect(url_for('tool_blueprint.route_tools'))
 
 
 if __name__ == "__main__":

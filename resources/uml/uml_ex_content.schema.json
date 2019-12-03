@@ -4,20 +4,18 @@
   "definitions": {
     "UmlExercise": {
       "allOf": [
-        {"$ref": "../../exercise.schema.json"},
+        {"$ref": "../../schemas/exercise.schema.json"},
         {
           "properties": {
             "content": {"$ref": "#/definitions/UmlExerciseContent"}
-          },
-          "required": ["content"],
-          "additionalProperties": false
+          }
         }
       ]
     },
     "UmlExerciseContent": {
       "type": "object",
       "properties": {
-        "mappings": {"$ref": "../../key_value_object_map.schema.json"},
+        "mappings": {"$ref": "../../schemas/key_value_object_map.schema.json"},
         "toIgnore": {"type": "array", "items": {"type": "string"}},
         "sampleSolutions": {"type": "array", "items": {"$ref": "#/definitions/UmlSampleSolution"}}
       },
