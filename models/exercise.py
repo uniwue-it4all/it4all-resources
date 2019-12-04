@@ -48,7 +48,15 @@ def get_exercise_ids_for_collection(tool_id: str, collection_id: int) -> List[in
 
 
 def load_exercises(tool_id: str, coll_id: int) -> List[Exercise]:
-    pass
+    exercises: List[Exercise] = []
+
+    for ex_id in get_exercise_ids_for_collection(tool_id, coll_id):
+        maybe_exercise = load_exercise(tool_id, coll_id, ex_id)
+
+        if maybe_exercise is not None:
+            exercises.append(maybe_exercise)
+
+    return exercises
 
 
 def load_exercise(tool_id: str, coll_id: int, ex_id: int) -> Optional[Exercise]:

@@ -3,7 +3,8 @@ collectionId: 2
 toolId: sql
 semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Teure Wünsche...
-author: bje40dc
+authors:
+  - bje40dc
 text: >
   Ermitteln Sie den Einkaufswert der Wunschlisten für jeden Kunden. Listen Sie dabei Vorname, Nachname und
   Einkaufswert (Spaltenbezeichnung 'value') auf. Sortieren Sie die Einträge aufwärts nach Einkaufswert.

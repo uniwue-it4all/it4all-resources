@@ -3,7 +3,8 @@ collectionId: 2
 toolId: sql
 semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Wer will Harry?
-author: bje40dc
+authors:
+  - bje40dc
 text: >
   Wählen Sie alle Bestellungen aus, die das Buch 'Harry Potter und der Halbblutprinz' enthalten. Geben Sie für diese
   Bestellungen jeweils das Datum und die Anzahl der bestellten Exemplare des Buches aus.

@@ -3,7 +3,8 @@ collectionId: 1
 toolId: programming
 semanticVersion: {major: 0, minor: 0, patch: 1}
 title: Fibonacci
-author: bje40dc
+authors:
+  - bje40dc
 text:
   relativePath: programming/1/4/text.html
 state: APPROVED

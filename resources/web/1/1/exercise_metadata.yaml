@@ -3,7 +3,8 @@ collectionId: 1
 toolId: web
 semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Listen in Html
-author: bje40dc
+authors:
+  - bje40dc
 text:
   relativePath: web/1/1/text.html
 state: APPROVED
@@ -26,16 +27,16 @@ content:
     htmlTasks:
       - id: 1
         text: Erstellen Sie eine passende h1-Überschrift, die das Wort 'Autohersteller' enthält.
-        xpathQuery: '/html/body//h1'
-        awaitedTagName: 'h1'
-        awaitedTextContent: 'Autohersteller'
+        xpathQuery: /html/body//h1
+        awaitedTagName: h1
+        awaitedTextContent: Autohersteller
 
       - id: 2
         text: >
           Erstellen Sie eine ungeordnete Liste auf der Seite, die dann die einzelnen Hersteller enthalten wird.
           Geben Sie dieser Liste die Klasse 'list-group'.
-        xpathQuery: '/html/body//ul'
-        awaitedTagName: 'ul'
+        xpathQuery: /html/body//ul
+        awaitedTagName: ul
 
       - id: 3
         text: Erstellen Sie ein Listenelement mit dem Text 'Audi'.
@@ -68,8 +69,8 @@ content:
         xpathQuery: /html/head/link
         awaitedTagName: link
         attributes:
-          - {key: 'href', value: 'carListStyle.css'}
-          - {key: 'rel', value: 'stylesheet'}
+          - {key: href, value: carListStyle.css}
+          - {key: rel, value: stylesheet}
 
     jsTasks: []
 

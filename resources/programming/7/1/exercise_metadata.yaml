@@ -3,7 +3,8 @@ collectionId: 7
 toolId: programming
 semanticVersion: {major: 0, minor: 0, patch: 1}
 title: Kreise
-author: bje40dc
+authors:
+  - bje40dc
 text:
   relativePath: programming/7/1/text.html
 state: APPROVED

@@ -38,8 +38,7 @@
           "properties": {
             "isDerived": {"type": "boolean", "default": false}
           },
-          "required": ["isDerived"],
-          "additionalProperties": false
+          "required": ["isDerived"]
         }
       ]
     },
@@ -51,8 +50,7 @@
           "properties": {
             "parameters": {"type": "string"}
           },
-          "required": ["parameters"],
-          "additionalProperties": false
+          "required": ["parameters"]
         }
       ]
     },

@@ -3,7 +3,8 @@ collectionId: 2
 toolId: sql
 semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Billige Bücher
-author: bje40dc
+authors:
+  - bje40dc
 text: Geben Sie die Titel aller Bücher aus die weniger als 10,00 € kosten.
 state: APPROVED
 content:

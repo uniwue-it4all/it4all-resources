@@ -3,7 +3,8 @@ collectionId: 1
 semanticVersion: {major: 1, minor: 0, patch: 0}
 toolId: xml
 title: Vorlesung
-author: bje40dc
+authors:
+  - bje40dc
 text:
   relativePath: xml/1/2/text.html
 state: APPROVED

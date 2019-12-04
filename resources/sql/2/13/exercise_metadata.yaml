@@ -3,7 +3,8 @@ collectionId: 2
 toolId: sql
 semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Harry Potters Leben
-author: bje40dc
+authors:
+  - bje40dc
 text: Bestimmen Sie Titel und ISBN sämtlicher Bücher der Autorin 'Rowling' (ohne Anführungszeichen).
 state: APPROVED
 content:

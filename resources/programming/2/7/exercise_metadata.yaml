@@ -3,7 +3,8 @@ collectionId: 2
 toolId: programming
 semanticVersion: {major: 1, minor: 0, patch: 0}
 title: A1Z26-Verschlüsselung
-author: bje40dc
+authors:
+  - bje40dc
 text:
   relativePath: programming/2/7/text.html
 state: APPROVED

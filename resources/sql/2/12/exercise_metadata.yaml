@@ -3,7 +3,8 @@ collectionId: 2
 toolId: sql
 semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Bücher von Carlsen
-author: bje40dc
+authors:
+  - bje40dc
 text: Bestimmen Sie Titel und Preis aller Bücher die im Verlag 'Carlsen' erschienen sind.
 state: APPROVED
 content:

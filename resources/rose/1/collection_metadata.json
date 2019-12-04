@@ -2,7 +2,7 @@
   "id": 1,
   "toolId": "rose",
   "title": "Rose Basics",
-  "author": ["bje40dc"],
+  "authors": ["bje40dc"],
   "text": "Einfache Aufgaben um den Umgang mit diesem Tool zu lernen",
   "state": "APPROVED",
   "shortName": "rose_basics"

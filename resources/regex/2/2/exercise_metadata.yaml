@@ -3,7 +3,8 @@ collectionId: 2
 toolId: regex
 semanticVersion: {major: 0, minor: 0, patch: 1}
 title: Kilometerstände
-author: bje40dc
+authors:
+  - bje40dc
 text: >
   Schreiben Sie einen regulären Ausdruck, der die Kilometerstände aus Autoanzeigen extrahieren kann. Diese bestehen
   aus einer Zahl, einem 'T' für Tausend und der Angabe der Einheit (km). Zwischen der Zahl und dem T und zwischen

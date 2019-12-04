@@ -3,7 +3,8 @@ collectionId: 1
 toolId: regex
 semanticVersion: {major: 0, minor: 0, patch: 1}
 title: E-Mail-Adressen
-author: bje40dc
+authors:
+  - bje40dc
 text: >
   Erstellen Sie einen regulären Ausdruck, der E-Mail-Adressen überprüfen kann. Eine Mailadresse besteht aus einem
   lokalen und einem Domänenteil, die durch ein @-Zeichen getrennt sind. Der Domänenteil wiederum besteht aus einem

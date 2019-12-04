@@ -3,7 +3,8 @@ collectionId: 8
 toolId: programming
 semanticVersion: {major: 0, minor: 0, patch: 0}
 title: PySQL
-author: amh12ry
+authors:
+  - amh12ry
 text: TODO!
 state: APPROVED
 

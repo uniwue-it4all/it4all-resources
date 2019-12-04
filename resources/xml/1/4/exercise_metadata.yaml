@@ -3,7 +3,8 @@ collectionId: 1
 toolId: xml
 semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Frühstück
-author: bje40dc
+authors:
+  - bje40dc
 text:
   relativePath: xml/1/4/text.html
 state: APPROVED

@@ -3,7 +3,8 @@ collectionId: 1
 toolId: regex
 semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Einfache Datumsangaben
-author: bje40dc
+authors:
+  - bje40dc
 text: >
   Schreiben Sie einen regulären Ausdruck, der eine einfache Version von Datumsangaben findet. Dabei sollen der Tag und
   der Monat jeweils aus zwei und die Jahresangabe aus vier Zahlen bestehen. Als Trennzeichen soll jeweils ein Punkt

@@ -3,7 +3,8 @@ collectionId: 2
 toolId: regex
 semanticVersion: {major: 0, minor: 0, patch: 1}
 title: Heiße Preise
-author: bje40dc
+authors:
+  - bje40dc
 text: >
   Schreiben Sie einen regulären Ausdruck, der Preise aus Angeboten extrahiert. Diese sollen aus einer Ganz-
   oder Fließkommazahl mit maximal zwei Nachkommastellen bestehen. Es soll kein Symbol für eine Währungeinheit

@@ -3,7 +3,8 @@ collectionId: 2
 toolId: sql
 semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Alles über die Autoren
-author: bje40dc
+authors:
+  - bje40dc
 text:
   relativePath: sql/2/1/text.txt
 state: APPROVED

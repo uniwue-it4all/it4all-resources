@@ -5,7 +5,7 @@
     "id": {"type": "number"},
     "toolId": {"type": "string"},
     "title": {"type": "string"},
-    "author": {
+    "authors": {
       "type": "array",
       "items": {"type": "string"}
     },
@@ -13,5 +13,5 @@
     "state": {"$ref": "exercise_state.schema.json"},
     "shortName": {"type": "string"}
   },
-  "required": ["id", "toolId", "title", "author", "text", "state", "shortName"]
+  "required": ["id", "toolId", "title", "authors", "text", "state", "shortName"]
 }

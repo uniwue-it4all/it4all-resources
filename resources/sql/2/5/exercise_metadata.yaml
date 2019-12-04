@@ -3,7 +3,8 @@ collectionId: 2
 toolId: sql
 semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Daten über Bücher
-author: bje40dc
+authors:
+  - bje40dc
 text: Geben Sie für jedes Buch jeweils den Titel das Erscheinungsjahr und die ISBN aus!
 state: APPROVED
 content:

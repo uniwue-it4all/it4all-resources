@@ -2,7 +2,7 @@
   "id": 2,
   "toolId": "sql",
   "title": "Amazon",
-  "author": ["bje40dc"],
+  "authors": ["bje40dc"],
   "text": "",
   "state": "APPROVED",
   "shortName": "amazon"

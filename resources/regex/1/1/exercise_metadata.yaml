@@ -3,7 +3,8 @@ collectionId: 1
 toolId: regex
 semanticVersion: {major: 0, minor: 0, patch: 1}
 title: Postleitzahlen
-author: bje40dc
+authors:
+  - bje40dc
 text: >
   Schreiben Sie einen regulären Ausdruck, der (deutsche) Postleitzahlen überprüfen kann. Diese bestehen aus 5 Ziffern.
 state: APPROVED

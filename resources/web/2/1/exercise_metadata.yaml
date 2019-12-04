@@ -3,7 +3,8 @@ collectionId: 2
 toolId: web
 semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Klickzähler
-author: bje40dc
+authors:
+  - bje40dc
 text: Erstellen Sie einen Zähler der die Klicks auf einen Button zählt!
 state: APPROVED
 

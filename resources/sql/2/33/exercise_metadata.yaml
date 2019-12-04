@@ -3,7 +3,8 @@ collectionId: 2
 toolId: sql
 semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Kumulierter Bestand
-author: bje40dc
+authors:
+  - bje40dc
 text: >
   Erfassen Sie die ID aller Autoren und den kumulierten Bestand ihrer Bücher. Ordnen Sie die Einträge nach kumulierten
   Bestand abwärts. Benennen Sie die Spalte des kumulierten Bestandes 'stock_sum' (ohne Anführungszeichen).

@@ -3,7 +3,8 @@ collectionId: 1
 toolId: regex
 semanticVersion: {major: 0, minor: 0, patch: 1}
 title: Komlexe Datumsangaben
-author: bje40dc
+authors:
+  - bje40dc
 text: >
   Schreiben Sie einen regulären Ausdruck, der eine komplexere Version von Datumsangaben überprüfen kann. Dabei sollen
   der Tag und der Monat jeweils aus ein oder zwei und die Jahresangabe aus zwei bis vier Ziffern bestehen. Als

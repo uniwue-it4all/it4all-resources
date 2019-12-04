@@ -3,7 +3,8 @@ collectionId: 2
 toolId: sql
 semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Geringer Bestand oder Preis
-author: bje40dc
+authors:
+  - bje40dc
 text: Geben Sie die Titel aller Bücher aus, die einen Bestand von weniger als 20.000 Exemplaren oder einen Preis unter 14€ haben.
 state: APPROVED
 content:

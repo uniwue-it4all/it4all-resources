@@ -3,7 +3,8 @@ collectionId: 2
 toolId: sql
 semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Mit allem zufrieden?
-author: bje40dc
+authors:
+  - bje40dc
 text: >
   Ermitteln Sie den Kunden, welcher die höchste durchschnittliche Bewertung abgegeben hat. Geben Sie dazu Vorname,
   Nachname und seine durchschnittliche Bewertung (Spaltenbezeichnung 'avg_rating') aus.

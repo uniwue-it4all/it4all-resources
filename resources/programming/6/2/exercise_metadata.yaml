@@ -3,7 +3,8 @@ collectionId: 6
 toolId: programming
 semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Längen
-author: bje40dc
+authors:
+  - bje40dc
 text:
   relativePath: programming/6/2/text.html
 state: APPROVED

@@ -3,7 +3,8 @@ collectionId: 2
 toolId: sql
 semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Jahrgang 81
-author: bje40dc
+authors:
+  - bje40dc
 text: Wählen Sie die Vor- und Nachnamen der Kunden aus, die im Jahr 1981 Geburtstag haben.
 state: APPROVED
 content:

@@ -7,11 +7,11 @@
     "toolId": {"type": "string"},
     "semanticVersion": {"$ref": "./semantic_version.schema.json"},
     "title": {"type": "string"},
-    "author": {"type": "string"},
+    "authors": {"type": "array", "items": {"type": "string"}},
     "text": {"$ref": "./long_text.schema.json"},
     "state": {"$ref": "./exercise_state.schema.json"}
   },
   "required": [
-    "id", "collectionId", "toolId", "semanticVersion", "title", "author", "text", "state", "content"
+    "id", "collectionId", "toolId", "semanticVersion", "title", "authors", "text", "state"
   ]
 }

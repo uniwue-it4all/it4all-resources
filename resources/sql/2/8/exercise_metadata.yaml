@@ -3,7 +3,8 @@ collectionId: 2
 toolId: sql
 semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Autorensuche
-author: bje40dc
+authors:
+  - bje40dc
 text: Bestimmen Sie den Vor- und Nachnamen des Autoren mit der ID 3.
 state: APPROVED
 content:

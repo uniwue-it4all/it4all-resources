@@ -8,7 +8,8 @@
         {
           "properties": {
             "content": {"$ref": "#/definitions/WebExerciseContent"}
-          }
+          },
+          "required": ["content"]
         }
       ]
     },
@@ -68,8 +69,7 @@
             "id": {"type": "integer"},
             "text": {"type": "string"}
           },
-          "required": ["id", "text"],
-          "additionalProperties": false
+          "required": ["id", "text"]
         }
       ]
     },
@@ -82,8 +82,7 @@
         "awaitedTextContent": {"type": "string"},
         "attributes": {"$ref": "../../schemas/key_value_object_map.schema.json"}
       },
-      "required": ["id", "xpathQuery", "awaitedTagName"],
-      "additionalProperties": false
+      "required": ["id", "xpathQuery", "awaitedTagName"]
     },
     "HtmlAttribute": {
       "type": "object",

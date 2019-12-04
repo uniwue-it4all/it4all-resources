@@ -3,7 +3,8 @@ collectionId: 1
 toolId: sql
 semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Anzahl der Untergebenen
-author: bje40dc
+authors:
+  - bje40dc
 text:
   relativePath: sql/1/5/text.txt
 state: APPROVED

@@ -3,7 +3,8 @@ collectionId: 1
 toolId: web
 semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Login-Formular
-author: bje40dc
+authors:
+  - bje40dc
 text:
   relativePath: web/1/4/text.html
 state: APPROVED

@@ -3,7 +3,8 @@ collectionId: 2
 toolId: programming
 semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Weihnachtsbaum
-author: bje40dc
+authors:
+  - bje40dc
 text:
   relativePath: programming/2/6/text.html
 state: APPROVED

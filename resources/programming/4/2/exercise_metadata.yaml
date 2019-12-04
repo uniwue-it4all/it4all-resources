@@ -1,12 +1,10 @@
 id: 2
 collectionId: 4
 toolId: programming
-semanticVersion:
-  major: 1
-  minor: 0
-  patch: 0
+semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Längste Zeichenkette
-author: bje40dc
+authors:
+  - bje40dc
 text:
   relativePath: programming/4/2/text.html
 state: APPROVED

@@ -3,7 +3,8 @@ collectionId: 1
 toolId: web
 semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Tabellen in Html
-author: bje40dc
+authors:
+  - bje40dc
 text:
   relativePath: web/1/2/text.html
 state: APPROVED
@@ -31,8 +32,8 @@ content:
 
       - id: 2
         text: Erstellen Sie die erste Zeile für die Überschriften.
-        xpathQuery: '/html/body//table//tr[1]'
-        awaitedTagName: 'tr'
+        xpathQuery: /html/body//table//tr[1]
+        awaitedTagName: tr
 
       - id: 3
         text: Erstellen Sie die erste Zelle für die Überschrift. Diese soll als Inhalt 'Jahr' haben.
@@ -48,8 +49,8 @@ content:
 
       - id: 5
         text: Erstellen Sie die zweite Zeile in der Tabelle
-        xpathQuery: '/html/body//table//tr[2]'
-        awaitedTagName: 'tr'
+        xpathQuery: /html/body//table//tr[2]
+        awaitedTagName: tr
 
       - id: 6
         text: Erstellen Sie die erste Zelle in der zweiten Zeile. Diese soll als Inhalt '1900' haben.
@@ -67,7 +68,6 @@ content:
         text: Erstellen Sie die dritte Zeile in der Tabelle
         xpathQuery: '/html/body//table//tr[3]'
         awaitedTagName: 'tr'
-        awaitedTextContent: null
 
       - id: 9
         text: Erstellen Sie die erste Zelle in der dritten Zeile. Diese soll als Inhalt '1950' haben.

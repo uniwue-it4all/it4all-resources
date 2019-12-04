@@ -8,7 +8,8 @@
         {
           "properties": {
             "content": {"$ref": "#/definitions/UmlExerciseContent"}
-          }
+          },
+          "required": ["content"]
         }
       ]
     },

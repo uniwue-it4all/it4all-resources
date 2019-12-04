@@ -3,7 +3,8 @@ collectionId: 1
 toolId: sql
 semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Anzahl der Angestellten
-author: bje40dc
+authors:
+  - bje40dc
 text:
   relativePath: sql/1/1/text.txt
 state: APPROVED

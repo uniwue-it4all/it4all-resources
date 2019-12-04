@@ -1,9 +1,8 @@
 from pathlib import Path
-from typing import List, Dict
 
 from flask import Blueprint, request, url_for, jsonify, redirect
 
-from models.basics import resource_base_dir
+from models.basics import resource_base_dir, get_all_tool_ids
 
 tool_blueprint: Blueprint = Blueprint('tool_blueprint', __name__)
 
@@ -15,16 +14,14 @@ def tool_exists(tool_id: str) -> bool:
 
 @tool_blueprint.route('/')
 def route_tools():
-    tool_ids: List[str] = sorted([x.name for x in resource_base_dir.glob('*') if x.is_dir()])
-
-    tools: List[Dict[str, str]] = [
-        {
-            'id': tool_id,
-            'toolUrl': request.host_url[:-1] + url_for('tool_blueprint.route_tool', tool_id=tool_id)
-        } for tool_id in tool_ids
-    ]
-
-    return jsonify({'tools': tools})
+    return jsonify({
+        'tools': [
+            {
+                'id': tool_id,
+                'toolUrl': request.host_url[:-1] + url_for('tool_blueprint.route_tool', tool_id=tool_id)
+            } for tool_id in get_all_tool_ids()
+        ]
+    })
 
 
 @tool_blueprint.route('/<string:tool_id>')

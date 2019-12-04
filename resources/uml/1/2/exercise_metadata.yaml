@@ -3,7 +3,8 @@ collectionId: 1
 toolId: uml
 semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Krankenhaus
-author: bje40dc
+authors:
+  - bje40dc
 text:
   relativePath: uml/1/2/2-text.txt
 state: APPROVED

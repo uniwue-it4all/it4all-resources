@@ -3,7 +3,8 @@ collectionId: 2
 toolId: sql
 semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Wer schrieb was?
-author: bje40dc
+authors:
+  - bje40dc
 text: Ordnen Sie allen Büchern ihre jeweiligen Autoren zu. Geben Sie jeweils den Titel des Buches und den Nachnamen des Autoren aus!
 state: APPROVED
 content:

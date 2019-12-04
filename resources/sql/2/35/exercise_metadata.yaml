@@ -2,8 +2,9 @@ id: 35
 collectionId: 2
 toolId: sql
 semanticVersion: {major: 1, minor: 0, patch: 0}
-title: Ich bin der jüngste!
-author: bje40dc
+title: Ich bin der Jüngste!
+authors:
+  - bje40dc
 text: Geben Sie den Vornamen, Nachnamen und Geburtstag des jüngsten Kunden aus.
 state: APPROVED
 content:

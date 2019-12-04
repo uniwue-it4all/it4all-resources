@@ -3,7 +3,8 @@ collectionId: 2
 toolId: sql
 semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Teuer, teuer und teuer
-author: bje40dc
+authors:
+  - bje40dc
 text: Zeigen sie Titel und Autor-ID der drei teuersten Bücher an. Sortieren Sie die Einträge nach Preis abwärts.
 state: APPROVED
 content:
