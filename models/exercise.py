@@ -3,22 +3,31 @@ from logging import exception as log_exception
 from pathlib import Path
 from typing import List, Optional, Dict, Any
 
-# noinspection Mypy
-from typed_json_dataclass import TypedJsonMixin, MappingMode
 from yaml import load as yaml_load, SafeLoader
 
 from models.basics import LongText, resource_base_dir
 
 
 @dataclass()
-class SemanticVersion(TypedJsonMixin):
+class SemanticVersion:
     major: int
     minor: int
     patch: int
 
+    @staticmethod
+    def from_json(json: Dict[str, Any]) -> 'SemanticVersion':
+        return SemanticVersion(
+            int(json['major']),
+            int(json['minor']),
+            int(json['patch'])
+        )
+
+    def to_json(self) -> Dict[str, Any]:
+        return self.__dict__
+
 
 @dataclass()
-class Exercise(TypedJsonMixin):
+class Exercise:
     id: int
     collection_id: int
     tool_id: str
@@ -30,12 +39,27 @@ class Exercise(TypedJsonMixin):
     content: object
     tags: List[str] = field(default_factory=list)
 
-    def to_json_dict(self) -> Dict[str, Any]:
+    @staticmethod
+    def from_json(json: Dict[str, Any]) -> 'Exercise':
+        return Exercise(
+            int(json['id']),
+            int(json['collectionId']),
+            str(json['toolId']),
+            SemanticVersion.from_json(json['semanticVersion']),
+            str(json['title']),
+            list(map(lambda a: str(a), json['authors'])),
+            LongText.from_json(json['text']),
+            str(json['state']),
+            json['content'],
+            list(map(lambda t: str(t), json['tags']))
+        )
+
+    def to_json(self) -> Dict[str, Any]:
         return {
             'id': self.id,
             'collectionId': self.collection_id,
             'toolId': self.tool_id,
-            'semanticVersion': self.semantic_version.__dict__,
+            'semanticVersion': self.semantic_version.to_json(),
             'title': self.title,
             'authors': self.authors,
             'text': self.text.to_json_dict(),
@@ -73,7 +97,7 @@ def load_exercise(tool_id: str, coll_id: int, ex_id: int, log_errors: bool = Tru
     # noinspection PyBroadException
     try:
         exercise_dict: Dict = yaml_load(metadata_file.open('r'), SafeLoader)
-        return Exercise.from_dict(exercise_dict, mapping_mode=MappingMode.SnakeCase)
+        return Exercise.from_json(exercise_dict)
     except Exception as e:
         if log_errors:
             log_exception(e)

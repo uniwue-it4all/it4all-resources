@@ -1,6 +1,5 @@
 flask==1.1.1
 
-typed_json_dataclass==1.2.1
-pyyaml==5.1.2
-
 mypy==0.740
+
+pyyaml==5.1.2

@@ -42,7 +42,7 @@ def route_exercises(tool_id: str, coll_id: int):
     return jsonify({
         'parentUrl': request.host_url[:-1] + url_for(
             'coll_blueprint.route_collection', tool_id=tool_id, coll_id=coll_id),
-        'exercises': [em.to_json_dict() for em in exercises_metadata]
+        'exercises': [em.to_json() for em in exercises_metadata]
     })
 
 
@@ -59,5 +59,5 @@ def route_exercise(tool_id: str, coll_id: int, ex_id: int):
 
     return jsonify({
         'parentUrl': request.host_url[:-1] + parent_url,
-        'exercise': exercise_metadata.to_json_dict()
+        'exercise': exercise_metadata.to_json()
     })

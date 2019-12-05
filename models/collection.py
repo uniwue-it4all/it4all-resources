@@ -1,16 +1,14 @@
 from dataclasses import dataclass
+from json import load as json_load
 from logging import exception as log_exception
 from pathlib import Path
 from typing import List, Optional, Dict, Any
-
-# noinspection Mypy
-from typed_json_dataclass import TypedJsonMixin, MappingMode
 
 from models.basics import get_tool_dir
 
 
 @dataclass
-class ExerciseCollection(TypedJsonMixin):
+class ExerciseCollection:
     tool_id: str
     id: int
     title: str
@@ -19,7 +17,19 @@ class ExerciseCollection(TypedJsonMixin):
     state: str
     short_name: str
 
-    def to_json_dict(self) -> Dict[str, Any]:
+    @staticmethod
+    def from_json(json: Dict[str, Any]) -> 'ExerciseCollection':
+        return ExerciseCollection(
+            str(json['toolId']),
+            int(json['id']),
+            str(json['title']),
+            list(map(lambda a: str(a), json['authors'])),
+            str(json['text']),
+            str(json['state']),
+            str(json['shortName'])
+        )
+
+    def to_json(self) -> Dict[str, Any]:
         return {
             'toolId': self.tool_id,
             'id': self.id,
@@ -47,18 +57,18 @@ def load_collections(tool_id: str) -> List[ExerciseCollection]:
     return collections
 
 
-def load_collection(tool_id: str, collection_id: int, log_erros: bool = True) -> Optional[ExerciseCollection]:
+def load_collection(tool_id: str, collection_id: int, log_errors: bool = True) -> Optional[ExerciseCollection]:
     metadata_path: Path = get_tool_dir(tool_id) / str(collection_id) / 'collection_metadata.json'
 
     if not metadata_path.exists():
-        if log_erros:
+        if log_errors:
             log_exception(f'Could not find metadata file {metadata_path}')
         return None
 
     # noinspection PyBroadException
     try:
-        return ExerciseCollection.from_json(metadata_path.read_text(), mapping_mode=MappingMode.SnakeCase)
+        return ExerciseCollection.from_json(json_load(metadata_path.open('r')))
     except Exception as e:
-        if log_erros:
+        if log_errors:
             log_exception(e)
         return None
