@@ -1,33 +1,30 @@
-from json import load as json_load
+from dataclasses import dataclass
+from logging import exception as log_exception
 from pathlib import Path
-from typing import List, Dict, Optional
+from typing import List, Optional, Dict, Any
 
 # noinspection Mypy
-from jsonschema import validate as json_schema_validate, RefResolver
-from typing_extensions import TypedDict
+from typed_json_dataclass import TypedJsonMixin, MappingMode
 
-from models.basics import resource_base_dir, schemas_path
-
-coll_file_name: str = 'collection_metadata.json'
-
-coll_schema_path: Path = schemas_path / 'collection.schema.json'
-collection_schema: Dict = json_load(coll_schema_path.open('r'))
-
-coll_resolver: RefResolver = RefResolver(referrer=collection_schema, base_uri=f'file://{schemas_path.absolute()}/')
+from models.basics import get_tool_dir
 
 
-class ExerciseCollection(TypedDict):
+@dataclass
+class ExerciseCollection(TypedJsonMixin):
     tool_id: str
     id: int
     title: str
     authors: List[str]
     text: str
     state: str
+    short_name: str
+
+    def to_json_dict(self) -> Dict[str, Any]:
+        return self.__dict__
 
 
 def get_collection_ids_for_tool(tool_id: str) -> List[int]:
-    tool_dir: Path = resource_base_dir / tool_id
-    return sorted([int(x.name) for x in tool_dir.glob('*') if x.is_dir()])
+    return sorted([int(x.name) for x in get_tool_dir(tool_id).glob('*') if x.is_dir()])
 
 
 def load_collections(tool_id: str) -> List[ExerciseCollection]:
@@ -42,19 +39,18 @@ def load_collections(tool_id: str) -> List[ExerciseCollection]:
     return collections
 
 
-def load_collection(tool_id: str, collection_id: int) -> Optional[ExerciseCollection]:
-    metadata_path: Path = resource_base_dir / tool_id / str(collection_id) / coll_file_name
+def load_collection(tool_id: str, collection_id: int, log_erros: bool = True) -> Optional[ExerciseCollection]:
+    metadata_path: Path = get_tool_dir(tool_id) / str(collection_id) / 'collection_metadata.json'
 
     if not metadata_path.exists():
+        if log_erros:
+            log_exception(f'Could not find metadata file {metadata_path}')
         return None
 
     # noinspection PyBroadException
     try:
-        maybe_collection: ExerciseCollection = json_load(metadata_path.open('r'))
-
-        json_schema_validate(maybe_collection, schema=collection_schema, resolver=coll_resolver)
-
-        return maybe_collection
+        return ExerciseCollection.from_json(metadata_path.read_text(), mapping_mode=MappingMode.SnakeCase)
     except Exception as e:
-        print(e)
+        if log_erros:
+            log_exception(e)
         return None

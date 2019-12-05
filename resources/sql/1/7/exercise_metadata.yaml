@@ -7,7 +7,9 @@ authors:
   - bje40dc
 text:
   relativePath: sql/1/7/text.txt
+tags: []
 state: APPROVED
+
 content:
   exerciseType: UPDATE
   sampleSolutions:

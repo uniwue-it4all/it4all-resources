@@ -5,9 +5,9 @@ semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Billig gekauft
 authors:
   - bje40dc
-text: >
-  Berechnen Sie die Anzahl der bestellten Buchexemplare (Tabelle order_positions) die zum Zeitpunkt des Kaufes weniger als
-  fünf Euro gekostet haben. Geben Sie das Ergebnis unter dem Spaltenname 'Anzahl' aus.
+text:
+  relativePath: sql/2/32/text.html
+tags: []
 state: APPROVED
 content:
   exerciseType: SELECT

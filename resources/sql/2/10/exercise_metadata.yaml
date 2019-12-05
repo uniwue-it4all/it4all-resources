@@ -5,8 +5,11 @@ semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Verlag mit Telefonnummer
 authors:
   - bje40dc
-text: Bestimmen Sie den Namen des Verlages der unter der Telefonnummer '+49 2402 / 806341' erreichbar ist.
+text:
+  relativePath: sql/2/10/text.html
+tags: []
 state: APPROVED
+
 content:
   exerciseType: SELECT
   sampleSolutions:

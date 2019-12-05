@@ -6,8 +6,10 @@ title: Namen aller Kunden
 authors:
   - bje40dc
 text:
-  relativePath: sql/2/4/text.txt
+  relativePath: sql/2/4/text.html
+tags: []
 state: APPROVED
+
 content:
   exerciseType: SELECT
   sampleSolutions:

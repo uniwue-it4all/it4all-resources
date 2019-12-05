@@ -5,8 +5,11 @@ semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Wunsch des Phönix
 authors:
   - bje40dc
-text: Wie lauten die Nachnamen der Kunden die sich das Buch 'Harry Potter und der Orden des Phönix' wünschen?
+text:
+  relativePath: sql/2/26/text.html
+tags: []
 state: APPROVED
+
 content:
   exerciseType: SELECT
   sampleSolutions:

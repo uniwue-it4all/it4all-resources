@@ -5,8 +5,9 @@ semanticVersion: {major: 0, minor: 0, patch: 1}
 title: Postleitzahlen
 authors:
   - bje40dc
-text: >
-  Schreiben Sie einen regulären Ausdruck, der (deutsche) Postleitzahlen überprüfen kann. Diese bestehen aus 5 Ziffern.
+text:
+  relativePath: regex/1/1/text.html
+tags: []
 state: APPROVED
 
 content:

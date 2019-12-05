@@ -5,7 +5,9 @@ semanticVersion: {major: 0, minor: 0, patch: 0}
 title: PySQL
 authors:
   - amh12ry
-text: TODO!
+text:
+  relativePath: programming/8/1/text.html
+tags: []
 state: APPROVED
 
 content:

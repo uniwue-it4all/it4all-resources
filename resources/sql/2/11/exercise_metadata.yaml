@@ -5,8 +5,11 @@ semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Wer schrieb was?
 authors:
   - bje40dc
-text: Ordnen Sie allen Büchern ihre jeweiligen Autoren zu. Geben Sie jeweils den Titel des Buches und den Nachnamen des Autoren aus!
+text:
+  relativePath: sql/2/11/text.html
+tags: []
 state: APPROVED
+
 content:
   exerciseType: SELECT
   sampleSolutions:

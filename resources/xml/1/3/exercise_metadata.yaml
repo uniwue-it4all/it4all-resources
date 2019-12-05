@@ -1,13 +1,15 @@
 id: 3
 collectionId: 1
 toolId: xml
+semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Krankenhaus
 authors:
   - bje40dc
 text:
   relativePath: xml/1/3/text.html
+tags: []
 state: APPROVED
-semanticVersion: {major: 1, minor: 0, patch: 0}
+
 
 content:
   rootNode: praxis

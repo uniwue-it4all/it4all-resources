@@ -5,8 +5,11 @@ semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Wer hat hier so viel bestellt?
 authors:
   - bje40dc
-text: Wie lauten die Nachnamen der Kunden, die mindestens 3 Bestellung aufgegeben haben?
+text:
+  relativePath: sql/2/15/text.html
+tags: []
 state: APPROVED
+
 content:
   exerciseType: SELECT
   sampleSolutions:

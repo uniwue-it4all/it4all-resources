@@ -25,7 +25,7 @@
           <value>
             <SchemaInfo>
               <option name="name" value="prog_ex.schema" />
-              <option name="relativePathToSchema" value="resources/programming/programming_ex_content.schema.json" />
+              <option name="relativePathToSchema" value="schemas/programming_ex_content.schema.json" />
               <option name="schemaVersion" value="JSON schema version 7" />
               <option name="patterns">
                 <list>
@@ -43,7 +43,7 @@
           <value>
             <SchemaInfo>
               <option name="name" value="regex_ex.schema" />
-              <option name="relativePathToSchema" value="resources/regex/regex_ex_content.schema.json" />
+              <option name="relativePathToSchema" value="schemas/regex_ex_content.schema.json" />
               <option name="schemaVersion" value="JSON schema version 7" />
               <option name="patterns">
                 <list>
@@ -61,7 +61,7 @@
           <value>
             <SchemaInfo>
               <option name="name" value="rose_ex.schema" />
-              <option name="relativePathToSchema" value="resources/rose/rose_ex_content.schema.json" />
+              <option name="relativePathToSchema" value="schemas/rose_ex_content.schema.json" />
               <option name="schemaVersion" value="JSON schema version 7" />
               <option name="patterns">
                 <list>
@@ -79,7 +79,7 @@
           <value>
             <SchemaInfo>
               <option name="name" value="sql_ex.schema" />
-              <option name="relativePathToSchema" value="resources/sql/sql_ex_content.schema.json" />
+              <option name="relativePathToSchema" value="schemas/sql_ex_content.schema.json" />
               <option name="schemaVersion" value="JSON schema version 7" />
               <option name="patterns">
                 <list>
@@ -97,7 +97,7 @@
           <value>
             <SchemaInfo>
               <option name="name" value="uml_ex.schema" />
-              <option name="relativePathToSchema" value="resources/uml/uml_ex_content.schema.json" />
+              <option name="relativePathToSchema" value="schemas/uml_ex_content.schema.json" />
               <option name="schemaVersion" value="JSON schema version 7" />
               <option name="patterns">
                 <list>
@@ -115,7 +115,7 @@
           <value>
             <SchemaInfo>
               <option name="name" value="web_ex.schema" />
-              <option name="relativePathToSchema" value="resources/web/web_ex_content.schema.json" />
+              <option name="relativePathToSchema" value="schemas/web_ex_content.schema.json" />
               <option name="schemaVersion" value="JSON schema version 7" />
               <option name="patterns">
                 <list>
@@ -133,7 +133,7 @@
           <value>
             <SchemaInfo>
               <option name="name" value="xml_ex.schema" />
-              <option name="relativePathToSchema" value="resources/xml/xml_ex_content.schema.json" />
+              <option name="relativePathToSchema" value="schemas/xml_ex_content.schema.json" />
               <option name="schemaVersion" value="JSON schema version 7" />
               <option name="patterns">
                 <list>

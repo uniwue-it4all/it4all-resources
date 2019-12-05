@@ -8,9 +8,9 @@ semanticVersion:
 title: Palindrom
 authors:
   - bje40dc
-text: >
-  Erstellen Sie ein Skript, das prüft, ob der übergebene String ein Palindrom darstellt! Ein leerer String ist für
-  diese Aufgabe auch ein Palindrom. Ihr Programm soll Groß- und Kleinschreibung ignorieren, d. h. 'a' == 'A'.
+text:
+  relativePath: programming/2/2/text.html
+tags: []
 state: APPROVED
 
 content:

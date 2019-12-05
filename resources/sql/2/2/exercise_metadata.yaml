@@ -6,8 +6,10 @@ title: Nachnamen aller Autoren
 authors:
   - bje40dc
 text:
-  relativePath: sql/2/2/text.txt
+  relativePath: sql/2/2/text.html
+tags: []
 state: APPROVED
+
 content:
   exerciseType: SELECT
   sampleSolutions:

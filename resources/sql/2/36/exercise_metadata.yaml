@@ -5,11 +5,11 @@ semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Passwortupdate!
 authors:
   - bje40dc
-text: >
-  Sie möchten ihre Kunden dazu motivieren sichere Passwörter zu verwenden. Alle Kunden, die als Kennwort 'Passwort'
-  verwenden, sollen beim nächsten Login über eine Meldung aufgefordert werden sich was neues auszudenken. Geben Sie
-  die ID und die Email-Adresse der faulen Kunden aus.
+text:
+  relativePath: sql/2/36/text.html
+tags: []
 state: APPROVED
+
 content:
   exerciseType: SELECT
   sampleSolutions:

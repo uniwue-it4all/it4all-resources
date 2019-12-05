@@ -5,8 +5,11 @@ semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Teuer, teuer und teuer
 authors:
   - bje40dc
-text: Zeigen sie Titel und Autor-ID der drei teuersten Bücher an. Sortieren Sie die Einträge nach Preis abwärts.
+text:
+  relativePath: sql/2/28/text.html
+tags: []
 state: APPROVED
+
 content:
   exerciseType: SELECT
   sampleSolutions:

@@ -5,8 +5,11 @@ semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Autorensuche
 authors:
   - bje40dc
-text: Bestimmen Sie den Vor- und Nachnamen des Autoren mit der ID 3.
+text:
+  relativePath: sql/2/8/text.html
+tags: []
 state: APPROVED
+
 content:
   exerciseType: SELECT
   sampleSolutions:

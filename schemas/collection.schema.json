@@ -9,7 +9,7 @@
       "type": "array",
       "items": {"type": "string"}
     },
-    "text": {"$ref": "long_text.schema.json"},
+    "text": {"type": "string"},
     "state": {"$ref": "exercise_state.schema.json"},
     "shortName": {"type": "string"}
   },

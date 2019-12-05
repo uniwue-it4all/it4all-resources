@@ -5,10 +5,9 @@ semanticVersion: {major: 0, minor: 0, patch: 1}
 title: Heiße Preise
 authors:
   - bje40dc
-text: >
-  Schreiben Sie einen regulären Ausdruck, der Preise aus Angeboten extrahiert. Diese sollen aus einer Ganz-
-  oder Fließkommazahl mit maximal zwei Nachkommastellen bestehen. Es soll kein Symbol für eine Währungeinheit
-  mitextrahiert werden.
+text:
+  relativePath: regex/2/1/text.html
+tags: []
 state: APPROVED
 
 content:

@@ -1,14 +1,9 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "anyOf": [
-    {"type": "string"},
-    {
-      "type": "object",
-      "properties": {
-        "relativePath": {"type": "string"}
-      },
-      "required": ["relativePath"],
-      "additionalProperties": false
-    }
-  ]
+  "type": "object",
+  "properties": {
+    "relativePath": {"type": "string"}
+  },
+  "required": ["relativePath"],
+  "additionalProperties": false
 }

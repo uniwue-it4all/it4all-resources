@@ -5,8 +5,11 @@ semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Bücher von Carlsen
 authors:
   - bje40dc
-text: Bestimmen Sie Titel und Preis aller Bücher die im Verlag 'Carlsen' erschienen sind.
+text:
+  relativePath: sql/2/12/text.html
+tags: []
 state: APPROVED
+
 content:
   exerciseType: SELECT
   sampleSolutions:

@@ -5,7 +5,9 @@ semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Verzweigungen und Strings
 authors:
   - alg81dm
-text: Erstellen Sie ein Anmeldeformular, das eine einfache Passwort-Qualitätsprüfung durchführt.
+text:
+  relativePath: web/2/2/text.html
+tags: []
 state: APPROVED
 
 content:

@@ -5,8 +5,11 @@ semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Orwellianisch
 authors:
   - bje40dc
-text: Suchen Sie die Titel aller Bücher, deren Autor George Orwell ist. Ordnen Sie die Titel nach Erscheinungsjahr abwärts.
+text:
+  relativePath: sql/2/27/text.html
+tags: []
 state: APPROVED
+
 content:
   exerciseType: SELECT
   sampleSolutions:

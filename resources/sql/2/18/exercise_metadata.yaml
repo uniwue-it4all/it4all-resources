@@ -5,8 +5,11 @@ semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Was wird gewünscht?
 authors:
   - bje40dc
-text: Geben die die IDs aller Bücher aus, die von Kunden gewünscht werden. Achten Sie darauf, dass eine ID nur einmal vorkommt.
+text:
+  relativePath: sql/2/18/text.html
+tags: []
 state: APPROVED
+
 content:
   exerciseType: SELECT
   sampleSolutions:

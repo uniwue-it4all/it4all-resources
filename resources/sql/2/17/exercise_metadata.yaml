@@ -5,8 +5,11 @@ semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Billige Bücher
 authors:
   - bje40dc
-text: Geben Sie die Titel aller Bücher aus die weniger als 10,00 € kosten.
+text:
+  relativePath: sql/2/17/text.html
+tags: []
 state: APPROVED
+
 content:
   exerciseType: SELECT
   sampleSolutions:

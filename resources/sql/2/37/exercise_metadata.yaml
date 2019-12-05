@@ -5,10 +5,11 @@ semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Mit allem zufrieden?
 authors:
   - bje40dc
-text: >
-  Ermitteln Sie den Kunden, welcher die höchste durchschnittliche Bewertung abgegeben hat. Geben Sie dazu Vorname,
-  Nachname und seine durchschnittliche Bewertung (Spaltenbezeichnung 'avg_rating') aus.
+text:
+  relativePath: sql/2/37/text.html
+tags: []
 state: APPROVED
+
 content:
   exerciseType: SELECT
   sampleSolutions:

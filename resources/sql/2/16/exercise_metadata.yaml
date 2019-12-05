@@ -5,8 +5,11 @@ semanticVersion: {major: 1, minor: 0, patch: 0}
 title: GMX-Kunden
 authors:
   - bje40dc
-text: Geben Sie alle Email-Adressen der Kunden aus die mit 'gmx.de' enden.
+text:
+ relativePath: sql/2/16/text.html
+tags: []
 state: APPROVED
+
 content:
   exerciseType: SELECT
   sampleSolutions:

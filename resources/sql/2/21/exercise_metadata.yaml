@@ -5,7 +5,9 @@ semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Sterne in der Wüste 1
 authors:
   - bje40dc
-text: Wie oft wurde das Buch 'Die Stadt in der Wüste' bewertet? Nennen Sie die Spalte 'Anzahl'.
+text:
+  relativePath: sql/2/21/text.html
+tags: []
 state: APPROVED
 content:
   exerciseType: SELECT

@@ -5,7 +5,9 @@ semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Der kleine Prinz?
 authors: 
   - bje40dc
-text: Bestimmen Sie die Autor-ID des Buches 'Der kleine Prinz' (ohne Anführungszeichen).
+text:
+  relativePath: sql/2/9/text.html
+tags: []
 state: APPROVED
 content:
   exerciseType: SELECT

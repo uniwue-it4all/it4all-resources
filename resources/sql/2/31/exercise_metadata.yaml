@@ -5,10 +5,11 @@ semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Tolkien in Billig
 authors:
   - bje40dc
-text: >
-  Bestimmen Sie Titel und Preis aller Bücher des Autors 'Tolkien' deren Preis über 10€ liegt. Ordnen Sie die
-  Einträge nach Erscheinungsjahr abwärts.
+text:
+  relativePath: sql/2/31/text.html
+tags: []
 state: APPROVED
+
 content:
   exerciseType: SELECT
   sampleSolutions:

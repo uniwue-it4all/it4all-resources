@@ -6,8 +6,10 @@ title: Verlagsnamen
 authors:
   - bje40dc
 text:
-  relativePath: sql/2/3/text.txt
+  relativePath: sql/2/3/text.html
+tags: []
 state: APPROVED
+
 content:
   exerciseType: SELECT
   sampleSolutions:

@@ -5,7 +5,9 @@ semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Schleifen
 authors:
   - alg81dm
-text: Erstellen Sie ein einfaches Formular zur Berechnung der Fakultät einer Zahl n (alle Zahlen von 1 bis n multipliziert).
+text:
+  relativePath: web/2/3/text.html
+tags: []
 state: APPROVED
 
 content:

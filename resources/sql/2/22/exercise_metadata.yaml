@@ -5,8 +5,11 @@ semanticVersion: {major: 1, minor: 0, patch: 0}
 title: Sterne in der Wüste 2
 authors: 
   - bje40dc
-text: Welche Durchschnittsbewertung bekam das Buch 'Die Stadt in der Wüste'? Nennen Sie die Spalte 'Durchschnitt'.
+text:
+  relativePath: sql/2/22/text.html
+tags: []
 state: APPROVED
+
 content:
   exerciseType: SELECT
   sampleSolutions:

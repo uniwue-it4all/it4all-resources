@@ -7,11 +7,18 @@
     "toolId": {"type": "string"},
     "semanticVersion": {"$ref": "./semantic_version.schema.json"},
     "title": {"type": "string"},
-    "authors": {"type": "array", "items": {"type": "string"}},
+    "authors": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
     "text": {"$ref": "./long_text.schema.json"},
+    "tags": {
+      "type": "array",
+      "items": {"$ref": "./ex_tag.schema.json"}
+    },
     "state": {"$ref": "./exercise_state.schema.json"}
   },
   "required": [
-    "id", "collectionId", "toolId", "semanticVersion", "title", "authors", "text", "state"
+    "id", "collectionId", "toolId", "semanticVersion", "title", "authors", "text", "tags", "state"
   ]
 }
