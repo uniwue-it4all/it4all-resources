@@ -34,7 +34,7 @@ class Exercise(TypedJsonMixin):
         return {
             'id': self.id,
             'collectionId': self.collection_id,
-            'tool_id': self.tool_id,
+            'toolId': self.tool_id,
             'semanticVersion': self.semantic_version.__dict__,
             'title': self.title,
             'authors': self.authors,

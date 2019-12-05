@@ -20,7 +20,15 @@ class ExerciseCollection(TypedJsonMixin):
     short_name: str
 
     def to_json_dict(self) -> Dict[str, Any]:
-        return self.__dict__
+        return {
+            'toolId': self.tool_id,
+            'id': self.id,
+            'title': self.title,
+            'authors': self.authors,
+            'text': self.text,
+            'state': self.state,
+            'shortName': self.short_name
+        }
 
 
 def get_collection_ids_for_tool(tool_id: str) -> List[int]:

@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional, List
 
 from flask import Blueprint, jsonify, redirect, url_for, request
 
@@ -23,9 +23,11 @@ def route_collection_ids(tool_id: str):
 
 @coll_blueprint.route('/collections')
 def route_collections(tool_id: str):
+    collections: List[ExerciseCollection] = load_collections(tool_id)
+
     return jsonify({
         'parentUrl': request.host_url[:-1] + url_for('tool_blueprint.route_tool', tool_id=tool_id),
-        'collections': load_collections(tool_id)
+        'collections': [c.to_json_dict() for c in collections]
     })
 
 
@@ -40,7 +42,7 @@ def route_collection(tool_id: str, coll_id: int):
 
     return jsonify({
         'parentUrl': request.host_url[:-1] + parent_url,
-        'metaData': collection_metadata,
+        'metaData': collection_metadata.to_json_dict(),
         'exerciseIdsUrl': request.host_url[:-1] + url_for(
             'exes_blueprint.route_exercise_ids', tool_id=tool_id, coll_id=coll_id),
         'exercisesUrl': request.host_url[:-1] + url_for(
