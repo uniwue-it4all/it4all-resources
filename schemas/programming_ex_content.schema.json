@@ -1,9 +1,9 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$ref": "#/definitions/ProgExercise",
+  "$ref": "#/definitions/ProgrammingExercise",
   "additionalItems": false,
   "definitions": {
-    "ProgExercise": {
+    "ProgrammingExercise": {
       "allOf": [
         {"$ref": "./exercise.schema.json"},
         {
@@ -20,18 +20,28 @@
         "functionName": {"type": "string"},
         "foldername": {"type": "string"},
         "filename": {"type": "string"},
-        "inputTypes": {"type": "array", "items": {"$ref": "#/definitions/ProgInputType"}, "additionalItems": false},
+        "inputTypes": {
+          "type": "array",
+          "items": {"$ref": "#/definitions/ProgInputType"},
+          "additionalItems": false
+        },
         "outputType": {"$ref": "#/definitions/ProgDataType"},
         "sampleTestData": {
-          "type": "array", "items": {"$ref": "#/definitions/ProgSampleTestData"}, "additionalItems": false
+          "type": "array",
+          "items": {"$ref": "#/definitions/ProgSampleTestData"},
+          "additionalItems": false
         },
         "unitTestPart": {"$ref": "#/definitions/UnitTestPart"},
         "implementationPart": {"$ref": "#/definitions/ImplementationPart"},
         "sampleSolutions": {
-          "type": "array", "items": {"$ref": "#/definitions/ProgSampleSolution"}, "additionalItems": false
+          "type": "array",
+          "items": {"$ref": "#/definitions/ProgSampleSolution"},
+          "additionalItems": false
         },
         "tags": {
-          "type": "array", "items": {"$ref": "#/definitions/ProgExerciseTag"}, "uniqueItems": true
+          "type": "array",
+          "items": {"$ref": "./ex_tag.schema.json"},
+          "uniqueItems": true
         }
       },
       "required": [
@@ -42,18 +52,6 @@
         "tags"
       ],
       "additionalProperties": false
-    },
-    "ProgExerciseTag": {
-      "enum": [
-        "ForLoops", "WhileLoops",
-        "Conditions",
-        "Classes",
-        "Exceptions",
-        "Math",
-        "Strings",
-        "Lists", "Tuples", "Dictionaries", "Slicing",
-        "Recursion"
-      ]
     },
     "ProgDataType": {
       "anyOf": [

@@ -1,57 +1,51 @@
 from dataclasses import dataclass, field
 from logging import exception as log_exception
 from pathlib import Path
-from typing import List, Optional, Dict, Any
-
+from typing import List, Optional, Dict, Any, TypeVar, Generic
+from models.programming import update_programming_exercise_content
 from yaml import load as yaml_load, SafeLoader
 
 from models.basics import LongText, resource_base_dir
 
-
-@dataclass()
-class SemanticVersion:
-    major: int
-    minor: int
-    patch: int
-
-    @staticmethod
-    def from_json(json: Dict[str, Any]) -> 'SemanticVersion':
-        return SemanticVersion(
-            int(json['major']),
-            int(json['minor']),
-            int(json['patch'])
-        )
-
-    def to_json(self) -> Dict[str, Any]:
-        return self.__dict__
+EC = TypeVar('EC')
 
 
 @dataclass()
-class Exercise:
+class Exercise(Generic[EC]):
     id: int
     collection_id: int
     tool_id: str
-    semantic_version: SemanticVersion
+    semantic_version: Dict
     title: str
     authors: List[str]
     text: LongText
     state: str
-    content: object
-    tags: List[str] = field(default_factory=list)
+    tags: List[str]
+    content: EC
+
+
+    @staticmethod
+    def __update_content__(tool_id: str, json: Dict[str, Any]) -> Dict[str, Any]:
+        if tool_id == 'programming':
+            return update_programming_exercise_content(json)
+        else:
+            return json
 
     @staticmethod
     def from_json(json: Dict[str, Any]) -> 'Exercise':
+        tool_id: str = str(json['toolId'])
+
         return Exercise(
             int(json['id']),
             int(json['collectionId']),
-            str(json['toolId']),
-            SemanticVersion.from_json(json['semanticVersion']),
+            tool_id,
+            json['semanticVersion'],
             str(json['title']),
             list(map(lambda a: str(a), json['authors'])),
             LongText.from_json(json['text']),
             str(json['state']),
-            json['content'],
-            list(map(lambda t: str(t), json['tags']))
+            list(map(lambda t: str(t), json['tags'])),
+            Exercise.__update_content__(tool_id, json['content'])
         )
 
     def to_json(self) -> Dict[str, Any]:
@@ -59,13 +53,13 @@ class Exercise:
             'id': self.id,
             'collectionId': self.collection_id,
             'toolId': self.tool_id,
-            'semanticVersion': self.semantic_version.to_json(),
+            'semanticVersion': self.semantic_version,
             'title': self.title,
             'authors': self.authors,
             'text': self.text.to_json_dict(),
             'state': self.state,
-            'content': self.content,
-            'tags': self.tags
+            'tags': self.tags,
+            'content': self.content
         }
 
 
