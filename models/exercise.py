@@ -1,11 +1,13 @@
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from logging import exception as log_exception
 from pathlib import Path
 from typing import List, Optional, Dict, Any, TypeVar, Generic
-from models.programming import update_programming_exercise_content
+
 from yaml import load as yaml_load, SafeLoader
 
 from models.basics import LongText, resource_base_dir
+from models.programming import update_programming_exercise_content
+from models.web import update_web_exercise_content
 
 EC = TypeVar('EC')
 
@@ -23,11 +25,14 @@ class Exercise(Generic[EC]):
     tags: List[str]
     content: EC
 
-
     @staticmethod
     def __update_content__(tool_id: str, json: Dict[str, Any]) -> Dict[str, Any]:
         if tool_id == 'programming':
             return update_programming_exercise_content(json)
+        elif tool_id == 'regex':
+            return json
+        elif tool_id == 'web':
+            return update_web_exercise_content(json)
         else:
             return json
 
