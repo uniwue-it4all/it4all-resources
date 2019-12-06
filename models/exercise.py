@@ -1,71 +1,35 @@
-from dataclasses import dataclass
 from logging import exception as log_exception
 from pathlib import Path
-from typing import List, Optional, Dict, Any, TypeVar, Generic
+from typing import List, Optional, Dict, Any, TypeVar
 
 from yaml import load as yaml_load, SafeLoader
 
-from models.basics import LongText, resource_base_dir
+from models.basics import resource_base_dir, read_long_text_from_file
 from models.programming import update_programming_exercise_content
 from models.web import update_web_exercise_content
 
 EC = TypeVar('EC')
 
+Exercise = Dict[str, Any]
 
-@dataclass()
-class Exercise(Generic[EC]):
-    id: int
-    collection_id: int
-    tool_id: str
-    semantic_version: Dict
-    title: str
-    authors: List[str]
-    text: LongText
-    state: str
-    tags: List[str]
-    content: EC
 
-    @staticmethod
-    def __update_content__(tool_id: str, json: Dict[str, Any]) -> Dict[str, Any]:
-        if tool_id == 'programming':
-            return update_programming_exercise_content(json)
-        elif tool_id == 'regex':
-            return json
-        elif tool_id == 'web':
-            return update_web_exercise_content(json)
-        else:
-            return json
+def __update_content__(tool_id: str, json: Dict[str, Any]) -> Dict[str, Any]:
+    if tool_id == 'programming':
+        return update_programming_exercise_content(json)
+    elif tool_id == 'regex':
+        return json
+    elif tool_id == 'web':
+        return update_web_exercise_content(json)
+    else:
+        return json
 
-    @staticmethod
-    def from_json(json: Dict[str, Any]) -> 'Exercise':
-        tool_id: str = str(json['toolId'])
 
-        return Exercise(
-            int(json['id']),
-            int(json['collectionId']),
-            tool_id,
-            json['semanticVersion'],
-            str(json['title']),
-            list(map(lambda a: str(a), json['authors'])),
-            LongText.from_json(json['text']),
-            str(json['state']),
-            list(map(lambda t: str(t), json['tags'])),
-            Exercise.__update_content__(tool_id, json['content'])
-        )
+def update_exercise(exercise: Exercise) -> 'Exercise':
+    exercise['text'] = read_long_text_from_file(exercise['text'])
 
-    def to_json(self) -> Dict[str, Any]:
-        return {
-            'id': self.id,
-            'collectionId': self.collection_id,
-            'toolId': self.tool_id,
-            'semanticVersion': self.semantic_version,
-            'title': self.title,
-            'authors': self.authors,
-            'text': self.text.to_json_dict(),
-            'state': self.state,
-            'tags': self.tags,
-            'content': self.content
-        }
+    __update_content__(exercise['toolId'], exercise['content'])
+
+    return exercise
 
 
 def get_exercise_ids_for_collection(tool_id: str, collection_id: int) -> List[int]:
@@ -96,7 +60,7 @@ def load_exercise(tool_id: str, coll_id: int, ex_id: int, log_errors: bool = Tru
     # noinspection PyBroadException
     try:
         exercise_dict: Dict = yaml_load(metadata_file.open('r'), SafeLoader)
-        return Exercise.from_json(exercise_dict)
+        return update_exercise(exercise_dict)
     except Exception as e:
         if log_errors:
             log_exception(e)

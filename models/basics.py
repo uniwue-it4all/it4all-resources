@@ -1,6 +1,5 @@
-from dataclasses import dataclass
 from pathlib import Path
-from typing import List, Any, Dict
+from typing import Dict, Any, List
 
 resource_base_dir: Path = Path.cwd() / 'resources'
 schemas_path: Path = Path.cwd() / 'schemas'
@@ -14,14 +13,17 @@ def get_tool_dir(tool_id: str) -> Path:
     return resource_base_dir / tool_id
 
 
-@dataclass()
-class LongText:
-    relative_path: str
+# LongText
 
-    @staticmethod
-    def from_json(json: Dict[str, Any]) -> 'LongText':
-        return LongText(str(json['relativePath']))
+def read_long_text_from_file(json: Dict[str, Any]) -> str:
+    file_path: Path = resource_base_dir / json['relativePath']
+    return file_path.read_text()
 
-    def to_json_dict(self) -> str:
-        file_path: Path = resource_base_dir / self.relative_path
-        return file_path.read_text()
+
+# ExerciseFile
+
+def update_exercise_files_field(json: Dict[str, Any], field_name: str):
+    for json_file in json[field_name]:
+        resource_path: Path = resource_base_dir / json_file['resourcePath']
+
+        json_file['content'] = resource_path.read_text()

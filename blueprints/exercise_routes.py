@@ -4,7 +4,7 @@ from typing import List, Optional
 from flask import Blueprint, url_for, request, redirect, jsonify
 
 from models.basics import resource_base_dir
-from models.exercise import Exercise, get_exercise_ids_for_collection, load_exercise, load_exercises
+from models.exercise import get_exercise_ids_for_collection, Exercise, load_exercise, load_exercises
 
 exes_blueprint: Blueprint = Blueprint('exes_blueprint', __name__)
 
@@ -42,7 +42,7 @@ def route_exercises(tool_id: str, coll_id: int):
     return jsonify({
         'parentUrl': request.host_url[:-1] + url_for(
             'coll_blueprint.route_collection', tool_id=tool_id, coll_id=coll_id),
-        'exercises': [em.to_json() for em in exercises_metadata]
+        'exercises': exercises_metadata
     })
 
 
@@ -52,12 +52,10 @@ def route_exercise(tool_id: str, coll_id: int, ex_id: int):
 
     exercise_metadata: Optional[Exercise] = load_exercise(tool_id, coll_id, ex_id)
 
-    # FIXME: load LongText column!
-
     if not exercise_metadata:
         return redirect(parent_url)
 
     return jsonify({
         'parentUrl': request.host_url[:-1] + parent_url,
-        'exercise': exercise_metadata.to_json()
+        'exercise': exercise_metadata
     })

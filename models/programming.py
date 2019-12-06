@@ -1,6 +1,6 @@
-from typing import Dict, Any, List
+from typing import Dict, Any
 
-from models.exercise_file import update_exercise_files_field
+from models.basics import update_exercise_files_field
 
 
 def update_programming_exercise_content(json: Dict[str, Any]) -> Dict[str, Any]:
