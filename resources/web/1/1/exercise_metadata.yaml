@@ -33,9 +33,7 @@ content:
         awaitedTextContent: Autohersteller
 
       - id: 2
-        text: >
-          Erstellen Sie eine ungeordnete Liste auf der Seite, die dann die einzelnen Hersteller enthalten wird.
-          Geben Sie dieser Liste die Klasse 'list-group'.
+        text: Erstellen Sie eine ungeordnete Liste auf der Seite, die dann die einzelnen Hersteller enthalten wird.
         xpathQuery: /html/body//ul
         awaitedTagName: ul
 

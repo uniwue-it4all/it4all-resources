@@ -4,6 +4,7 @@ ARG WorkDir=/app/
 
 WORKDIR ${WorkDir}
 
+# FIXME: move resources to different directory!
 COPY . ${WorkDir}
 
 RUN apk update && \
