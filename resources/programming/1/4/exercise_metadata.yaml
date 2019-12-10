@@ -15,7 +15,8 @@ content:
   filename: fibonacci
   foldername: fibonacci
 
-  inputTypes: [{id: 1, inputName: number, inputType: INTEGER}]
+  inputTypes:
+    - {id: 1, inputName: number, inputType: INTEGER}
   outputType: INTEGER
 
   unitTestPart:
@@ -36,28 +37,52 @@ content:
     unitTestTestConfigs:
       - id: 0
         shouldFail: false
-        cause: ''
         description: Diese Implementierun ist korrekt und sollte alle Tests bestehen.
+        file:
+          name: fibonacci_0.py
+          resourcePath: programming/1/4/unit_test_sols/fibonacci_0.py
+          fileType: python
+          editable: false
       - id: 1
         shouldFail: true
-        cause: ''
         description: Falls das Argument 'number' keine Zahl ist, soll eine Exception geworfen werden.
+        file:
+          name: fibonacci_1.py
+          resourcePath: programming/1/4/unit_test_sols/fibonacci_1.py
+          fileType: python
+          editable: false
       - id: 2
         shouldFail: true
-        cause: ''
         description: Falls das Argument 'number' kleiner als 0 ist, soll eine Exception geworfen werden.
+        file:
+          name: fibonacci_2.py
+          resourcePath: programming/1/4/unit_test_sols/fibonacci_2.py
+          fileType: python
+          editable: false
       - id: 3
         shouldFail: true
-        cause: ''
         description: Die Funktion sollte den richtigen Startwert für 0 benutzen.
+        file:
+          name: fibonacci_3.py
+          resourcePath: programming/1/4/unit_test_sols/fibonacci_3.py
+          fileType: python
+          editable: false
       - id: 4
         shouldFail: true
-        cause: ''
         description: Die Funktion sollte den richtigen Startwert für 1 benutzen.
+        file:
+          name: fibonacci_4.py
+          resourcePath: programming/1/4/unit_test_sols/fibonacci_4.py
+          fileType: python
+          editable: false
       - id: 5
         shouldFail: true
-        cause: ''
         description: Die Funktion sollte das richtige Ergebnis berechnen.
+        file:
+          name: fibonacci_5.py
+          resourcePath: programming/1/4/unit_test_sols/fibonacci_5.py
+          fileType: python
+          editable: false
 
     testFileName: test_fibonacci.py
     sampleSolFileNames: [test_fibonacci.py]

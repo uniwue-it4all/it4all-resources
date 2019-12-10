@@ -22,8 +22,12 @@ def read_long_text_from_file(json: Dict[str, Any]) -> str:
 
 # ExerciseFile
 
+def update_exercise_file(json_file: Dict[str, Any]):
+    resource_path: Path = resource_base_dir / json_file['resourcePath']
+
+    json_file['content'] = resource_path.read_text()
+
+
 def update_exercise_files_field(json: Dict[str, Any], field_name: str):
     for json_file in json[field_name]:
-        resource_path: Path = resource_base_dir / json_file['resourcePath']
-
-        json_file['content'] = resource_path.read_text()
+        update_exercise_file(json_file)

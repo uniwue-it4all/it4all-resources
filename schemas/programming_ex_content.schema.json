@@ -1,20 +1,19 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$ref": "#/definitions/ProgrammingExercise",
-  "additionalItems": false,
   "definitions": {
     "ProgrammingExercise": {
       "allOf": [
         {"$ref": "./exercise.schema.json"},
         {
           "properties": {
-            "content": {"$ref": "#/definitions/ProgExerciseContent"}
+            "content": {"$ref": "#/definitions/ProgrammingExerciseContent"}
           },
           "required": ["content"]
         }
       ]
     },
-    "ProgExerciseContent": {
+    "ProgrammingExerciseContent": {
       "type": "object",
       "properties": {
         "functionName": {"type": "string"},
@@ -22,20 +21,20 @@
         "filename": {"type": "string"},
         "inputTypes": {
           "type": "array",
-          "items": {"$ref": "#/definitions/ProgInputType"},
+          "items": {"$ref": "#/definitions/ProgrammingInputType"},
           "additionalItems": false
         },
-        "outputType": {"$ref": "#/definitions/ProgDataType"},
+        "outputType": {"$ref": "#/definitions/ProgrammingDataType"},
         "sampleTestData": {
           "type": "array",
-          "items": {"$ref": "#/definitions/ProgSampleTestData"},
+          "items": {"$ref": "#/definitions/ProgrammingSampleTestData"},
           "additionalItems": false
         },
         "unitTestPart": {"$ref": "#/definitions/UnitTestPart"},
         "implementationPart": {"$ref": "#/definitions/ImplementationPart"},
         "sampleSolutions": {
           "type": "array",
-          "items": {"$ref": "#/definitions/ProgSampleSolution"},
+          "items": {"$ref": "#/definitions/ProgrammingSampleSolution"},
           "additionalItems": false
         },
         "tags": {
@@ -53,25 +52,25 @@
       ],
       "additionalProperties": false
     },
-    "ProgDataType": {
+    "ProgrammingDataType": {
       "anyOf": [
         {"type": "string", "enum": ["VOID", "BOOLEAN", "INTEGER", "FLOAT", "STRING"]},
         {
           "type": "object",
           "properties": {
             "genericType": {"type": "string", "enum": ["LIST", "TUPLE", "DICT"]},
-            "subType": {"$ref": "#/definitions/ProgDataType"}
+            "subType": {"$ref": "#/definitions/ProgrammingDataType"}
           },
           "required": ["genericType", "subType"]
         }
       ]
     },
-    "ProgInputType": {
+    "ProgrammingInputType": {
       "type": "object",
       "properties": {
         "id": {"type": "number"},
         "inputName": {"type": "string"},
-        "inputType": {"$ref": "#/definitions/ProgDataType"}
+        "inputType": {"$ref": "#/definitions/ProgrammingDataType"}
       },
       "required": ["id", "inputName", "inputType"],
       "additionalProperties": false
@@ -80,7 +79,6 @@
       "type": "object",
       "properties": {
         "unitTestType": {
-          "type": "string",
           "description": "Modus, in dem die Unittests ausgeführt werden. 'Simplified' für vereinfacht, 'Normal' for normale Unittests.",
           "enum": ["Simplified", "Normal"]
         },
@@ -100,6 +98,7 @@
           "items": {"$ref": "#/definitions/UnitTestTestConfig"},
           "additionalItems": false
         },
+        "simplifiedTestMainFile": {"$ref": "./exercise_file.schema.json"},
         "testFileName": {"type": "string"},
         "sampleSolFileNames": {
           "type": "array",
@@ -125,10 +124,10 @@
           "type": "boolean",
           "description": "Angabe, ob der Unittest fehlschlagen soll (true, falls die zugehörige Lösung einen Fehler enthält)."
         },
-        "cause": {"type": "string"},
-        "description": {"type": "string"}
+        "description": {"type": "string"},
+        "file": {"$ref": "./exercise_file.schema.json"}
       },
-      "required": ["id", "shouldFail"],
+      "required": ["id", "shouldFail", "description", "file"],
       "additionalProperties": false
     },
     "ImplementationPart": {
@@ -152,7 +151,7 @@
       "required": ["base", "files", "implFileName", "sampleSolFileNames"],
       "additionalProperties": false
     },
-    "ProgSampleSolution": {
+    "ProgrammingSampleSolution": {
       "type": "object",
       "properties": {
         "id": {"type": "number"},
@@ -175,7 +174,7 @@
       "required": ["id"],
       "additionalProperties": false
     },
-    "ProgSampleTestData": {
+    "ProgrammingSampleTestData": {
       "type": "object",
       "properties": {
         "id": {"type": "number"},

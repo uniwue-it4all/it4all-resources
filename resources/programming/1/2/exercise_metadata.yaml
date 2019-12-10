@@ -40,21 +40,35 @@ content:
       - id: 0
         shouldFail: false
         description: Diese Implementierung ist korrekt und sollte alle Tests bestehen.
-
+        file:
+          name: factorial_0.py
+          resourcePath: programming/1/2/unit_test_sols/factorial_0.py
+          fileType: python
+          editable: false
       - id: 1
         shouldFail: true
-        cause: IllegalArgument
         description: Falls das Funktionsargument 'n' keine Ganzzahl ist, soll eine Exception geworfen werden.
-
+        file:
+          name: factorial_1.py
+          resourcePath: programming/1/2/unit_test_sols/factorial_1.py
+          fileType: python
+          editable: false
       - id: 2
         shouldFail: true
-        cause: IllegalArgument
         description: Falls das Funktionsargument kleiner oder gleich 0 ist, soll eine Exception geworfen werden.
-
+        file:
+          name: factorial_2.py
+          resourcePath: programming/1/2/unit_test_sols/factorial_2.py
+          fileType: python
+          editable: false
       - id: 3
         shouldFail: true
-        cause: WrongResult
         description: Die Funktion soll das richtige Resultat zurückliefern.
+        file:
+          name: factorial_3.py
+          resourcePath: programming/1/2/unit_test_sols/factorial_3.py
+          fileType: python
+          editable: false
     testFileName: test_factorial.py
     sampleSolFileNames: [test_factorial.py]
 

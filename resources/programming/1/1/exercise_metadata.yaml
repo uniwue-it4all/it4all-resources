@@ -25,6 +25,11 @@ content:
     unitTestsDescription: TODO!
     unitTestFiles: []
     unitTestTestConfigs: []
+    simplifiedTestMainFile:
+      name: test_main.py
+      resourcePath: programming/1/1/test_main.py
+      fileType: python
+      editable: false
     testFileName: test_ggt.py
     sampleSolFileNames: []
 
