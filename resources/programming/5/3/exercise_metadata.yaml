@@ -37,24 +37,59 @@ content:
       - id: 0
         shouldFail: false
         description: Musterlösung...
+        file:
+          name: tuples_and_dicts_0.py
+          resourcePath: programming/5/3/unit_test_sols/tuples_and_dicts_0.py
+          fileType: python
+          editable: false
       - id: 1
         shouldFail: true
         description: Die Funktion tuple_list_to_dict soll den ersten Eintrag im Tupel als Schlüssel und den zweiten Eintrag als Wert setzen.
+        file:
+          name: tuples_and_dicts_1.py
+          resourcePath: programming/5/3/unit_test_sols/tuples_and_dicts_1.py
+          fileType: python
+          editable: false
       - id: 2
         shouldFail: true
         description: Die Funktion tuple_list_to_dict soll den ersten Wert verwenden, falls ein Schlüssel mehrmals vorkommt.
+        file:
+          name: tuples_and_dicts_2.py
+          resourcePath: programming/5/3/unit_test_sols/tuples_and_dicts_2.py
+          fileType: python
+          editable: false
       - id: 3
         shouldFail: true
         description: Die Funktion tuple_list_to_dict soll ein leeres Dictionary zurückgeben, falls eine leere Liste übergeben wird.
+        file:
+          name: tuples_and_dicts_3.py
+          resourcePath: programming/5/3/unit_test_sols/tuples_and_dicts_3.py
+          fileType: python
+          editable: false
       - id: 4
         shouldFail: true
         description: Die Funktion intersect_dicts soll ein leeres Dictionary zurückgeben, falls keine übereinstimmenden Schlüsseln in den übergebenen Dictionaries existieren.
+        file:
+          name: tuples_and_dicts_4.py
+          resourcePath: programming/5/3/unit_test_sols/tuples_and_dicts_4.py
+          fileType: python
+          editable: false
       - id: 5
         shouldFail: true
         description: Die Funktion intersect_dicts soll ein Dictionary mit den korrekten Werten bei übereinstimmenden Schlüsseln zurückgeben.
+        file:
+          name: tuples_and_dicts_5.py
+          resourcePath: programming/5/3/unit_test_sols/tuples_and_dicts_5.py
+          fileType: python
+          editable: false
       - id: 6
         shouldFail: true
         description: Die Funktion intersect_dicts soll ein leeres Dictionary zurückgeben, falls die beiden übergebenen Dictionaries leer sind.
+        file:
+          name: tuples_and_dicts_6.py
+          resourcePath: programming/5/3/unit_test_sols/tuples_and_dicts_6.py
+          fileType: python
+          editable: false
     testFileName: test_tuples_and_dicts.py
     sampleSolFileNames: [test_tuples_and_dicts.py]
 

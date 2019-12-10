@@ -49,36 +49,59 @@ content:
       - id: 0
         shouldFail: false
         description: Musterlösung
-
+        file:
+          name: table_0.py
+          resourcePath: programming/8/1/unit_test_sols/table_0.py
+          fileType: python
+          editable: false
       - id: 1
         shouldFail: true
-        cause: illegal_argument
         description: Es soll überprüft werden, ob die eingegebene Liste die gleiche Länge wie die Tabellenreihen hat.
-
+        file:
+          name: table_1.py
+          resourcePath: programming/8/1/unit_test_sols/table_1.py
+          fileType: python
+          editable: false
       - id: 2
         shouldFail: true
-        cause: illegal_argument
         description: Es soll überprüft werden, ob der Inhalt der eingegebenen Liste die gleichen Datentypen hat wie die Anfangsdaten.
-
+        file:
+          name: table_2.py
+          resourcePath: programming/8/1/unit_test_sols/table_2.py
+          fileType: python
+          editable: false
       - id: 3
         shouldFail: true
-        cause: wrong_result
         description: Die Funktion sollte bei Erfolg True ausgeben.
-
+        file:
+          name: table_3.py
+          resourcePath: programming/8/1/unit_test_sols/table_3.py
+          fileType: python
+          editable: false
       - id: 4
         shouldFail: true
-        cause: wrong_result
         description: Die letzte Zeile der Tabelle muss der angefügten Zeile entsprechen.
-
+        file:
+          name: table_4.py
+          resourcePath: programming/8/1/unit_test_sols/table_4.py
+          fileType: python
+          editable: false
       - id: 5
         shouldFail: true
-        cause: wrong_result
         description: Die neue Anzahl an Zeilen muss um genau 1 höher sein.
-
+        file:
+          name: table_5.py
+          resourcePath: programming/8/1/unit_test_sols/table_5.py
+          fileType: python
+          editable: false
       - id: 6
         shouldFail: true
-        cause: wrong_result
         description: Zahlen in der neuen Zeile sollen automatisch von Strings zu floats konvertiert werden.
+        file:
+          name: table_6.py
+          resourcePath: programming/8/1/unit_test_sols/table_6.py
+          fileType: python
+          editable: false
 
     testFileName: test_table.py
     sampleSolFileNames: [test_table.py]

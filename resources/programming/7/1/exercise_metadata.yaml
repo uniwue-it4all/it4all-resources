@@ -42,38 +42,75 @@ content:
       - id: 0
         shouldFail: false
         description: Musterlösung...
+        file:
+          name: circle_0.py
+          resourcePath: programming/7/1/unit_test_sols/circle_0.py
+          fileType: python
+          editable: false
       - id: 1
         shouldFail: true
-        cause: illegal_argument
         description: Die X-Koordinate sollte eine Ganz- oder Fließkommazahl sein.
+        file:
+          name: circle_1.py
+          resourcePath: programming/7/1/unit_test_sols/circle_1.py
+          fileType: python
+          editable: false
       - id: 2
         shouldFail: true
-        cause: logic_error
         description: Der Wert des Konstruktorarguments 'center_x' sollte unter dem selben Namen als Argument zugänglich sein.
+        file:
+          name: circle_2.py
+          resourcePath: programming/7/1/unit_test_sols/circle_2.py
+          fileType: python
+          editable: false
       - id: 3
         shouldFail: true
-        cause: illegal_argument
         description: Die Y-Koordinate sollte eine Ganz- oder Fließkommazahl sein.
+        file:
+          name: circle_3.py
+          resourcePath: programming/7/1/unit_test_sols/circle_3.py
+          fileType: python
+          editable: false
       - id: 4
         shouldFail: true
-        cause: logic_error
         description: Der Wert des Konstruktorarguments 'center_y' sollte unter dem selben Namen als Argument zugänglich sein.
+        file:
+          name: circle_4.py
+          resourcePath: programming/7/1/unit_test_sols/circle_4.py
+          fileType: python
+          editable: false
       - id: 5
         shouldFail: true
-        cause: illegal_argument
         description: Der Radius sollte eine Ganz- oder Fließkommazahl sein.
+        file:
+          name: circle_5.py
+          resourcePath: programming/7/1/unit_test_sols/circle_5.py
+          fileType: python
+          editable: false
       - id: 6
         shouldFail: true
-        cause: illegal_argument
         description: Der Radius sollte größer oder gleich 0 sein.
+        file:
+          name: circle_6.py
+          resourcePath: programming/7/1/unit_test_sols/circle_6.py
+          fileType: python
+          editable: false
       - id: 7
         shouldFail: true
-        cause: logic_error
         description: Der Wert des Konstruktorarguments 'radius' sollte unter dem selben Namen als Argument zugänglich sein.
+        file:
+          name: circle_7.py
+          resourcePath: programming/7/1/unit_test_sols/circle_7.py
+          fileType: python
+          editable: false
       - id: 8
         shouldFail: true
-        cause: wrong_result
         description: Die Fläche des Kreises sollte richtig berechnet werden
+        file:
+          name: circle_8.py
+          resourcePath: programming/7/1/unit_test_sols/circle_8.py
+          fileType: python
+          editable: false
     testFileName: test_circle.py
     sampleSolFileNames: [test_circle.py]
 

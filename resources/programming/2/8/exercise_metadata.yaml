@@ -39,6 +39,11 @@ content:
       - id: 0
         shouldFail: false
         description: Musterlösung...
+        file:
+          name: caesar_0.py
+          resourcePath: programming/2/8/unit_test_sols/ceasar_0.py
+          fileType: python
+          editable: false
     testFileName: test_ceasar.py
     sampleSolFileNames: [test_ceasar.py]
 

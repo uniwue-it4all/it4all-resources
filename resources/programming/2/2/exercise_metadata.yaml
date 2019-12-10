@@ -37,18 +37,43 @@ content:
       - id: 0
         shouldFail: false
         description: Musterlösung...
+        file:
+          name: floating_point_exponential_0.py
+          resourcePath: programming/2/2/unit_test_sols/floating_point_exponential_0.py
+          fileType: python
+          editable: false
       - id: 1
         shouldFail: true
         description: Die Mantisse soll alle Dezimalstellen beinhalten.
+        file:
+          name: floating_point_exponential_1.py
+          resourcePath: programming/2/2/unit_test_sols/floating_point_exponential_1.py
+          fileType: python
+          editable: false
       - id: 2
         shouldFail: true
         description: Die Zahl 10 soll mit der Variable <code>exponent</code> potenziert und nicht multipliziert werden.
+        file:
+          name: floating_point_exponential_2.py
+          resourcePath: programming/2/2/unit_test_sols/floating_point_exponential_2.py
+          fileType: python
+          editable: false
       - id: 3
         shouldFail: true
         description: Die Zahl 10 soll mit der Variable <code>exponent</code> potenziert werden.
+        file:
+          name: floating_point_exponential_3.py
+          resourcePath: programming/2/2/unit_test_sols/floating_point_exponential_3.py
+          fileType: python
+          editable: false
       - id: 4
         shouldFail: true
         description: Die Ausgabe soll richtig formatiert sein {Mantisse}e{Exponent}.
+        file:
+          name: floating_point_exponential_4.py
+          resourcePath: programming/2/2/unit_test_sols/floating_point_exponential_4.py
+          fileType: python
+          editable: false
     testFileName: test_floating_point_exponential.py
     sampleSolFileNames: [test_floating_point_exponential.py]
 

@@ -1,5 +1,5 @@
 from pathlib import Path
-from typing import List, Optional
+from typing import List, Optional, Union
 
 from flask import Blueprint, url_for, request, redirect, jsonify
 
@@ -50,9 +50,9 @@ def route_exercises(tool_id: str, coll_id: int):
 def route_exercise(tool_id: str, coll_id: int, ex_id: int):
     parent_url: str = url_for('exes_blueprint.route_exercise_ids', tool_id=tool_id, coll_id=coll_id)
 
-    exercise_metadata: Optional[Exercise] = load_exercise(tool_id, coll_id, ex_id)
+    exercise_metadata: Union[str, Exercise] = load_exercise(tool_id, coll_id, ex_id)
 
-    if not exercise_metadata:
+    if isinstance(exercise_metadata, str):
         return redirect(parent_url)
 
     return jsonify({

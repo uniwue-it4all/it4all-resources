@@ -37,30 +37,75 @@ content:
       - id: 0
         shouldFail: false
         description: Musterlösung...
+        file:
+          name: maumau_0.py
+          resourcePath: programming/7/2/unit_test_sols/maumau_0.py
+          fileType: python
+          editable: false
       - id: 1
         shouldFail: true
         description: Die Funktion can_be_played_on soll ebenfalls true zurückgeben, falls die Bilder der beiden Karten übereinstimmen.
+        file:
+          name: maumau_1.py
+          resourcePath: programming/7/2/unit_test_sols/maumau_1.py
+          fileType: python
+          editable: false
       - id: 2
         shouldFail: true
         description: Die Funktion can_be_played_on soll ebenfalls true zurückgeben, falls die Farben der beiden Karten übereinstimmen.
+        file:
+          name: maumau_2.py
+          resourcePath: programming/7/2/unit_test_sols/maumau_2.py
+          fileType: python
+          editable: false
       - id: 3
         shouldFail: true
         description: Die Funktion can_be_played_on soll nur true zurückgeben, falls die Farben der beiden Karten übereinstimmen.
+        file:
+          name: maumau_3.py
+          resourcePath: programming/7/2/unit_test_sols/maumau_3.py
+          fileType: python
+          editable: false
       - id: 4
         shouldFail: true
         description: Die Funktion can_be_played_on soll nur true zurückgeben, falls die Bilder der beiden Karten übereinstimmen.
+        file:
+          name: maumau_4.py
+          resourcePath: programming/7/2/unit_test_sols/maumau_4.py
+          fileType: python
+          editable: false
       - id: 5
         shouldFail: true
         description: Die Funktion can_be_palyed_on soll true zurückgeben, falls entweder die Farben oder die Bilder der beiden Karten übereinstimmen.
+        file:
+          name: maumau_5.py
+          resourcePath: programming/7/2/unit_test_sols/maumau_5.py
+          fileType: python
+          editable: false
       - id: 6
         shouldFail: true
         description: Die Funktion playable_cards soll die Handkarten zurückgeben, die spielbar sind.
+        file:
+          name: maumau_6.py
+          resourcePath: programming/7/2/unit_test_sols/maumau_6.py
+          fileType: python
+          editable: false
       - id: 7
         shouldFail: true
         description: Die Funktion playable_cards soll alle Handkarten zurückgeben, die spielbar sind.
+        file:
+          name: maumau_7.py
+          resourcePath: programming/7/2/unit_test_sols/maumau_7.py
+          fileType: python
+          editable: false
       - id: 8
         shouldFail: true
         description: Die Funktion playable_cards soll eine leere Liste zurückgeben, falls keine Handkarten vorhanden sind.
+        file:
+          name: maumau_8.py
+          resourcePath: programming/7/2/unit_test_sols/maumau_8.py
+          fileType: python
+          editable: false
     testFileName: test_maumau.py
     sampleSolFileNames: [test_maumau.py]
 
