@@ -10,7 +10,7 @@ authors:
   - bje40dc
 text:
   relativePath: programming/2/2/text.html
-tags: []
+tags: [S, FL]
 state: APPROVED
 
 content:
@@ -61,6 +61,3 @@ content:
     - {id: 5, input: "qwertzuiyiuztrewq", output: true}
     - {id: 6, input: "Tacocat", output: true}
 
-  tags:
-    - Strings
-    - ForLoops

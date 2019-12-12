@@ -7,7 +7,7 @@ authors:
   - bje40dc
 text:
   relativePath: programming/1/2/text.html
-tags: []
+tags: [E, M, FL]
 state: APPROVED
 
 content:
@@ -103,8 +103,3 @@ content:
             fileType: python
             editable: false
         testData: []
-
-  tags:
-    - Exceptions
-    - Math
-    - ForLoops

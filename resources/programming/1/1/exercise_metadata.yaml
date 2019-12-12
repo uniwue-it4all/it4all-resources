@@ -7,7 +7,7 @@ authors:
   - bje40dc
 text:
   relativePath: programming/1/1/text.html
-tags: []
+tags: [FL, C, M]
 state: APPROVED
 
 content:
@@ -61,8 +61,3 @@ content:
     - {id: 3, input: [64, 46], output: 2}
     - {id: 4, input: [777, 111], output: 111}
     - {id: 5, input: [15, 25], output: 5}
-
-  tags:
-    - ForLoops
-    - Conditions
-    - Math

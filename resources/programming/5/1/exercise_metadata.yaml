@@ -7,7 +7,7 @@ authors:
   - bje40dc
 text:
   relativePath: programming/5/1/text.html
-tags: []
+tags: [T, L, M, C]
 state: APPROVED
 
 content:
@@ -151,9 +151,3 @@ content:
         testData: []
 
   sampleTestData: []
-
-  tags:
-    - Tuples
-    - Lists
-    - Math
-    - Conditions

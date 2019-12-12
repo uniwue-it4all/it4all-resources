@@ -7,7 +7,7 @@ authors:
   - bje40dc
 text:
   relativePath: programming/1/4/text.html
-tags: []
+tags: [E, R]
 state: APPROVED
 
 content:
@@ -116,7 +116,3 @@ content:
         testData: []
 
   sampleTestData: []
-
-  tags:
-    - Exceptions
-    - Recursion

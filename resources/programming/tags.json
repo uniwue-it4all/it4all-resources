@@ -1,0 +1,12 @@
+{
+  "FL": "For-Schleifen",
+  "C": "Bedingungen",
+  "M": "Mathematik",
+  "S": "Strings",
+  "L": "Listen",
+  "T": "Tuple",
+  "CL": "Klassen",
+  "E": "Exceptions",
+  "R": "Rekursion",
+  "D": "Dictionaries"
+}

@@ -7,7 +7,7 @@ authors:
   - bje40dc
 text:
   relativePath: programming/4/3/text.html
-tags: []
+tags: [L, FL, M, C]
 state: APPROVED
 
 content:
@@ -255,9 +255,3 @@ content:
         testData: []
 
   sampleTestData: []
-
-  tags:
-    - Lists
-    - ForLoops
-    - Math
-    - Conditions

@@ -7,7 +7,7 @@ authors:
   - amh12ry
 text:
   relativePath: programming/8/1/text.html
-tags: []
+tags: [E, CL, FL, C]
 state: APPROVED
 
 content:
@@ -139,9 +139,3 @@ content:
         testData: []
 
   sampleTestData: []
-
-  tags:
-    - Exceptions
-    - Classes
-    - ForLoops
-    - Conditions

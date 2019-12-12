@@ -36,19 +36,13 @@
           "type": "array",
           "items": {"$ref": "#/definitions/ProgrammingSampleSolution"},
           "additionalItems": false
-        },
-        "tags": {
-          "type": "array",
-          "items": {"$ref": "./ex_tag.schema.json"},
-          "uniqueItems": true
         }
       },
       "required": [
         "functionName", "foldername", "filename",
         "inputTypes", "outputType",
         "unitTestPart", "implementationPart",
-        "sampleSolutions", "sampleTestData",
-        "tags"
+        "sampleSolutions", "sampleTestData"
       ],
       "additionalProperties": false
     },

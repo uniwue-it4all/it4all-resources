@@ -7,7 +7,7 @@ authors:
   - bje40dc
 text:
   relativePath: programming/7/1/text.html
-tags: []
+tags: [C, E, CL, M]
 state: APPROVED
 
 content:
@@ -152,9 +152,3 @@ content:
         testData: []
 
   sampleTestData: []
-
-  tags:
-    - Conditions
-    - Exceptions
-    - Classes
-    - Math

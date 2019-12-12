@@ -7,7 +7,7 @@ authors:
   - bje40dc
 text:
   relativePath: programming/2/5/text.html
-tags: []
+tags: [S, FL, L]
 state: APPROVED
 
 content:
@@ -157,7 +157,3 @@ content:
 
   sampleTestData: []
 
-  tags:
-    - Strings
-    - Lists
-    - ForLoops

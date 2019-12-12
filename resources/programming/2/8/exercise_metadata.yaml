@@ -7,7 +7,7 @@ authors:
   - bje40dc
 text:
   relativePath: programming/2/8/text.html
-tags: []
+tags: [M, S, CL]
 state: APPROVED
 
 content:
@@ -109,8 +109,3 @@ content:
         testData: []
 
   sampleTestData: []
-
-  tags:
-    - Math
-    - Strings
-    - Classes

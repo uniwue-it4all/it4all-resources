@@ -1,7 +1,7 @@
 from logging import exception as log_exception
 from pathlib import Path
 from typing import List, Dict, Any, TypeVar, Union
-
+from json import load as json_load
 from yaml import load as yaml_load, SafeLoader
 
 from models.basics import resource_base_dir, read_long_text_from_file
@@ -24,7 +24,23 @@ def __update_content__(tool_id: str, json: Dict[str, Any]) -> Dict[str, Any]:
         return json
 
 
+def __update_tags__(exercise: Exercise):
+    tag_abbreviations: List[str] = exercise['tags']
+
+    tag_file = resource_base_dir / exercise['toolId'] / 'tags.json'
+    tag_mappings: Dict[str, str] = json_load(tag_file.open('r'))
+
+    exercise['tags'] = [
+        {
+            'abbreviation': tag_ab,
+            'title': tag_mappings[tag_ab]
+        } for tag_ab in tag_abbreviations
+    ]
+
+
 def update_exercise(exercise: Exercise) -> Exercise:
+    __update_tags__(exercise)
+
     exercise['text'] = read_long_text_from_file(exercise['text'])
 
     __update_content__(exercise['toolId'], exercise['content'])

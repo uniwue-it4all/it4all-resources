@@ -7,7 +7,7 @@ authors:
   - bje40dc
 text:
   relativePath: programming/5/3/text.html
-tags: []
+tags: [L, T, D, FL, C]
 state: APPROVED
 
 content:
@@ -131,10 +131,3 @@ content:
         testData: []
 
   sampleTestData: []
-
-  tags:
-    - Lists
-    - Tuples
-    - Dictionaries
-    - ForLoops
-    - Conditions

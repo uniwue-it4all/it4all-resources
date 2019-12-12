@@ -14,7 +14,7 @@
     "text": {"$ref": "./long_text.schema.json"},
     "tags": {
       "type": "array",
-      "items": {"$ref": "./ex_tag.schema.json"}
+      "items": {"type": "string"}
     },
     "state": {"$ref": "./exercise_state.schema.json"}
   },
