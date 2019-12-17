@@ -10,9 +10,7 @@ coll_blueprint: Blueprint = Blueprint('coll', __name__)
 def route_collections(tool_id: str):
     return jsonify({
         'parentUrl': request.host_url[:-1] + url_for('tool.route_tool', tool_id=tool_id),
-        'collections': [
-            coll for coll in load_collections(tool_id)
-        ]
+        'collections': load_collections(tool_id)
     })
 
 

@@ -56,7 +56,7 @@ def route_lesson_ids(tool_id: str):
         'lessons': [
             {
                 'id': lesson_id,
-                'lessonUrl': host_url + url_for('', tool_id=tool_id, lesson_id=lesson_id)
+                'lessonUrl': host_url + url_for('lessons.route_lesson', tool_id=tool_id, lesson_id=lesson_id)
             } for lesson_id in get_lesson_ids_for_tool(tool_id)
         ]
     })

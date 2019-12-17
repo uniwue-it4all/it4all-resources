@@ -21,6 +21,24 @@
             </SchemaInfo>
           </value>
         </entry>
+        <entry key="lesson.schema">
+          <value>
+            <SchemaInfo>
+              <option name="name" value="lesson.schema" />
+              <option name="relativePathToSchema" value="schemas/lesson.schema.json" />
+              <option name="schemaVersion" value="JSON schema version 7" />
+              <option name="patterns">
+                <list>
+                  <Item>
+                    <option name="pattern" value="true" />
+                    <option name="path" value="resources/*/lessons/*/lesson_metadata.json" />
+                    <option name="mappingKind" value="Pattern" />
+                  </Item>
+                </list>
+              </option>
+            </SchemaInfo>
+          </value>
+        </entry>
         <entry key="prog_ex.schema">
           <value>
             <SchemaInfo>
