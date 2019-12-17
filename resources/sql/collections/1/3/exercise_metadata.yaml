@@ -1,0 +1,37 @@
+id: 3
+collectionId: 1
+toolId: sql
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Emailadresse
+authors:
+  - bje40dc
+text:
+  relativePath: text.txt
+tags: []
+state: APPROVED
+
+content:
+  exerciseType: SELECT
+  sampleSolutions:
+    - id: 1
+      sample: |
+        SELECT emailaddress
+          FROM employee
+            JOIN emailaddress ON employee.id = emailaddress.employee_id
+          WHERE firstname = 'Max' AND lastname = 'Becker';
+
+    - id: 2
+      sample: |
+        SELECT emailaddress
+          FROM employee, emailaddress
+          WHERE employee.id = emailaddress.employee_id
+            AND firstname = 'Max' AND lastname = 'Becker';
+
+    - id: 3
+      sample: |
+        SELECT emailaddress
+          FROM employee as emp, emailaddress as email
+          WHERE emp.id = email.employee_id
+            AND firstname = 'Max' AND lastname = 'Becker';
+  tags: [SQL_JOIN]
+  hint: null

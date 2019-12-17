@@ -1,0 +1,25 @@
+id: 38
+collectionId: 2
+toolId: sql
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Teure Wünsche...
+authors:
+  - bje40dc
+text:
+  relativePath: text.html
+tags: []
+state: APPROVED
+
+content:
+  exerciseType: SELECT
+  sampleSolutions:
+    - id: 1
+      sample: |
+        SELECT customers.first_name, customers.family_name, SUM(price) AS value
+          FROM wishlists
+            LEFT JOIN books ON books.id = book_id
+            LEFT JOIN customers ON customers.id = customer_id
+          GROUP BY customer_id
+          ORDER BY value ASC;
+  tags: [SQL_FUNCTION, SQL_ALIAS, SQL_DOUBLE_JOIN, SQL_GROUP_BY, SQL_ORDER_BY]
+  hint: null

@@ -1,0 +1,24 @@
+id: 37
+collectionId: 2
+toolId: sql
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Mit allem zufrieden?
+authors:
+  - bje40dc
+text:
+  relativePath: text.html
+tags: []
+state: APPROVED
+
+content:
+  exerciseType: SELECT
+  sampleSolutions:
+    - id: 1
+      sample: |
+        SELECT customers.first_name, customers.family_name, AVG(rating) AS avg_rating
+          FROM ratings LEFT JOIN customers ON customers.id = customer_id
+          GROUP BY customer_id
+          ORDER BY avg_rating DESC
+          LIMIT 1;
+  tags: [SQL_JOIN, SQL_FUNCTION, SQL_GROUP_BY, SQL_ORDER_BY, SQL_LIMIT]
+  hint: null

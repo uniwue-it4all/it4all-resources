@@ -1,0 +1,21 @@
+id: 18
+collectionId: 2
+toolId: sql
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Was wird gewünscht?
+authors:
+  - bje40dc
+text:
+  relativePath: text.html
+tags: []
+state: APPROVED
+
+content:
+  exerciseType: SELECT
+  sampleSolutions:
+    - id: 1
+      sample: |
+        SELECT DISTINCT book_id
+          FROM wishlists;
+  tags: []
+  hint: null

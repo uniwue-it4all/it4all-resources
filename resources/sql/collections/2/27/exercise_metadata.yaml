@@ -1,0 +1,25 @@
+id: 27
+collectionId: 2
+toolId: sql
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Orwellianisch
+authors:
+  - bje40dc
+text:
+  relativePath: text.html
+tags: []
+state: APPROVED
+
+content:
+  exerciseType: SELECT
+  sampleSolutions:
+    - id: 1
+      sample: |
+        SELECT title
+          FROM books
+            JOIN authors on books.author_id = authors.id
+          WHERE first_name = 'George'
+          AND family_name = 'Orwell'
+          ORDER BY year DESC;
+  tags: [SQL_ORDER_BY, SQL_JOIN]
+  hint: null

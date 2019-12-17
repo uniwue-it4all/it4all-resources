@@ -1,0 +1,65 @@
+id: 2
+collectionId: 1
+semanticVersion: {major: 1, minor: 0, patch: 0}
+toolId: xml
+title: Vorlesung
+authors:
+  - bje40dc
+text:
+  relativePath: text.html
+tags: []
+state: APPROVED
+
+content:
+  rootNode: lecture
+  grammarDescription:
+    relativePath: xml/1/grammarDescription.txt
+  sampleSolutions:
+    - id: 1
+      sample:
+        grammar: |
+          <!ELEMENT lecture (lecturer+, date+, student+)>
+          <!ELEMENT lecturer (name)>
+          <!ATTLIST lecturer title CDATA #REQUIRED>
+          <!ELEMENT date (hours)>
+          <!ATTLIST date weekday (mon | tue | wed | thu | fri | sat | sun) #REQUIRED>
+          <!ELEMENT student (name)>
+          <!ATTLIST student matrikel CDATA #REQUIRED>
+          <!ELEMENT name (#PCDATA)>
+          <!ELEMENT hours (#PCDATA)>
+        document: |
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE lecture SYSTEM "lecture.dtd">
+          <lecture>
+            <lecturer title="Prof.">
+              <name>Jason Bourne</name>
+            </lecturer>
+            <lecturer title="Commander">
+              <name>James Bond</name>
+            </lecturer>
+            <date weekday="mon">
+              <hours>16.00 to 18.00</hours>
+            </date>
+            <student matrikel="173">
+              <name>Jack Bauer</name>
+            </student>
+          </lecture>
+
+    - id: 2
+      sample:
+        grammar: |
+          <!ELEMENT lecture (lecturer+, date+, student+)>
+          <!ELEMENT lecturer (name, title)>
+          <!ELEMENT date (hours)>
+          <!ATTLIST date weekday (mon | tue | wed | thu | fri | sat | sun) #REQUIRED>
+          <!ELEMENT student (name, matrikel)>
+          <!ELEMENT name (#PCDATA)>
+          <!ELEMENT hours (#PCDATA)>
+          <!ELEMENT title (#PCDATA)>
+          <!ELEMENT matrikel (#PCDATA)>
+        document: |
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE lecture SYSTEM "lecture.dtd">
+          <lecture>
+            TODO!
+          </lecture>

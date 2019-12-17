@@ -1,0 +1,22 @@
+id: 23
+collectionId: 2
+toolId: sql
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Harry Potters
+authors:
+  - bje40dc
+text:
+  relativePath: text.html
+tags: []
+state: APPROVED
+
+content:
+  exerciseType: SELECT
+  sampleSolutions:
+    - id: 1
+      sample: |
+        SELECT SUM(stock) AS Gesamtbestand
+          FROM books
+          WHERE title like 'Harry Potter%';
+  tags: [SQL_FUNCTION, SQL_ALIAS]
+  hint: null

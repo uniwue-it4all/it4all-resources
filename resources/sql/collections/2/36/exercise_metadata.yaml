@@ -1,0 +1,24 @@
+id: 36
+collectionId: 2
+toolId: sql
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Passwortupdate!
+authors:
+  - bje40dc
+text:
+  relativePath: text.html
+tags: []
+state: APPROVED
+
+content:
+  exerciseType: SELECT
+  sampleSolutions:
+    - id: 1
+      sample: |
+        SELECT id, email
+          FROM customers
+          WHERE password = '3e45af4ca27ea2b03fc6183af40ea112';
+  tags: []
+  hint: >
+    Die Passwörter der Kunden sind als MD5-Hash-String in der Tabelle 'customers' gespeichert. Der MD5-Hashstring
+    zu 'Passwort' lautet '3e45af4ca27ea2b03fc6183af40ea112'.

@@ -1,0 +1,23 @@
+id: 28
+collectionId: 2
+toolId: sql
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Teuer, teuer und teuer
+authors:
+  - bje40dc
+text:
+  relativePath: text.html
+tags: []
+state: APPROVED
+
+content:
+  exerciseType: SELECT
+  sampleSolutions:
+    - id: 1
+      sample: |
+        SELECT title, author_id
+          FROM books
+          ORDER BY price DESC
+          LIMIT 3;
+  tags: [SQL_ORDER_BY, SQL_LIMIT]
+  hint: null

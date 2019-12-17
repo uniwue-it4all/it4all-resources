@@ -1,3 +1,4 @@
+from pathlib import Path
 from typing import Dict, Any
 
 from models.basics import update_exercise_files_field
@@ -20,12 +21,12 @@ def update_site_spec(site_spec_json: Dict[str, Any]):
             __check_attributes__(post_cond_json)
 
 
-def update_web_exercise_content(json: Dict[str, Any]) -> Dict[str, Any]:
-    update_exercise_files_field(json, 'files')
+def update_web_exercise_content(exercise_base_path: Path, content: Dict[str, Any]) -> Dict[str, Any]:
+    update_exercise_files_field(exercise_base_path, content, 'files')
 
-    update_site_spec(json['siteSpec'])
+    update_site_spec(content['siteSpec'])
 
-    for sample_json in json['sampleSolutions']:
-        update_exercise_files_field(sample_json, 'sample')
+    for sample_json in content['sampleSolutions']:
+        update_exercise_files_field(exercise_base_path, sample_json, 'sample')
 
-    return json
+    return content

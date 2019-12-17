@@ -1,0 +1,23 @@
+id: 5
+collectionId: 1
+toolId: sql
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Anzahl der Untergebenen
+authors:
+  - bje40dc
+text:
+  relativePath: text.txt
+tags: []
+state: APPROVED
+
+content:
+  exerciseType: SELECT
+  sampleSolutions:
+    - id: 1
+      sample: |
+        SELECT chef_id, count(id)
+          FROM employee
+          WHERE chef_id IS NOT NULL
+          GROUP BY chef_id;
+  tags: [SQL_GROUP_BY]
+  hint: null

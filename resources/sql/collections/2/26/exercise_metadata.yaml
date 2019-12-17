@@ -1,0 +1,24 @@
+id: 26
+collectionId: 2
+toolId: sql
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Wunsch des Phönix
+authors:
+  - bje40dc
+text:
+  relativePath: text.html
+tags: []
+state: APPROVED
+
+content:
+  exerciseType: SELECT
+  sampleSolutions:
+    - id: 1
+      sample: |
+        SELECT family_name
+          FROM customers
+            JOIN wishlists ON wishlists.customer_id = customers.id
+            JOIN books on wishlists.book_id = books.id
+          WHERE title = 'Harry Potter und der Orden des Phönix';
+  tags: [SQL_DOUBLE_JOIN]
+  hint: null

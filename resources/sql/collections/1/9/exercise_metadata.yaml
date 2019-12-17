@@ -1,0 +1,25 @@
+id: 9
+collectionId: 1
+toolId: sql
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: TODO!
+authors:
+  - bje40dc
+text:
+  relativePath: text.txt
+tags: []
+state: APPROVED
+
+content:
+  exerciseType: INSERT
+  sampleSolutions:
+    - id: 1
+      sample: |
+        INSERT INTO employee VALUES
+          (9, 'Tina', 'Sattler', 'tina_sattler', 2)
+    - id: 2
+      sample: |
+        INSERT INTO employee (id, firstname, lastname, username, chef_id) VALUES
+          (9, 'Tina', 'Sattler', 'tina_sattler', 2)
+  tags: []
+  hint: null

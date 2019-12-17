@@ -1,0 +1,31 @@
+id: 1
+collectionId: 1
+toolId: regex
+semanticVersion: {major: 0, minor: 0, patch: 1}
+title: Postleitzahlen
+authors:
+  - bje40dc
+text:
+  relativePath: text.html
+tags: []
+state: APPROVED
+
+content:
+  maxPoints: 1
+  correctionType: MATCHING
+
+  matchTestData:
+    - {id: 1, data: '97070', isIncluded: true}
+    - {id: 2, data: '90210', isIncluded: true}
+    - {id: 3, data: '10115', isIncluded: true}
+    - {id: 4, data: '65432', isIncluded: true}
+    - {id: 5, data: '01234', isIncluded: true}
+    - {id: 6, data: '8911', isIncluded: false}
+    - {id: 7, data: '654321', isIncluded: false}
+
+  extractionTestData: []
+
+  sampleSolutions:
+    - {id: 1, sample: '\d{5}'}
+    - {id: 2, sample: '[0-9]{5}'}
+    - {id: 3, sample: '\d\d\d\d\d'}

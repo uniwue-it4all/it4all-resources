@@ -1,0 +1,23 @@
+id: 14
+collectionId: 2
+toolId: sql
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Wilhards Wertungen
+authors:
+  - bje40dc
+text:
+  relativePath: text.html
+tags: []
+state: APPROVED
+
+content:
+  exerciseType: SELECT
+  sampleSolutions:
+    - id: 1
+      sample: |
+        SELECT rating
+          FROM ratings
+            JOIN customers ON ratings.customer_id = customers.id
+          WHERE email = 'wilhard_1041@web.de';
+  tags: [SQL_JOIN]
+  hint: null

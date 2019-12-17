@@ -1,0 +1,22 @@
+id: 19
+collectionId: 2
+toolId: sql
+semanticVersion: {major: 1, minor: 0, patch: 0}
+title: Jahrgang 81
+authors:
+  - bje40dc
+text:
+  relativePath: text.html
+tags: []
+state: APPROVED
+
+content:
+  exerciseType: SELECT
+  sampleSolutions:
+    - id: 1
+      sample: |
+        SELECT first_name, family_name
+          FROM customers
+          WHERE birthday LIKE '1981-%';
+  hint: Verwenden Sie den 'LIKE'-Operator zu Vergleich des Jahres.
+  tags: []
