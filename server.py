@@ -18,7 +18,7 @@ app.register_blueprint(exes_blueprint, url_prefix='/tools/<string:tool_id>/colle
 
 @app.route('/')
 def route_index():
-    return redirect(url_for('tool_blueprint.route_tools'))
+    return redirect(url_for('tool.route_tools'))
 
 
 if __name__ == "__main__":

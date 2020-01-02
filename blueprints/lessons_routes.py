@@ -1,4 +1,5 @@
 from flask import Blueprint, jsonify, url_for, request
+
 from models.lesson import load_lesson, load_lessons
 
 lessons_blueprint: Blueprint = Blueprint('lessons', __name__)

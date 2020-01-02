@@ -34,7 +34,9 @@ def load_lesson(tool_id: str, lesson_id: int, log_errors: bool = True) -> Option
         return None
 
     try:
-        return json_load(metadata_path.open('r'))
+        loaded = json_load(metadata_path.open('r'))
+        loaded['toolId'] = tool_id
+        return loaded
     except Exception as e:
         if log_errors:
             log_exception(e)
