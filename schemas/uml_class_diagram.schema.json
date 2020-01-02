@@ -22,7 +22,7 @@
     "UmlClassMember": {
       "type": "object",
       "properties": {
-        "visibility": {"enum": ["public", "private", "package", "protected"]},
+        "visibility": {"enum": ["PUBLIC", "PRIVATE", "PACKAGE", "PROTECTED"]},
         "memberName": {"type": "string"},
         "memberType": {"enum": ["void", "boolean", "int", "float", "string"]},
         "isStatic": {"type": "boolean", "default": false},
