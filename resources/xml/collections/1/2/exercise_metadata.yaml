@@ -13,7 +13,7 @@ state: APPROVED
 content:
   rootNode: lecture
   grammarDescription:
-    relativePath: xml/1/grammarDescription.txt
+    relativePath: grammarDescription.txt
   sampleSolutions:
     - id: 1
       sample:

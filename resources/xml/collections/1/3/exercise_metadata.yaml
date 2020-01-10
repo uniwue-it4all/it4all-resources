@@ -14,7 +14,7 @@ state: APPROVED
 content:
   rootNode: praxis
   grammarDescription:
-    relativePath: xml/1/3/3-grammarDescription.txt
+    relativePath: grammarDescription.txt
 
   sampleSolutions:
     - id: 1

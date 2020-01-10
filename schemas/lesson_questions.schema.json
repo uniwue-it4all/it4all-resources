@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {"$ref": "#/definitions/Question"},
+  "definitions": {
+    "Question": {
+      "type": "object",
+      "properties": {
+        "id": {"type": "number"},
+        "question": {"type": "string"},
+        "answers": {"type": "array", "items": {"$ref": "#/definitions/QuestionAnswer"}}
+      },
+      "required": ["id", "question"],
+      "additionalProperties": false
+    },
+    "QuestionAnswer": {
+      "type": "object",
+      "properties": {
+        "answer": {"type": "string"},
+        "isCorrect": {"type": "boolean"}
+      },
+      "required": ["answer", "isCorrect"],
+      "additionalProperties": false
+    }
+  }
+}

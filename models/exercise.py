@@ -8,6 +8,8 @@ from yaml import load as yaml_load, SafeLoader
 from models.basics import resource_base_dir, read_long_text_from_file
 from models.programming import update_programming_exercise_content
 from models.web import update_web_exercise_content
+from models.xml import update_xml_exercise_content
+
 
 Exercise = Dict[str, Any]
 
@@ -21,6 +23,8 @@ def __update_content__(exercise_base_path: Path, tool_id: str, content: Dict[str
         return update_programming_exercise_content(exercise_base_path, content)
     elif tool_id == 'web':
         return update_web_exercise_content(exercise_base_path, content)
+    elif tool_id == 'xml':
+        return update_xml_exercise_content(exercise_base_path, content)
     else:
         return content
 

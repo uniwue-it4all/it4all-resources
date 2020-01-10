@@ -14,7 +14,7 @@ state: APPROVED
 content:
   rootNode: breakfast
   grammarDescription:
-    relativePath: xml/1/4-grammarDescription.txt
+    relativePath: grammarDescription.txt
   sampleSolutions:
     - id: 1
       sample:

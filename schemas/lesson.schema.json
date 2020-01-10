@@ -23,20 +23,37 @@
         {"$ref": "#/definitions/LessonQuestionsContent"}
       ]
     },
-    "LessonTextContent": {
+    "BasicLessonContent": {
       "type": "object",
       "properties": {
-        "_type": {"type": "string", "enum": ["Text"]},
-        "contentFile": {"type": "string"}
+        "id": {"type": "number"}
       },
-      "required": ["_type", "contentFile"]
+      "required": ["id"]
+    },
+    "LessonTextContent": {
+      "allOf": [
+        {"$ref": "#/definitions/BasicLessonContent"},
+        {
+          "type": "object",
+          "properties": {
+            "_type": {"type": "string", "enum": ["Text"]},
+            "contentFile": {"type": "string"}
+          },
+          "required": ["_type", "contentFile"]
+        }
+      ]
     },
     "LessonQuestionsContent": {
-      "type": "object",
-      "properties": {
-        "_type": {"type": "string", "enum": ["Questions"]},
-        "questionsFile": {"type": "string"}
-      }
+      "allOf": [
+        {"$ref": "#/definitions/BasicLessonContent"},
+        {
+          "type": "object",
+          "properties": {
+            "_type": {"type": "string", "enum": ["Questions"]},
+            "questionsFile": {"type": "string"}
+          }
+        }
+      ]
     }
   }
 }
