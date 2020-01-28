@@ -9,6 +9,7 @@ text:
   relativePath: text.txt
 tags: []
 state: APPROVED
+difficulty: 1
 
 content:
   exerciseType: UPDATE

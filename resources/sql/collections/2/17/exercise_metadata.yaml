@@ -9,15 +9,14 @@ text:
   relativePath: text.html
 tags: []
 state: APPROVED
+difficulty: 1
 
 content:
   exerciseType: SELECT
   sampleSolutions:
     - id: 1
       sample: |
-    - id: 2
-      sample: |
         SELECT title
-          FROM books WHERE price < 10.00
+          FROM books WHERE price < 10.00;
   tags: []
   hint: null

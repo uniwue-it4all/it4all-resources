@@ -9,6 +9,8 @@ text:
   relativePath: text.html
 tags: []
 state: APPROVED
+difficulty: 2
+
 content:
   exerciseType: SELECT
   sampleSolutions:
