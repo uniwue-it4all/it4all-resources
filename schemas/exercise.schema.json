@@ -12,13 +12,14 @@
       "items": {"type": "string"}
     },
     "text": {"$ref": "./long_text.schema.json"},
+    "state": {"$ref": "./exercise_state.schema.json"},
     "tags": {
       "type": "array",
       "items": {"type": "string"}
     },
-    "state": {"$ref": "./exercise_state.schema.json"}
+    "difficulty": {"type": "integer", "minimum": 1, "maximum": 5}
   },
   "required": [
-    "id", "collectionId", "toolId", "semanticVersion", "title", "authors", "text", "tags", "state"
+    "id", "collectionId", "toolId", "semanticVersion", "title", "authors", "text", "tags", "state", "difficulty"
   ]
 }
