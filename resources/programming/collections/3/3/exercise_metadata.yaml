@@ -9,6 +9,7 @@ text:
   relativePath: text.html
 tags: [C, S]
 state: APPROVED
+difficulty: 1
 
 content:
   functionName: greet

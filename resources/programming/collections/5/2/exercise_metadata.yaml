@@ -9,6 +9,7 @@ text:
   relativePath: text.html
 tags: [S, FL, C, M, L]
 state: APPROVED
+difficulty: 2
 
 content:
   functionName: dicts

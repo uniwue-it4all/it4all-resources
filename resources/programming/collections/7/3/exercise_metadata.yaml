@@ -9,6 +9,7 @@ text:
   relativePath: text.html
 tags: [CL, S, M]
 state: APPROVED
+difficulty: 2
 
 content:
   functionName: vector2d

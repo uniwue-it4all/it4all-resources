@@ -9,6 +9,7 @@ text:
   relativePath: text.html
 tags: [FL, C, L, S]
 state: APPROVED
+difficulty: 2
 
 content:
   functionName: longest_string

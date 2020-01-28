@@ -9,6 +9,7 @@ text:
   relativePath: text.html
 tags: [L, T, D, FL, C]
 state: APPROVED
+difficulty: 3
 
 content:
   functionName: tuples_and_dicts

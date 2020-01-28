@@ -9,6 +9,7 @@ text:
   relativePath: text.html
 tags: [M]
 state: APPROVED
+difficulty: 2
 
 content:
   functionName: distances

@@ -12,6 +12,7 @@ text:
   relativePath: text.html
 tags: [S, FL]
 state: APPROVED
+difficulty: 1
 
 content:
   functionName: is_palindrome
