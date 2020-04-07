@@ -18,5 +18,45 @@ programming_collections: List[Collection] = [
         "authors": ["bje40dc"],
         "text": "TODO",
         "short_name": "strings"
+    },
+    {
+        "id": 3,
+        "tool_id": "programming",
+        "title": "Bedingte Anweisungen",
+        "authors": ["bje40dc"],
+        "text": "TODO",
+        "short_name": "conditions"
+    },
+    {
+        "id": 4,
+        "tool_id": "programming",
+        "title": "Listen",
+        "authors": ["bje40dc"],
+        "text": "TODO",
+        "short_name": "lists"
+    },
+    {
+        "id": 5,
+        "tool_id": "programming",
+        "title": "Tupel und Dictionaries",
+        "authors": ["bje40dc"],
+        "text": "TODO",
+        "short_name": "tuples_and_dicts"
+    },
+    {
+        "id": 6,
+        "tool_id": "programming",
+        "title": "Funktionen",
+        "authors": ["bje40dc"],
+        "text": "TODO",
+        "short_name": "functions"
+    },
+    {
+        "id": 7,
+        "tool_id": "programming",
+        "title": "Klassen",
+        "authors": ["bje40dc"],
+        "text": "TODO",
+        "short_name": "classes"
     }
 ]

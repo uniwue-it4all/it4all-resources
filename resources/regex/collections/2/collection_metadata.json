@@ -1,9 +1,0 @@
-{
-  "id": 2,
-  "toolId": "regex",
-  "title": "Informationsextraktion",
-  "authors": ["bje40dc"],
-  "text": "TODO",
-  "state": "APPROVED",
-  "shortName": "extraction"
-}

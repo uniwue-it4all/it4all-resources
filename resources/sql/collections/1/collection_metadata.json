@@ -1,9 +1,0 @@
-{
-  "id": 1,
-  "toolId": "sql",
-  "title": "Angestellte",
-  "authors": ["bje40dc"],
-  "text": "Dieses Szenario beschreibt die Datenbank einer kleinen Firma.",
-  "state": "APPROVED",
-  "shortName": "employee"
-}
