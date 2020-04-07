@@ -1,5 +1,5 @@
 from pathlib import Path
-from typing import Dict, Any
+from typing import Dict, Any, TypedDict, Optional, List
 
 from models.basics import update_exercise_files_field
 
@@ -30,3 +30,41 @@ def update_web_exercise_content(exercise_base_path: Path, content: Dict[str, Any
         update_exercise_files_field(exercise_base_path, sample_json, 'sample')
 
     return content
+
+
+class HtmlTask(TypedDict):
+    id: int
+    text: str
+    xpath_query: str
+    awaited_tag_name: str
+    awaited_text_content: str
+
+
+class JsTask(TypedDict):
+    pass
+
+
+class SiteSpec(TypedDict):
+    file_name: str
+    html_task: List[HtmlTask]
+    js_tasks: List[JsTask]
+
+
+class ExerciseFile(TypedDict):
+    name: str
+    resource_path: str
+    file_type: str
+    editable: bool
+
+
+class WebSampleSolution(TypedDict):
+    id: int
+    sample: List[ExerciseFile]
+
+
+class WebExerciseContent(TypedDict):
+    html_text: Optional[str]
+    js_text: Optional[str]
+    files: List[ExerciseFile]
+    site_spec: SiteSpec
+    sample_solutions: List[WebSampleSolution]

@@ -10,8 +10,8 @@
       "items": {"type": "string"}
     },
     "text": {"type": "string"},
-    "state": {"$ref": "exercise_state.schema.json"},
     "shortName": {"type": "string"}
   },
-  "required": ["id", "toolId", "title", "authors", "text", "state", "shortName"]
+  "required": ["id", "toolId", "title", "authors", "text", "shortName"],
+  "additionalProperties": false
 }

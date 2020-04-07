@@ -1,17 +1,16 @@
+from typing import List, Dict, Union
+
 from flask import Blueprint, jsonify, url_for, request
 
-from models.collection import load_collections, load_collection
+from data.web_data import web_collections
+from models.collection import load_collections, load_collection, Collection, ExerciseCollection
 from models.exercise import get_exercise_ids_for_collection
 
 coll_blueprint: Blueprint = Blueprint('coll', __name__)
 
-
-@coll_blueprint.route('/')
-def route_collections(tool_id: str):
-    return jsonify({
-        'parentUrl': request.host_url[:-1] + url_for('tool.route_tool', tool_id=tool_id),
-        'collections': load_collections(tool_id)
-    })
+collections_for_tools: Dict[str, List[Collection]] = {
+    'web': web_collections
+}
 
 
 @coll_blueprint.route('/<int:coll_id>')

@@ -1,7 +1,8 @@
+from enum import Enum
 from json import load as json_load
 from logging import exception as log_exception
 from pathlib import Path
-from typing import List, Optional, Dict, Any
+from typing import List, Optional, Dict, Any, TypedDict
 
 from models.basics import resource_base_dir
 
@@ -40,3 +41,19 @@ def load_collection(tool_id: str, collection_id: int, log_errors: bool = True) -
         if log_errors:
             log_exception(e)
         return None
+
+
+class ToolState(Enum):
+    PRE_ALPHA = 'PRE_ALPHA'
+    ALPHA = 'ALPHA'
+    BETA = 'BETA'
+    LIVE = 'LIVE'
+
+
+class Collection(TypedDict):
+    id: int
+    tool_id: str
+    title: str
+    authors: List[str]
+    text: str
+    short_name: str
