@@ -1,5 +1,5 @@
 from typing import List
 
-from models.collection import Collection
+from models.collection import CollectionAndExes
 
-uml_collections: List[Collection] = []
+uml_collections_and_exes: List[CollectionAndExes] = []

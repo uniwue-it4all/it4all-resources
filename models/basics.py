@@ -1,12 +1,7 @@
 from pathlib import Path
-from typing import Dict, Any, List
+from typing import Dict, Any
 
 resource_base_dir: Path = Path.cwd() / 'resources'
-schemas_path: Path = Path.cwd() / 'schemas'
-
-
-def get_all_tool_ids() -> List[str]:
-    return sorted([x.name for x in resource_base_dir.glob('*') if x.is_dir()])
 
 
 # LongText

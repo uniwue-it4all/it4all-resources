@@ -1,70 +1,46 @@
-from pathlib import Path
-from typing import Dict, Any, TypedDict, Optional, List
+from dataclasses import dataclass, field
+from typing import Optional, List
 
-from models.basics import update_exercise_files_field
-
-
-def __check_attributes__(element_spec_json: Dict[str, Any]):
-    if 'attributes' not in element_spec_json:
-        element_spec_json['attributes'] = []
+from models.collection import SampleSolution, ExerciseFile
 
 
-def update_site_spec(site_spec_json: Dict[str, Any]):
-    for html_task_json in site_spec_json['htmlTasks']:
-        __check_attributes__(html_task_json)
-
-    for js_task_json in site_spec_json['jsTasks']:
-        for pre_cond_json in js_task_json['preConditions']:
-            __check_attributes__(pre_cond_json)
-
-        for post_cond_json in js_task_json['postConditions']:
-            __check_attributes__(post_cond_json)
+@dataclass()
+class HtmlAttribute:
+    key: str
+    value: str
 
 
-def update_web_exercise_content(exercise_base_path: Path, content: Dict[str, Any]) -> Dict[str, Any]:
-    update_exercise_files_field(exercise_base_path, content, 'files')
-
-    update_site_spec(content['siteSpec'])
-
-    for sample_json in content['sampleSolutions']:
-        update_exercise_files_field(exercise_base_path, sample_json, 'sample')
-
-    return content
-
-
-class HtmlTask(TypedDict):
+@dataclass()
+class HtmlTask:
     id: int
     text: str
     xpath_query: str
     awaited_tag_name: str
-    awaited_text_content: str
+    awaited_text_content: Optional[str] = None
+    attributes: List[HtmlAttribute] = field(default_factory=list)
 
 
-class JsTask(TypedDict):
+@dataclass()
+class JsTask:
     pass
 
 
-class SiteSpec(TypedDict):
+@dataclass()
+class SiteSpec:
     file_name: str
-    html_task: List[HtmlTask]
+    html_tasks: List[HtmlTask]
     js_tasks: List[JsTask]
 
 
-class ExerciseFile(TypedDict):
-    name: str
-    resource_path: str
-    file_type: str
-    editable: bool
+@dataclass()
+class WebSolution:
+    files: List[ExerciseFile]
 
 
-class WebSampleSolution(TypedDict):
-    id: int
-    sample: List[ExerciseFile]
-
-
-class WebExerciseContent(TypedDict):
-    html_text: Optional[str]
-    js_text: Optional[str]
+@dataclass
+class WebExerciseContent:
     files: List[ExerciseFile]
     site_spec: SiteSpec
-    sample_solutions: List[WebSampleSolution]
+    sample_solutions: List[SampleSolution[WebSolution]]
+    html_text: Optional[str] = None
+    js_text: Optional[str] = None

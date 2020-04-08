@@ -1,59 +1,55 @@
-from dataclasses import dataclass
-from typing import Dict, Any, List
+from dataclasses import is_dataclass, asdict as dataclasses_asdict
+from typing import Dict, List
 
+# noinspection Mypy
 from animal_case import animalify
 from flask import Flask, redirect
 from flask import url_for, jsonify
+from flask.json import JSONEncoder as FlaskJSONEncoder
 
-from data.programming_data import programming_collections
-from data.regex_data import regex_collections
-from data.sql_data import sql_collections
-from data.uml_data import uml_collections
-from data.web_data import web_collections
-from data.xml_data import xml_collections
-from models.collection import Collection, Exercise
-from models.exercise import load_exercise, load_exercises
+from data.programming_data import programming_collections_and_exes
+from data.regex_data import regex_collections_and_exes
+from data.sql_data import sql_collections_and_exes
+from data.uml_data import uml_collections_and_exes
+from data.web.web_data import web_collections_and_exes
+from data.xml.xml_data import xml_collections_and_exes
+from models.collection import CollectionAndExes, Exercise, ToolValues
 from models.lesson import load_lesson, load_lessons
 
 app = Flask(__name__)
 
 
-@dataclass()
-class CollAndExes:
-    collection: Collection
-    exercises: List[Exercise]
-
-
-@dataclass()
-class ToolValues:
-    collections: Dict[int, CollAndExes]
-    lessons: Dict[int, Any]
+class EnhancedJSONEncoder(FlaskJSONEncoder):
+    def default(self, o):
+        if is_dataclass(o):
+            return dataclasses_asdict(o)
+        return super().default(o)
 
 
 all_tools: Dict[str, ToolValues] = {
     'programming': ToolValues(
-        {pc['id']: CollAndExes(pc, []) for pc in programming_collections},
+        {pc.collection.id: pc for pc in programming_collections_and_exes},
         {}
     ),
     'regex': ToolValues(
-        {rc['id']: CollAndExes(rc, []) for rc in regex_collections},
+        {rc.collection.id: rc for rc in regex_collections_and_exes},
         {}
     ),
     'rose': ToolValues({}, {}),
     'sql': ToolValues(
-        {sc['id']: CollAndExes(sc, []) for sc in sql_collections},
+        {sc.collection.id: sc for sc in sql_collections_and_exes},
         {}
     ),
     'uml': ToolValues(
-        {uc['id']: CollAndExes(uc, []) for uc in uml_collections},
+        {uc.collection.id: uc for uc in uml_collections_and_exes},
         {}
     ),
     'web': ToolValues(
-        {wc['id']: CollAndExes(wc, []) for wc in web_collections},
+        {wc.collection.id: wc for wc in web_collections_and_exes},
         {}
     ),
     'xml': ToolValues(
-        {xc['id']: CollAndExes(xc, []) for xc in xml_collections},
+        {xc.collection.id: xc for xc in xml_collections_and_exes},
         {}
     ),
 }
@@ -80,7 +76,7 @@ def route_tools():
 
 @app.route('/tools/<string:tool_id>')
 def route_tool(tool_id: str):
-    tool_values = all_tools[tool_id]
+    tool_values: ToolValues = all_tools[tool_id]
 
     return jsonify(
         animalify({
@@ -91,8 +87,8 @@ def route_tool(tool_id: str):
                 'all': url_for('route_collections', tool_id=tool_id, _external=True),
                 'single': [
                     {
-                        'id': collection.collection['id'],
-                        'url': url_for('route_collection', tool_id=tool_id, coll_id=collection.collection['id'],
+                        'id': collection.collection.id,
+                        'url': url_for('route_collection', tool_id=tool_id, coll_id=collection.collection.id,
                                        _external=True)
                     } for collection in tool_values.collections.values()
                 ]
@@ -102,8 +98,8 @@ def route_tool(tool_id: str):
                 'all': url_for('route_lessons', tool_id=tool_id, _external=True),
                 'single': [
                     {
-                        'id': lesson['id'],
-                        'url': url_for('route_lesson', tool_id=tool_id, lesson_id=lesson['id'], _external=True)
+                        'id': lesson.id,
+                        'url': url_for('route_lesson', tool_id=tool_id, lesson_id=lesson.id, _external=True)
                     } for lesson in tool_values.lessons.values()
                 ]
             }
@@ -115,18 +111,17 @@ def route_tool(tool_id: str):
 
 @app.route('/tools/<string:tool_id>/collections')
 def route_collections(tool_id: str):
-    collections: List[Collection] = [x.collection for x in all_tools[tool_id].collections.values()]
     return jsonify(
         animalify({
             'parent_url': url_for('route_tool', tool_id=tool_id, _external=True),
-            'collections': collections
+            'collections': [x.collection for x in all_tools[tool_id].collections.values()]
         })
     )
 
 
 @app.route('/tools/<string:tool_id>/collections/<int:coll_id>')
 def route_collection(tool_id: str, coll_id: int):
-    coll_and_ex = all_tools[tool_id].collections[coll_id]
+    coll_and_ex: CollectionAndExes = all_tools[tool_id].collections[coll_id]
 
     return jsonify(
         animalify({
@@ -137,11 +132,11 @@ def route_collection(tool_id: str, coll_id: int):
                 'all': url_for('route_exercises', tool_id=tool_id, coll_id=coll_id, _external=True),
                 'single': [
                     {
-                        'id': ex['id'],
+                        'id': ex_id,
                         'url': url_for(
-                            'route_exercise', tool_id=tool_id, coll_id=coll_id, ex_id=ex['id'], _external=True
+                            'route_exercise', tool_id=tool_id, coll_id=coll_id, ex_id=ex_id, _external=True
                         ),
-                    } for ex in coll_and_ex.exercises
+                    } for ex_id in coll_and_ex.exercises.keys()
                 ]
             }
         })
@@ -150,20 +145,24 @@ def route_collection(tool_id: str, coll_id: int):
 
 @app.route('/tools/<string:tool_id>/collections/<int:coll_id>/exercises/')
 def route_exercises(tool_id: str, coll_id: int):
+    exercises: List[Exercise] = list(all_tools[tool_id].collections[coll_id].exercises.values())
+
     return jsonify(
         animalify({
             'parent_url': url_for('route_collection', tool_id=tool_id, coll_id=coll_id, _external=True),
-            'exercises': load_exercises(tool_id, coll_id)
+            'exercises': exercises
         })
     )
 
 
 @app.route('/tools/<string:tool_id>/collections/<int:coll_id>/exercises/<int:ex_id>')
 def route_exercise(tool_id: str, coll_id: int, ex_id: int):
+    exercise: Exercise = all_tools[tool_id].collections[coll_id].exercises[ex_id]
+
     return jsonify(
         animalify({
             'parent_url': url_for('route_collection', tool_id=tool_id, coll_id=coll_id, _external=True),
-            'exercise': load_exercise(tool_id, coll_id, ex_id)
+            'exercise': exercise
         })
     )
 
@@ -193,4 +192,5 @@ def route_lesson(tool_id: str, lesson_id: int):
 if __name__ == "__main__":
     app.debug = True
     app.config["JSON_SORT_KEYS"] = False
+    app.json_encoder = EnhancedJSONEncoder
     app.run(host='0.0.0.0')
