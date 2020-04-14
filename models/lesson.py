@@ -3,7 +3,7 @@ from logging import exception as log_exception
 from pathlib import Path
 from typing import Dict, Any, List, Optional
 
-from models.basics import resource_base_dir
+resource_base_dir: Path = Path.cwd() / 'resources'
 
 Lesson = Dict[str, Any]
 
