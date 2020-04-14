@@ -4,14 +4,6 @@ from typing import Dict, Any
 resource_base_dir: Path = Path.cwd() / 'resources'
 
 
-# LongText
-
-def read_long_text_from_file(exercise_base_path: Path, json: Dict[str, Any]) -> str:
-    file_path: Path = exercise_base_path / json['relativePath']
-
-    return file_path.read_text()
-
-
 # ExerciseFile
 
 def update_exercise_file(base_path: Path, json_file: Dict[str, Any]):

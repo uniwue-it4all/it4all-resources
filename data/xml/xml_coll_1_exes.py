@@ -153,4 +153,4 @@ coll_1_ex_5: Exercise[XmlExerciseContent] = Exercise(
     )
 )
 
-coll_1_exercises: List[Exercise[XmlExerciseContent]] = [coll_1_ex_1, coll_1_ex_2, coll_1_ex_3, coll_1_ex_4, coll_1_ex_5]
+xml_coll_1_exercises: List[Exercise[XmlExerciseContent]] = [coll_1_ex_1, coll_1_ex_2, coll_1_ex_3, coll_1_ex_4, coll_1_ex_5]

@@ -17,13 +17,13 @@ web_coll_2_exercises: List[Exercise[WebExerciseContent]] = [
 web_collections_and_exes: List[CollectionAndExes[WebExerciseContent]] = [
     CollectionAndExes(
         Collection(
-            id=1, tool_id="web", title="Html Elemente", authors=["bje40dc"], text="TODO", short_name="html_elements"
+            id=1, toolId="web", title="Html Elemente", authors=["bje40dc"], text="TODO", shortName="html_elements"
         ),
         {ex.id: ex for ex in web_coll_1_exercises}
     ),
     CollectionAndExes(
         Collection(
-            id=2, tool_id="web", title="Js Basics", authors=["bje40dc"], text="TODO", short_name="js_basics"
+            id=2, toolId="web", title="Js Basics", authors=["bje40dc"], text="TODO", shortName="js_basics"
         ),
         {ex.id: ex for ex in web_coll_2_exercises}
     )

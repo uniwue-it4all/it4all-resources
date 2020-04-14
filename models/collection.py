@@ -5,7 +5,7 @@ from typing import List, Dict, TypeVar, Generic, Any
 
 T = TypeVar('T')
 
-base_res_path = Path.cwd() / 'data'
+base_res_path: Path = Path.cwd() / 'data'
 
 
 class ExerciseState(str, Enum):
@@ -51,11 +51,11 @@ class Exercise(Generic[T]):
 @dataclass()
 class Collection:
     id: int
-    tool_id: str
+    toolId: str
     title: str
     authors: List[str]
     text: str
-    short_name: str
+    shortName: str
 
 
 @dataclass()

@@ -1,9 +1,0 @@
-{
-  "id": 1,
-  "toolId": "uml",
-  "title": "Uml Basics",
-  "authors": ["bje40dc"],
-  "text": "Aufgaben um die Grundlagen von UML-Klassendiagrammen zu erlernen.",
-  "state": "APPROVED",
-  "shortName": "uml_basics"
-}
