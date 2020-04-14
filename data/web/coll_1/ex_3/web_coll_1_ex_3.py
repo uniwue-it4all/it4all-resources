@@ -2,7 +2,7 @@ from textwrap import dedent
 
 from models.collection import ExerciseState, SampleSolution, SemanticVersion, load_text_from_file, \
     base_res_path, ExerciseFile, Exercise
-from models.web import WebExerciseContent, SiteSpec, HtmlTask, HtmlAttribute, WebSolution
+from models.web import WebExerciseContent, SiteSpec, HtmlTask, HtmlAttribute, WebSolution, WebExTag
 
 html_tasks = [
     HtmlTask(
@@ -75,7 +75,7 @@ sampleSolution: SampleSolution[WebSolution] = SampleSolution(
     )
 )
 
-web_coll_1_ex_3 = Exercise(
+web_coll_1_ex_3: Exercise[WebExTag, WebExerciseContent] = Exercise(
     id=3,
     collectionId=1,
     toolId='web',

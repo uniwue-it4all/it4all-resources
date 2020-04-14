@@ -10,19 +10,19 @@ from data.sql.coll_1.ex_7.sql_coll_1_ex_7 import sql_coll_1_ex_7
 from data.sql.coll_1.ex_8.sql_coll_1_ex_8 import sql_coll_1_ex_8
 from data.sql.coll_1.ex_9.sql_coll_1_ex_9 import sql_coll_1_ex_9
 from models.collection import CollectionAndExes, Collection, Exercise
-from models.sql import SqlExerciseContent
+from models.sql import SqlExerciseContent, SqlExTag
 
-sql_coll_1_exes: List[Exercise[SqlExerciseContent]] = [
+sql_coll_1_exes: List[Exercise[SqlExTag, SqlExerciseContent]] = [
     sql_coll_1_ex_1, sql_coll_1_ex_2, sql_coll_1_ex_3,
     sql_coll_1_ex_4, sql_coll_1_ex_5, sql_coll_1_ex_6,
     sql_coll_1_ex_7, sql_coll_1_ex_8, sql_coll_1_ex_9
 ]
 
-sql_coll_2_exes: List[Exercise[SqlExerciseContent]] = [
+sql_coll_2_exes: List[Exercise[SqlExTag, SqlExerciseContent]] = [
 
 ]
 
-sql_collections_and_exes: List[CollectionAndExes] = [
+sql_collections_and_exes: List[CollectionAndExes[SqlExTag, SqlExerciseContent]] = [
     CollectionAndExes(
         Collection(
             id=1, toolId="sql", title="Angestellte", authors=["bje40dc"],

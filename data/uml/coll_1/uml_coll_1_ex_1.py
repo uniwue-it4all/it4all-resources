@@ -2,7 +2,7 @@ from textwrap import dedent
 
 from models.collection import Exercise, SemanticVersion, SampleSolution, ExerciseState
 from models.uml import UmlClassDiagram, UmlMapping, UmlExerciseContent, UmlClass, UmlClassType, UmlAttribute, \
-    UmlMethod, UmlAssociation, UmlImplementation, UmlMultiplicity
+    UmlMethod, UmlAssociation, UmlImplementation, UmlMultiplicity, UmlExTag
 
 sample: UmlClassDiagram = UmlClassDiagram(
     classes=[
@@ -43,7 +43,7 @@ sample: UmlClassDiagram = UmlClassDiagram(
     ]
 )
 
-uml_coll_1_ex_1 = Exercise(
+uml_coll_1_ex_1: Exercise[UmlExTag, UmlExerciseContent] = Exercise(
     id=1,
     collectionId=1,
     toolId='uml',

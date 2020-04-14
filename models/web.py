@@ -1,7 +1,12 @@
 from dataclasses import dataclass, field
+from enum import Enum
 from typing import Optional, List
 
-from models.collection import SampleSolution, ExerciseFile
+from models.collection import ExerciseFile, ExerciseContent
+
+
+class WebExTag(str, Enum):
+    pass
 
 
 @dataclass()
@@ -38,9 +43,8 @@ class WebSolution:
 
 
 @dataclass
-class WebExerciseContent:
+class WebExerciseContent(ExerciseContent[WebSolution]):
     files: List[ExerciseFile]
     siteSpec: SiteSpec
-    sampleSolutions: List[SampleSolution[WebSolution]]
     htmlText: Optional[str] = None
     jsText: Optional[str] = None

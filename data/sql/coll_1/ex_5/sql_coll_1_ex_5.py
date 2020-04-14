@@ -1,9 +1,9 @@
 from textwrap import dedent
 
 from models.collection import ExerciseState, Exercise, SampleSolution, SemanticVersion
-from models.sql import SqlExerciseType, SqlExerciseContent, SqlExerciseTag
+from models.sql import SqlExerciseType, SqlExerciseContent, SqlExTag
 
-sql_coll_1_ex_5 = Exercise(
+sql_coll_1_ex_5: Exercise[SqlExTag, SqlExerciseContent] = Exercise(
     id=5,
     collectionId=1,
     toolId='sql',
@@ -28,6 +28,6 @@ sql_coll_1_ex_5 = Exercise(
                 )
             )
         ],
-        tags=[SqlExerciseTag.SQL_GROUP_BY]
+        tags=[SqlExTag.SQL_GROUP_BY]
     )
 )

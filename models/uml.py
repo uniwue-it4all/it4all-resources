@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import List
 
-from models.collection import SampleSolution
+from models.collection import ExerciseContent
 
 
 class UmlClassType(str, Enum):
@@ -13,6 +13,11 @@ class UmlClassType(str, Enum):
 
 class UmlVisibility(str, Enum):
     PUBLIC = 'PUBLIC'
+    PRIVATE = 'PRIVATE'
+    PACKAGE = 'PACKAGE'
+
+class UmlExTag(str, Enum):
+    pass
 
 
 @dataclass()
@@ -82,7 +87,6 @@ class UmlMapping:
 
 
 @dataclass()
-class UmlExerciseContent:
+class UmlExerciseContent(ExerciseContent[UmlClassDiagram]):
     toIgnore: List[str]
     mappings: List[UmlMapping]
-    sampleSolutions: List[SampleSolution[UmlClassDiagram]]

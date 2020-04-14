@@ -3,7 +3,7 @@ from typing import List
 
 from models.collection import Exercise, SemanticVersion, ExerciseState, load_text_from_file, base_res_path, \
     SampleSolution
-from models.web import WebExerciseContent, ExerciseFile, SiteSpec, HtmlTask, HtmlAttribute, WebSolution
+from models.web import WebExerciseContent, ExerciseFile, SiteSpec, HtmlTask, HtmlAttribute, WebSolution, WebExTag
 
 html_tasks: List[HtmlTask] = [
     HtmlTask(
@@ -80,7 +80,7 @@ sampleSolution: SampleSolution[WebSolution] = SampleSolution(
     )
 )
 
-web_coll_1_ex_1: Exercise[WebExerciseContent] = Exercise(
+web_coll_1_ex_1: Exercise[WebExTag, WebExerciseContent] = Exercise(
     id=1,
     collectionId=1,
     toolId='web',

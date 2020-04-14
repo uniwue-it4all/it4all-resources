@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import List, Optional
 
-from models.collection import SampleSolution
+from models.collection import ExerciseContent
 
 
 class SqlExerciseType(str, Enum):
@@ -13,15 +13,14 @@ class SqlExerciseType(str, Enum):
     CREATE = 'CREATE'
 
 
-class SqlExerciseTag(str, Enum):
+class SqlExTag(str, Enum):
     SQL_JOIN = 'SQL_JOIN'
     SQL_ORDER_BY = 'SQL_ORDER_BY'
     SQL_GROUP_BY = 'SQL_GROUP_BY'
 
 
 @dataclass()
-class SqlExerciseContent:
+class SqlExerciseContent(ExerciseContent[str]):
     exerciseType: SqlExerciseType
-    sampleSolutions: List[SampleSolution[str]]
-    tags: List[SqlExerciseTag] = field(default_factory=list)
+    tags: List[SqlExTag] = field(default_factory=list)
     hint: Optional[str] = None

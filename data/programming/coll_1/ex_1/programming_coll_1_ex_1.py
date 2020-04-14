@@ -4,7 +4,7 @@ from models.collection import Exercise, ExerciseState, ExerciseFile, SemanticVer
     load_text_from_file, base_res_path
 from models.programming import ProgrammingExerciseContent, ProgrammingInput, ProgrammingUnitTestPart, \
     ProgrammingImplementationPart, ProgrammingUnitTestType, ProgrammingTestData, \
-    ProgrammingSolution
+    ProgrammingSolution, ProgrammingExTag
 
 unitTestPart: ProgrammingUnitTestPart = ProgrammingUnitTestPart(
     unitTestType=ProgrammingUnitTestType.Simplified,
@@ -40,7 +40,22 @@ implementationPart: ProgrammingImplementationPart = ProgrammingImplementationPar
     sampleSolFileNames=['ggt.py']
 )
 
-programming_coll_1_ex_1: Exercise[ProgrammingExerciseContent] = Exercise(
+sampleSolution: SampleSolution[ProgrammingSolution] = SampleSolution(
+    id=1,
+    sample=ProgrammingSolution(
+        files=[
+            ExerciseFile(
+                name='ggt.py',
+                fileType='python',
+                editable=True,
+                content=load_text_from_file(base_res_path / 'programming' / 'coll_1' / 'ex_1' / 'ggt.py')
+            )
+        ],
+        testData=[]
+    )
+)
+
+programming_coll_1_ex_1: Exercise[ProgrammingExTag, ProgrammingExerciseContent] = Exercise(
     id=1,
     collectionId=1,
     toolId='programming',
@@ -48,7 +63,7 @@ programming_coll_1_ex_1: Exercise[ProgrammingExerciseContent] = Exercise(
     title='Größter gemeinsamer Teiler',
     authors=['bje40dc'],
     text=load_text_from_file(base_res_path / 'programming' / 'coll_1' / 'ex_1' / 'text.html'),
-    tags=['FL', 'C', 'M'],
+    tags=[ProgrammingExTag.ForLoops, ProgrammingExTag.Conditions, ProgrammingExTag.Maths],
     state=ExerciseState.APPROVED,
     difficulty=2,
     content=ProgrammingExerciseContent(
@@ -62,22 +77,7 @@ programming_coll_1_ex_1: Exercise[ProgrammingExerciseContent] = Exercise(
         outputType='INTEGER',
         unitTestPart=unitTestPart,
         implementationPart=implementationPart,
-        sampleSolutions=[
-            SampleSolution(
-                id=1,
-                sample=ProgrammingSolution(
-                    files=[
-                        ExerciseFile(
-                            name='ggt.py',
-                            fileType='python',
-                            editable=True,
-                            content=load_text_from_file(base_res_path / 'programming' / 'coll_1' / 'ex_1' / 'ggt.py')
-                        )
-                    ],
-                    testData=[]
-                )
-            )
-        ],
+        sampleSolutions=[sampleSolution],
         sampleTestData=[
             ProgrammingTestData(id=1, input=[12, 4], output=4),
             ProgrammingTestData(id=2, input=[3, 7], output=1),

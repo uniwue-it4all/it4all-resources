@@ -1,9 +1,9 @@
 from textwrap import dedent
 
 from models.collection import ExerciseState, Exercise, SampleSolution, SemanticVersion
-from models.sql import SqlExerciseType, SqlExerciseContent
+from models.sql import SqlExerciseType, SqlExerciseContent, SqlExTag
 
-sql_coll_1_ex_6 = Exercise(
+sql_coll_1_ex_6: Exercise[SqlExTag, SqlExerciseContent] = Exercise(
     id=6,
     collectionId=1,
     toolId='sql',

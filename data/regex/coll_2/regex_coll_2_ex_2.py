@@ -1,9 +1,9 @@
 from textwrap import dedent
 
 from models.collection import ExerciseState, SemanticVersion, Exercise, SampleSolution
-from models.regex import RegexExerciseContent, RegexExtractionTestData, RegexCorrectionType
+from models.regex import RegexExerciseContent, RegexExtractionTestData, RegexCorrectionType, RegexExTag
 
-regex_coll_2_ex_2 = Exercise(
+regex_coll_2_ex_2: Exercise[RegexExTag, RegexExerciseContent] = Exercise(
     id=2,
     collectionId=2,
     toolId='regex',

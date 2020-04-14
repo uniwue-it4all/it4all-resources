@@ -1,9 +1,12 @@
 from typing import List
 
 from data.programming.coll_1.ex_1.programming_coll_1_ex_1 import programming_coll_1_ex_1
-from models.collection import CollectionAndExes, Collection
+from models.collection import CollectionAndExes, Collection, Exercise
+from models.programming import ProgrammingExerciseContent, ProgrammingExTag
 
-programming_collections_and_exes: List[CollectionAndExes] = [
+ex: Exercise[ProgrammingExTag, ProgrammingExerciseContent]
+
+programming_collections_and_exes: List[CollectionAndExes[ProgrammingExTag, ProgrammingExerciseContent]] = [
     CollectionAndExes(
         Collection(
             id=1, toolId="programming", title="Zahlen", authors=["bje40dc"], text="TODO", shortName="numbers"

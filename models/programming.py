@@ -2,7 +2,20 @@ from dataclasses import dataclass
 from enum import Enum
 from typing import List, Any
 
-from models.collection import ExerciseFile, SampleSolution
+from models.collection import ExerciseFile, ExerciseContent
+
+
+class ProgrammingExTag(str, Enum):
+    ForLoops = 'For-Schleifen'
+    Conditions = 'Bedingungen'
+    Maths = 'Mathematik'
+    Strings = 'Strings'
+    Lists = 'Listen'
+    Tuples = 'Tuple'
+    Classes = 'Klassen'
+    Exceptions = 'Exceptions'
+    Recursions = 'Rekursion'
+    Dicts = 'Dictionaries'
 
 
 class ProgrammingUnitTestType(str, Enum):
@@ -55,7 +68,7 @@ class ProgrammingTestData:
 
 
 @dataclass()
-class ProgrammingExerciseContent:
+class ProgrammingExerciseContent(ExerciseContent[ProgrammingSolution]):
     functionName: str
     foldername: str
     filename: str
@@ -63,5 +76,4 @@ class ProgrammingExerciseContent:
     outputType: str
     unitTestPart: ProgrammingUnitTestPart
     implementationPart: ProgrammingImplementationPart
-    sampleSolutions: List[SampleSolution[ProgrammingSolution]]
     sampleTestData: List[ProgrammingTestData]

@@ -1,8 +1,8 @@
 from models.collection import Exercise, ExerciseState, SemanticVersion, SampleSolution, load_text_from_file, \
     base_res_path
-from models.xml import XmlExerciseContent, XmlSolution
+from models.xml import XmlExerciseContent, XmlSolution, XmlExTag
 
-xml_coll_1_ex_3: Exercise[XmlExerciseContent] = Exercise(
+xml_coll_1_ex_3: Exercise[XmlExTag, XmlExerciseContent] = Exercise(
     id=3,
     collectionId=1,
     toolId='xml',
@@ -16,7 +16,7 @@ xml_coll_1_ex_3: Exercise[XmlExerciseContent] = Exercise(
     content=XmlExerciseContent(
         root_node='praxis',
         grammar_description=load_text_from_file(base_res_path / 'xml' / 'coll_1' / 'ex_3' / 'grammarDescription.txt'),
-        sample_solutions=[
+        sampleSolutions=[
             SampleSolution(
                 id=1,
                 sample=XmlSolution(

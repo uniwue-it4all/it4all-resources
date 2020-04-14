@@ -1,11 +1,26 @@
 from dataclasses import dataclass
 from enum import Enum
 from pathlib import Path
-from typing import List, Dict, TypeVar, Generic, Any
-
-T = TypeVar('T')
+from typing import List, Dict, TypeVar, Generic
 
 base_res_path: Path = Path.cwd() / 'data'
+
+S = TypeVar('S')
+T = TypeVar('T')
+
+
+@dataclass()
+class SampleSolution(Generic[S]):
+    id: int
+    sample: S
+
+
+@dataclass()
+class ExerciseContent(Generic[S]):
+    sampleSolutions: List[SampleSolution[S]]
+
+
+CT = TypeVar('CT', bound=ExerciseContent)
 
 
 class ExerciseState(str, Enum):
@@ -29,13 +44,7 @@ class SemanticVersion:
 
 
 @dataclass()
-class SampleSolution(Generic[T]):
-    id: int
-    sample: T
-
-
-@dataclass()
-class Exercise(Generic[T]):
+class Exercise(Generic[T, CT]):
     id: int
     collectionId: int
     toolId: str
@@ -43,10 +52,10 @@ class Exercise(Generic[T]):
     title: str
     authors: List[str]
     text: str
-    tags: List[Any]
+    tags: List[T]
     state: ExerciseState
     difficulty: int
-    content: T
+    content: CT
 
 
 @dataclass()
@@ -60,9 +69,9 @@ class Collection:
 
 
 @dataclass()
-class CollectionAndExes(Generic[T]):
+class CollectionAndExes(Generic[T, CT]):
     collection: Collection
-    exercises: Dict[int, Exercise[T]]
+    exercises: Dict[int, Exercise[T, CT]]
 
 
 @dataclass()

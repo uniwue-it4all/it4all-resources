@@ -6,9 +6,9 @@ from data.web.coll_1.ex_3.web_coll_1_ex_3 import web_coll_1_ex_3
 from data.web.coll_1.ex_4.web_coll_1_ex_4 import web_coll_1_ex_4
 from data.web.coll_1.ex_5.web_coll_1_ex_5 import web_coll_1_ex_5
 from models.collection import CollectionAndExes, Collection, Exercise
-from models.web import WebExerciseContent
+from models.web import WebExerciseContent, WebExTag
 
-web_coll_1_exercises: List[Exercise[WebExerciseContent]] = [
+web_coll_1_exercises: List[Exercise[WebExTag, WebExerciseContent]] = [
     web_coll_1_ex_1,
     web_coll_1_ex_2,
     web_coll_1_ex_3,
@@ -16,11 +16,11 @@ web_coll_1_exercises: List[Exercise[WebExerciseContent]] = [
     web_coll_1_ex_5
 ]
 
-web_coll_2_exercises: List[Exercise[WebExerciseContent]] = [
+web_coll_2_exercises: List[Exercise[WebExTag, WebExerciseContent]] = [
 
 ]
 
-web_collections_and_exes: List[CollectionAndExes[WebExerciseContent]] = [
+web_collections_and_exes: List[CollectionAndExes[WebExTag, WebExerciseContent]] = [
     CollectionAndExes(
         Collection(
             id=1, toolId="web", title="Html Elemente", authors=["bje40dc"], text="TODO", shortName="html_elements"
