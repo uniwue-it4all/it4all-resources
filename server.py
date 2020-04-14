@@ -7,7 +7,7 @@ from flask import Flask, redirect
 from flask import url_for, jsonify
 from flask.json import JSONEncoder as FlaskJSONEncoder
 
-from data.programming_data import programming_collections_and_exes
+from data.programming.programming_data import programming_collections_and_exes
 from data.regex.regex_data import regex_collections_and_exes
 from data.sql.sql_data import sql_collections_and_exes
 from data.uml.uml_data import uml_collections_and_exes
@@ -128,7 +128,7 @@ def route_collection(tool_id: str, coll_id: int):
             'parent_url': url_for('route_collections', tool_id=tool_id, _external=True),
             'meta_data': coll_and_ex.collection,
             'exercises': {
-                'count': -1,
+                'count': len(coll_and_ex.exercises),
                 'all': url_for('route_exercises', tool_id=tool_id, coll_id=coll_id, _external=True),
                 'single': [
                     {

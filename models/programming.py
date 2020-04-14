@@ -1,26 +1,67 @@
-from pathlib import Path
-from typing import Dict, Any
+from dataclasses import dataclass
+from enum import Enum
+from typing import List, Any
 
-from models.basics import update_exercise_files_field, update_exercise_file
+from models.collection import ExerciseFile, SampleSolution
 
 
-def update_programming_exercise_content(exercise_base_dir: Path, content: Dict[str, Any]) -> Dict[str, Any]:
-    # Update UnitTestPart
-    unit_test_part: Dict[str, Any] = content['unitTestPart']
+class ProgrammingUnitTestType(str, Enum):
+    Simplified = 'Simplified'
+    Normal = 'Normal'
 
-    update_exercise_files_field(exercise_base_dir, unit_test_part, 'unitTestFiles')
 
-    for unit_test_config in unit_test_part['unitTestTestConfigs']:
-        update_exercise_file(exercise_base_dir, unit_test_config['file'])
+@dataclass()
+class ProgrammingInput:
+    id: int
+    inputName: str
+    inputType: str
 
-    if 'simplifiedTestMainFile' in unit_test_part:
-        update_exercise_file(exercise_base_dir, unit_test_part['simplifiedTestMainFile'])
 
-    # Update ImplementationPart
-    update_exercise_files_field(exercise_base_dir, content['implementationPart'], 'files')
+@dataclass()
+class ProgrammingUnitTestTestConfig:
+    pass
 
-    # Update SampleSolution
-    for sample_json in content['sampleSolutions']:
-        update_exercise_files_field(exercise_base_dir, sample_json['sample'], 'files')
 
-    return content
+@dataclass()
+class ProgrammingUnitTestPart:
+    unitTestType: ProgrammingUnitTestType
+    unitTestsDescription: str
+    unitTestFiles: List[ExerciseFile]
+    unitTestTestConfigs: List[ProgrammingUnitTestTestConfig]
+    simplifiedTestMainFile: ExerciseFile
+    testFileName: str
+    sampleSolFileNames: List[str]
+
+
+@dataclass()
+class ProgrammingImplementationPart:
+    base: str
+    files: List[ExerciseFile]
+    implFileName: str
+    sampleSolFileNames: List[str]
+
+
+@dataclass()
+class ProgrammingSolution:
+    files: List[ExerciseFile]
+    testData: List[Any]
+
+
+@dataclass()
+class ProgrammingTestData:
+    id: int
+    input: Any
+    output: Any
+
+
+@dataclass()
+class ProgrammingExerciseContent:
+    functionName: str
+    foldername: str
+    filename: str
+    inputTypes: List[ProgrammingInput]
+    outputType: str
+    unitTestPart: ProgrammingUnitTestPart
+    implementationPart: ProgrammingImplementationPart
+    sampleSolutions: List[SampleSolution[ProgrammingSolution]]
+    sampleTestData: List[ProgrammingTestData]
