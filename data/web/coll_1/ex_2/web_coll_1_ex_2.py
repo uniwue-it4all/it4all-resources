@@ -9,91 +9,87 @@ html_tasks: List[HtmlTask] = [
     HtmlTask(
         id=1,
         text='Erstellen Sie das Grundtag für die Tabelle.',
-        xpath_query='/html/body//table',
-        awaited_tag_name='table'
+        xpathQuery='/html/body//table',
+        awaitedTagName='table'
     ),
     HtmlTask(
         id=2,
         text='Erstellen Sie die erste Zeile für die Überschriften.',
-        xpath_query='/html/body//table//tr[1]',
-        awaited_tag_name='tr'
+        xpathQuery='/html/body//table//tr[1]',
+        awaitedTagName='tr'
     ),
     HtmlTask(
         id=3,
         text="""Erstellen Sie die erste Zelle für die Überschrift. Diese soll als Inhalt 'Jahr' haben.""",
-        xpath_query='html/body//table//tr[1]/th[1]',
-        awaited_tag_name='th',
-        awaited_text_content='Jahr'
+        xpathQuery='html/body//table//tr[1]/th[1]',
+        awaitedTagName='th',
+        awaitedTextContent='Jahr'
     ), HtmlTask(
         id=4,
-        text=dedent(
-            """\
-            Erstellen Sie die zweite Zelle für die Überschrift.
-            Diese soll als Inhalt 'Produktion' haben."""
-        ),
-        xpath_query='html/body//table//tr[1]/th[2]',
-        awaited_tag_name='th',
-        awaited_text_content='Produktion'
+        text="""Erstellen Sie die zweite Zelle für die Überschrift. Diese soll als Inhalt 'Produktion' haben.""",
+        xpathQuery='html/body//table//tr[1]/th[2]',
+        awaitedTagName='th',
+        awaitedTextContent='Produktion'
     ),
     HtmlTask(
         id=5,
         text='Erstellen Sie die zweite Zeile in der Tabelle',
-        xpath_query='/html/body//table//tr[2]',
-        awaited_tag_name='tr'
+        xpathQuery='/html/body//table//tr[2]',
+        awaitedTagName='tr'
     ),
     HtmlTask(
         id=6,
         text="""Erstellen Sie die erste Zelle in der zweiten Zeile. Diese soll als Inhalt '1900' haben.""",
-        xpath_query='html/body//table//tr[2]/td[1]',
-        awaited_tag_name='td',
-        awaited_text_content='1900'
+        xpathQuery='html/body//table//tr[2]/td[1]',
+        awaitedTagName='td',
+        awaitedTextContent='1900'
     ),
     HtmlTask(
         id=7,
         text="""Erstellen Sie die zweite Zelle in der zweiten Zeile. Diese soll als Inhalt '9504' haben.""",
-        xpath_query='html/body//table//tr[2]/td[2]',
-        awaited_tag_name='td',
-        awaited_text_content='9504'
+        xpathQuery='html/body//table//tr[2]/td[2]',
+        awaitedTagName='td',
+        awaitedTextContent='9504'
     ),
     HtmlTask(
         id=8,
         text='Erstellen Sie die dritte Zeile in der Tabelle',
-        xpath_query='/html/body//table//tr[3]',
-        awaited_tag_name='tr'
+        xpathQuery='/html/body//table//tr[3]',
+        awaitedTagName='tr'
     ),
     HtmlTask(
         id=9,
         text="""Erstellen Sie die erste Zelle in der dritten Zeile. Diese soll als Inhalt '1950' haben.""",
-        xpath_query='html/body//table//tr[3]/td[1]',
-        awaited_tag_name='td',
-        awaited_text_content='1950'
+        xpathQuery='html/body//table//tr[3]/td[1]',
+        awaitedTagName='td',
+        awaitedTextContent='1950'
     ),
     HtmlTask(
         id=10,
         text="""Erstellen Sie die zweite Zelle in der dritten Zeile. Diese soll als Inhalt '10577426' haben.""",
-        xpath_query='html/body//table//tr[3]/td[2]',
-        awaited_tag_name='td',
-        awaited_text_content='10577426'
+        xpathQuery='html/body//table//tr[3]/td[2]',
+        awaitedTagName='td',
+        awaitedTextContent='10577426'
     ),
     HtmlTask(
         id=11,
         text='Erstellen Sie die vierte Zeile in der Tabelle.',
-        xpath_query='/html/body//table//tr[4]',
-        awaited_tag_name='td'
+        xpathQuery='/html/body//table//tr[4]',
+        awaitedTagName='td'
     ),
     HtmlTask(
         id=12,
         text="""Erstellen Sie die erste Zelle in der vierten Zeile. Diese soll als Inhalt '2000' haben.""",
-        xpath_query='html/body//table//tr[4]/td[1]',
-        awaited_tag_name='td',
-        awaited_text_content='2000'
+        xpathQuery='html/body//table//tr[4]/td[1]',
+        awaitedTagName='td',
+        awaitedTextContent='2000'
     ),
     HtmlTask(
         id=13,
         text="""Erstellen Sie die zweite Zelle in der vierten Zeile. Diese soll als Inhalt '58374162' haben""",
-        xpath_query='html/body//table//tr[4]/td[2]',
-        awaited_tag_name='td',
-        awaited_text_content='58374162'
+        xpathQuery='html/body//table//tr[4]/td[2]',
+        awaitedTagName='td',
+        awaitedTextContent='58374162'
     ),
     HtmlTask(
         id=14,
@@ -102,15 +98,31 @@ html_tasks: List[HtmlTask] = [
             Binden Sie die vorgegebene CSS-Datei 'productionStyle.css' ein.
             Die entsprechende Datei ist unter der URL 'productionStyle.css' zu finden.
             Setzen Sie auch den entsprechenden Wert für das Attribut 'rel'."""
-        ),
-        xpath_query='/html/head//link',
-        awaited_tag_name='link',
+        ).replace('\n', ' '),
+        xpathQuery='/html/head//link',
+        awaitedTagName='link',
         attributes=[
             HtmlAttribute(key='href', value='productionStyle.css'),
             HtmlAttribute(key='rel', value='stylesheet')
         ]
     )
 ]
+
+sampleSolution: SampleSolution[WebSolution] = SampleSolution(
+    id=1,
+    sample=WebSolution(
+        files=[
+            ExerciseFile(
+                name='production.html',
+                fileType='htmlmixed',
+                editable=False,
+                content=load_text_from_file(
+                    base_res_path / 'web' / 'coll_1' / 'ex_2' / 'sol_1' / 'production.html'
+                ),
+            )
+        ]
+    )
+)
 
 web_coll_1_ex_2: Exercise[WebExerciseContent] = Exercise(
     id=2,
@@ -127,38 +139,22 @@ web_coll_1_ex_2: Exercise[WebExerciseContent] = Exercise(
         files=[
             ExerciseFile(
                 name='production.html',
-                file_type='htmlmixed',
+                fileType='htmlmixed',
                 editable=True,
                 content=load_text_from_file(base_res_path / 'web' / 'coll_1' / 'ex_2' / 'production.html')
             ),
             ExerciseFile(
                 name='productionStyle.css',
-                file_type='css',
+                fileType='css',
                 editable=False,
                 content=load_text_from_file(base_res_path / 'web' / 'coll_1' / 'ex_2' / 'productionStyle.css')
             )
         ],
-        site_spec=SiteSpec(
-            file_name='production.html',
-            html_tasks=html_tasks,
-            js_tasks=[]
+        siteSpec=SiteSpec(
+            fileName='production.html',
+            htmlTasks=html_tasks,
+            jsTasks=[]
         ),
-        sample_solutions=[
-            SampleSolution(
-                id=1,
-                sample=WebSolution(
-                    files=[
-                        ExerciseFile(
-                            name='production.html',
-                            file_type='htmlmixed',
-                            editable=False,
-                            content=load_text_from_file(
-                                base_res_path / 'web' / 'coll_1' / 'ex_2' / 'sol_1' / 'production.html'
-                            ),
-                        )
-                    ]
-                )
-            )
-        ]
+        sampleSolutions=[sampleSolution]
     )
 )

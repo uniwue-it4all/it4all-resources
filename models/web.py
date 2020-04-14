@@ -14,9 +14,9 @@ class HtmlAttribute:
 class HtmlTask:
     id: int
     text: str
-    xpath_query: str
-    awaited_tag_name: str
-    awaited_text_content: Optional[str] = None
+    xpathQuery: str
+    awaitedTagName: str
+    awaitedTextContent: Optional[str] = None
     attributes: List[HtmlAttribute] = field(default_factory=list)
 
 
@@ -27,9 +27,9 @@ class JsTask:
 
 @dataclass()
 class SiteSpec:
-    file_name: str
-    html_tasks: List[HtmlTask]
-    js_tasks: List[JsTask]
+    fileName: str
+    htmlTasks: List[HtmlTask]
+    jsTasks: List[JsTask]
 
 
 @dataclass()
@@ -40,7 +40,7 @@ class WebSolution:
 @dataclass
 class WebExerciseContent:
     files: List[ExerciseFile]
-    site_spec: SiteSpec
-    sample_solutions: List[SampleSolution[WebSolution]]
-    html_text: Optional[str] = None
-    js_text: Optional[str] = None
+    siteSpec: SiteSpec
+    sampleSolutions: List[SampleSolution[WebSolution]]
+    htmlText: Optional[str] = None
+    jsText: Optional[str] = None

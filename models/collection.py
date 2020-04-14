@@ -16,7 +16,7 @@ class ExerciseState(str, Enum):
 @dataclass()
 class ExerciseFile:
     name: str
-    file_type: str
+    fileType: str
     editable: bool
     content: str
 
