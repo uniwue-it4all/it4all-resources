@@ -1,1 +1,0 @@
-Wie viele Angestellte hat die Firma? Benennen Sie das Ergebnis als 'Anzahl'.

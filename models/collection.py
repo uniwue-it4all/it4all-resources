@@ -10,6 +10,7 @@ base_res_path: Path = Path.cwd() / 'data'
 
 class ExerciseState(str, Enum):
     APPROVED = 'APPROVED'
+    CREATED = 'CREATED'
 
 
 @dataclass()
