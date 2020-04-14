@@ -4,14 +4,14 @@ from models.collection import Exercise, ExerciseState, SemanticVersion, SampleSo
     base_res_path
 from models.xml import XmlExerciseContent, XmlSolution
 
-collection_id = 1
-tool_id = 'xml'
+collectionId = 1
+toolId = 'xml'
 
 coll_1_ex_1: Exercise[XmlExerciseContent] = Exercise(
     id=1,
-    collection_id=collection_id,
-    tool_id=tool_id,
-    semantic_version=SemanticVersion(major=1, minor=0, patch=0),
+    collectionId=collectionId,
+    toolId=toolId,
+    semanticVersion=SemanticVersion(major=1, minor=0, patch=0),
     title='Party',
     authors=['bje40dc'],
     text='Erstellen Sie zu dieser DTD ein passendes Xml-Dokument.',
@@ -37,9 +37,9 @@ coll_1_ex_1: Exercise[XmlExerciseContent] = Exercise(
 
 coll_1_ex_2: Exercise[XmlExerciseContent] = Exercise(
     id=2,
-    collection_id=collection_id,
-    tool_id=tool_id,
-    semantic_version=SemanticVersion(major=1, minor=0, patch=0),
+    collectionId=collectionId,
+    toolId=toolId,
+    semanticVersion=SemanticVersion(major=1, minor=0, patch=0),
     title='Vorlesung',
     authors=['bje40dc'],
     text='Erstellen Sie zu dieser DTD ein passendes Xml-Dokument.',
@@ -70,9 +70,9 @@ coll_1_ex_2: Exercise[XmlExerciseContent] = Exercise(
 
 coll_1_ex_3: Exercise[XmlExerciseContent] = Exercise(
     id=3,
-    collection_id=collection_id,
-    tool_id=tool_id,
-    semantic_version=SemanticVersion(major=1, minor=0, patch=0),
+    collectionId=collectionId,
+    toolId=toolId,
+    semanticVersion=SemanticVersion(major=1, minor=0, patch=0),
     title='Krankenhaus',
     authors=['bje40dc'],
     text='Erstellen Sie zu dieser DTD ein passendes Xml-Dokument.',
@@ -96,9 +96,9 @@ coll_1_ex_3: Exercise[XmlExerciseContent] = Exercise(
 
 coll_1_ex_4: Exercise[XmlExerciseContent] = Exercise(
     id=4,
-    collection_id=collection_id,
-    tool_id=tool_id,
-    semantic_version=SemanticVersion(major=1, minor=0, patch=0),
+    collectionId=collectionId,
+    toolId=toolId,
+    semanticVersion=SemanticVersion(major=1, minor=0, patch=0),
     title='Frühstück',
     authors=['bje40dc'],
     text='Erstellen Sie für dieses Xml-Dokument eine passende DTD.',
@@ -122,9 +122,9 @@ coll_1_ex_4: Exercise[XmlExerciseContent] = Exercise(
 
 coll_1_ex_5: Exercise[XmlExerciseContent] = Exercise(
     id=5,
-    collection_id=collection_id,
-    tool_id=tool_id,
-    semantic_version=SemanticVersion(major=1, minor=0, patch=0),
+    collectionId=collectionId,
+    toolId=toolId,
+    semanticVersion=SemanticVersion(major=1, minor=0, patch=0),
     title='Bibliothek',
     authors=['bje40dc'],
     text='Erstellen Sie für dieses Xml-Dokument eine passende DTD.',

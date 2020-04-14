@@ -36,9 +36,9 @@ class SampleSolution(Generic[T]):
 @dataclass()
 class Exercise(Generic[T]):
     id: int
-    collection_id: int
-    tool_id: str
-    semantic_version: SemanticVersion
+    collectionId: int
+    toolId: str
+    semanticVersion: SemanticVersion
     title: str
     authors: List[str]
     text: str

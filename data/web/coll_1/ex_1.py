@@ -6,9 +6,9 @@ from models.web import WebExerciseContent, ExerciseFile, SiteSpec, HtmlTask, Htm
 
 web_coll_1_ex_1: Exercise[WebExerciseContent] = Exercise(
     id=1,
-    collection_id=1,
-    tool_id='web',
-    semantic_version=SemanticVersion(major=1, minor=0, patch=0),
+    collectionId=1,
+    toolId='web',
+    semanticVersion=SemanticVersion(major=1, minor=0, patch=0),
     title='Listen in Html',
     authors=['bje40dc'],
     text=load_text_from_file(base_res_path / 'web' / 'coll_1' / 'ex_1' / 'text.html'),
