@@ -1,10 +1,12 @@
 from textwrap import dedent
 
 from models.collection import Exercise, ExerciseState, ExerciseFile, SemanticVersion, SampleSolution, \
-    load_text_from_file, base_res_path
+    load_text_from_file, ex_resources_path
 from models.programming import ProgrammingExerciseContent, ProgrammingInput, ProgrammingUnitTestPart, \
     ProgrammingImplementationPart, ProgrammingUnitTestType, ProgrammingTestData, \
     ProgrammingSolution, ProgrammingExTag
+
+ex_res_path = ex_resources_path('programming', 1, 1)
 
 unitTestPart: ProgrammingUnitTestPart = ProgrammingUnitTestPart(
     unitTestType=ProgrammingUnitTestType.Simplified,
@@ -15,7 +17,7 @@ unitTestPart: ProgrammingUnitTestPart = ProgrammingUnitTestPart(
         name='test_main.py',
         fileType='python',
         editable=False,
-        content=load_text_from_file(base_res_path / 'programming' / 'coll_1' / 'ex_1' / 'test_main.py'),
+        content=load_text_from_file(ex_res_path / 'test_main.py'),
     ),
     testFileName='test_ggt.py',
     sampleSolFileNames=[]
@@ -33,7 +35,7 @@ implementationPart: ProgrammingImplementationPart = ProgrammingImplementationPar
             name='ggt.py',
             fileType='python',
             editable=True,
-            content=load_text_from_file(base_res_path / 'programming' / 'coll_1' / 'ex_1' / 'ggt_declaration.py')
+            content=load_text_from_file(ex_res_path / 'ggt_declaration.py')
         )
     ],
     implFileName='ggt.py',
@@ -48,7 +50,7 @@ sampleSolution: SampleSolution[ProgrammingSolution] = SampleSolution(
                 name='ggt.py',
                 fileType='python',
                 editable=True,
-                content=load_text_from_file(base_res_path / 'programming' / 'coll_1' / 'ex_1' / 'ggt.py')
+                content=load_text_from_file(ex_res_path / 'ggt.py')
             )
         ],
         testData=[]
@@ -62,7 +64,7 @@ programming_coll_1_ex_1: Exercise[ProgrammingExTag, ProgrammingExerciseContent] 
     semanticVersion=SemanticVersion(major=1, minor=0, patch=0),
     title='Größter gemeinsamer Teiler',
     authors=['bje40dc'],
-    text=load_text_from_file(base_res_path / 'programming' / 'coll_1' / 'ex_1' / 'text.html'),
+    text=load_text_from_file(ex_res_path / 'text.html'),
     tags=[ProgrammingExTag.ForLoops, ProgrammingExTag.Conditions, ProgrammingExTag.Maths],
     state=ExerciseState.APPROVED,
     difficulty=2,

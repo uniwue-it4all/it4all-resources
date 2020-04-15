@@ -1,6 +1,7 @@
 from typing import List
 
 from data.programming.coll_1.ex_1.programming_coll_1_ex_1 import programming_coll_1_ex_1
+from data.programming.coll_1.ex_2.programming_coll_1_ex_2 import programming_coll_1_ex_2
 from models.collection import CollectionAndExes, Collection, Exercise
 from models.programming import ProgrammingExerciseContent, ProgrammingExTag
 
@@ -11,7 +12,7 @@ programming_collections_and_exes: List[CollectionAndExes[ProgrammingExTag, Progr
         Collection(
             id=1, toolId="programming", title="Zahlen", authors=["bje40dc"], text="TODO", shortName="numbers"
         ),
-        {ex.id: ex for ex in [programming_coll_1_ex_1]}
+        {ex.id: ex for ex in [programming_coll_1_ex_1, programming_coll_1_ex_2]}
     ),
     CollectionAndExes(
         Collection(

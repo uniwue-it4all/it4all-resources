@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from enum import Enum
-from typing import List, Any
+from typing import List, Any, Optional
 
 from models.collection import ExerciseFile, ExerciseContent
 
@@ -32,7 +32,10 @@ class ProgrammingInput:
 
 @dataclass()
 class ProgrammingUnitTestTestConfig:
-    pass
+    id: int
+    shouldFail: bool
+    description: str
+    file: ExerciseFile
 
 
 @dataclass()
@@ -41,9 +44,9 @@ class ProgrammingUnitTestPart:
     unitTestsDescription: str
     unitTestFiles: List[ExerciseFile]
     unitTestTestConfigs: List[ProgrammingUnitTestTestConfig]
-    simplifiedTestMainFile: ExerciseFile
     testFileName: str
     sampleSolFileNames: List[str]
+    simplifiedTestMainFile: Optional[ExerciseFile] = None
 
 
 @dataclass()
