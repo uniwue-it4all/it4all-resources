@@ -5,6 +5,11 @@ from typing import Optional, List
 from models.collection import ExerciseFile, ExerciseContent
 
 
+class JsActionType(str, Enum):
+    Click = 'Click'
+    FillOut = 'FillOut'
+
+
 class WebExTag(str, Enum):
     pass
 
@@ -26,8 +31,28 @@ class HtmlTask:
 
 
 @dataclass()
+class JsAction:
+    xpathQuery: str
+    actionType: JsActionType
+    keysToSend: Optional[str] = None
+
+
+@dataclass()
+class JsCondition:
+    id: int
+    xpathQuery: str
+    awaitedTagName: str
+    awaitedTextContent: Optional[str]
+    attributes: List[HtmlAttribute] = field(default_factory=list)
+
+
+@dataclass()
 class JsTask:
-    pass
+    id: int
+    text: str
+    preConditions: List[JsCondition]
+    action: JsAction
+    postConditions: List[JsCondition]
 
 
 @dataclass()
