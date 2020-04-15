@@ -125,7 +125,7 @@ def route_collection(tool_id: str, coll_id: int):
 
     return jsonify(
         animalify({
-            'parent_url': url_for('route_collections', tool_id=tool_id, _external=True),
+            'parent_url': url_for('route_tool', tool_id=tool_id, _external=True),
             'meta_data': coll_and_ex.collection,
             'exercises': {
                 'count': len(coll_and_ex.exercises),

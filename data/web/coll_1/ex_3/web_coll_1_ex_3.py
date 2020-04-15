@@ -1,8 +1,11 @@
+from pathlib import Path
 from textwrap import dedent
 
 from models.collection import ExerciseState, SampleSolution, SemanticVersion, load_text_from_file, \
-    base_res_path, ExerciseFile, Exercise
+    base_res_path, ExerciseFile, Exercise, ex_resources_path
 from models.web import WebExerciseContent, SiteSpec, HtmlTask, HtmlAttribute, WebSolution, WebExTag
+
+ex_res_folder: Path = ex_resources_path('web', 1, 3)
 
 html_tasks = [
     HtmlTask(

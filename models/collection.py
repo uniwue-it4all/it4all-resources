@@ -5,6 +5,11 @@ from typing import List, Dict, TypeVar, Generic
 
 base_res_path: Path = Path.cwd() / 'data'
 
+
+def ex_resources_path(tool_id: str, coll_id: int, ex_id: int):
+    return base_res_path / tool_id / f'coll_{coll_id}' / f'ex_{ex_id}'
+
+
 S = TypeVar('S')
 T = TypeVar('T')
 

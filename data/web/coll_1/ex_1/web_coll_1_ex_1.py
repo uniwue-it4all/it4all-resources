@@ -1,9 +1,12 @@
+from pathlib import Path
 from textwrap import dedent
 from typing import List
 
-from models.collection import Exercise, SemanticVersion, ExerciseState, load_text_from_file, base_res_path, \
-    SampleSolution
+from models.collection import Exercise, SemanticVersion, ExerciseState, load_text_from_file, SampleSolution, \
+    ex_resources_path
 from models.web import WebExerciseContent, ExerciseFile, SiteSpec, HtmlTask, HtmlAttribute, WebSolution, WebExTag
+
+ex_res_folder: Path = ex_resources_path('web', 1, 1)
 
 html_tasks: List[HtmlTask] = [
     HtmlTask(
@@ -72,9 +75,7 @@ sampleSolution: SampleSolution[WebSolution] = SampleSolution(
                 name='carList.html',
                 fileType='htmlmixed',
                 editable=False,
-                content=load_text_from_file(
-                    base_res_path / 'web' / 'coll_1' / 'ex_1' / 'sol_1' / 'carList.html'
-                )
+                content=load_text_from_file(ex_res_folder / 'sol_1' / 'carList.html')
             )
         ]
     )
@@ -87,7 +88,7 @@ web_coll_1_ex_1: Exercise[WebExTag, WebExerciseContent] = Exercise(
     semanticVersion=SemanticVersion(major=1, minor=0, patch=0),
     title='Listen in Html',
     authors=['bje40dc'],
-    text=load_text_from_file(base_res_path / 'web' / 'coll_1' / 'ex_1' / 'text.html'),
+    text=load_text_from_file(ex_res_folder / 'text.html'),
     tags=[],
     state=ExerciseState.APPROVED,
     difficulty=1,
@@ -97,13 +98,13 @@ web_coll_1_ex_1: Exercise[WebExTag, WebExerciseContent] = Exercise(
                 name='carList.html',
                 fileType='htmlmixed',
                 editable=True,
-                content=load_text_from_file(base_res_path / 'web' / 'coll_1' / 'ex_1' / 'carList.html'),
+                content=load_text_from_file(ex_res_folder / 'carList.html'),
             ),
             ExerciseFile(
                 name='carListStyle.css',
                 fileType='css',
                 editable=False,
-                content=load_text_from_file(base_res_path / 'web' / 'coll_1' / 'ex_1' / 'carListStyle.css'),
+                content=load_text_from_file(ex_res_folder / 'carListStyle.css'),
             )
         ],
         siteSpec=SiteSpec(

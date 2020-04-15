@@ -1,9 +1,12 @@
+from pathlib import Path
 from textwrap import dedent
 from typing import List
 
 from models.collection import Exercise, ExerciseFile, ExerciseState, SampleSolution, SemanticVersion, \
-    load_text_from_file, base_res_path
+    load_text_from_file, ex_resources_path
 from models.web import WebSolution, WebExerciseContent, HtmlAttribute, SiteSpec, HtmlTask, WebExTag
+
+ex_res_path: Path = ex_resources_path('web', 1, 4)
 
 html_tasks: List[HtmlTask] = [
     HtmlTask(
@@ -97,7 +100,7 @@ sampleSolution: SampleSolution[WebSolution] = SampleSolution(
                 name='login.html',
                 fileType='htmlmixed',
                 editable=False,
-                content=load_text_from_file(base_res_path / 'web' / 'coll_1' / 'ex_4' / 'sol_1' / 'login.html')
+                content=load_text_from_file(ex_res_path / 'sol_1' / 'login.html')
             )
         ]
     )
@@ -110,7 +113,7 @@ web_coll_1_ex_4: Exercise[WebExTag, WebExerciseContent] = Exercise(
     semanticVersion=SemanticVersion(major=1, minor=0, patch=0),
     title='Login-Formular',
     authors=['bje40dc'],
-    text=load_text_from_file(base_res_path / 'web' / 'coll_1' / 'ex_4' / 'text.html'),
+    text=load_text_from_file(ex_res_path / 'text.html'),
     tags=[],
     state=ExerciseState.APPROVED,
     difficulty=3,
@@ -120,13 +123,13 @@ web_coll_1_ex_4: Exercise[WebExTag, WebExerciseContent] = Exercise(
                 name='login.html',
                 fileType='htmlmixed',
                 editable=True,
-                content=load_text_from_file(base_res_path / 'web' / 'coll_1' / 'ex_4' / 'login.html')
+                content=load_text_from_file(ex_res_path / 'login.html')
             ),
             ExerciseFile(
                 name='loginStyle.css',
                 fileType='css',
                 editable=False,
-                content=load_text_from_file(base_res_path / 'web' / 'coll_1' / 'ex_4' / 'loginStyle.css')
+                content=load_text_from_file(ex_res_path / 'loginStyle.css')
             )
         ],
         siteSpec=SiteSpec(

@@ -1,9 +1,12 @@
+from pathlib import Path
 from textwrap import dedent
 from typing import List
 
 from models.collection import ExerciseFile, ExerciseState, Exercise, SampleSolution, SemanticVersion, \
-    load_text_from_file, base_res_path
+    load_text_from_file, ex_resources_path
 from models.web import WebSolution, WebExerciseContent, HtmlTask, HtmlAttribute, SiteSpec, WebExTag
+
+ex_res_path: Path = ex_resources_path('web', 1, 5)
 
 sampleSolution = SampleSolution(
     id=1,
@@ -13,7 +16,7 @@ sampleSolution = SampleSolution(
                 name='audio.html',
                 fileType='htmlmixed',
                 editable=False,
-                content=load_text_from_file(base_res_path / 'web' / 'coll_1' / 'ex_5' / 'sol_1' / 'audio.html')
+                content=load_text_from_file(ex_res_path / 'sol_1' / 'audio.html')
             )
         ]
     )
@@ -68,7 +71,7 @@ web_coll_1_ex_5: Exercise[WebExTag, WebExerciseContent] = Exercise(
     semanticVersion=SemanticVersion(major=1, minor=0, patch=0),
     title='Audio in HTML 5',
     authors=['bje40dc'],
-    text=load_text_from_file(base_res_path / 'web' / 'coll_1' / 'ex_5' / 'text.html'),
+    text=load_text_from_file(ex_res_path / 'text.html'),
     tags=[],
     state=ExerciseState.APPROVED,
     difficulty=1,
@@ -78,7 +81,7 @@ web_coll_1_ex_5: Exercise[WebExTag, WebExerciseContent] = Exercise(
                 name='audio.html',
                 fileType='htmlmixed',
                 editable=True,
-                content=load_text_from_file(base_res_path / 'web' / 'coll_1' / 'ex_5' / 'audio.html')
+                content=load_text_from_file(ex_res_path / 'audio.html')
             )
         ],
         siteSpec=SiteSpec(

@@ -1,9 +1,12 @@
+from pathlib import Path
 from textwrap import dedent
 from typing import List
 
-from models.collection import ExerciseFile, Exercise, SemanticVersion, load_text_from_file, base_res_path, \
-    ExerciseState, SampleSolution
+from models.collection import ExerciseFile, Exercise, SemanticVersion, load_text_from_file, ExerciseState, \
+    SampleSolution, ex_resources_path
 from models.web import WebExerciseContent, WebSolution, SiteSpec, HtmlTask, HtmlAttribute, WebExTag
+
+ex_res_folder: Path = ex_resources_path('web', 1, 2)
 
 html_tasks: List[HtmlTask] = [
     HtmlTask(
@@ -116,9 +119,7 @@ sampleSolution: SampleSolution[WebSolution] = SampleSolution(
                 name='production.html',
                 fileType='htmlmixed',
                 editable=False,
-                content=load_text_from_file(
-                    base_res_path / 'web' / 'coll_1' / 'ex_2' / 'sol_1' / 'production.html'
-                ),
+                content=load_text_from_file(ex_res_folder / 'sol_1' / 'production.html'),
             )
         ]
     )
@@ -131,7 +132,7 @@ web_coll_1_ex_2: Exercise[WebExTag, WebExerciseContent] = Exercise(
     semanticVersion=SemanticVersion(major=1, minor=0, patch=0),
     title='Tabellen in Html',
     authors=['bje40dc'],
-    text=load_text_from_file(base_res_path / 'web' / 'coll_1' / 'ex_2' / 'text.html'),
+    text=load_text_from_file(ex_res_folder / 'text.html'),
     tags=[],
     state=ExerciseState.APPROVED,
     difficulty=2,
@@ -141,13 +142,13 @@ web_coll_1_ex_2: Exercise[WebExTag, WebExerciseContent] = Exercise(
                 name='production.html',
                 fileType='htmlmixed',
                 editable=True,
-                content=load_text_from_file(base_res_path / 'web' / 'coll_1' / 'ex_2' / 'production.html')
+                content=load_text_from_file(ex_res_folder / 'production.html')
             ),
             ExerciseFile(
                 name='productionStyle.css',
                 fileType='css',
                 editable=False,
-                content=load_text_from_file(base_res_path / 'web' / 'coll_1' / 'ex_2' / 'productionStyle.css')
+                content=load_text_from_file(ex_res_folder / 'productionStyle.css')
             )
         ],
         siteSpec=SiteSpec(
