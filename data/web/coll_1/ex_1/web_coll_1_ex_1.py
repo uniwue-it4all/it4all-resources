@@ -2,9 +2,8 @@ from pathlib import Path
 from textwrap import dedent
 from typing import List
 
-from models.collection import Exercise, SemanticVersion, ExerciseState, load_text_from_file, SampleSolution, \
-    ex_resources_path
-from models.web import WebExerciseContent, ExerciseFile, SiteSpec, HtmlTask, HtmlAttribute, WebSolution, WebExTag
+from models.collection import load_text_from_file, SampleSolution, ex_resources_path
+from models.web import ExerciseFile, SiteSpec, HtmlTask, HtmlAttribute, WebSolution, WebExercise
 
 ex_res_folder: Path = ex_resources_path('web', 1, 1)
 
@@ -81,37 +80,33 @@ sampleSolution: SampleSolution[WebSolution] = SampleSolution(
     )
 )
 
-web_coll_1_ex_1: Exercise[WebExTag, WebExerciseContent] = Exercise(
+web_coll_1_ex_1: WebExercise = WebExercise(
     id=1,
     collectionId=1,
     toolId='web',
-    semanticVersion=SemanticVersion(major=1, minor=0, patch=0),
     title='Listen in Html',
     authors=['bje40dc'],
     text=load_text_from_file(ex_res_folder / 'text.html'),
-    tags=[],
-    state=ExerciseState.APPROVED,
+    topics=[],
     difficulty=1,
-    content=WebExerciseContent(
-        files=[
-            ExerciseFile(
-                name='carList.html',
-                fileType='htmlmixed',
-                editable=True,
-                content=load_text_from_file(ex_res_folder / 'carList.html'),
-            ),
-            ExerciseFile(
-                name='carListStyle.css',
-                fileType='css',
-                editable=False,
-                content=load_text_from_file(ex_res_folder / 'carListStyle.css'),
-            )
-        ],
-        siteSpec=SiteSpec(
-            fileName='carList.html',
-            htmlTasks=html_tasks,
-            jsTasks=[]
+    files=[
+        ExerciseFile(
+            name='carList.html',
+            fileType='htmlmixed',
+            editable=True,
+            content=load_text_from_file(ex_res_folder / 'carList.html'),
         ),
-        sampleSolutions=[sampleSolution]
-    )
+        ExerciseFile(
+            name='carListStyle.css',
+            fileType='css',
+            editable=False,
+            content=load_text_from_file(ex_res_folder / 'carListStyle.css'),
+        )
+    ],
+    siteSpec=SiteSpec(
+        fileName='carList.html',
+        htmlTasks=html_tasks,
+        jsTasks=[]
+    ),
+    sampleSolutions=[sampleSolution]
 )

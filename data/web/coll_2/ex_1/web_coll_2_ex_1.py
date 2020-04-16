@@ -2,10 +2,9 @@ from pathlib import Path
 from textwrap import dedent
 from typing import List
 
-from models.collection import Exercise, ExerciseFile, ExerciseState, SampleSolution, SemanticVersion, \
-    load_text_from_file, ex_resources_path
-from models.web import WebExerciseContent, WebSolution, HtmlTask, HtmlAttribute, JsTask, SiteSpec, JsAction, \
-    JsCondition, JsActionType
+from models.collection import ExerciseFile, SampleSolution, load_text_from_file, ex_resources_path
+from models.web import WebSolution, HtmlTask, HtmlAttribute, JsTask, SiteSpec, JsAction, JsCondition, JsActionType, \
+    WebExercise
 
 ex_res_path: Path = ex_resources_path('web', 2, 1)
 
@@ -89,44 +88,40 @@ sampleSolution: SampleSolution[WebSolution] = SampleSolution(
     )
 )
 
-web_coll_2_ex_1 = Exercise(
+web_coll_2_ex_1: WebExercise = WebExercise(
     id=1,
     collectionId=2,
     toolId='web',
-    semanticVersion=SemanticVersion(major=1, minor=0, patch=0),
     title='Klickzähler',
     authors=['bje40dc'],
     text=load_text_from_file(ex_res_path / 'text.html'),
-    tags=[],
-    state=ExerciseState.APPROVED,
+    topics=[],
     difficulty=2,
-    content=WebExerciseContent(
-        files=[
-            ExerciseFile(
-                name='clickCounter.html',
-                fileType='htmlmixed',
-                editable=True,
-                content=load_text_from_file(ex_res_path / 'clickCounter.html')
-            ),
-            ExerciseFile(
-                name='clickCounter.js',
-                fileType='javascript',
-                editable=True,
-                content=load_text_from_file(ex_res_path / 'clickCounter.js')
-            )
-        ],
-        htmlText='Erstellen Sie zunächst den Rumpf der Seite in HTML.',
-        jsText=dedent(
-            """\
-            Implementieren Sie nun die Funktion <code>increment()</code> die aufgerufen wird wenn auf den Knopf
-            gedrückt wird. Sie soll den Inhalt (innerHTML) des Elementes mit der id 'theSpan' auslesen und um 1 erhöhen.
-            Sie können die Funktion <code>parseInt(str)</code> verwenden um einen String in eine Ganzzahl umzuwandeln."""
+    files=[
+        ExerciseFile(
+            name='clickCounter.html',
+            fileType='htmlmixed',
+            editable=True,
+            content=load_text_from_file(ex_res_path / 'clickCounter.html')
         ),
-        siteSpec=SiteSpec(
-            fileName='clickCounter.html',
-            htmlTasks=html_tasks,
-            jsTasks=js_tasks
-        ),
-        sampleSolutions=[sampleSolution]
-    )
+        ExerciseFile(
+            name='clickCounter.js',
+            fileType='javascript',
+            editable=True,
+            content=load_text_from_file(ex_res_path / 'clickCounter.js')
+        )
+    ],
+    htmlText='Erstellen Sie zunächst den Rumpf der Seite in HTML.',
+    jsText=dedent(
+        """\
+        Implementieren Sie nun die Funktion <code>increment()</code> die aufgerufen wird wenn auf den Knopf
+        gedrückt wird. Sie soll den Inhalt (innerHTML) des Elementes mit der id 'theSpan' auslesen und um 1 erhöhen.
+        Sie können die Funktion <code>parseInt(str)</code> verwenden um einen String in eine Ganzzahl umzuwandeln."""
+    ),
+    siteSpec=SiteSpec(
+        fileName='clickCounter.html',
+        htmlTasks=html_tasks,
+        jsTasks=js_tasks
+    ),
+    sampleSolutions=[sampleSolution]
 )

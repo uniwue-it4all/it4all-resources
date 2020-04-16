@@ -2,16 +2,12 @@ from dataclasses import dataclass
 from enum import Enum
 from typing import List
 
-from models.collection import ExerciseContent
+from models.collection import Exercise
 
 
 class RegexCorrectionType(str, Enum):
     MATCHING = "MATCHING"
     EXTRACTION = "EXTRACTION"
-
-
-class RegexExTag(str, Enum):
-    pass
 
 
 @dataclass()
@@ -29,7 +25,7 @@ class RegexExtractionTestData:
 
 
 @dataclass()
-class RegexExerciseContent(ExerciseContent[str]):
+class RegexExercise(Exercise[str]):
     maxPoints: int
     correctionType: RegexCorrectionType
     matchTestData: List[RegexMatchTestData]

@@ -1,29 +1,28 @@
-from models.collection import Exercise, ExerciseState, SemanticVersion, SampleSolution, load_text_from_file, \
-    base_res_path
-from models.xml import XmlExerciseContent, XmlSolution, XmlExTag
+from pathlib import Path
 
-xml_coll_1_ex_3: Exercise[XmlExTag, XmlExerciseContent] = Exercise(
+from models.collection import SampleSolution, load_text_from_file, ex_resources_path
+from models.xml import XmlSolution, XmlExercise
+
+ex_res_path: Path = ex_resources_path('xml', 1, 3)
+
+xml_coll_1_ex_3: XmlExercise = XmlExercise(
     id=3,
     collectionId=1,
     toolId='xml',
-    semanticVersion=SemanticVersion(major=1, minor=0, patch=0),
     title='Krankenhaus',
     authors=['bje40dc'],
     text='Erstellen Sie zu dieser DTD ein passendes Xml-Dokument.',
-    tags=[],
-    state=ExerciseState.APPROVED,
+    topics=[],
     difficulty=1,
-    content=XmlExerciseContent(
-        root_node='praxis',
-        grammar_description=load_text_from_file(base_res_path / 'xml' / 'coll_1' / 'ex_3' / 'grammarDescription.txt'),
-        sampleSolutions=[
-            SampleSolution(
-                id=1,
-                sample=XmlSolution(
-                    grammar=load_text_from_file(base_res_path / 'xml' / 'coll_1' / 'ex_3' / 'sol_1' / 'praxis.dtd'),
-                    document=load_text_from_file(base_res_path / 'xml' / 'coll_1' / 'ex_3' / 'sol_1' / 'praxis.xml')
-                )
+    rootNode='praxis',
+    grammarDescription=load_text_from_file(ex_res_path / 'grammarDescription.txt'),
+    sampleSolutions=[
+        SampleSolution(
+            id=1,
+            sample=XmlSolution(
+                grammar=load_text_from_file(ex_res_path / 'sol_1' / 'praxis.dtd'),
+                document=load_text_from_file(ex_res_path / 'sol_1' / 'praxis.xml')
             )
-        ]
-    )
+        )
+    ]
 )

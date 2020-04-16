@@ -1,13 +1,12 @@
 from textwrap import dedent
 
-from models.collection import ExerciseState, Exercise, SampleSolution, SemanticVersion
-from models.regex import RegexExerciseContent, RegexCorrectionType, RegexMatchTestData, RegexExTag
+from models.collection import SampleSolution
+from models.regex import RegexCorrectionType, RegexMatchTestData, RegexExercise
 
-regex_coll_1_ex_4: Exercise[RegexExTag, RegexExerciseContent] = Exercise(
+regex_coll_1_ex_4: RegexExercise = RegexExercise(
     id=4,
     collectionId=1,
     toolId='regex',
-    semanticVersion=SemanticVersion(major=0, minor=0, patch=1),
     title='Semantische Versionierung',
     authors=['bje40dc'],
     text=dedent(
@@ -17,27 +16,24 @@ regex_coll_1_ex_4: Exercise[RegexExTag, RegexExerciseContent] = Exercise(
         mit einem Punkt beziehungsweise im Fall der Revisions- und Buildnummer mit einem Minus getrennt werden.
         Jede der Nummern kann mehrstellig sein und führende Nullen besitzen."""
     ).replace('\n', ' '),
-    tags=[],
-    state=ExerciseState.APPROVED,
+    topics=[],
     difficulty=3,
-    content=RegexExerciseContent(
-        maxPoints=3,
-        correctionType=RegexCorrectionType.MATCHING,
-        matchTestData=[
-            RegexMatchTestData(id=1, data='2.3.5-0041', isIncluded=True),
-            RegexMatchTestData(id=2, data='0.0.1', isIncluded=True),
-            RegexMatchTestData(id=3, data='1.3.3-7', isIncluded=True),
-            RegexMatchTestData(id=4, data='1.12.2-21', isIncluded=True),
-            RegexMatchTestData(id=5, data='2.05.7-11', isIncluded=True),
-            RegexMatchTestData(id=6, data='1.0', isIncluded=False),
-            RegexMatchTestData(id=7, data='1..10', isIncluded=False),
-            RegexMatchTestData(id=8, data='1..10', isIncluded=False),
-            RegexMatchTestData(id=9, data='1.0-3', isIncluded=False)
-        ],
-        extractionTestData=[],
-        sampleSolutions=[
-            SampleSolution(id=1, sample=r'\d+\.\d+\.\d+(-\d+)?'),
-            SampleSolution(id=2, sample=r'[0-9]+\.[0-9]+\.[0-9]+(-[0-9]+)?')
-        ]
-    )
+    maxPoints=3,
+    correctionType=RegexCorrectionType.MATCHING,
+    matchTestData=[
+        RegexMatchTestData(id=1, data='2.3.5-0041', isIncluded=True),
+        RegexMatchTestData(id=2, data='0.0.1', isIncluded=True),
+        RegexMatchTestData(id=3, data='1.3.3-7', isIncluded=True),
+        RegexMatchTestData(id=4, data='1.12.2-21', isIncluded=True),
+        RegexMatchTestData(id=5, data='2.05.7-11', isIncluded=True),
+        RegexMatchTestData(id=6, data='1.0', isIncluded=False),
+        RegexMatchTestData(id=7, data='1..10', isIncluded=False),
+        RegexMatchTestData(id=8, data='1..10', isIncluded=False),
+        RegexMatchTestData(id=9, data='1.0-3', isIncluded=False)
+    ],
+    extractionTestData=[],
+    sampleSolutions=[
+        SampleSolution(id=1, sample=r'\d+\.\d+\.\d+(-\d+)?'),
+        SampleSolution(id=2, sample=r'[0-9]+\.[0-9]+\.[0-9]+(-[0-9]+)?')
+    ]
 )

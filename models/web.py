@@ -2,16 +2,12 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import Optional, List
 
-from models.collection import ExerciseFile, ExerciseContent
+from models.collection import ExerciseFile, Exercise
 
 
 class JsActionType(str, Enum):
     Click = 'Click'
     FillOut = 'FillOut'
-
-
-class WebExTag(str, Enum):
-    pass
 
 
 @dataclass()
@@ -68,7 +64,7 @@ class WebSolution:
 
 
 @dataclass
-class WebExerciseContent(ExerciseContent[WebSolution]):
+class WebExercise(Exercise[WebSolution]):
     files: List[ExerciseFile]
     siteSpec: SiteSpec
     htmlText: Optional[str] = None

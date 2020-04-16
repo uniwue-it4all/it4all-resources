@@ -1,10 +1,8 @@
 from textwrap import dedent
 
-from models.collection import Exercise, ExerciseState, ExerciseFile, SemanticVersion, SampleSolution, \
-    load_text_from_file, ex_resources_path
-from models.programming import ProgrammingExerciseContent, ProgrammingInput, ProgrammingUnitTestPart, \
-    ProgrammingImplementationPart, ProgrammingUnitTestType, ProgrammingTestData, \
-    ProgrammingSolution, ProgrammingExTag
+from models.collection import ExerciseFile, SampleSolution, load_text_from_file, ex_resources_path, Topic
+from models.programming import ProgrammingInput, ProgrammingUnitTestPart, ProgrammingImplementationPart, \
+    ProgrammingUnitTestType, ProgrammingTestData, ProgrammingSolution, ProgrammingExTag, ProgrammingExercise
 
 ex_res_path = ex_resources_path('programming', 1, 1)
 
@@ -57,35 +55,35 @@ sampleSolution: SampleSolution[ProgrammingSolution] = SampleSolution(
     )
 )
 
-programming_coll_1_ex_1: Exercise[ProgrammingExTag, ProgrammingExerciseContent] = Exercise(
+programming_coll_1_ex_1: ProgrammingExercise = ProgrammingExercise(
     id=1,
     collectionId=1,
     toolId='programming',
-    semanticVersion=SemanticVersion(major=1, minor=0, patch=0),
     title='Größter gemeinsamer Teiler',
     authors=['bje40dc'],
     text=load_text_from_file(ex_res_path / 'text.html'),
-    tags=[ProgrammingExTag.ForLoops, ProgrammingExTag.Conditions, ProgrammingExTag.Maths],
-    state=ExerciseState.APPROVED,
+    topics=[
+        Topic(ProgrammingExTag.ForLoops),
+        Topic(ProgrammingExTag.Conditions),
+        Topic(ProgrammingExTag.Maths)
+    ],
     difficulty=2,
-    content=ProgrammingExerciseContent(
-        functionName='ggt',
-        foldername='ggt',
-        filename='ggt',
-        inputTypes=[
-            ProgrammingInput(id=1, inputName='a', inputType='INTEGER'),
-            ProgrammingInput(id=2, inputName='b', inputType='INTEGER')
-        ],
-        outputType='INTEGER',
-        unitTestPart=unitTestPart,
-        implementationPart=implementationPart,
-        sampleSolutions=[sampleSolution],
-        sampleTestData=[
-            ProgrammingTestData(id=1, input=[12, 4], output=4),
-            ProgrammingTestData(id=2, input=[3, 7], output=1),
-            ProgrammingTestData(id=3, input=[64, 46], output=2),
-            ProgrammingTestData(id=4, input=[777, 111], output=111),
-            ProgrammingTestData(id=5, input=[15, 25], output=5)
-        ]
-    )
+    functionName='ggt',
+    foldername='ggt',
+    filename='ggt',
+    inputTypes=[
+        ProgrammingInput(id=1, inputName='a', inputType='INTEGER'),
+        ProgrammingInput(id=2, inputName='b', inputType='INTEGER')
+    ],
+    outputType='INTEGER',
+    unitTestPart=unitTestPart,
+    implementationPart=implementationPart,
+    sampleSolutions=[sampleSolution],
+    sampleTestData=[
+        ProgrammingTestData(id=1, input=[12, 4], output=4),
+        ProgrammingTestData(id=2, input=[3, 7], output=1),
+        ProgrammingTestData(id=3, input=[64, 46], output=2),
+        ProgrammingTestData(id=4, input=[777, 111], output=111),
+        ProgrammingTestData(id=5, input=[15, 25], output=5)
+    ]
 )

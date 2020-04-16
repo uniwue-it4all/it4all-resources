@@ -2,17 +2,19 @@ from typing import List
 
 from data.programming.coll_1.ex_1.programming_coll_1_ex_1 import programming_coll_1_ex_1
 from data.programming.coll_1.ex_2.programming_coll_1_ex_2 import programming_coll_1_ex_2
-from models.collection import CollectionAndExes, Collection, Exercise
-from models.programming import ProgrammingExerciseContent, ProgrammingExTag
+from models.collection import CollectionAndExes, Collection
+from models.programming import ProgrammingExercise
 
-ex: Exercise[ProgrammingExTag, ProgrammingExerciseContent]
+programming_coll_1_exes: List[ProgrammingExercise] = [
+    programming_coll_1_ex_1, programming_coll_1_ex_2
+]
 
-programming_collections_and_exes: List[CollectionAndExes[ProgrammingExTag, ProgrammingExerciseContent]] = [
+programming_collections_and_exes: List[CollectionAndExes[ProgrammingExercise]] = [
     CollectionAndExes(
         Collection(
             id=1, toolId="programming", title="Zahlen", authors=["bje40dc"], text="TODO", shortName="numbers"
         ),
-        {ex.id: ex for ex in [programming_coll_1_ex_1, programming_coll_1_ex_2]}
+        {ex.id: ex for ex in programming_coll_1_exes}
     ),
     CollectionAndExes(
         Collection(

@@ -1,8 +1,8 @@
 from textwrap import dedent
 
-from models.collection import Exercise, SampleSolution, ExerciseState, SemanticVersion
-from models.uml import UmlClass, UmlMethod, UmlAttribute, UmlExerciseContent, UmlClassDiagram, UmlMapping, \
-    UmlAssociation, UmlImplementation, UmlClassType, UmlMultiplicity, UmlExTag
+from models.collection import SampleSolution
+from models.uml import UmlClass, UmlMethod, UmlAttribute, UmlClassDiagram, UmlMapping, UmlAssociation, \
+    UmlImplementation, UmlClassType, UmlMultiplicity, UmlExercise
 
 sample: UmlClassDiagram = UmlClassDiagram(
     classes=[
@@ -80,11 +80,10 @@ sample: UmlClassDiagram = UmlClassDiagram(
     ]
 )
 
-uml_coll_1_ex_2: Exercise[UmlExTag, UmlExerciseContent] = Exercise(
+uml_coll_1_ex_2: UmlExercise = UmlExercise(
     id=2,
     collectionId=1,
     toolId='uml',
-    semanticVersion=SemanticVersion(major=1, minor=0, patch=0),
     title='Krankenhaus',
     authors=['bje40dc'],
     text=dedent(
@@ -98,20 +97,17 @@ uml_coll_1_ex_2: Exercise[UmlExTag, UmlExerciseContent] = Exercise(
         verschrieben werden.
         Ein Patient wiederum kann in einer Station aufgenommen bzw. entlassen werden."""
     ).replace('\n', ' '),
-    tags=[],
-    state=ExerciseState.APPROVED,
+    topics=[],
     difficulty=2,
-    content=UmlExerciseContent(
-        mappings=[
-            UmlMapping(key='Stationen', value='Station'),
-            UmlMapping(key='Doktoren', value='Doktor'),
-            UmlMapping(key='Krankenschwestern', value='Krankenschwester'),
-            UmlMapping(key='Patienten', value='Patient'),
-            UmlMapping(key='Namen', value='Name'),
-            UmlMapping(key='Medikamente', value='Medikament'),
-            UmlMapping(key='Rezepten', value='Rezept')
-        ],
-        toIgnore=['Ein', 'Jede'],
-        sampleSolutions=[SampleSolution(id=1, sample=sample)]
-    )
+    mappings=[
+        UmlMapping(key='Stationen', value='Station'),
+        UmlMapping(key='Doktoren', value='Doktor'),
+        UmlMapping(key='Krankenschwestern', value='Krankenschwester'),
+        UmlMapping(key='Patienten', value='Patient'),
+        UmlMapping(key='Namen', value='Name'),
+        UmlMapping(key='Medikamente', value='Medikament'),
+        UmlMapping(key='Rezepten', value='Rezept')
+    ],
+    toIgnore=['Ein', 'Jede'],
+    sampleSolutions=[SampleSolution(id=1, sample=sample)]
 )

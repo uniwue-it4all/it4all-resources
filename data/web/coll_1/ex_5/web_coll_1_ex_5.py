@@ -2,9 +2,8 @@ from pathlib import Path
 from textwrap import dedent
 from typing import List
 
-from models.collection import ExerciseFile, ExerciseState, Exercise, SampleSolution, SemanticVersion, \
-    load_text_from_file, ex_resources_path
-from models.web import WebSolution, WebExerciseContent, HtmlTask, HtmlAttribute, SiteSpec, WebExTag
+from models.collection import ExerciseFile, SampleSolution, load_text_from_file, ex_resources_path
+from models.web import WebSolution, HtmlTask, HtmlAttribute, SiteSpec, WebExercise
 
 ex_res_path: Path = ex_resources_path('web', 1, 5)
 
@@ -64,31 +63,27 @@ html_tasks: List[HtmlTask] = [
     )
 ]
 
-web_coll_1_ex_5: Exercise[WebExTag, WebExerciseContent] = Exercise(
+web_coll_1_ex_5: WebExercise = WebExercise(
     id=5,
     collectionId=1,
     toolId='web',
-    semanticVersion=SemanticVersion(major=1, minor=0, patch=0),
     title='Audio in HTML 5',
     authors=['bje40dc'],
     text=load_text_from_file(ex_res_path / 'text.html'),
-    tags=[],
-    state=ExerciseState.APPROVED,
+    topics=[],
     difficulty=1,
-    content=WebExerciseContent(
-        files=[
-            ExerciseFile(
-                name='audio.html',
-                fileType='htmlmixed',
-                editable=True,
-                content=load_text_from_file(ex_res_path / 'audio.html')
-            )
-        ],
-        siteSpec=SiteSpec(
-            fileName='audio.html',
-            htmlTasks=html_tasks,
-            jsTasks=[]
-        ),
-        sampleSolutions=[sampleSolution]
-    )
+    files=[
+        ExerciseFile(
+            name='audio.html',
+            fileType='htmlmixed',
+            editable=True,
+            content=load_text_from_file(ex_res_path / 'audio.html')
+        )
+    ],
+    siteSpec=SiteSpec(
+        fileName='audio.html',
+        htmlTasks=html_tasks,
+        jsTasks=[]
+    ),
+    sampleSolutions=[sampleSolution]
 )

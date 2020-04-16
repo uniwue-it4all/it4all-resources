@@ -1,13 +1,12 @@
 from textwrap import dedent
 
-from models.collection import ExerciseState, Exercise, SampleSolution, SemanticVersion
-from models.sql import SqlExerciseType, SqlExerciseContent, SqlExTag
+from models.collection import SampleSolution
+from models.sql import SqlExerciseType, SqlExercise
 
-sql_coll_1_ex_7: Exercise[SqlExTag, SqlExerciseContent] = Exercise(
+sql_coll_1_ex_7: SqlExercise = SqlExercise(
     id=7,
     collectionId=1,
     toolId='sql',
-    semanticVersion=SemanticVersion(major=1, minor=0, patch=0),
     title='Versetzung',
     authors=['bje40dc'],
     text=dedent(
@@ -15,21 +14,18 @@ sql_coll_1_ex_7: Exercise[SqlExTag, SqlExerciseContent] = Exercise(
         Der Angestellte mit der OID 8 arbeitet jetzt für den Angestellten mit der OID 3.
         Aktualisieren Sie die Datenbank!"""
     ).replace('\n', ' '),
-    tags=[],
-    state=ExerciseState.APPROVED,
+    topics=[],
     difficulty=1,
-    content=SqlExerciseContent(
-        exerciseType=SqlExerciseType.UPDATE,
-        sampleSolutions=[
-            SampleSolution(
-                id=1,
-                sample=dedent(
-                    """\
-                    UPDATE employee
-                        SET chef_id = 3
-                        WHERE id = 8;"""
-                )
+    exerciseType=SqlExerciseType.UPDATE,
+    sampleSolutions=[
+        SampleSolution(
+            id=1,
+            sample=dedent(
+                """\
+                UPDATE employee
+                    SET chef_id = 3
+                    WHERE id = 8;"""
             )
-        ]
-    )
+        )
+    ]
 )

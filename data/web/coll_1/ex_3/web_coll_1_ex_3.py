@@ -1,9 +1,9 @@
 from pathlib import Path
 from textwrap import dedent
 
-from models.collection import ExerciseState, SampleSolution, SemanticVersion, load_text_from_file, \
-    base_res_path, ExerciseFile, Exercise, ex_resources_path
-from models.web import WebExerciseContent, SiteSpec, HtmlTask, HtmlAttribute, WebSolution, WebExTag
+from models.collection import SampleSolution, load_text_from_file, \
+    base_res_path, ExerciseFile, ex_resources_path
+from models.web import SiteSpec, HtmlTask, HtmlAttribute, WebSolution, WebExercise
 
 ex_res_folder: Path = ex_resources_path('web', 1, 3)
 
@@ -78,37 +78,33 @@ sampleSolution: SampleSolution[WebSolution] = SampleSolution(
     )
 )
 
-web_coll_1_ex_3: Exercise[WebExTag, WebExerciseContent] = Exercise(
+web_coll_1_ex_3: WebExercise = WebExercise(
     id=3,
     collectionId=1,
     toolId='web',
-    semanticVersion=SemanticVersion(major=1, minor=0, patch=0),
     title='Hyperlinks und Bilder in HTML',
     authors=['bje40dc'],
     text=load_text_from_file(base_res_path / 'web' / 'coll_1' / 'ex_3' / 'text.html'),
-    tags=[],
-    state=ExerciseState.APPROVED,
+    topics=[],
     difficulty=2,
-    content=WebExerciseContent(
-        files=[
-            ExerciseFile(
-                name='mustang.html',
-                fileType='htmlmixed',
-                editable=True,
-                content=load_text_from_file(base_res_path / 'web' / 'coll_1' / 'ex_3' / 'mustang.html'),
-            ),
-            ExerciseFile(
-                name='mustangStyle.css',
-                fileType='css',
-                editable=False,
-                content=load_text_from_file(base_res_path / 'web' / 'coll_1' / 'ex_3' / 'mustangStyle.css'),
-            )
-        ],
-        siteSpec=SiteSpec(
-            fileName='mustang.html',
-            htmlTasks=html_tasks,
-            jsTasks=[]
+    files=[
+        ExerciseFile(
+            name='mustang.html',
+            fileType='htmlmixed',
+            editable=True,
+            content=load_text_from_file(base_res_path / 'web' / 'coll_1' / 'ex_3' / 'mustang.html'),
         ),
-        sampleSolutions=[sampleSolution]
-    )
+        ExerciseFile(
+            name='mustangStyle.css',
+            fileType='css',
+            editable=False,
+            content=load_text_from_file(base_res_path / 'web' / 'coll_1' / 'ex_3' / 'mustangStyle.css'),
+        )
+    ],
+    siteSpec=SiteSpec(
+        fileName='mustang.html',
+        htmlTasks=html_tasks,
+        jsTasks=[]
+    ),
+    sampleSolutions=[sampleSolution]
 )

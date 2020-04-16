@@ -2,9 +2,8 @@ from pathlib import Path
 from textwrap import dedent
 from typing import List
 
-from models.collection import Exercise, ExerciseFile, ExerciseState, SampleSolution, SemanticVersion, \
-    load_text_from_file, ex_resources_path
-from models.web import WebSolution, WebExerciseContent, HtmlAttribute, SiteSpec, HtmlTask, WebExTag
+from models.collection import ExerciseFile, SampleSolution, load_text_from_file, ex_resources_path
+from models.web import WebSolution, HtmlAttribute, SiteSpec, HtmlTask, WebExercise
 
 ex_res_path: Path = ex_resources_path('web', 1, 4)
 
@@ -106,37 +105,33 @@ sampleSolution: SampleSolution[WebSolution] = SampleSolution(
     )
 )
 
-web_coll_1_ex_4: Exercise[WebExTag, WebExerciseContent] = Exercise(
+web_coll_1_ex_4: WebExercise = WebExercise(
     id=4,
     collectionId=1,
     toolId='web',
-    semanticVersion=SemanticVersion(major=1, minor=0, patch=0),
     title='Login-Formular',
     authors=['bje40dc'],
     text=load_text_from_file(ex_res_path / 'text.html'),
-    tags=[],
-    state=ExerciseState.APPROVED,
+    topics=[],
     difficulty=3,
-    content=WebExerciseContent(
-        files=[
-            ExerciseFile(
-                name='login.html',
-                fileType='htmlmixed',
-                editable=True,
-                content=load_text_from_file(ex_res_path / 'login.html')
-            ),
-            ExerciseFile(
-                name='loginStyle.css',
-                fileType='css',
-                editable=False,
-                content=load_text_from_file(ex_res_path / 'loginStyle.css')
-            )
-        ],
-        siteSpec=SiteSpec(
-            fileName='login.html',
-            htmlTasks=html_tasks,
-            jsTasks=[]
+    files=[
+        ExerciseFile(
+            name='login.html',
+            fileType='htmlmixed',
+            editable=True,
+            content=load_text_from_file(ex_res_path / 'login.html')
         ),
-        sampleSolutions=[sampleSolution]
-    )
+        ExerciseFile(
+            name='loginStyle.css',
+            fileType='css',
+            editable=False,
+            content=load_text_from_file(ex_res_path / 'loginStyle.css')
+        )
+    ],
+    siteSpec=SiteSpec(
+        fileName='login.html',
+        htmlTasks=html_tasks,
+        jsTasks=[]
+    ),
+    sampleSolutions=[sampleSolution]
 )

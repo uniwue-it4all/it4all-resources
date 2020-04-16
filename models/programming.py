@@ -2,7 +2,7 @@ from dataclasses import dataclass
 from enum import Enum
 from typing import List, Any, Optional
 
-from models.collection import ExerciseFile, ExerciseContent
+from models.collection import ExerciseFile, Exercise
 
 
 class ProgrammingExTag(str, Enum):
@@ -71,7 +71,7 @@ class ProgrammingTestData:
 
 
 @dataclass()
-class ProgrammingExerciseContent(ExerciseContent[ProgrammingSolution]):
+class ProgrammingExercise(Exercise[ProgrammingSolution]):
     functionName: str
     foldername: str
     filename: str

@@ -1,11 +1,6 @@
 from dataclasses import dataclass
-from enum import Enum
 
-from models.collection import ExerciseContent
-
-
-class XmlExTag(str, Enum):
-    pass
+from models.collection import Exercise
 
 
 @dataclass()
@@ -15,6 +10,6 @@ class XmlSolution:
 
 
 @dataclass()
-class XmlExerciseContent(ExerciseContent[XmlSolution]):
-    root_node: str
-    grammar_description: str
+class XmlExercise(Exercise[XmlSolution]):
+    rootNode: str
+    grammarDescription: str

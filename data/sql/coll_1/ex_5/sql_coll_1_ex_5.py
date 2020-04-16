@@ -1,33 +1,29 @@
 from textwrap import dedent
 
-from models.collection import ExerciseState, Exercise, SampleSolution, SemanticVersion
-from models.sql import SqlExerciseType, SqlExerciseContent, SqlExTag
+from models.collection import SampleSolution
+from models.sql import SqlExerciseType, SqlExTag, SqlExercise
 
-sql_coll_1_ex_5: Exercise[SqlExTag, SqlExerciseContent] = Exercise(
+sql_coll_1_ex_5: SqlExercise = SqlExercise(
     id=5,
     collectionId=1,
     toolId='sql',
-    semanticVersion=SemanticVersion(major=1, minor=0, patch=0),
     title='Anzahl der Untergebenen',
     authors=['bje40dc'],
     text="""Wie viele Untergebene hat jeder Chef? Geben Sie jeweils die OID des Chefs und die Anzahl aus!""",
-    tags=[],
-    state=ExerciseState.APPROVED,
+    topics=[],
     difficulty=2,
-    content=SqlExerciseContent(
-        exerciseType=SqlExerciseType.SELECT,
-        sampleSolutions=[
-            SampleSolution(
-                id=1,
-                sample=dedent(
-                    """\
-                    SELECT chef_id, count(id)
-                        FROM employee
-                        WHERE chef_id IS NOT NULL
-                        GROUP BY chef_id;"""
-                )
+    exerciseType=SqlExerciseType.SELECT,
+    sampleSolutions=[
+        SampleSolution(
+            id=1,
+            sample=dedent(
+                """\
+                SELECT chef_id, count(id)
+                    FROM employee
+                    WHERE chef_id IS NOT NULL
+                    GROUP BY chef_id;"""
             )
-        ],
-        tags=[SqlExTag.SQL_GROUP_BY]
-    )
+        )
+    ],
+    tags=[SqlExTag.SQL_GROUP_BY]
 )
