@@ -4,7 +4,7 @@ from typing import List
 
 from models.collection import ExerciseFile, load_text_from_file, SampleSolution, ex_resources_path
 from models.web import WebSolution, HtmlTask, HtmlAttribute, JsTask, JsAction, JsActionType, JsCondition, SiteSpec, \
-    WebExercise
+    WebExercise, WebExerciseContent
 
 ex_res_path: Path = ex_resources_path('web', 2, 2)
 
@@ -137,37 +137,39 @@ web_coll_2_ex_2: WebExercise = WebExercise(
     text=load_text_from_file(ex_res_path / 'text.html'),
     topics=[],
     difficulty=3,
-    files=[
-        ExerciseFile(
-            name='pwChecker.html',
-            fileType='htmlmixed',
-            editable=True,
-            content=load_text_from_file(ex_res_path / 'branchesStrings.html')
-        ),
-        ExerciseFile(
-            name='pwChecker.js',
-            fileType='javascript',
-            editable=True,
-            content=load_text_from_file(ex_res_path / 'branchesStrings.js')
+    sampleSolutions=[sampleSolution],
+    content=WebExerciseContent(
+        files=[
+            ExerciseFile(
+                name='pwChecker.html',
+                fileType='htmlmixed',
+                editable=True,
+                content=load_text_from_file(ex_res_path / 'branchesStrings.html')
+            ),
+            ExerciseFile(
+                name='pwChecker.js',
+                fileType='javascript',
+                editable=True,
+                content=load_text_from_file(ex_res_path / 'branchesStrings.js')
+            )
+        ],
+        htmlText='Erstellen Sie zunächst den Rumpf der Seite in HTML.',
+        jsText=dedent(
+            """\
+            Implementieren Sie nun die Funktion <code>passwordStrength()</code>, die bei Änderung des Felds aufgerufen
+            wird.
+            Sie soll den Inhalt (value) des Passwortfeldes auslesen und verschiedene Tests durchführen.
+            Bei fehlgeschlagenen Tests soll der Inhalt des Elements mit der ID 'errors' auf den entsprechenden Text
+            gesetzt werden.
+            Es soll immer nur der erste fehlgeschlagene Test (in der Reihenfolge der Teilaufgaben) beachtet werden.
+            Wenn kein Test fehlschlägt, soll der Fehlertext gelöscht werden (auf '' setzen).
+            Wenn das Passwort unter 8 Zeichen lang ist, soll der Fehlertext 'Zu kurz' lauten.
+            Wenn die Eingabe den Teilstring 'passwort' enthält, soll 'Zu einfach' gesetzt werden."""
+        ).replace('\n', ' '),
+        siteSpec=SiteSpec(
+            fileName='pwChecker.html',
+            htmlTasks=html_tasks,
+            jsTasks=js_tasks
         )
-    ],
-    htmlText='Erstellen Sie zunächst den Rumpf der Seite in HTML.',
-    jsText=dedent(
-        """\
-        Implementieren Sie nun die Funktion <code>passwordStrength()</code>, die bei Änderung des Felds aufgerufen
-        wird.
-        Sie soll den Inhalt (value) des Passwortfeldes auslesen und verschiedene Tests durchführen.
-        Bei fehlgeschlagenen Tests soll der Inhalt des Elements mit der ID 'errors' auf den entsprechenden Text
-        gesetzt werden.
-        Es soll immer nur der erste fehlgeschlagene Test (in der Reihenfolge der Teilaufgaben) beachtet werden.
-        Wenn kein Test fehlschlägt, soll der Fehlertext gelöscht werden (auf '' setzen).
-        Wenn das Passwort unter 8 Zeichen lang ist, soll der Fehlertext 'Zu kurz' lauten.
-        Wenn die Eingabe den Teilstring 'passwort' enthält, soll 'Zu einfach' gesetzt werden."""
-    ).replace('\n', ' '),
-    siteSpec=SiteSpec(
-        fileName='pwChecker.html',
-        htmlTasks=html_tasks,
-        jsTasks=js_tasks
-    ),
-    sampleSolutions=[sampleSolution]
+    )
 )

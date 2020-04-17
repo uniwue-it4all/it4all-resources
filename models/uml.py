@@ -84,6 +84,11 @@ class UmlMapping:
 
 
 @dataclass()
-class UmlExercise(Exercise[UmlClassDiagram]):
+class UmlExerciseContent:
     toIgnore: List[str]
     mappings: List[UmlMapping]
+
+
+@dataclass()
+class UmlExercise(Exercise[UmlClassDiagram, UmlExerciseContent]):
+    pass

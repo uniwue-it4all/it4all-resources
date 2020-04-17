@@ -3,7 +3,8 @@ from textwrap import dedent
 
 from models.collection import SampleSolution, ex_resources_path, load_text_from_file, ExerciseFile, Topic
 from models.programming import ProgrammingUnitTestPart, ProgrammingUnitTestType, ProgrammingUnitTestTestConfig, \
-    ProgrammingImplementationPart, ProgrammingExTag, ProgrammingInput, ProgrammingSolution, ProgrammingExercise
+    ProgrammingImplementationPart, ProgrammingExTag, ProgrammingInput, ProgrammingSolution, ProgrammingExercise, \
+    ProgrammingExerciseContent
 
 ex_res_path: Path = ex_resources_path('programming', 1, 2)
 
@@ -117,16 +118,6 @@ programming_coll_1_ex_2: ProgrammingExercise = ProgrammingExercise(
         Topic(ProgrammingExTag.ForLoops)
     ],
     difficulty=1,
-    functionName='factorial',
-    foldername='factorial',
-    filename='factorial',
-    inputTypes=[
-        ProgrammingInput(id=1, inputName='n', inputType='INTEGER')
-    ],
-    outputType='INTEGER',
-    unitTestPart=unit_test_part,
-    implementationPart=implementation_part,
-    sampleTestData=[],
     sampleSolutions=[
         SampleSolution(
             id=1,
@@ -149,5 +140,17 @@ programming_coll_1_ex_2: ProgrammingExercise = ProgrammingExercise(
             )
 
         )
-    ]
+    ],
+    content=ProgrammingExerciseContent(
+        functionName='factorial',
+        foldername='factorial',
+        filename='factorial',
+        inputTypes=[
+            ProgrammingInput(id=1, inputName='n', inputType='INTEGER')
+        ],
+        outputType='INTEGER',
+        unitTestPart=unit_test_part,
+        implementationPart=implementation_part,
+        sampleTestData=[],
+    )
 )

@@ -10,6 +10,11 @@ class XmlSolution:
 
 
 @dataclass()
-class XmlExercise(Exercise[XmlSolution]):
+class XmlExerciseContent:
     rootNode: str
     grammarDescription: str
+
+
+@dataclass()
+class XmlExercise(Exercise[XmlSolution, XmlExerciseContent]):
+    pass

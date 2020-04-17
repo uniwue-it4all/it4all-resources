@@ -1,7 +1,7 @@
 from textwrap import dedent
 
 from models.collection import SampleSolution
-from models.sql import SqlExerciseType, SqlExercise
+from models.sql import SqlExerciseType, SqlExercise, SqlExerciseContent
 
 sql_coll_1_ex_9: SqlExercise = SqlExercise(
     id=9,
@@ -16,7 +16,6 @@ sql_coll_1_ex_9: SqlExercise = SqlExercise(
     ),
     topics=[],
     difficulty=1,
-    exerciseType=SqlExerciseType.INSERT,
     sampleSolutions=[
         SampleSolution(
             id=1,
@@ -30,5 +29,8 @@ sql_coll_1_ex_9: SqlExercise = SqlExercise(
                 VALUES (9, 'Tina', 'Sattler', 'tina_sattler', 2);"""
             )
         )
-    ]
+    ],
+    content=SqlExerciseContent(
+        exerciseType=SqlExerciseType.INSERT
+    )
 )

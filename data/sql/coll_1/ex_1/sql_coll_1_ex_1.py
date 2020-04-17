@@ -1,7 +1,7 @@
 from textwrap import dedent
 
 from models.collection import SampleSolution
-from models.sql import SqlExerciseType, SqlExercise
+from models.sql import SqlExerciseType, SqlExercise, SqlExerciseContent
 
 sql_coll_1_ex_1: SqlExercise = SqlExercise(
     id=1,
@@ -12,7 +12,6 @@ sql_coll_1_ex_1: SqlExercise = SqlExercise(
     text="""Wie viele Angestellte hat die Firma? Benennen Sie das Ergebnis als 'Anzahl'.""",
     topics=[],
     difficulty=1,
-    exerciseType=SqlExerciseType.SELECT,
     sampleSolutions=[
         SampleSolution(
             id=1,
@@ -30,5 +29,8 @@ sql_coll_1_ex_1: SqlExercise = SqlExercise(
                 FROM employee;"""
             )
         )
-    ]
+    ],
+    content=SqlExerciseContent(
+        exerciseType=SqlExerciseType.SELECT,
+    )
 )

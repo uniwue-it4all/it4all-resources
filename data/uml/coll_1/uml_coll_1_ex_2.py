@@ -2,7 +2,7 @@ from textwrap import dedent
 
 from models.collection import SampleSolution
 from models.uml import UmlClass, UmlMethod, UmlAttribute, UmlClassDiagram, UmlMapping, UmlAssociation, \
-    UmlImplementation, UmlClassType, UmlMultiplicity, UmlExercise
+    UmlImplementation, UmlClassType, UmlMultiplicity, UmlExercise, UmlExerciseContent
 
 sample: UmlClassDiagram = UmlClassDiagram(
     classes=[
@@ -99,15 +99,17 @@ uml_coll_1_ex_2: UmlExercise = UmlExercise(
     ).replace('\n', ' '),
     topics=[],
     difficulty=2,
-    mappings=[
-        UmlMapping(key='Stationen', value='Station'),
-        UmlMapping(key='Doktoren', value='Doktor'),
-        UmlMapping(key='Krankenschwestern', value='Krankenschwester'),
-        UmlMapping(key='Patienten', value='Patient'),
-        UmlMapping(key='Namen', value='Name'),
-        UmlMapping(key='Medikamente', value='Medikament'),
-        UmlMapping(key='Rezepten', value='Rezept')
-    ],
-    toIgnore=['Ein', 'Jede'],
-    sampleSolutions=[SampleSolution(id=1, sample=sample)]
+    sampleSolutions=[SampleSolution(id=1, sample=sample)],
+    content=UmlExerciseContent(
+        mappings=[
+            UmlMapping(key='Stationen', value='Station'),
+            UmlMapping(key='Doktoren', value='Doktor'),
+            UmlMapping(key='Krankenschwestern', value='Krankenschwester'),
+            UmlMapping(key='Patienten', value='Patient'),
+            UmlMapping(key='Namen', value='Name'),
+            UmlMapping(key='Medikamente', value='Medikament'),
+            UmlMapping(key='Rezepten', value='Rezept')
+        ],
+        toIgnore=['Ein', 'Jede'],
+    )
 )

@@ -1,7 +1,7 @@
 from textwrap import dedent
 
 from models.collection import SampleSolution
-from models.sql import SqlExerciseType, SqlExTag, SqlExercise
+from models.sql import SqlExerciseType, SqlExTag, SqlExercise, SqlExerciseContent
 
 sql_coll_1_ex_3: SqlExercise = SqlExercise(
     id=3,
@@ -12,7 +12,6 @@ sql_coll_1_ex_3: SqlExercise = SqlExercise(
     text='Welche Emailadresse hat Max Becker für die Arbeit?',
     topics=[],
     difficulty=1,
-    exerciseType=SqlExerciseType.SELECT,
     sampleSolutions=[
         SampleSolution(
             id=1,
@@ -42,5 +41,8 @@ sql_coll_1_ex_3: SqlExercise = SqlExercise(
             )
         )
     ],
-    tags=[SqlExTag.SQL_JOIN]
+    content=SqlExerciseContent(
+        exerciseType=SqlExerciseType.SELECT,
+        tags=[SqlExTag.SQL_JOIN]
+    )
 )

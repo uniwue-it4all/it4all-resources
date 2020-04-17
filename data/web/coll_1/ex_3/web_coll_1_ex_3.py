@@ -1,9 +1,8 @@
 from pathlib import Path
 from textwrap import dedent
 
-from models.collection import SampleSolution, load_text_from_file, \
-    base_res_path, ExerciseFile, ex_resources_path
-from models.web import SiteSpec, HtmlTask, HtmlAttribute, WebSolution, WebExercise
+from models.collection import SampleSolution, load_text_from_file, base_res_path, ExerciseFile, ex_resources_path
+from models.web import SiteSpec, HtmlTask, HtmlAttribute, WebSolution, WebExercise, WebExerciseContent
 
 ex_res_folder: Path = ex_resources_path('web', 1, 3)
 
@@ -87,24 +86,26 @@ web_coll_1_ex_3: WebExercise = WebExercise(
     text=load_text_from_file(base_res_path / 'web' / 'coll_1' / 'ex_3' / 'text.html'),
     topics=[],
     difficulty=2,
-    files=[
-        ExerciseFile(
-            name='mustang.html',
-            fileType='htmlmixed',
-            editable=True,
-            content=load_text_from_file(base_res_path / 'web' / 'coll_1' / 'ex_3' / 'mustang.html'),
+    sampleSolutions=[sampleSolution],
+    content=WebExerciseContent(
+        files=[
+            ExerciseFile(
+                name='mustang.html',
+                fileType='htmlmixed',
+                editable=True,
+                content=load_text_from_file(base_res_path / 'web' / 'coll_1' / 'ex_3' / 'mustang.html'),
+            ),
+            ExerciseFile(
+                name='mustangStyle.css',
+                fileType='css',
+                editable=False,
+                content=load_text_from_file(base_res_path / 'web' / 'coll_1' / 'ex_3' / 'mustangStyle.css'),
+            )
+        ],
+        siteSpec=SiteSpec(
+            fileName='mustang.html',
+            htmlTasks=html_tasks,
+            jsTasks=[]
         ),
-        ExerciseFile(
-            name='mustangStyle.css',
-            fileType='css',
-            editable=False,
-            content=load_text_from_file(base_res_path / 'web' / 'coll_1' / 'ex_3' / 'mustangStyle.css'),
-        )
-    ],
-    siteSpec=SiteSpec(
-        fileName='mustang.html',
-        htmlTasks=html_tasks,
-        jsTasks=[]
-    ),
-    sampleSolutions=[sampleSolution]
+    )
 )

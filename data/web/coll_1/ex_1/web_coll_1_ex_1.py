@@ -3,7 +3,7 @@ from textwrap import dedent
 from typing import List
 
 from models.collection import load_text_from_file, SampleSolution, ex_resources_path
-from models.web import ExerciseFile, SiteSpec, HtmlTask, HtmlAttribute, WebSolution, WebExercise
+from models.web import ExerciseFile, SiteSpec, HtmlTask, HtmlAttribute, WebSolution, WebExercise, WebExerciseContent
 
 ex_res_folder: Path = ex_resources_path('web', 1, 1)
 
@@ -89,24 +89,26 @@ web_coll_1_ex_1: WebExercise = WebExercise(
     text=load_text_from_file(ex_res_folder / 'text.html'),
     topics=[],
     difficulty=1,
-    files=[
-        ExerciseFile(
-            name='carList.html',
-            fileType='htmlmixed',
-            editable=True,
-            content=load_text_from_file(ex_res_folder / 'carList.html'),
+    sampleSolutions=[sampleSolution],
+    content=WebExerciseContent(
+        files=[
+            ExerciseFile(
+                name='carList.html',
+                fileType='htmlmixed',
+                editable=True,
+                content=load_text_from_file(ex_res_folder / 'carList.html'),
+            ),
+            ExerciseFile(
+                name='carListStyle.css',
+                fileType='css',
+                editable=False,
+                content=load_text_from_file(ex_res_folder / 'carListStyle.css'),
+            )
+        ],
+        siteSpec=SiteSpec(
+            fileName='carList.html',
+            htmlTasks=html_tasks,
+            jsTasks=[]
         ),
-        ExerciseFile(
-            name='carListStyle.css',
-            fileType='css',
-            editable=False,
-            content=load_text_from_file(ex_res_folder / 'carListStyle.css'),
-        )
-    ],
-    siteSpec=SiteSpec(
-        fileName='carList.html',
-        htmlTasks=html_tasks,
-        jsTasks=[]
-    ),
-    sampleSolutions=[sampleSolution]
+    )
 )

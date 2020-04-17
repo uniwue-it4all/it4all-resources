@@ -20,7 +20,12 @@ class SqlExTag(str, Enum):
 
 
 @dataclass()
-class SqlExercise(Exercise[str]):
+class SqlExerciseContent:
     exerciseType: SqlExerciseType
     tags: List[SqlExTag] = field(default_factory=list)
     hint: Optional[str] = None
+
+
+@dataclass()
+class SqlExercise(Exercise[str, SqlExerciseContent]):
+    pass

@@ -3,7 +3,7 @@ from textwrap import dedent
 from typing import List
 
 from models.collection import ExerciseFile, load_text_from_file, SampleSolution, ex_resources_path
-from models.web import WebSolution, SiteSpec, HtmlTask, HtmlAttribute, WebExercise
+from models.web import WebSolution, SiteSpec, HtmlTask, HtmlAttribute, WebExercise, WebExerciseContent
 
 ex_res_folder: Path = ex_resources_path('web', 1, 2)
 
@@ -133,24 +133,26 @@ web_coll_1_ex_2: WebExercise = WebExercise(
     text=load_text_from_file(ex_res_folder / 'text.html'),
     topics=[],
     difficulty=2,
-    files=[
-        ExerciseFile(
-            name='production.html',
-            fileType='htmlmixed',
-            editable=True,
-            content=load_text_from_file(ex_res_folder / 'production.html')
+    sampleSolutions=[sampleSolution],
+    content=WebExerciseContent(
+        files=[
+            ExerciseFile(
+                name='production.html',
+                fileType='htmlmixed',
+                editable=True,
+                content=load_text_from_file(ex_res_folder / 'production.html')
+            ),
+            ExerciseFile(
+                name='productionStyle.css',
+                fileType='css',
+                editable=False,
+                content=load_text_from_file(ex_res_folder / 'productionStyle.css')
+            )
+        ],
+        siteSpec=SiteSpec(
+            fileName='production.html',
+            htmlTasks=html_tasks,
+            jsTasks=[]
         ),
-        ExerciseFile(
-            name='productionStyle.css',
-            fileType='css',
-            editable=False,
-            content=load_text_from_file(ex_res_folder / 'productionStyle.css')
-        )
-    ],
-    siteSpec=SiteSpec(
-        fileName='production.html',
-        htmlTasks=html_tasks,
-        jsTasks=[]
-    ),
-    sampleSolutions=[sampleSolution]
+    )
 )

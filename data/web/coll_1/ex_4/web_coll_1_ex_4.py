@@ -3,7 +3,7 @@ from textwrap import dedent
 from typing import List
 
 from models.collection import ExerciseFile, SampleSolution, load_text_from_file, ex_resources_path
-from models.web import WebSolution, HtmlAttribute, SiteSpec, HtmlTask, WebExercise
+from models.web import WebSolution, HtmlAttribute, SiteSpec, HtmlTask, WebExercise, WebExerciseContent
 
 ex_res_path: Path = ex_resources_path('web', 1, 4)
 
@@ -114,24 +114,26 @@ web_coll_1_ex_4: WebExercise = WebExercise(
     text=load_text_from_file(ex_res_path / 'text.html'),
     topics=[],
     difficulty=3,
-    files=[
-        ExerciseFile(
-            name='login.html',
-            fileType='htmlmixed',
-            editable=True,
-            content=load_text_from_file(ex_res_path / 'login.html')
+    sampleSolutions=[sampleSolution],
+    content=WebExerciseContent(
+        files=[
+            ExerciseFile(
+                name='login.html',
+                fileType='htmlmixed',
+                editable=True,
+                content=load_text_from_file(ex_res_path / 'login.html')
+            ),
+            ExerciseFile(
+                name='loginStyle.css',
+                fileType='css',
+                editable=False,
+                content=load_text_from_file(ex_res_path / 'loginStyle.css')
+            )
+        ],
+        siteSpec=SiteSpec(
+            fileName='login.html',
+            htmlTasks=html_tasks,
+            jsTasks=[]
         ),
-        ExerciseFile(
-            name='loginStyle.css',
-            fileType='css',
-            editable=False,
-            content=load_text_from_file(ex_res_path / 'loginStyle.css')
-        )
-    ],
-    siteSpec=SiteSpec(
-        fileName='login.html',
-        htmlTasks=html_tasks,
-        jsTasks=[]
-    ),
-    sampleSolutions=[sampleSolution]
+    )
 )

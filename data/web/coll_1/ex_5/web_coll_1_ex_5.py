@@ -3,7 +3,7 @@ from textwrap import dedent
 from typing import List
 
 from models.collection import ExerciseFile, SampleSolution, load_text_from_file, ex_resources_path
-from models.web import WebSolution, HtmlTask, HtmlAttribute, SiteSpec, WebExercise
+from models.web import WebSolution, HtmlTask, HtmlAttribute, SiteSpec, WebExercise, WebExerciseContent
 
 ex_res_path: Path = ex_resources_path('web', 1, 5)
 
@@ -72,18 +72,20 @@ web_coll_1_ex_5: WebExercise = WebExercise(
     text=load_text_from_file(ex_res_path / 'text.html'),
     topics=[],
     difficulty=1,
-    files=[
-        ExerciseFile(
-            name='audio.html',
-            fileType='htmlmixed',
-            editable=True,
-            content=load_text_from_file(ex_res_path / 'audio.html')
-        )
-    ],
-    siteSpec=SiteSpec(
-        fileName='audio.html',
-        htmlTasks=html_tasks,
-        jsTasks=[]
-    ),
-    sampleSolutions=[sampleSolution]
+    sampleSolutions=[sampleSolution],
+    content=WebExerciseContent(
+        files=[
+            ExerciseFile(
+                name='audio.html',
+                fileType='htmlmixed',
+                editable=True,
+                content=load_text_from_file(ex_res_path / 'audio.html')
+            )
+        ],
+        siteSpec=SiteSpec(
+            fileName='audio.html',
+            htmlTasks=html_tasks,
+            jsTasks=[]
+        ),
+    )
 )

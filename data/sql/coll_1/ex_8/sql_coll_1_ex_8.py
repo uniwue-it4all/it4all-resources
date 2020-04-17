@@ -1,7 +1,7 @@
 from textwrap import dedent
 
 from models.collection import SampleSolution
-from models.sql import SqlExerciseType, SqlExercise
+from models.sql import SqlExerciseType, SqlExercise, SqlExerciseContent
 
 sql_coll_1_ex_8: SqlExercise = SqlExercise(
     id=8,
@@ -12,7 +12,6 @@ sql_coll_1_ex_8: SqlExercise = SqlExercise(
     text="""Der Angestellte mit der OID 7 hat gekündigt. Löschen Sie ihn aus der Angestelltentabelle.""",
     topics=[],
     difficulty=1,
-    exerciseType=SqlExerciseType.DELETE,
     sampleSolutions=[
         SampleSolution(
             id=1,
@@ -22,5 +21,8 @@ sql_coll_1_ex_8: SqlExercise = SqlExercise(
                     WHERE id = 7;"""
             )
         )
-    ]
+    ],
+    content=SqlExerciseContent(
+        exerciseType=SqlExerciseType.DELETE
+    )
 )

@@ -1,7 +1,7 @@
 from textwrap import dedent
 
 from models.collection import SampleSolution
-from models.sql import SqlExerciseType, SqlExercise
+from models.sql import SqlExerciseType, SqlExercise, SqlExerciseContent
 
 sql_coll_1_ex_7: SqlExercise = SqlExercise(
     id=7,
@@ -16,7 +16,6 @@ sql_coll_1_ex_7: SqlExercise = SqlExercise(
     ).replace('\n', ' '),
     topics=[],
     difficulty=1,
-    exerciseType=SqlExerciseType.UPDATE,
     sampleSolutions=[
         SampleSolution(
             id=1,
@@ -27,5 +26,8 @@ sql_coll_1_ex_7: SqlExercise = SqlExercise(
                     WHERE id = 8;"""
             )
         )
-    ]
+    ],
+    content=SqlExerciseContent(
+        exerciseType=SqlExerciseType.UPDATE,
+    )
 )

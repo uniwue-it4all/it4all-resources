@@ -41,8 +41,11 @@ class SampleSolution(Generic[S]):
     sample: S
 
 
+EC = TypeVar('EC')
+
+
 @dataclass()
-class Exercise(Generic[S]):
+class Exercise(Generic[S, EC]):
     id: int
     collectionId: int
     toolId: str
@@ -52,6 +55,7 @@ class Exercise(Generic[S]):
     topics: List[Topic]
     difficulty: int
     sampleSolutions: List[SampleSolution[S]]
+    content: EC
 
 
 E = TypeVar('E', bound=Exercise)

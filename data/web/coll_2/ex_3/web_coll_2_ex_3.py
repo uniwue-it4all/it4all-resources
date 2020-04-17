@@ -4,7 +4,7 @@ from typing import List
 
 from models.collection import ExerciseFile, SampleSolution, ex_resources_path, load_text_from_file
 from models.web import WebSolution, HtmlTask, JsTask, HtmlAttribute, JsActionType, JsCondition, JsAction, SiteSpec, \
-    WebExercise
+    WebExercise, WebExerciseContent
 
 ex_res_path: Path = ex_resources_path('web', 2, 3)
 
@@ -146,31 +146,33 @@ web_coll_2_ex_3: WebExercise = WebExercise(
     text=load_text_from_file(ex_res_path / 'text.html'),
     topics=[],
     difficulty=2,
-    files=[
-        ExerciseFile(
-            name='factorial.html',
-            fileType='htmlmixed',
-            editable=True,
-            content=load_text_from_file(ex_res_path / 'factorial.html')
-        ),
-        ExerciseFile(
-            name='factorial.js',
-            fileType='javascript',
-            editable=True,
-            content=load_text_from_file(ex_res_path / 'factorial.js')
+    sampleSolutions=[sampleSolution],
+    content=WebExerciseContent(
+        files=[
+            ExerciseFile(
+                name='factorial.html',
+                fileType='htmlmixed',
+                editable=True,
+                content=load_text_from_file(ex_res_path / 'factorial.html')
+            ),
+            ExerciseFile(
+                name='factorial.js',
+                fileType='javascript',
+                editable=True,
+                content=load_text_from_file(ex_res_path / 'factorial.js')
+            )
+        ],
+        htmlText='Erstellen Sie zunächst den Rumpf der Seite in HTML.',
+        jsText=dedent(
+            """\
+            Implementieren Sie nun die Funktion <code>fakultaet()</code>, die bei Änderung des Felds aufgerufen wird.
+            Sie soll den Inhalt (value) des Eingabefeldes auslesen, die Fakultät davon berechnen und den
+            Inhalt (textContent) des Elements mit der ID 'result' auf das Ergebnis setzen."""
+        ).replace('\n', ' '),
+        siteSpec=SiteSpec(
+            fileName='factorial.html',
+            htmlTasks=html_tasks,
+            jsTasks=js_tasks
         )
-    ],
-    htmlText='Erstellen Sie zunächst den Rumpf der Seite in HTML.',
-    jsText=dedent(
-        """\
-        Implementieren Sie nun die Funktion <code>fakultaet()</code>, die bei Änderung des Felds aufgerufen wird.
-        Sie soll den Inhalt (value) des Eingabefeldes auslesen, die Fakultät davon berechnen und den
-        Inhalt (textContent) des Elements mit der ID 'result' auf das Ergebnis setzen."""
-    ).replace('\n', ' '),
-    siteSpec=SiteSpec(
-        fileName='factorial.html',
-        htmlTasks=html_tasks,
-        jsTasks=js_tasks
-    ),
-    sampleSolutions=[sampleSolution]
+    )
 )

@@ -1,7 +1,7 @@
 from textwrap import dedent
 
 from models.collection import SampleSolution
-from models.sql import SqlExerciseType, SqlExercise
+from models.sql import SqlExerciseType, SqlExercise, SqlExerciseContent
 
 sql_coll_1_ex_6: SqlExercise = SqlExercise(
     id=6,
@@ -12,7 +12,6 @@ sql_coll_1_ex_6: SqlExercise = SqlExercise(
     text='Erstellen Sie das CREATE TABLE-Skript für die Tabelle employee!',
     topics=[],
     difficulty=2,
-    exerciseType=SqlExerciseType.CREATE,
     sampleSolutions=[
         SampleSolution(
             id=1,
@@ -28,5 +27,8 @@ sql_coll_1_ex_6: SqlExercise = SqlExercise(
               );"""
             )
         )
-    ]
+    ],
+    content=SqlExerciseContent(
+        exerciseType=SqlExerciseType.CREATE
+    )
 )

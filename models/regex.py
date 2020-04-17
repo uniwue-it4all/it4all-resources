@@ -25,8 +25,13 @@ class RegexExtractionTestData:
 
 
 @dataclass()
-class RegexExercise(Exercise[str]):
+class RegexExerciseContent:
     maxPoints: int
     correctionType: RegexCorrectionType
     matchTestData: List[RegexMatchTestData]
     extractionTestData: List[RegexExtractionTestData]
+
+
+@dataclass()
+class RegexExercise(Exercise[str, RegexExerciseContent]):
+    pass

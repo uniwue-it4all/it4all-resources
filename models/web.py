@@ -63,9 +63,14 @@ class WebSolution:
     files: List[ExerciseFile]
 
 
-@dataclass
-class WebExercise(Exercise[WebSolution]):
+@dataclass()
+class WebExerciseContent:
     files: List[ExerciseFile]
     siteSpec: SiteSpec
     htmlText: Optional[str] = None
     jsText: Optional[str] = None
+
+
+@dataclass
+class WebExercise(Exercise[WebSolution, WebExerciseContent]):
+    pass

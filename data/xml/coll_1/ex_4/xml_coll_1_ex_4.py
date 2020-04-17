@@ -1,7 +1,7 @@
 from pathlib import Path
 
 from models.collection import SampleSolution, load_text_from_file, ex_resources_path
-from models.xml import XmlSolution, XmlExercise
+from models.xml import XmlSolution, XmlExercise, XmlExerciseContent
 
 ex_res_path: Path = ex_resources_path('xml', 1, 4)
 
@@ -14,8 +14,6 @@ xml_coll_1_ex_4: XmlExercise = XmlExercise(
     text='Erstellen Sie für dieses Xml-Dokument eine passende DTD.',
     topics=[],
     difficulty=1,
-    rootNode='breakfast',
-    grammarDescription=load_text_from_file(ex_res_path / 'grammarDescription.txt'),
     sampleSolutions=[
         SampleSolution(
             id=1,
@@ -24,5 +22,9 @@ xml_coll_1_ex_4: XmlExercise = XmlExercise(
                 document=load_text_from_file(ex_res_path / 'sol_1' / 'breakfast.xml')
             )
         )
-    ]
+    ],
+    content=XmlExerciseContent(
+        rootNode='breakfast',
+        grammarDescription=load_text_from_file(ex_res_path / 'grammarDescription.txt'),
+    )
 )

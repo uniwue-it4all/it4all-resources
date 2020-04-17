@@ -1,7 +1,7 @@
 from textwrap import dedent
 
 from models.collection import SampleSolution
-from models.sql import SqlExerciseType, SqlExercise
+from models.sql import SqlExerciseType, SqlExercise, SqlExerciseContent
 
 sql_coll_1_ex_2: SqlExercise = SqlExercise(
     id=2,
@@ -12,7 +12,6 @@ sql_coll_1_ex_2: SqlExercise = SqlExercise(
     text="""Welche Angestelltennummer (id) hat Max Becker?""",
     topics=[],
     difficulty=1,
-    exerciseType=SqlExerciseType.SELECT,
     sampleSolutions=[
         SampleSolution(
             id=1,
@@ -23,5 +22,8 @@ sql_coll_1_ex_2: SqlExercise = SqlExercise(
                     WHERE firstname = 'Max' AND lastname = 'Becker';"""
             )
         )
-    ]
+    ],
+    content=SqlExerciseContent(
+        exerciseType=SqlExerciseType.SELECT,
+    )
 )

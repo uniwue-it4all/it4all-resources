@@ -71,7 +71,7 @@ class ProgrammingTestData:
 
 
 @dataclass()
-class ProgrammingExercise(Exercise[ProgrammingSolution]):
+class ProgrammingExerciseContent:
     functionName: str
     foldername: str
     filename: str
@@ -80,3 +80,8 @@ class ProgrammingExercise(Exercise[ProgrammingSolution]):
     unitTestPart: ProgrammingUnitTestPart
     implementationPart: ProgrammingImplementationPart
     sampleTestData: List[ProgrammingTestData]
+
+
+@dataclass()
+class ProgrammingExercise(Exercise[ProgrammingSolution, ProgrammingExerciseContent]):
+    pass

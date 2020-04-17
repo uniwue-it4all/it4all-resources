@@ -2,7 +2,7 @@ from textwrap import dedent
 
 from models.collection import SampleSolution
 from models.uml import UmlClassDiagram, UmlMapping, UmlClass, UmlClassType, UmlAttribute, UmlMethod, UmlAssociation, \
-    UmlImplementation, UmlMultiplicity, UmlExercise
+    UmlImplementation, UmlMultiplicity, UmlExercise, UmlExerciseContent
 
 sample: UmlClassDiagram = UmlClassDiagram(
     classes=[
@@ -64,14 +64,14 @@ uml_coll_1_ex_1: UmlExercise = UmlExercise(
     ).replace('\n', ' '),
     topics=[],
     difficulty=1,
-    mappings=[
-        UmlMapping(key='Konten', value='Konto'),
-        UmlMapping(key='Kunden', value='Kunde'),
-        UmlMapping(key='Jahren', value='Jahr'),
-        UmlMapping(key='Zinsen', value='Zins'),
-    ],
-    toIgnore=['Eine', 'Jedes', 'Diese', 'Für', 'Jeder', 'Es', 'Zudem', 'Die'],
-    sampleSolutions=[
-        SampleSolution(id=1, sample=sample)
-    ]
+    sampleSolutions=[SampleSolution(id=1, sample=sample)],
+    content=UmlExerciseContent(
+        mappings=[
+            UmlMapping(key='Konten', value='Konto'),
+            UmlMapping(key='Kunden', value='Kunde'),
+            UmlMapping(key='Jahren', value='Jahr'),
+            UmlMapping(key='Zinsen', value='Zins'),
+        ],
+        toIgnore=['Eine', 'Jedes', 'Diese', 'Für', 'Jeder', 'Es', 'Zudem', 'Die'],
+    )
 )
