@@ -32,6 +32,7 @@ class UmlMethod:
     memberName: str
     parameters: str
     memberType: str
+    visibility: UmlVisibility = field(default=UmlVisibility.PUBLIC)
     isAbstract: bool = field(default=False)
     isStatic: bool = field(default=False)
 
