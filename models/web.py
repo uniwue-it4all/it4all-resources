@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import Optional, List
 
-from models.collection import ExerciseFile, Exercise
+from models.collection import ExerciseFile, Exercise, SampleSolution
 
 
 class JsActionType(str, Enum):
@@ -67,10 +67,11 @@ class WebSolution:
 class WebExerciseContent:
     files: List[ExerciseFile]
     siteSpec: SiteSpec
+    sampleSolutions: List[SampleSolution[WebSolution]]
     htmlText: Optional[str] = None
     jsText: Optional[str] = None
 
 
 @dataclass
-class WebExercise(Exercise[WebSolution, WebExerciseContent]):
-    pass
+class WebExercise(Exercise):
+    content: WebExerciseContent

@@ -6,7 +6,7 @@ from models.collection import CollectionAndExes, Collection
 from models.uml import UmlExercise
 
 uml_coll_1_exes: List[UmlExercise] = [
-    uml_coll_1_ex_1, uml_coll_1_ex_2,
+    uml_coll_1_ex_1, uml_coll_1_ex_2
 ]
 
 uml_collections_and_exes: List[CollectionAndExes[UmlExercise]] = [

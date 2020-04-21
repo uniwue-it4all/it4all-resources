@@ -12,37 +12,37 @@ sql_coll_1_ex_3: SqlExercise = SqlExercise(
     text='Welche Emailadresse hat Max Becker für die Arbeit?',
     topics=[],
     difficulty=1,
-    sampleSolutions=[
-        SampleSolution(
-            id=1,
-            sample=dedent(
-                """\
-                SELECT emailaddress
-                    FROM employee JOIN emailaddress ON employee.id = emailaddress.employee_id
-                    WHERE firstname = 'Max' AND lastname = 'Becker';"""
-            )
-        ),
-        SampleSolution(
-            id=2,
-            sample=dedent(
-                """\
-                SELECT emailaddress
-                    FROM employee, emailaddress
-                    WHERE employee.id = emailaddress.employee_id AND firstname = 'Max' AND lastname = 'Becker';"""
-            )
-        ),
-        SampleSolution(
-            id=3,
-            sample=dedent(
-                """\
-                SELECT emailaddress
-                    FROM employee as emp, emailaddress as email
-                    WHERE emp.id = email.employee_id AND firstname = 'Max' AND lastname = 'Becker';"""
-            )
-        )
-    ],
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,
+        sampleSolutions=[
+            SampleSolution(
+                id=1,
+                sample=dedent(
+                    """\
+                    SELECT emailaddress
+                        FROM employee JOIN emailaddress ON employee.id = emailaddress.employee_id
+                        WHERE firstname = 'Max' AND lastname = 'Becker';"""
+                )
+            ),
+            SampleSolution(
+                id=2,
+                sample=dedent(
+                    """\
+                    SELECT emailaddress
+                        FROM employee, emailaddress
+                        WHERE employee.id = emailaddress.employee_id AND firstname = 'Max' AND lastname = 'Becker';"""
+                )
+            ),
+            SampleSolution(
+                id=3,
+                sample=dedent(
+                    """\
+                    SELECT emailaddress
+                        FROM employee as emp, emailaddress as email
+                        WHERE emp.id = email.employee_id AND firstname = 'Max' AND lastname = 'Becker';"""
+                )
+            )
+        ],
         tags=[SqlExTag.SQL_JOIN]
     )
 )

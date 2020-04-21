@@ -12,18 +12,18 @@ sql_coll_1_ex_2: SqlExercise = SqlExercise(
     text="""Welche Angestelltennummer (id) hat Max Becker?""",
     topics=[],
     difficulty=1,
-    sampleSolutions=[
-        SampleSolution(
-            id=1,
-            sample=dedent(
-                """\
-                SELECT id
-                    FROM employee
-                    WHERE firstname = 'Max' AND lastname = 'Becker';"""
-            )
-        )
-    ],
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,
+        sampleSolutions=[
+            SampleSolution(
+                id=1,
+                sample=dedent(
+                    """\
+                    SELECT id
+                        FROM employee
+                        WHERE firstname = 'Max' AND lastname = 'Becker';"""
+                )
+            )
+        ]
     )
 )

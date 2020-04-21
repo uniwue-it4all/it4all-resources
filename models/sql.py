@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import List, Optional
 
-from models.collection import Exercise
+from models.collection import SampleSolution, Exercise
 
 
 class SqlExerciseType(str, Enum):
@@ -22,10 +22,11 @@ class SqlExTag(str, Enum):
 @dataclass()
 class SqlExerciseContent:
     exerciseType: SqlExerciseType
+    sampleSolutions: List[SampleSolution[str]]
     tags: List[SqlExTag] = field(default_factory=list)
     hint: Optional[str] = None
 
 
 @dataclass()
-class SqlExercise(Exercise[str, SqlExerciseContent]):
-    pass
+class SqlExercise(Exercise):
+    content: SqlExerciseContent

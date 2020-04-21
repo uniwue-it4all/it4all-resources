@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import List
 
-from models.collection import Exercise
+from models.collection import Exercise, SampleSolution
 
 
 class UmlClassType(str, Enum):
@@ -87,8 +87,9 @@ class UmlMapping:
 class UmlExerciseContent:
     toIgnore: List[str]
     mappings: List[UmlMapping]
+    sampleSolutions: List[SampleSolution[UmlClassDiagram]]
 
 
 @dataclass()
-class UmlExercise(Exercise[UmlClassDiagram, UmlExerciseContent]):
-    pass
+class UmlExercise(Exercise):
+    content: UmlExerciseContent

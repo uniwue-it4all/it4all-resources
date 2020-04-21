@@ -14,24 +14,24 @@ xml_coll_1_ex_5: XmlExercise = XmlExercise(
     text='Erstellen Sie für dieses Xml-Dokument eine passende DTD.',
     topics=[],
     difficulty=2,
-    sampleSolutions=[
-        SampleSolution(
-            id=1,
-            sample=XmlSolution(
-                grammar=load_text_from_file(ex_res_path / 'sol_1' / 'library.dtd'),
-                document=load_text_from_file(ex_res_path / 'sol_1' / 'library.xml'),
-            )
-        ),
-        SampleSolution(
-            id=2,
-            sample=XmlSolution(
-                grammar=load_text_from_file(ex_res_path / 'sol_2' / 'library.dtd'),
-                document=load_text_from_file(ex_res_path / 'sol_2' / 'library.xml')
-            )
-        )
-    ],
     content=XmlExerciseContent(
         rootNode='bibliothek',
         grammarDescription=load_text_from_file(base_res_path / 'xml' / 'coll_1' / 'ex_5' / 'grammarDescription.txt'),
+        sampleSolutions=[
+            SampleSolution(
+                id=1,
+                sample=XmlSolution(
+                    grammar=load_text_from_file(ex_res_path / 'sol_1' / 'library.dtd'),
+                    document=load_text_from_file(ex_res_path / 'sol_1' / 'library.xml'),
+                )
+            ),
+            SampleSolution(
+                id=2,
+                sample=XmlSolution(
+                    grammar=load_text_from_file(ex_res_path / 'sol_2' / 'library.dtd'),
+                    document=load_text_from_file(ex_res_path / 'sol_2' / 'library.xml')
+                )
+            )
+        ]
     )
 )

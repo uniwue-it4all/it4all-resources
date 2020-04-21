@@ -86,7 +86,6 @@ web_coll_1_ex_3: WebExercise = WebExercise(
     text=load_text_from_file(base_res_path / 'web' / 'coll_1' / 'ex_3' / 'text.html'),
     topics=[],
     difficulty=2,
-    sampleSolutions=[sampleSolution],
     content=WebExerciseContent(
         files=[
             ExerciseFile(
@@ -107,5 +106,6 @@ web_coll_1_ex_3: WebExercise = WebExercise(
             htmlTasks=html_tasks,
             jsTasks=[]
         ),
+        sampleSolutions=[sampleSolution]
     )
 )

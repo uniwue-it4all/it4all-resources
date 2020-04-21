@@ -14,17 +14,17 @@ xml_coll_1_ex_3: XmlExercise = XmlExercise(
     text='Erstellen Sie zu dieser DTD ein passendes Xml-Dokument.',
     topics=[],
     difficulty=1,
-    sampleSolutions=[
-        SampleSolution(
-            id=1,
-            sample=XmlSolution(
-                grammar=load_text_from_file(ex_res_path / 'sol_1' / 'praxis.dtd'),
-                document=load_text_from_file(ex_res_path / 'sol_1' / 'praxis.xml')
-            )
-        )
-    ],
     content=XmlExerciseContent(
         rootNode='praxis',
         grammarDescription=load_text_from_file(ex_res_path / 'grammarDescription.txt'),
+        sampleSolutions=[
+            SampleSolution(
+                id=1,
+                sample=XmlSolution(
+                    grammar=load_text_from_file(ex_res_path / 'sol_1' / 'praxis.dtd'),
+                    document=load_text_from_file(ex_res_path / 'sol_1' / 'praxis.xml')
+                )
+            )
+        ]
     )
 )

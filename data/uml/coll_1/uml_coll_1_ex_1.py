@@ -64,7 +64,6 @@ uml_coll_1_ex_1: UmlExercise = UmlExercise(
     ).replace('\n', ' '),
     topics=[],
     difficulty=1,
-    sampleSolutions=[SampleSolution(id=1, sample=sample)],
     content=UmlExerciseContent(
         mappings=[
             UmlMapping(key='Konten', value='Konto'),
@@ -73,5 +72,6 @@ uml_coll_1_ex_1: UmlExercise = UmlExercise(
             UmlMapping(key='Zinsen', value='Zins'),
         ],
         toIgnore=['Eine', 'Jedes', 'Diese', 'Für', 'Jeder', 'Es', 'Zudem', 'Die'],
+        sampleSolutions=[SampleSolution(id=1, sample=sample)]
     )
 )

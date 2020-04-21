@@ -2,7 +2,7 @@ from dataclasses import dataclass
 from enum import Enum
 from typing import List, Any, Optional
 
-from models.collection import ExerciseFile, Exercise
+from models.collection import ExerciseFile, Exercise, SampleSolution
 
 
 class ProgrammingExTag(str, Enum):
@@ -80,8 +80,9 @@ class ProgrammingExerciseContent:
     unitTestPart: ProgrammingUnitTestPart
     implementationPart: ProgrammingImplementationPart
     sampleTestData: List[ProgrammingTestData]
+    sampleSolutions: List[SampleSolution[ProgrammingSolution]]
 
 
 @dataclass()
-class ProgrammingExercise(Exercise[ProgrammingSolution, ProgrammingExerciseContent]):
-    pass
+class ProgrammingExercise(Exercise):
+    content: ProgrammingExerciseContent

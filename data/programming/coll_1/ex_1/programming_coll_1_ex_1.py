@@ -69,7 +69,6 @@ programming_coll_1_ex_1: ProgrammingExercise = ProgrammingExercise(
         Topic(ProgrammingExTag.Maths)
     ],
     difficulty=2,
-    sampleSolutions=[sampleSolution],
     content=ProgrammingExerciseContent(
         functionName='ggt',
         foldername='ggt',
@@ -87,6 +86,7 @@ programming_coll_1_ex_1: ProgrammingExercise = ProgrammingExercise(
             ProgrammingTestData(id=3, input=[64, 46], output=2),
             ProgrammingTestData(id=4, input=[777, 111], output=111),
             ProgrammingTestData(id=5, input=[15, 25], output=5)
-        ]
+        ],
+        sampleSolutions=[sampleSolution]
     )
 )

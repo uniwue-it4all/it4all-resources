@@ -105,6 +105,27 @@ implementation_part: ProgrammingImplementationPart = ProgrammingImplementationPa
     sampleSolFileNames=['factorial.py']
 )
 
+sampleSolution: SampleSolution[ProgrammingSolution] = SampleSolution(
+    id=1,
+    sample=ProgrammingSolution(
+        files=[
+            ExerciseFile(
+                name='test_factorial.py',
+                fileType='python',
+                editable=False,
+                content=load_text_from_file(ex_res_path / 'test_factorial.py'),
+            ),
+            ExerciseFile(
+                name='factorial.py',
+                fileType='python',
+                editable=False,
+                content=load_text_from_file(ex_res_path / 'factorial.py'),
+            )
+        ],
+        testData=[]
+    )
+)
+
 programming_coll_1_ex_2: ProgrammingExercise = ProgrammingExercise(
     id=2,
     collectionId=1,
@@ -118,39 +139,15 @@ programming_coll_1_ex_2: ProgrammingExercise = ProgrammingExercise(
         Topic(ProgrammingExTag.ForLoops)
     ],
     difficulty=1,
-    sampleSolutions=[
-        SampleSolution(
-            id=1,
-            sample=ProgrammingSolution(
-                files=[
-                    ExerciseFile(
-                        name='test_factorial.py',
-                        fileType='python',
-                        editable=False,
-                        content=load_text_from_file(ex_res_path / 'test_factorial.py'),
-                    ),
-                    ExerciseFile(
-                        name='factorial.py',
-                        fileType='python',
-                        editable=False,
-                        content=load_text_from_file(ex_res_path / 'factorial.py'),
-                    )
-                ],
-                testData=[]
-            )
-
-        )
-    ],
     content=ProgrammingExerciseContent(
         functionName='factorial',
         foldername='factorial',
         filename='factorial',
-        inputTypes=[
-            ProgrammingInput(id=1, inputName='n', inputType='INTEGER')
-        ],
+        inputTypes=[ProgrammingInput(id=1, inputName='n', inputType='INTEGER')],
         outputType='INTEGER',
         unitTestPart=unit_test_part,
         implementationPart=implementation_part,
         sampleTestData=[],
+        sampleSolutions=[sampleSolution]
     )
 )

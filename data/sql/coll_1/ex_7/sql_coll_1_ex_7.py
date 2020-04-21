@@ -16,18 +16,18 @@ sql_coll_1_ex_7: SqlExercise = SqlExercise(
     ).replace('\n', ' '),
     topics=[],
     difficulty=1,
-    sampleSolutions=[
-        SampleSolution(
-            id=1,
-            sample=dedent(
-                """\
-                UPDATE employee
-                    SET chef_id = 3
-                    WHERE id = 8;"""
-            )
-        )
-    ],
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.UPDATE,
+        sampleSolutions=[
+            SampleSolution(
+                id=1,
+                sample=dedent(
+                    """\
+                    UPDATE employee
+                        SET chef_id = 3
+                        WHERE id = 8;"""
+                )
+            )
+        ]
     )
 )

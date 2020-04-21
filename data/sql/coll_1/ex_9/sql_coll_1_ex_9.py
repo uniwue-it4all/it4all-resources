@@ -16,21 +16,21 @@ sql_coll_1_ex_9: SqlExercise = SqlExercise(
     ),
     topics=[],
     difficulty=1,
-    sampleSolutions=[
-        SampleSolution(
-            id=1,
-            sample="""INSERT INTO employee VALUES (9, 'Tina', 'Sattler', 'tina_sattler', 2);"""
-        ),
-        SampleSolution(
-            id=2,
-            sample=dedent(
-                """\
-                INSERT INTO employee (id, firstname, lastname, username, chef_id)
-                VALUES (9, 'Tina', 'Sattler', 'tina_sattler', 2);"""
-            )
-        )
-    ],
     content=SqlExerciseContent(
-        exerciseType=SqlExerciseType.INSERT
+        exerciseType=SqlExerciseType.INSERT,
+        sampleSolutions=[
+            SampleSolution(
+                id=1,
+                sample="""INSERT INTO employee VALUES (9, 'Tina', 'Sattler', 'tina_sattler', 2);"""
+            ),
+            SampleSolution(
+                id=2,
+                sample=dedent(
+                    """\
+                    INSERT INTO employee (id, firstname, lastname, username, chef_id)
+                    VALUES (9, 'Tina', 'Sattler', 'tina_sattler', 2);"""
+                )
+            )
+        ],
     )
 )

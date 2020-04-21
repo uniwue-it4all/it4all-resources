@@ -12,17 +12,17 @@ sql_coll_1_ex_8: SqlExercise = SqlExercise(
     text="""Der Angestellte mit der OID 7 hat gekündigt. Löschen Sie ihn aus der Angestelltentabelle.""",
     topics=[],
     difficulty=1,
-    sampleSolutions=[
-        SampleSolution(
-            id=1,
-            sample=dedent(
-                """\
-                DELETE FROM employee
-                    WHERE id = 7;"""
-            )
-        )
-    ],
     content=SqlExerciseContent(
-        exerciseType=SqlExerciseType.DELETE
+        exerciseType=SqlExerciseType.DELETE,
+        sampleSolutions=[
+            SampleSolution(
+                id=1,
+                sample=dedent(
+                    """\
+                    DELETE FROM employee
+                        WHERE id = 7;"""
+                )
+            )
+        ]
     )
 )

@@ -12,25 +12,25 @@ sql_coll_1_ex_1: SqlExercise = SqlExercise(
     text="""Wie viele Angestellte hat die Firma? Benennen Sie das Ergebnis als 'Anzahl'.""",
     topics=[],
     difficulty=1,
-    sampleSolutions=[
-        SampleSolution(
-            id=1,
-            sample=dedent(
-                """\
-                SELECT COUNT(*) AS Anzahl
-                FROM employee;"""
-            )
-        ),
-        SampleSolution(
-            id=2,
-            sample=dedent(
-                """\
-                SELECT COUNT(id) AS Anzahl
-                FROM employee;"""
-            )
-        )
-    ],
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,
+        sampleSolutions=[
+            SampleSolution(
+                id=1,
+                sample=dedent(
+                    """\
+                    SELECT COUNT(*) AS Anzahl
+                    FROM employee;"""
+                )
+            ),
+            SampleSolution(
+                id=2,
+                sample=dedent(
+                    """\
+                    SELECT COUNT(id) AS Anzahl
+                    FROM employee;"""
+                )
+            )
+        ]
     )
 )

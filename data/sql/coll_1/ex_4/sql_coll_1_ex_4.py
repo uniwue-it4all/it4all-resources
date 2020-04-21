@@ -12,19 +12,19 @@ sql_coll_1_ex_4: SqlExercise = SqlExercise(
     text='Geben Sie die Nutzernamen aller Angestellten alphabetisch geordnet aus!',
     topics=[],
     difficulty=1,
-    sampleSolutions=[
-        SampleSolution(
-            id=1,
-            sample=dedent(
-                """\
-                SELECT username
-                    FROM employee
-                    ORDER BY username;"""
-            )
-        )
-    ],
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,
+        sampleSolutions=[
+            SampleSolution(
+                id=1,
+                sample=dedent(
+                    """\
+                    SELECT username
+                        FROM employee
+                        ORDER BY username;"""
+                )
+            )
+        ],
         tags=[SqlExTag.SQL_ORDER_BY]
     )
 )

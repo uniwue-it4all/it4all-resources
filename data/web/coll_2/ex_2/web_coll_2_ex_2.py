@@ -137,7 +137,6 @@ web_coll_2_ex_2: WebExercise = WebExercise(
     text=load_text_from_file(ex_res_path / 'text.html'),
     topics=[],
     difficulty=3,
-    sampleSolutions=[sampleSolution],
     content=WebExerciseContent(
         files=[
             ExerciseFile(
@@ -170,6 +169,7 @@ web_coll_2_ex_2: WebExercise = WebExercise(
             fileName='pwChecker.html',
             htmlTasks=html_tasks,
             jsTasks=js_tasks
-        )
+        ),
+        sampleSolutions=[sampleSolution]
     )
 )

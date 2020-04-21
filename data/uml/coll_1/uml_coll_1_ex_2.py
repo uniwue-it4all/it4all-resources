@@ -99,7 +99,6 @@ uml_coll_1_ex_2: UmlExercise = UmlExercise(
     ).replace('\n', ' '),
     topics=[],
     difficulty=2,
-    sampleSolutions=[SampleSolution(id=1, sample=sample)],
     content=UmlExerciseContent(
         mappings=[
             UmlMapping(key='Stationen', value='Station'),
@@ -111,5 +110,6 @@ uml_coll_1_ex_2: UmlExercise = UmlExercise(
             UmlMapping(key='Rezepten', value='Rezept')
         ],
         toIgnore=['Ein', 'Jede'],
+        sampleSolutions=[SampleSolution(id=1, sample=sample)]
     )
 )

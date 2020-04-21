@@ -1,6 +1,7 @@
 from dataclasses import dataclass
+from typing import List
 
-from models.collection import Exercise
+from models.collection import Exercise, SampleSolution
 
 
 @dataclass()
@@ -13,8 +14,9 @@ class XmlSolution:
 class XmlExerciseContent:
     rootNode: str
     grammarDescription: str
+    sampleSolutions: List[SampleSolution[XmlSolution]]
 
 
 @dataclass()
-class XmlExercise(Exercise[XmlSolution, XmlExerciseContent]):
-    pass
+class XmlExercise(Exercise):
+    content: XmlExerciseContent
