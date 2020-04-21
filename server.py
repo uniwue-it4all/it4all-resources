@@ -22,7 +22,12 @@ app = Flask(__name__)
 class EnhancedJSONEncoder(FlaskJSONEncoder):
     def default(self, o):
         if is_dataclass(o):
-            return dataclasses_asdict(o)
+            if isinstance(o, Exercise):
+                encoded = dataclasses_asdict(o)
+                encoded['topicAbbreviations'] = [x.abbreviation for x in o.topics]
+                return encoded
+            else:
+                return dataclasses_asdict(o)
         return super().default(o)
 
 
