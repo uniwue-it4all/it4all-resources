@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from pathlib import Path
-from typing import List, Dict, TypeVar, Generic, Any
+from typing import List, Dict, TypeVar, Generic
 
 base_res_path: Path = Path.cwd() / 'data'
 
@@ -29,7 +29,9 @@ class ExerciseFile:
 
 @dataclass()
 class Topic:
-    x: Any
+    abbreviation: str
+    toolId: str
+    title: str
 
 
 S = TypeVar('S')

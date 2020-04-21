@@ -1,6 +1,6 @@
 from textwrap import dedent
 
-from models.collection import ExerciseFile, SampleSolution, load_text_from_file, ex_resources_path, Topic
+from models.collection import ExerciseFile, SampleSolution, load_text_from_file, ex_resources_path
 from models.programming import ProgrammingInput, ProgrammingUnitTestPart, ProgrammingImplementationPart, \
     ProgrammingUnitTestType, ProgrammingTestData, ProgrammingSolution, ProgrammingExTag, ProgrammingExercise, \
     ProgrammingExerciseContent
@@ -64,9 +64,9 @@ programming_coll_1_ex_1: ProgrammingExercise = ProgrammingExercise(
     authors=['bje40dc'],
     text=load_text_from_file(ex_res_path / 'text.html'),
     topics=[
-        Topic(ProgrammingExTag.ForLoops),
-        Topic(ProgrammingExTag.Conditions),
-        Topic(ProgrammingExTag.Maths)
+        ProgrammingExTag.ForLoops,
+        ProgrammingExTag.Conditions,
+        ProgrammingExTag.Maths
     ],
     difficulty=2,
     content=ProgrammingExerciseContent(

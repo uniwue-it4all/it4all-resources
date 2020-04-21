@@ -1,7 +1,7 @@
 from pathlib import Path
 from textwrap import dedent
 
-from models.collection import SampleSolution, ex_resources_path, load_text_from_file, ExerciseFile, Topic
+from models.collection import SampleSolution, ex_resources_path, load_text_from_file, ExerciseFile
 from models.programming import ProgrammingUnitTestPart, ProgrammingUnitTestType, ProgrammingUnitTestTestConfig, \
     ProgrammingImplementationPart, ProgrammingExTag, ProgrammingInput, ProgrammingSolution, ProgrammingExercise, \
     ProgrammingExerciseContent
@@ -134,9 +134,9 @@ programming_coll_1_ex_2: ProgrammingExercise = ProgrammingExercise(
     authors=['bje40dc'],
     text=load_text_from_file(ex_res_path / 'text.html'),
     topics=[
-        Topic(ProgrammingExTag.Exceptions),
-        Topic(ProgrammingExTag.Maths),
-        Topic(ProgrammingExTag.ForLoops)
+        ProgrammingExTag.Exceptions,
+        ProgrammingExTag.Maths,
+        ProgrammingExTag.ForLoops
     ],
     difficulty=1,
     content=ProgrammingExerciseContent(
