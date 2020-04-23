@@ -11,53 +11,35 @@ programming_coll_1_exes: List[ProgrammingExercise] = [
 
 programming_collections_and_exes: List[CollectionAndExes[ProgrammingExercise]] = [
     CollectionAndExes(
-        Collection(
-            id=1, toolId="programming", title="Zahlen", authors=["bje40dc"], text="TODO", shortName="numbers"
-        ),
+        Collection(id=1, toolId="programming", title="Zahlen", authors=["bje40dc"], text="TODO"),
         {ex.id: ex for ex in programming_coll_1_exes}
     ),
     CollectionAndExes(
-        Collection(
-            id=2, toolId="programming", title="Strings", authors=["bje40dc"], text="TODO", shortName="strings"
-        ),
+        Collection(id=2, toolId="programming", title="Strings", authors=["bje40dc"], text="TODO"),
         {ex.id: ex for ex in []}
     ),
     CollectionAndExes(
-        Collection(
-            id=3, toolId="programming", title="Bedingte Anweisungen", authors=["bje40dc"], text="TODO",
-            shortName="conditions"
-        ),
+        Collection(id=3, toolId="programming", title="Bedingte Anweisungen", authors=["bje40dc"], text="TODO", ),
         {ex.id: ex for ex in []}
     ),
     CollectionAndExes(
-        Collection(
-            id=4, toolId="programming", title="Listen", authors=["bje40dc"], text="TODO", shortName="lists"
-        ),
+        Collection(id=4, toolId="programming", title="Listen", authors=["bje40dc"], text="TODO"),
         {ex.id: ex for ex in []}
     ),
     CollectionAndExes(
-        Collection(
-            id=5, toolId="programming", title="Tupel und Dictionaries", authors=["bje40dc"], text="TODO",
-            shortName="tuples_and_dicts"
-        ),
+        Collection(id=5, toolId="programming", title="Tupel und Dictionaries", authors=["bje40dc"], text="TODO", ),
         {ex.id: ex for ex in []}
     ),
     CollectionAndExes(
-        Collection(
-            id=6, toolId="programming", title="Funktionen", authors=["bje40dc"], text="TODO", shortName="functions"
-        ),
+        Collection(id=6, toolId="programming", title="Funktionen", authors=["bje40dc"], text="TODO"),
         {ex.id: ex for ex in []}
     ),
     CollectionAndExes(
-        Collection(
-            id=7, toolId="programming", title="Klassen", authors=["bje40dc"], text="TODO", shortName="classes"
-        ),
+        Collection(id=7, toolId="programming", title="Klassen", authors=["bje40dc"], text="TODO"),
         {ex.id: ex for ex in []}
     ),
     CollectionAndExes(
-        Collection(
-            id=8, toolId='programming', title='Unit Testing', authors=['bje40dc'], text='TODO', shortName='unit_testing'
-        ),
+        Collection(id=8, toolId='programming', title='Unit Testing', authors=['bje40dc'], text='TODO'),
         {ex.id: ex for ex in []}
     )
 ]

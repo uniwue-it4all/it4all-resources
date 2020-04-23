@@ -14,6 +14,7 @@ sql_coll_1_ex_5: SqlExercise = SqlExercise(
     difficulty=2,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,
+        schemaName='employee',
         sampleSolutions=[
             SampleSolution(
                 id=1,

@@ -22,6 +22,7 @@ class SqlExTag(str, Enum):
 @dataclass()
 class SqlExerciseContent:
     exerciseType: SqlExerciseType
+    schemaName: str
     sampleSolutions: List[SampleSolution[str]]
     tags: List[SqlExTag] = field(default_factory=list)
     hint: Optional[str] = None

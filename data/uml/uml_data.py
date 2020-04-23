@@ -14,7 +14,6 @@ uml_collections_and_exes: List[CollectionAndExes[UmlExercise]] = [
         Collection(
             id=1, toolId="uml", title="Uml Basics", authors=["bje40dc"],
             text="Aufgaben um die Grundlagen von UML-Klassendiagrammen zu erlernen.",
-            shortName="uml_basics"
         ),
         {ex.id: ex for ex in uml_coll_1_exes}
     )

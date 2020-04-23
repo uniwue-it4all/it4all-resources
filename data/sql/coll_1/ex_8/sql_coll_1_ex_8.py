@@ -14,6 +14,7 @@ sql_coll_1_ex_8: SqlExercise = SqlExercise(
     difficulty=1,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.DELETE,
+        schemaName='employee',
         sampleSolutions=[
             SampleSolution(
                 id=1,

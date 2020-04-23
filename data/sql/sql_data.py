@@ -26,14 +26,12 @@ sql_collections_and_exes: List[CollectionAndExes[SqlExercise]] = [
     CollectionAndExes(
         Collection(
             id=1, toolId="sql", title="Angestellte", authors=["bje40dc"],
-            text="Dieses Szenario beschreibt die Datenbank einer kleinen Firma.", shortName="employee"
+            text="Dieses Szenario beschreibt die Datenbank einer kleinen Firma."
         ),
         {ex.id: ex for ex in sql_coll_1_exes}
     ),
     CollectionAndExes(
-        Collection(
-            id=2, toolId="sql", title="Amazon", authors=["bje40dc"], text="", shortName="amazon"
-        ),
+        Collection(id=2, toolId="sql", title="Amazon", authors=["bje40dc"], text=""),
         {ex.id: ex for ex in sql_coll_2_exes}
     )
 ]

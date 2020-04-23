@@ -18,6 +18,7 @@ sql_coll_1_ex_7: SqlExercise = SqlExercise(
     difficulty=1,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.UPDATE,
+        schemaName='employee',
         sampleSolutions=[
             SampleSolution(
                 id=1,

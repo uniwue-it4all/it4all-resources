@@ -16,7 +16,6 @@ class Collection:
     title: str
     authors: List[str]
     text: str
-    shortName: str
 
 
 @dataclass()

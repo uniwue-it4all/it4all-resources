@@ -21,17 +21,11 @@ regex_coll_2_exes: List[RegexExercise] = [
 
 regex_collections_and_exes: List[CollectionAndExes[RegexExercise]] = [
     CollectionAndExes(
-        Collection(
-            id=1, toolId="regex", title="Zahlen und Fakten", authors=["bje40dc"], text="TODO",
-            shortName="numbers_facts"
-        ),
+        Collection(id=1, toolId="regex", title="Zahlen und Fakten", authors=["bje40dc"], text="TODO"),
         {ex.id: ex for ex in regex_coll_1_exes}
     ),
     CollectionAndExes(
-        Collection(
-            id=2, toolId="regex", title="Informationsextraktion", authors=["bje40dc"], text="TODO",
-            shortName="extraction"
-        ),
+        Collection(id=2, toolId="regex", title="Informationsextraktion", authors=["bje40dc"], text="TODO"),
         {ex.id: ex for ex in regex_coll_2_exes}
     )
 ]
