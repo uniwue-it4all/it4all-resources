@@ -4,7 +4,7 @@ from models.collection import SampleSolution
 from models.sql import SqlExerciseType, SqlExercise, SqlExerciseContent
 
 sql_coll_1_ex_6: SqlExercise = SqlExercise(
-    id=6,
+    exerciseId=6,
     collectionId=1,
     toolId='sql',
     title="""Tabelle 'employee' erstellen""",

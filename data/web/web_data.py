@@ -22,11 +22,11 @@ web_coll_2_exercises: List[WebExercise] = [
 
 web_collections_and_exes: List[CollectionAndExes[WebExercise]] = [
     CollectionAndExes(
-        Collection(id=1, toolId="web", title="Html Elemente", authors=["bje40dc"], text="TODO"),
-        {ex.id: ex for ex in web_coll_1_exercises}
+        Collection(collectionId=1, toolId="web", title="Html Elemente", authors=["bje40dc"], text="TODO"),
+        {ex.exerciseId: ex for ex in web_coll_1_exercises}
     ),
     CollectionAndExes(
-        Collection(id=2, toolId="web", title="Js Basics", authors=["bje40dc"], text="TODO"),
-        {ex.id: ex for ex in web_coll_2_exercises}
+        Collection(collectionId=2, toolId="web", title="Js Basics", authors=["bje40dc"], text="TODO"),
+        {ex.exerciseId: ex for ex in web_coll_2_exercises}
     )
 ]

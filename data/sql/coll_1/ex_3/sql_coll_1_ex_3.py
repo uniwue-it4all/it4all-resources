@@ -4,7 +4,7 @@ from models.collection import SampleSolution
 from models.sql import SqlExerciseType, SqlExTag, SqlExercise, SqlExerciseContent
 
 sql_coll_1_ex_3: SqlExercise = SqlExercise(
-    id=3,
+    exerciseId=3,
     collectionId=1,
     toolId='sql',
     title='Emailadresse',

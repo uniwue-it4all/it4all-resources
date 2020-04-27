@@ -60,7 +60,7 @@ content: RegexExerciseContent = RegexExerciseContent(
 )
 
 regex_coll_2_ex_2: RegexExercise = RegexExercise(
-    id=2,
+    exerciseId=2,
     collectionId=2,
     toolId='regex',
     title='Kilometerstände',

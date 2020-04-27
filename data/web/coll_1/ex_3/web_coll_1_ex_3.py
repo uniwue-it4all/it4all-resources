@@ -78,7 +78,7 @@ sampleSolution: SampleSolution[WebSolution] = SampleSolution(
 )
 
 web_coll_1_ex_3: WebExercise = WebExercise(
-    id=3,
+    exerciseId=3,
     collectionId=1,
     toolId='web',
     title='Hyperlinks und Bilder in HTML',

@@ -81,7 +81,7 @@ sampleSolution: SampleSolution[WebSolution] = SampleSolution(
 )
 
 web_coll_1_ex_1: WebExercise = WebExercise(
-    id=1,
+    exerciseId=1,
     collectionId=1,
     toolId='web',
     title='Listen in Html',

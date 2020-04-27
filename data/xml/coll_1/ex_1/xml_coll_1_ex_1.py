@@ -6,7 +6,7 @@ from models.xml import XmlExercise, XmlSolution, XmlExerciseContent
 ex_res_path: Path = ex_resources_path('xml', 1, 1)
 
 xml_coll_1_ex_1: XmlExercise = XmlExercise(
-    id=1,
+    exerciseId=1,
     collectionId=1,
     toolId='xml',
     title='Party',

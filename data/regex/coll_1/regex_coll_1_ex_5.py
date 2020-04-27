@@ -24,7 +24,7 @@ content = RegexExerciseContent(
 )
 
 regex_coll_1_ex_5: RegexExercise = RegexExercise(
-    id=5,
+    exerciseId=5,
     collectionId=1,
     toolId='regex',
     title='E-Mail-Adressen',

@@ -57,7 +57,7 @@ sampleSolution: SampleSolution[ProgrammingSolution] = SampleSolution(
 )
 
 programming_coll_1_ex_1: ProgrammingExercise = ProgrammingExercise(
-    id=1,
+    exerciseId=1,
     collectionId=1,
     toolId='programming',
     title='Größter gemeinsamer Teiler',

@@ -4,7 +4,7 @@ from models.collection import SampleSolution
 from models.sql import SqlExerciseType, SqlExercise, SqlExerciseContent
 
 sql_coll_1_ex_7: SqlExercise = SqlExercise(
-    id=7,
+    exerciseId=7,
     collectionId=1,
     toolId='sql',
     title='Versetzung',

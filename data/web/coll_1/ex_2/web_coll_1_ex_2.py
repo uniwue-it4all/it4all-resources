@@ -125,7 +125,7 @@ sampleSolution: SampleSolution[WebSolution] = SampleSolution(
 )
 
 web_coll_1_ex_2: WebExercise = WebExercise(
-    id=2,
+    exerciseId=2,
     collectionId=1,
     toolId='web',
     title='Tabellen in Html',

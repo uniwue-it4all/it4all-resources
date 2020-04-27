@@ -127,7 +127,7 @@ sampleSolution: SampleSolution[ProgrammingSolution] = SampleSolution(
 )
 
 programming_coll_1_ex_2: ProgrammingExercise = ProgrammingExercise(
-    id=2,
+    exerciseId=2,
     collectionId=1,
     toolId='programming',
     title='Fakultät',

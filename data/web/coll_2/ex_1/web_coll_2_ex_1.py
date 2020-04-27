@@ -89,7 +89,7 @@ sampleSolution: SampleSolution[WebSolution] = SampleSolution(
 )
 
 web_coll_2_ex_1: WebExercise = WebExercise(
-    id=1,
+    exerciseId=1,
     collectionId=2,
     toolId='web',
     title='Klickzähler',

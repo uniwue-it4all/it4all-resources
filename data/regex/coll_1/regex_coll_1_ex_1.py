@@ -24,7 +24,7 @@ content: RegexExerciseContent = RegexExerciseContent(
 )
 
 regex_coll_1_ex_1: RegexExercise = RegexExercise(
-    id=1,
+    exerciseId=1,
     collectionId=1,
     toolId='regex',
     title='Postleitzahlen',

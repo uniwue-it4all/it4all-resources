@@ -15,7 +15,7 @@ xml_coll_1_exercises: List[XmlExercise] = [
 
 xml_collections_and_exes: List[CollectionAndExes[XmlExercise]] = [
     CollectionAndExes(
-        Collection(id=1, toolId="xml", title="Xml Basics", authors=["bje40dc"], text="TODO"),
-        {ex.id: ex for ex in xml_coll_1_exercises}
+        Collection(collectionId=1, toolId="xml", title="Xml Basics", authors=["bje40dc"], text="TODO"),
+        {ex.exerciseId: ex for ex in xml_coll_1_exercises}
     )
 ]

@@ -29,7 +29,7 @@ content: RegexExerciseContent = RegexExerciseContent(
 )
 
 regex_coll_1_ex_3 = RegexExercise(
-    id=3,
+    exerciseId=3,
     collectionId=1,
     toolId='regex',
     title='Komlexe Datumsangaben',

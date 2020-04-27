@@ -138,7 +138,7 @@ sampleSolution: SampleSolution[WebSolution] = SampleSolution(
 )
 
 web_coll_2_ex_3: WebExercise = WebExercise(
-    id=3,
+    exerciseId=3,
     collectionId=2,
     toolId='web',
     title='Schleifen',

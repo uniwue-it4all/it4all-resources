@@ -6,7 +6,7 @@ from models.xml import XmlSolution, XmlExercise, XmlExerciseContent
 ex_res_path: Path = ex_resources_path('xml', 1, 3)
 
 xml_coll_1_ex_3: XmlExercise = XmlExercise(
-    id=3,
+    exerciseId=3,
     collectionId=1,
     toolId='xml',
     title='Krankenhaus',

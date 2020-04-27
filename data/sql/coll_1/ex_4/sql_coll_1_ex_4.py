@@ -4,7 +4,7 @@ from models.collection import SampleSolution
 from models.sql import SqlExerciseType, SqlExTag, SqlExercise, SqlExerciseContent
 
 sql_coll_1_ex_4: SqlExercise = SqlExercise(
-    id=4,
+    exerciseId=4,
     collectionId=1,
     toolId='sql',
     title='Nutzernamen',

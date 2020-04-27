@@ -44,7 +44,7 @@ sample: UmlClassDiagram = UmlClassDiagram(
 )
 
 uml_coll_1_ex_1: UmlExercise = UmlExercise(
-    id=1,
+    exerciseId=1,
     collectionId=1,
     toolId='uml',
     title='Tutorial Konto',

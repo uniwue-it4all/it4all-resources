@@ -33,28 +33,28 @@ class EnhancedJSONEncoder(FlaskJSONEncoder):
 
 all_tools: Dict[str, ToolValues] = {
     'programming': ToolValues(
-        {pc.collection.id: pc for pc in programming_collections_and_exes},
+        {pc.collection.collectionId: pc for pc in programming_collections_and_exes},
         {}
     ),
     'regex': ToolValues(
-        {rc.collection.id: rc for rc in regex_collections_and_exes},
+        {rc.collection.collectionId: rc for rc in regex_collections_and_exes},
         {}
     ),
     'rose': ToolValues({}, {}),
     'sql': ToolValues(
-        {sc.collection.id: sc for sc in sql_collections_and_exes},
+        {sc.collection.collectionId: sc for sc in sql_collections_and_exes},
         {}
     ),
     'uml': ToolValues(
-        {uc.collection.id: uc for uc in uml_collections_and_exes},
+        {uc.collection.collectionId: uc for uc in uml_collections_and_exes},
         {}
     ),
     'web': ToolValues(
-        {wc.collection.id: wc for wc in web_collections_and_exes},
+        {wc.collection.collectionId: wc for wc in web_collections_and_exes},
         {}
     ),
     'xml': ToolValues(
-        {xc.collection.id: xc for xc in xml_collections_and_exes},
+        {xc.collection.collectionId: xc for xc in xml_collections_and_exes},
         {}
     ),
 }
@@ -92,8 +92,8 @@ def route_tool(tool_id: str):
                 'all': url_for('route_collections', tool_id=tool_id, _external=True),
                 'single': [
                     {
-                        'id': collection.collection.id,
-                        'url': url_for('route_collection', tool_id=tool_id, coll_id=collection.collection.id,
+                        'id': collection.collection.collectionId,
+                        'url': url_for('route_collection', tool_id=tool_id, coll_id=collection.collection.collectionId,
                                        _external=True)
                     } for collection in tool_values.collections.values()
                 ]

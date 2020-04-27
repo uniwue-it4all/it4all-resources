@@ -129,7 +129,7 @@ js_tasks: List[JsTask] = [
 ]
 
 web_coll_2_ex_2: WebExercise = WebExercise(
-    id=2,
+    exerciseId=2,
     collectionId=2,
     toolId='web',
     title='Verzweigungen und Strings',

@@ -106,7 +106,7 @@ sampleSolution: SampleSolution[WebSolution] = SampleSolution(
 )
 
 web_coll_1_ex_4: WebExercise = WebExercise(
-    id=4,
+    exerciseId=4,
     collectionId=1,
     toolId='web',
     title='Login-Formular',

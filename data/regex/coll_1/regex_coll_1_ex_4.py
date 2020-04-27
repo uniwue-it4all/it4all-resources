@@ -25,7 +25,7 @@ content: RegexExerciseContent = RegexExerciseContent(
 )
 
 regex_coll_1_ex_4: RegexExercise = RegexExercise(
-    id=4,
+    exerciseId=4,
     collectionId=1,
     toolId='regex',
     title='Semantische Versionierung',

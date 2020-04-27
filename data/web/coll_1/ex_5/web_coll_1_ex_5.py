@@ -64,7 +64,7 @@ html_tasks: List[HtmlTask] = [
 ]
 
 web_coll_1_ex_5: WebExercise = WebExercise(
-    id=5,
+    exerciseId=5,
     collectionId=1,
     toolId='web',
     title='Audio in HTML 5',

@@ -81,7 +81,7 @@ sample: UmlClassDiagram = UmlClassDiagram(
 )
 
 uml_coll_1_ex_2: UmlExercise = UmlExercise(
-    id=2,
+    exerciseId=2,
     collectionId=1,
     toolId='uml',
     title='Krankenhaus',

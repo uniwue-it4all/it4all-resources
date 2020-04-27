@@ -11,7 +11,7 @@ def ex_resources_path(tool_id: str, coll_id: int, ex_id: int):
 
 @dataclass()
 class Collection:
-    id: int
+    collectionId: int
     toolId: str
     title: str
     authors: List[str]
@@ -44,7 +44,7 @@ class SampleSolution(Generic[S]):
 
 @dataclass()
 class Exercise:
-    id: int
+    exerciseId: int
     collectionId: int
     toolId: str
     title: str

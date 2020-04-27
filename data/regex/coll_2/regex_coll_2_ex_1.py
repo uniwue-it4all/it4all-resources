@@ -25,7 +25,7 @@ content = RegexExerciseContent(
 )
 
 regex_coll_2_ex_1: RegexExercise = RegexExercise(
-    id=1,
+    exerciseId=1,
     collectionId=2,
     toolId='regex',
     title='Heiße Preise',

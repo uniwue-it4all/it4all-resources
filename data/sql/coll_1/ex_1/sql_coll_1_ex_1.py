@@ -4,7 +4,7 @@ from models.collection import SampleSolution
 from models.sql import SqlExerciseType, SqlExercise, SqlExerciseContent
 
 sql_coll_1_ex_1: SqlExercise = SqlExercise(
-    id=1,
+    exerciseId=1,
     collectionId=1,
     toolId='sql',
     title='Anzahl der Angestellten',
