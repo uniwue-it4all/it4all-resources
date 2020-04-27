@@ -24,28 +24,28 @@ html_tasks: List[HtmlTask] = [
     HtmlTask(
         id=3,
         text="""Erstellen Sie ein Listenelement mit dem Text Audi.""",
-        xpathQuery="""/html/body//ul/li[contains(text(), Audi)]""",
+        xpathQuery="""/html/body//ul/li[contains(text(), 'Audi')]""",
         awaitedTagName='li',
         awaitedTextContent='Audi',
     ),
     HtmlTask(
         id=4,
         text="""Erstellen Sie ein Listenelement mit dem Text BMW.""",
-        xpathQuery="""/html/body//ul/li[contains(text(), BMW)]""",
+        xpathQuery="""/html/body//ul/li[contains(text(), 'BMW')]""",
         awaitedTagName='li',
         awaitedTextContent='BMW'
     ),
     HtmlTask(
         id=5,
         text="""Erstellen Sie ein Listenelement mit dem Text Mercedes.""",
-        xpathQuery="""/html/body//ul/li[contains(text(), Mercedes)]""",
+        xpathQuery="""/html/body//ul/li[contains(text(), 'Mercedes')]""",
         awaitedTagName='li',
         awaitedTextContent='Mercedes'
     ),
     HtmlTask(
         id=6,
         text="""Erstellen Sie ein Listenelement mit dem Text Volkswagen.""",
-        xpathQuery="""/html/body//ul/li[contains(text(), Volkswagen)]""",
+        xpathQuery="""/html/body//ul/li[contains(text(), 'Volkswagen')]""",
         awaitedTagName='li',
         awaitedTextContent='Volkswagen'
     ),

@@ -18,6 +18,11 @@ content:
       sample: |
         SELECT first_name, family_name
           FROM customers
+          WHERE birthday < '1982-01-01' AND birthday > '1980-12-31';
+    - id: 2
+      sample: |
+        SELECT first_name, family_name
+          FROM customers
           WHERE birthday LIKE '1981-%';
   hint: Verwenden Sie den 'LIKE'-Operator zu Vergleich des Jahres.
   tags: []
