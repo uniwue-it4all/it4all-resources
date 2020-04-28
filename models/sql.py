@@ -21,6 +21,10 @@ class SqlExTag(str, Enum):
     SQL_ALIAS = 'SQL_ALIAS'
     SQL_DOUBLE_JOIN = 'SQL_DOUBLE_JOIN'
     SQL_LIMIT = 'SQL_LIMIT'
+    SQL_SELECT = 'SQL_SELECT'
+    SQL_UPDATE = 'SQL_UPDATE'
+    SQL_DELETE = 'SQL_DELETE'
+    SQL_INSERT = 'SQL_INSERT'
 
 
 @dataclass()
