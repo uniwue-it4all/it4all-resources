@@ -17,6 +17,10 @@ class SqlExTag(str, Enum):
     SQL_JOIN = 'SQL_JOIN'
     SQL_ORDER_BY = 'SQL_ORDER_BY'
     SQL_GROUP_BY = 'SQL_GROUP_BY'
+    SQL_FUNCTION = 'SQL_FUNCTION'
+    SQL_ALIAS = 'SQL_ALIAS'
+    SQL_DOUBLE_JOIN = 'SQL_DOUBLE_JOIN'
+    SQL_LIMIT = 'SQL_LIMIT'
 
 
 @dataclass()

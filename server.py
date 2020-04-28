@@ -9,6 +9,7 @@ from flask.json import JSONEncoder as FlaskJSONEncoder
 
 from data.programming.programming_data import programming_collections_and_exes
 from data.regex.regex_data import regex_collections_and_exes
+from data.rose.rose_data import rose_collections_and_exes
 from data.sql.sql_data import sql_collections_and_exes
 from data.uml.uml_data import uml_collections_and_exes
 from data.web.web_data import web_collections_and_exes
@@ -40,7 +41,10 @@ all_tools: Dict[str, ToolValues] = {
         {rc.collection.collectionId: rc for rc in regex_collections_and_exes},
         {}
     ),
-    'rose': ToolValues({}, {}),
+    'rose': ToolValues(
+        {rc.collection.collectionId: rc for rc in rose_collections_and_exes},
+        {}
+    ),
     'sql': ToolValues(
         {sc.collection.collectionId: sc for sc in sql_collections_and_exes},
         {}
