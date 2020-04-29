@@ -14,6 +14,7 @@ from models.collection import ExerciseCollection, ExCollKey, ExKey
 
 db_name = 'it4all'
 
+users_coll_name = 'users'
 collections_coll_name = 'exercise_collections'
 exercises_coll_name = 'exercises'
 
@@ -34,6 +35,13 @@ print(Fore.WHITE)
 print(f'connected to database {db_name}...')
 
 db.command('createUser', new_username, pwd=new_password, roles=["readWrite"])
+
+# Create collection and index for Users
+
+users_coll: Collection = db.get_collection(users_coll_name)
+users_unique_index_name = users_coll.create_index([('username', ASCENDING)], unique=True)
+
+print(f'Create unique index on {users_coll.name}: {users_unique_index_name}')
 
 # Create collection and index for ExerciseCollections
 collections_coll: Collection = db.get_collection(collections_coll_name)
