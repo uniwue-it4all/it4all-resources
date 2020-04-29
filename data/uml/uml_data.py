@@ -2,7 +2,7 @@ from typing import List
 
 from data.uml.coll_1.uml_coll_1_ex_1 import uml_coll_1_ex_1
 from data.uml.coll_1.uml_coll_1_ex_2 import uml_coll_1_ex_2
-from models.collection import CollectionAndExes, Collection
+from models.collection import CollectionAndExes, ExerciseCollection
 from models.uml import UmlExercise
 
 uml_coll_1_exes: List[UmlExercise] = [
@@ -11,7 +11,7 @@ uml_coll_1_exes: List[UmlExercise] = [
 
 uml_collections_and_exes: List[CollectionAndExes[UmlExercise]] = [
     CollectionAndExes(
-        Collection(
+        ExerciseCollection(
             collectionId=1, toolId="uml", title="Uml Basics", authors=["bje40dc"],
             text="Aufgaben um die Grundlagen von UML-Klassendiagrammen zu erlernen.",
         ),

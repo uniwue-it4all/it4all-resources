@@ -1,8 +1,2 @@
-flask
-
-jsonschema
-pyyaml
-
-mypy
-
-animal-case
+pymongo
+colorama

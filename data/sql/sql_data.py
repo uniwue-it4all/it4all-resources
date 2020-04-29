@@ -9,7 +9,7 @@ from data.sql.coll_1.ex_6.sql_coll_1_ex_6 import sql_coll_1_ex_6
 from data.sql.coll_1.ex_7.sql_coll_1_ex_7 import sql_coll_1_ex_7
 from data.sql.coll_1.ex_8.sql_coll_1_ex_8 import sql_coll_1_ex_8
 from data.sql.coll_1.ex_9.sql_coll_1_ex_9 import sql_coll_1_ex_9
-from models.collection import CollectionAndExes, Collection
+from models.collection import CollectionAndExes, ExerciseCollection
 from models.sql import SqlExercise
 
 sql_coll_1_exes: List[SqlExercise] = [
@@ -24,14 +24,14 @@ sql_coll_2_exes: List[SqlExercise] = [
 
 sql_collections_and_exes: List[CollectionAndExes[SqlExercise]] = [
     CollectionAndExes(
-        Collection(
+        ExerciseCollection(
             collectionId=1, toolId="sql", title="Angestellte", authors=["bje40dc"],
             text="Dieses Szenario beschreibt die Datenbank einer kleinen Firma."
         ),
         {ex.exerciseId: ex for ex in sql_coll_1_exes}
     ),
     CollectionAndExes(
-        Collection(collectionId=2, toolId="sql", title="Amazon", authors=["bje40dc"], text=""),
+        ExerciseCollection(collectionId=2, toolId="sql", title="Amazon", authors=["bje40dc"], text=""),
         {ex.exerciseId: ex for ex in sql_coll_2_exes}
     )
 ]

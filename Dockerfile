@@ -1,18 +1,16 @@
-FROM python:3-alpine
+FROM mongo
 
-ARG WorkDir=/app/
+RUN apt update && \
+  apt install -y python3 python3-pip locales && \
+  sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
+  locale-gen && \
+  pip3 install dataclasses pymongo colorama typing_extensions
 
-COPY requirements.txt requirements.txt
+# Set the locale
+ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 
-RUN apk update && \
-    apk add build-base && \
-    pip install -r requirements.txt
+WORKDIR /app
 
-WORKDIR ${WorkDir}
+COPY ./ /app/
 
-# FIXME: move resources to different directory!
-COPY . ${WorkDir}
-
-EXPOSE 5000
-
-ENTRYPOINT python server.py
+COPY ./seed.sh /docker-entrypoint-initdb.d/seed.sh

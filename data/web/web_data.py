@@ -8,7 +8,7 @@ from data.web.coll_1.ex_5.web_coll_1_ex_5 import web_coll_1_ex_5
 from data.web.coll_2.ex_1.web_coll_2_ex_1 import web_coll_2_ex_1
 from data.web.coll_2.ex_2.web_coll_2_ex_2 import web_coll_2_ex_2
 from data.web.coll_2.ex_3.web_coll_2_ex_3 import web_coll_2_ex_3
-from models.collection import CollectionAndExes, Collection
+from models.collection import CollectionAndExes, ExerciseCollection
 from models.web import WebExercise
 
 web_coll_1_exercises: List[WebExercise] = [
@@ -22,11 +22,11 @@ web_coll_2_exercises: List[WebExercise] = [
 
 web_collections_and_exes: List[CollectionAndExes[WebExercise]] = [
     CollectionAndExes(
-        Collection(collectionId=1, toolId="web", title="Html Elemente", authors=["bje40dc"], text="TODO"),
+        ExerciseCollection(collectionId=1, toolId="web", title="Html Elemente", authors=["bje40dc"], text="TODO"),
         {ex.exerciseId: ex for ex in web_coll_1_exercises}
     ),
     CollectionAndExes(
-        Collection(collectionId=2, toolId="web", title="Js Basics", authors=["bje40dc"], text="TODO"),
+        ExerciseCollection(collectionId=2, toolId="web", title="Js Basics", authors=["bje40dc"], text="TODO"),
         {ex.exerciseId: ex for ex in web_coll_2_exercises}
     )
 ]
