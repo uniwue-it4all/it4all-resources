@@ -1,5 +1,4 @@
 from dataclasses import asdict as dataclasses_asdcit
-from typing import List
 
 # noinspection Mypy
 from colorama import init as colorama_init, Fore
@@ -21,43 +20,39 @@ exercises_coll_name = 'exercises'
 username = 'root'
 password = '1234'
 
+new_username = 'it4all'
+new_password = password
+
 colorama_init()
 
 client: MongoClient = MongoClient(f'mongodb://{username}:{password}@localhost:27017/')
 
 db: Database = client.get_database(db_name)
 
-print(Fore.WHITE + f'connected to database {db_name}...')
+print(Fore.WHITE)
 
-existing_collections: List[str] = db.list_collection_names()
+print(f'connected to database {db_name}...')
 
-collections_coll: Collection
-if collections_coll_name not in existing_collections:
-    collections_coll = db.create_collection(collections_coll_name)
+db.command('createUser', new_username, pwd=new_password, roles=["readWrite"])
 
-    print(f'Created collection {collections_coll.name}')
+# Create collection and index for ExerciseCollections
+collections_coll: Collection = db.get_collection(collections_coll_name)
+collections_unique_index_name: str = collections_coll.create_index(
+    [('toolId', ASCENDING), ('collectionId', ASCENDING)], unique=True
+)
 
-    collections_unique_index_name: str = collections_coll.create_index(
-        [('toolId', ASCENDING), ('collectionId', ASCENDING)], unique=True
-    )
+print(f'Created unique index on {collections_coll.name}: {collections_unique_index_name}')
 
-    print(f'Created unique index on {collections_coll.name}: {collections_unique_index_name}')
-else:
-    collections_coll = db.get_collection(collections_coll_name)
+# Create collection and index for Exercises
+exercises_coll: Collection = db.get_collection(exercises_coll_name)
 
-exercises_coll: Collection
-if exercises_coll_name not in existing_collections:
-    exercises_coll = db.create_collection(exercises_coll_name)
+exercises_unique_index_name: str = exercises_coll.create_index(
+    [('toolId', ASCENDING), ('collectionId', ASCENDING), ('exerciseId', ASCENDING)], unique=True
+)
 
-    print(f'Create collection {exercises_coll.name}')
+print(f'Create unique index on {exercises_coll.name}: {exercises_unique_index_name}')
 
-    exercises_unique_index_name: str = exercises_coll.create_index(
-        [('toolId', ASCENDING), ('collectionId', ASCENDING), ('exerciseId', ASCENDING)], unique=True
-    )
-
-    print(f'Create unique index on {exercises_coll.name}: {exercises_unique_index_name}')
-else:
-    exercises_coll = db.get_collection(exercises_coll_name)
+# Insert all collections and exercises
 
 for tool_values in all_tools.values():
     for collectionsAndExes in tool_values.collectionAndExes.values():
