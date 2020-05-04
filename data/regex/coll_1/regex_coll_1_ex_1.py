@@ -35,5 +35,6 @@ regex_coll_1_ex_1: RegexExercise = RegexExercise(
         Diese bestehen aus 5 Ziffern."""
     ).replace('\n', ' '),
     difficulty=1,
+    topicAbbreviations=[],
     content=content
 )

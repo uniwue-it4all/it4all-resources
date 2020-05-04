@@ -1,25 +1,20 @@
 from typing import List
 
-from data.sql.coll_1.ex_1.sql_coll_1_ex_1 import sql_coll_1_ex_1
-from data.sql.coll_1.ex_2.sql_coll_1_ex_2 import sql_coll_1_ex_2
-from data.sql.coll_1.ex_3.sql_coll_1_ex_3 import sql_coll_1_ex_3
-from data.sql.coll_1.ex_4.sql_coll_1_ex_4 import sql_coll_1_ex_4
-from data.sql.coll_1.ex_5.sql_coll_1_ex_5 import sql_coll_1_ex_5
-from data.sql.coll_1.ex_6.sql_coll_1_ex_6 import sql_coll_1_ex_6
-from data.sql.coll_1.ex_7.sql_coll_1_ex_7 import sql_coll_1_ex_7
-from data.sql.coll_1.ex_8.sql_coll_1_ex_8 import sql_coll_1_ex_8
-from data.sql.coll_1.ex_9.sql_coll_1_ex_9 import sql_coll_1_ex_9
+from data.sql.sql_coll_1_exes import sql_coll_1_exes
+from data.sql.sql_coll_2_exes_01_to_10 import sql_coll_2_exes_01_to_10
+from data.sql.sql_coll_2_exes_11_to_20 import sql_coll_2_exes_11_to_20
+from data.sql.sql_coll_2_exes_21_to_30 import sql_coll_2_exes_21_to_30
+from data.sql.sql_coll_2_exes_31_to_40 import sql_coll_2_exes_31_to_40
+from data.sql.sql_coll_2_exes_41_to_50 import sql_coll_2_exes_41_to_50
 from models.basics import CollectionAndExes, ExerciseCollection
 from models.sql import SqlExercise
 
-sql_coll_1_exes: List[SqlExercise] = [
-    sql_coll_1_ex_1, sql_coll_1_ex_2, sql_coll_1_ex_3,
-    sql_coll_1_ex_4, sql_coll_1_ex_5, sql_coll_1_ex_6,
-    sql_coll_1_ex_7, sql_coll_1_ex_8, sql_coll_1_ex_9
-]
-
 sql_coll_2_exes: List[SqlExercise] = [
-
+    *sql_coll_2_exes_01_to_10,
+    *sql_coll_2_exes_11_to_20,
+    *sql_coll_2_exes_21_to_30,
+    *sql_coll_2_exes_31_to_40,
+    *sql_coll_2_exes_41_to_50
 ]
 
 sql_collections_and_exes: List[CollectionAndExes[SqlExercise]] = [

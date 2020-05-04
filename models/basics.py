@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from pathlib import Path
 from typing import List, Dict, TypeVar, Generic, Tuple
 
@@ -63,7 +63,7 @@ class Exercise:
     authors: List[str]
     text: str
     difficulty: int
-    topicAbbreviations: List[Tuple[str, int]] = field(default_factory=list)
+    topicAbbreviations: List[Tuple[str, int]]
 
     def key(self) -> ExKey:
         return {

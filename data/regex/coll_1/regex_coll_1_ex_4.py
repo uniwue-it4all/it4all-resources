@@ -38,5 +38,6 @@ regex_coll_1_ex_4: RegexExercise = RegexExercise(
         Jede der Nummern kann mehrstellig sein und führende Nullen besitzen."""
     ).replace('\n', ' '),
     difficulty=3,
+    topicAbbreviations=[],
     content=content
 )

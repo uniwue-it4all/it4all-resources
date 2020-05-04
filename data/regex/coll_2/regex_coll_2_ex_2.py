@@ -73,5 +73,6 @@ regex_coll_2_ex_2: RegexExercise = RegexExercise(
         Alle Buchstaben können außerdem groß oder klein geschrieben sein."""
     ).replace('\n', ''),
     difficulty=3,
+    topicAbbreviations=[],
     content=content
 )

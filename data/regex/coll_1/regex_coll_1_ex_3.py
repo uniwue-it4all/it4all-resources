@@ -44,5 +44,6 @@ regex_coll_1_ex_3 = RegexExercise(
         Führende Nullen sind erlaubt."""
     ).replace('\n', ' '),
     difficulty=3,
+    topicAbbreviations=[],
     content=content
 )

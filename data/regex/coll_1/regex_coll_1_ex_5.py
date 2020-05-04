@@ -40,5 +40,6 @@ regex_coll_1_ex_5: RegexExercise = RegexExercise(
         Jeder Teil besteht aus mindestens einem dieser Zeichen."""
     ).replace('\n', ' '),
     difficulty=4,
+    topicAbbreviations=[],
     content=content
 )

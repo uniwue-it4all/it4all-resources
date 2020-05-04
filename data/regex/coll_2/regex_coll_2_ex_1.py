@@ -37,5 +37,6 @@ regex_coll_2_ex_1: RegexExercise = RegexExercise(
         Es soll kein Symbol für eine Währungeinheit mitextrahiert werden."""
     ).replace('\n', ' '),
     difficulty=3,
+    topicAbbreviations=[],
     content=content
 )
