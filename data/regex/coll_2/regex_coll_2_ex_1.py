@@ -1,6 +1,6 @@
 from textwrap import dedent
 
-from models.collection import SampleSolution
+from models.basics import SampleSolution
 from models.regex import RegexCorrectionType, RegexExtractionTestData, RegexExercise, RegexExerciseContent
 
 content = RegexExerciseContent(
@@ -36,7 +36,6 @@ regex_coll_2_ex_1: RegexExercise = RegexExercise(
         Diese sollen aus einer Ganz- oder Fließkommazahl mit maximal zwei Nachkommastellen bestehen.
         Es soll kein Symbol für eine Währungeinheit mitextrahiert werden."""
     ).replace('\n', ' '),
-    topics=[],
     difficulty=3,
     content=content
 )

@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import List, Optional
 
-from models.collection import SampleSolution, Exercise
+from models.basics import SampleSolution, Exercise
 
 
 class SqlExerciseType(str, Enum):

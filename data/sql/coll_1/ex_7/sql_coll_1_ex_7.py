@@ -1,6 +1,6 @@
 from textwrap import dedent
 
-from models.collection import SampleSolution
+from models.basics import SampleSolution
 from models.sql import SqlExerciseType, SqlExercise, SqlExerciseContent
 
 sql_coll_1_ex_7: SqlExercise = SqlExercise(
@@ -14,7 +14,6 @@ sql_coll_1_ex_7: SqlExercise = SqlExercise(
         Der Angestellte mit der OID 8 arbeitet jetzt für den Angestellten mit der OID 3.
         Aktualisieren Sie die Datenbank!"""
     ).replace('\n', ' '),
-    topics=[],
     difficulty=1,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.UPDATE,

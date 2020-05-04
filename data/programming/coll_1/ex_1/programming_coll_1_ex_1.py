@@ -1,6 +1,6 @@
 from textwrap import dedent
 
-from models.collection import ExerciseFile, SampleSolution, load_text_from_file, ex_resources_path
+from models.basics import ExerciseFile, SampleSolution, load_text_from_file, ex_resources_path
 from models.programming import ProgrammingInput, ProgrammingUnitTestPart, ProgrammingImplementationPart, \
     ProgrammingUnitTestType, ProgrammingTestData, ProgrammingSolution, ProgrammingExTag, ProgrammingExercise, \
     ProgrammingExerciseContent
@@ -63,12 +63,12 @@ programming_coll_1_ex_1: ProgrammingExercise = ProgrammingExercise(
     title='Größter gemeinsamer Teiler',
     authors=['bje40dc'],
     text=load_text_from_file(ex_res_path / 'text.html'),
-    topics=[
-        ProgrammingExTag.ForLoops,
-        ProgrammingExTag.Conditions,
-        ProgrammingExTag.Maths
-    ],
     difficulty=2,
+    topicAbbreviations=[
+        (ProgrammingExTag.ForLoops, 1),
+        (ProgrammingExTag.Conditions, 1),
+        (ProgrammingExTag.Maths, 1)
+    ],
     content=ProgrammingExerciseContent(
         functionName='ggt',
         foldername='ggt',

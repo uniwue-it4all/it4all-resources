@@ -2,20 +2,20 @@ from dataclasses import dataclass
 from enum import Enum
 from typing import List, Any, Optional
 
-from models.collection import ExerciseFile, Exercise, SampleSolution, Topic
+from models.basics import ExerciseFile, Exercise, SampleSolution
 
 
-class ProgrammingExTag:
-    ForLoops = Topic('FL', 'programming', 'For-Schleifen')
-    Conditions = Topic('C', 'programming', 'Bedingungen')
-    Maths = Topic('M', 'programming', 'Mathematik')
-    Strings = Topic('S', 'programming', 'Strings')
-    Lists = Topic('L', 'programming', 'Listen')
-    Tuples = Topic('T', 'programming', 'Tuple')
-    Classes = Topic('CL', 'programming', 'Klassen')
-    Exceptions = Topic('E', 'programming', 'Exceptions')
-    Recursions = Topic('R', 'programming', 'Rekursion')
-    Dicts = Topic('D', 'programming', 'Dictionaries')
+class ProgrammingExTag(str, Enum):
+    ForLoops = 'FL'
+    Conditions = 'C'
+    Maths = 'M'
+    Strings = 'S'
+    Lists = 'L'
+    Tuples = 'T'
+    Classes = 'CL'
+    Exceptions = 'E'
+    Recursions = 'R'
+    Dicts = 'D'
 
 
 class ProgrammingUnitTestType(str, Enum):

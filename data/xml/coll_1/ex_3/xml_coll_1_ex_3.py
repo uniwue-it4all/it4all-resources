@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from models.collection import SampleSolution, load_text_from_file, ex_resources_path
+from models.basics import SampleSolution, load_text_from_file, ex_resources_path
 from models.xml import XmlSolution, XmlExercise, XmlExerciseContent
 
 ex_res_path: Path = ex_resources_path('xml', 1, 3)
@@ -12,7 +12,7 @@ xml_coll_1_ex_3: XmlExercise = XmlExercise(
     title='Krankenhaus',
     authors=['bje40dc'],
     text='Erstellen Sie zu dieser DTD ein passendes Xml-Dokument.',
-    topics=[],
+
     difficulty=1,
     content=XmlExerciseContent(
         rootNode='praxis',

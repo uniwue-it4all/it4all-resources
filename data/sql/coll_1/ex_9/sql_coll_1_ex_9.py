@@ -1,6 +1,6 @@
 from textwrap import dedent
 
-from models.collection import SampleSolution
+from models.basics import SampleSolution
 from models.sql import SqlExerciseType, SqlExercise, SqlExerciseContent
 
 sql_coll_1_ex_9: SqlExercise = SqlExercise(
@@ -14,7 +14,6 @@ sql_coll_1_ex_9: SqlExercise = SqlExercise(
         Es gibt eine neue Angestellte mit Namen Tina Sattler.
         Diese arbeitet für die Person mit der OID 2 und soll als OID 9 und als Nutzernamen 'tina_sattler' bekommen."""
     ),
-    topics=[],
     difficulty=1,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.INSERT,

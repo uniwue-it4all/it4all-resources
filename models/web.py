@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import Optional, List
 
-from models.collection import ExerciseFile, Exercise, SampleSolution
+from models.basics import ExerciseFile, Exercise, SampleSolution
 
 
 class JsActionType(str, Enum):

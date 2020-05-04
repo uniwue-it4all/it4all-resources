@@ -1,6 +1,6 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
-from typing import List, Dict, TypeVar, Generic
+from typing import List, Dict, TypeVar, Generic, Tuple
 
 from typing_extensions import TypedDict
 
@@ -39,13 +39,6 @@ class ExerciseFile:
     content: str
 
 
-@dataclass()
-class Topic:
-    abbreviation: str
-    toolId: str
-    title: str
-
-
 S = TypeVar('S')
 
 
@@ -69,8 +62,8 @@ class Exercise:
     title: str
     authors: List[str]
     text: str
-    topics: List[Topic]
     difficulty: int
+    topicAbbreviations: List[Tuple[str, int]] = field(default_factory=list)
 
     def key(self) -> ExKey:
         return {

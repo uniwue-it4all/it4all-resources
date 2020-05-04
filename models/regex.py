@@ -2,7 +2,7 @@ from dataclasses import dataclass
 from enum import Enum
 from typing import List
 
-from models.collection import Exercise, SampleSolution
+from models.basics import Exercise, SampleSolution
 
 
 class RegexCorrectionType(str, Enum):

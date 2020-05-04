@@ -6,7 +6,7 @@ from data.sql.sql_data import sql_collections_and_exes
 from data.uml.uml_data import uml_collections_and_exes
 from data.web.web_data import web_collections_and_exes
 from data.xml.xml_data import xml_collections_and_exes
-from models.collection import ToolValues
+from models.basics import ToolValues
 
 all_tools: Dict[str, ToolValues] = {
     'programming': ToolValues(

@@ -1,6 +1,6 @@
 from textwrap import dedent
 
-from models.collection import SampleSolution
+from models.basics import SampleSolution
 from models.regex import RegexMatchTestData, RegexCorrectionType, RegexExercise, RegexExerciseContent
 
 content: RegexExerciseContent = RegexExerciseContent(
@@ -43,7 +43,6 @@ regex_coll_1_ex_3 = RegexExercise(
         Eine Validierung auf kalendarische Korrektheit ist nicht erforderlich.
         Führende Nullen sind erlaubt."""
     ).replace('\n', ' '),
-    topics=[],
     difficulty=3,
     content=content
 )

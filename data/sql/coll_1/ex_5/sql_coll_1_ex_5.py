@@ -1,6 +1,6 @@
 from textwrap import dedent
 
-from models.collection import SampleSolution
+from models.basics import SampleSolution
 from models.sql import SqlExerciseType, SqlExTag, SqlExercise, SqlExerciseContent
 
 sql_coll_1_ex_5: SqlExercise = SqlExercise(
@@ -10,7 +10,6 @@ sql_coll_1_ex_5: SqlExercise = SqlExercise(
     title='Anzahl der Untergebenen',
     authors=['bje40dc'],
     text="""Wie viele Untergebene hat jeder Chef? Geben Sie jeweils die OID des Chefs und die Anzahl aus!""",
-    topics=[],
     difficulty=2,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,

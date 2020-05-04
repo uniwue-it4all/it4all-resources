@@ -5,7 +5,7 @@ from data.xml.coll_1.ex_2.xml_coll_1_ex_2 import xml_coll_1_ex_2
 from data.xml.coll_1.ex_3.xml_coll_1_ex_3 import xml_coll_1_ex_3
 from data.xml.coll_1.ex_4.xml_coll_1_ex_4 import xml_coll_1_ex_4
 from data.xml.coll_1.ex_5.xml_coll_1_ex_5 import xml_coll_1_ex_5
-from models.collection import CollectionAndExes, ExerciseCollection
+from models.basics import CollectionAndExes, ExerciseCollection
 from models.xml import XmlExercise
 
 xml_coll_1_exercises: List[XmlExercise] = [

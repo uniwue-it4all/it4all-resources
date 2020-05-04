@@ -1,7 +1,7 @@
 from pathlib import Path
 from textwrap import dedent
 
-from models.collection import SampleSolution, load_text_from_file, base_res_path, ExerciseFile, ex_resources_path
+from models.basics import SampleSolution, load_text_from_file, base_res_path, ExerciseFile, ex_resources_path
 from models.web import SiteSpec, HtmlTask, HtmlAttribute, WebSolution, WebExercise, WebExerciseContent
 
 ex_res_folder: Path = ex_resources_path('web', 1, 3)
@@ -84,7 +84,7 @@ web_coll_1_ex_3: WebExercise = WebExercise(
     title='Hyperlinks und Bilder in HTML',
     authors=['bje40dc'],
     text=load_text_from_file(base_res_path / 'web' / 'coll_1' / 'ex_3' / 'text.html'),
-    topics=[],
+
     difficulty=2,
     content=WebExerciseContent(
         files=[

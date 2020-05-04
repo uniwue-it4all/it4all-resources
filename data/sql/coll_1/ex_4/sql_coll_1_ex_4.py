@@ -1,6 +1,6 @@
 from textwrap import dedent
 
-from models.collection import SampleSolution
+from models.basics import SampleSolution
 from models.sql import SqlExerciseType, SqlExTag, SqlExercise, SqlExerciseContent
 
 sql_coll_1_ex_4: SqlExercise = SqlExercise(
@@ -10,7 +10,6 @@ sql_coll_1_ex_4: SqlExercise = SqlExercise(
     title='Nutzernamen',
     authors=['bje40dc'],
     text='Geben Sie die Nutzernamen aller Angestellten alphabetisch geordnet aus!',
-    topics=[],
     difficulty=1,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,

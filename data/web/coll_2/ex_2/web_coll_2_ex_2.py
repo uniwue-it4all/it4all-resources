@@ -2,7 +2,7 @@ from pathlib import Path
 from textwrap import dedent
 from typing import List
 
-from models.collection import ExerciseFile, load_text_from_file, SampleSolution, ex_resources_path
+from models.basics import ExerciseFile, load_text_from_file, SampleSolution, ex_resources_path
 from models.web import WebSolution, HtmlTask, HtmlAttribute, JsTask, JsAction, JsActionType, JsCondition, SiteSpec, \
     WebExercise, WebExerciseContent
 
@@ -135,7 +135,7 @@ web_coll_2_ex_2: WebExercise = WebExercise(
     title='Verzweigungen und Strings',
     authors=['alg81dm'],
     text=load_text_from_file(ex_res_path / 'text.html'),
-    topics=[],
+
     difficulty=3,
     content=WebExerciseContent(
         files=[

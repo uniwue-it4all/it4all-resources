@@ -1,6 +1,6 @@
 from textwrap import dedent
 
-from models.collection import SampleSolution
+from models.basics import SampleSolution
 from models.regex import RegexMatchTestData, RegexCorrectionType, RegexExercise, RegexExerciseContent
 
 content = RegexExerciseContent(
@@ -39,7 +39,6 @@ regex_coll_1_ex_5: RegexExercise = RegexExercise(
         Klein- und Großbuchstaben, alle Ziffern, Minus, Punkt und Unterstrich (_).
         Jeder Teil besteht aus mindestens einem dieser Zeichen."""
     ).replace('\n', ' '),
-    topics=[],
     difficulty=4,
     content=content
 )

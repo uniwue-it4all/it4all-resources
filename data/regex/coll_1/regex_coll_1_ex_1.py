@@ -1,6 +1,6 @@
 from textwrap import dedent
 
-from models.collection import SampleSolution
+from models.basics import SampleSolution
 from models.regex import RegexCorrectionType, RegexMatchTestData, RegexExercise, RegexExerciseContent
 
 content: RegexExerciseContent = RegexExerciseContent(
@@ -34,7 +34,6 @@ regex_coll_1_ex_1: RegexExercise = RegexExercise(
         Schreiben Sie einen regulären Ausdruck, der (deutsche) Postleitzahlen überprüfen kann.
         Diese bestehen aus 5 Ziffern."""
     ).replace('\n', ' '),
-    topics=[],
     difficulty=1,
     content=content
 )

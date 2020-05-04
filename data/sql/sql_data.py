@@ -9,7 +9,7 @@ from data.sql.coll_1.ex_6.sql_coll_1_ex_6 import sql_coll_1_ex_6
 from data.sql.coll_1.ex_7.sql_coll_1_ex_7 import sql_coll_1_ex_7
 from data.sql.coll_1.ex_8.sql_coll_1_ex_8 import sql_coll_1_ex_8
 from data.sql.coll_1.ex_9.sql_coll_1_ex_9 import sql_coll_1_ex_9
-from models.collection import CollectionAndExes, ExerciseCollection
+from models.basics import CollectionAndExes, ExerciseCollection
 from models.sql import SqlExercise
 
 sql_coll_1_exes: List[SqlExercise] = [

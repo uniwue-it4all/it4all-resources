@@ -2,7 +2,7 @@ from pathlib import Path
 from textwrap import dedent
 from typing import List
 
-from models.collection import ExerciseFile, load_text_from_file, SampleSolution, ex_resources_path
+from models.basics import ExerciseFile, load_text_from_file, SampleSolution, ex_resources_path
 from models.web import WebSolution, SiteSpec, HtmlTask, HtmlAttribute, WebExercise, WebExerciseContent
 
 ex_res_folder: Path = ex_resources_path('web', 1, 2)
@@ -131,7 +131,7 @@ web_coll_1_ex_2: WebExercise = WebExercise(
     title='Tabellen in Html',
     authors=['bje40dc'],
     text=load_text_from_file(ex_res_folder / 'text.html'),
-    topics=[],
+
     difficulty=2,
     content=WebExerciseContent(
         files=[

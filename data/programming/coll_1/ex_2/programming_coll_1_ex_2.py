@@ -1,7 +1,7 @@
 from pathlib import Path
 from textwrap import dedent
 
-from models.collection import SampleSolution, ex_resources_path, load_text_from_file, ExerciseFile
+from models.basics import SampleSolution, ex_resources_path, load_text_from_file, ExerciseFile
 from models.programming import ProgrammingUnitTestPart, ProgrammingUnitTestType, ProgrammingUnitTestTestConfig, \
     ProgrammingImplementationPart, ProgrammingExTag, ProgrammingInput, ProgrammingSolution, ProgrammingExercise, \
     ProgrammingExerciseContent
@@ -133,12 +133,12 @@ programming_coll_1_ex_2: ProgrammingExercise = ProgrammingExercise(
     title='Fakultät',
     authors=['bje40dc'],
     text=load_text_from_file(ex_res_path / 'text.html'),
-    topics=[
-        ProgrammingExTag.Exceptions,
-        ProgrammingExTag.Maths,
-        ProgrammingExTag.ForLoops
-    ],
     difficulty=1,
+    topicAbbreviations=[
+        (ProgrammingExTag.Exceptions, 1),
+        (ProgrammingExTag.Maths, 1),
+        (ProgrammingExTag.ForLoops, 1)
+    ],
     content=ProgrammingExerciseContent(
         functionName='factorial',
         foldername='factorial',

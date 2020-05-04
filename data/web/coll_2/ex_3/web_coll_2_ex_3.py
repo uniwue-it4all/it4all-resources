@@ -2,7 +2,7 @@ from pathlib import Path
 from textwrap import dedent
 from typing import List
 
-from models.collection import ExerciseFile, SampleSolution, ex_resources_path, load_text_from_file
+from models.basics import ExerciseFile, SampleSolution, ex_resources_path, load_text_from_file
 from models.web import WebSolution, HtmlTask, JsTask, HtmlAttribute, JsActionType, JsCondition, JsAction, SiteSpec, \
     WebExercise, WebExerciseContent
 
@@ -144,7 +144,7 @@ web_coll_2_ex_3: WebExercise = WebExercise(
     title='Schleifen',
     authors=['alg81dm'],
     text=load_text_from_file(ex_res_path / 'text.html'),
-    topics=[],
+
     difficulty=2,
     content=WebExerciseContent(
         files=[

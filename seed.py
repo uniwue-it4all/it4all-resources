@@ -10,7 +10,7 @@ from pymongo.collection import Collection
 from pymongo.database import Database
 
 from all_data import all_tools
-from models.collection import ExerciseCollection, ExCollKey, ExKey
+from models.basics import ExerciseCollection, ExCollKey, ExKey
 
 db_name = 'it4all'
 

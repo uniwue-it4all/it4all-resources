@@ -1,6 +1,6 @@
 from textwrap import dedent
 
-from models.collection import SampleSolution
+from models.basics import SampleSolution
 from models.regex import RegexExtractionTestData, RegexCorrectionType, RegexExercise, RegexExerciseContent
 
 content: RegexExerciseContent = RegexExerciseContent(
@@ -72,7 +72,6 @@ regex_coll_2_ex_2: RegexExercise = RegexExercise(
         Zwischen der Zahl und dem T und zwischen dem T und der Einheit können optional Leerzeichen vorhanden sein.
         Alle Buchstaben können außerdem groß oder klein geschrieben sein."""
     ).replace('\n', ''),
-    topics=[],
     difficulty=3,
     content=content
 )

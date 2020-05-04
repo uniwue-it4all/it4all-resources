@@ -1,6 +1,6 @@
 from textwrap import dedent
 
-from models.collection import SampleSolution
+from models.basics import SampleSolution
 from models.regex import RegexCorrectionType, RegexMatchTestData, RegexExercise, RegexExerciseContent
 
 content: RegexExerciseContent = RegexExerciseContent(
@@ -43,7 +43,6 @@ regex_coll_1_ex_2: RegexExercise = RegexExercise(
         existieren) ist nicht erforderlich.
         Außerdem sind führende Nullen erlaubt."""
     ).replace('\n', ' '),
-    topics=[],
     difficulty=2,
     content=content
 )

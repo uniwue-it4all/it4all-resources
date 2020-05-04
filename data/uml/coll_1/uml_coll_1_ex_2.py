@@ -1,6 +1,6 @@
 from textwrap import dedent
 
-from models.collection import SampleSolution
+from models.basics import SampleSolution
 from models.uml import UmlClass, UmlMethod, UmlAttribute, UmlClassDiagram, UmlMapping, UmlAssociation, \
     UmlImplementation, UmlClassType, UmlMultiplicity, UmlExercise, UmlExerciseContent
 
@@ -97,7 +97,7 @@ uml_coll_1_ex_2: UmlExercise = UmlExercise(
         verschrieben werden.
         Ein Patient wiederum kann in einer Station aufgenommen bzw. entlassen werden."""
     ).replace('\n', ' '),
-    topics=[],
+
     difficulty=2,
     content=UmlExerciseContent(
         mappings=[

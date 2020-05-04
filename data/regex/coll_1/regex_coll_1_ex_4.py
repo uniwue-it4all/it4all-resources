@@ -1,6 +1,6 @@
 from textwrap import dedent
 
-from models.collection import SampleSolution
+from models.basics import SampleSolution
 from models.regex import RegexCorrectionType, RegexMatchTestData, RegexExercise, RegexExerciseContent
 
 content: RegexExerciseContent = RegexExerciseContent(
@@ -37,7 +37,6 @@ regex_coll_1_ex_4: RegexExercise = RegexExercise(
         mit einem Punkt beziehungsweise im Fall der Revisions- und Buildnummer mit einem Minus getrennt werden.
         Jede der Nummern kann mehrstellig sein und führende Nullen besitzen."""
     ).replace('\n', ' '),
-    topics=[],
     difficulty=3,
     content=content
 )

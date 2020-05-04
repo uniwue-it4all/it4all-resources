@@ -1,6 +1,6 @@
 from textwrap import dedent
 
-from models.collection import SampleSolution
+from models.basics import SampleSolution
 from models.uml import UmlClassDiagram, UmlMapping, UmlClass, UmlClassType, UmlAttribute, UmlMethod, UmlAssociation, \
     UmlImplementation, UmlMultiplicity, UmlExercise, UmlExerciseContent
 
@@ -62,7 +62,7 @@ uml_coll_1_ex_1: UmlExercise = UmlExercise(
         Jeder Kunde kann mehrere Konten besitzen und hat die Möglichkeit, sich das Gesamtsaldo aller Konten anzeigen
         zu lassen und Geld auf ein Konto einzuzahlen."""
     ).replace('\n', ' '),
-    topics=[],
+
     difficulty=1,
     content=UmlExerciseContent(
         mappings=[

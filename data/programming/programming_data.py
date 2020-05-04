@@ -2,7 +2,7 @@ from typing import List
 
 from data.programming.coll_1.ex_1.programming_coll_1_ex_1 import programming_coll_1_ex_1
 from data.programming.coll_1.ex_2.programming_coll_1_ex_2 import programming_coll_1_ex_2
-from models.collection import CollectionAndExes, ExerciseCollection
+from models.basics import CollectionAndExes, ExerciseCollection
 from models.programming import ProgrammingExercise
 
 programming_coll_1_exes: List[ProgrammingExercise] = [
