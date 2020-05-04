@@ -12,8 +12,8 @@ xml_coll_1_ex_5: XmlExercise = XmlExercise(
     title='Bibliothek',
     authors=['bje40dc'],
     text='Erstellen Sie für dieses Xml-Dokument eine passende DTD.',
-
     difficulty=2,
+    topicAbbreviations=[],
     content=XmlExerciseContent(
         rootNode='bibliothek',
         grammarDescription=load_text_from_file(base_res_path / 'xml' / 'coll_1' / 'ex_5' / 'grammarDescription.txt'),

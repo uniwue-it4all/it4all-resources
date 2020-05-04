@@ -1,6 +1,6 @@
 from textwrap import dedent
 
-from models.collection import SampleSolution
+from models.basics import SampleSolution
 from models.sql import SqlExTag, SqlExerciseContent, SqlExercise, SqlExerciseType
 
 schemaName = 'amazon'
@@ -17,7 +17,7 @@ sql_coll_2_ex_41 = SqlExercise(
         Geben Sie nur den Vornamen und Nachnamen aus.
         Die Datensätze sollen nach dem Nachnamen alphabetisch sortiert werden."""
     ).replace("\n", " "),
-    topics=[],
+    topicAbbreviations=[],
     difficulty=3,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,
@@ -49,7 +49,7 @@ sql_coll_2_ex_42 = SqlExercise(
         Zeigen Sie Titel, Verlag-Name und Lagerbestand sämtlicher Bücher an,
         deren Lagerbestand geringer als 40000 ist."""
     ).replace("\n", " "),
-    topics=[],
+    topicAbbreviations=[],
     difficulty=2,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,
@@ -81,7 +81,7 @@ sql_coll_2_ex_43 = SqlExercise(
         Fügen Sie einen neuen Kunden in die Datenbank ein. Name 'Ferdinandus Merkle', Email: 'ferdinandus_1856 @yahoo.com', Geburtstag: '1990 - 11 - 24 '. Das Passwort und die Adresse soll vorerst leer gelassen werden.
         """
     ).replace("\n", " "),
-    topics=[],
+    topicAbbreviations=[],
     difficulty=2,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.INSERT,
@@ -115,7 +115,7 @@ sql_coll_2_ex_44 = SqlExercise(
     title="Immer diese Jugendlichen",
     authors=["bje40dc"],
     text="Löschen Sie alle Kunden, die nach dem Jahr 1995 geboren wurden.",
-    topics=[],
+    topicAbbreviations=[],
     difficulty=2,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.DELETE,
@@ -140,7 +140,7 @@ sql_coll_2_ex_45 = SqlExercise(
     title="Karteileichen",
     authors=["bje40dc"],
     text="Löschen Sie alle Kunden, die noch keine Bestellung abgegeben haben.",
-    topics=[],
+    topicAbbreviations=[],
     difficulty=3,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.DELETE,
@@ -166,7 +166,7 @@ sql_coll_2_ex_46 = SqlExercise(
     title="Weg mit den Billigheimern",
     authors=["bje40dc"],
     text="Löschen Sie alle Bücher, die mehr als 8,50 Euro kosten und die Verlags-ID 7 besitzen.",
-    topics=[],
+    topicAbbreviations=[],
     difficulty=1,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.DELETE,
@@ -191,7 +191,7 @@ sql_coll_2_ex_47 = SqlExercise(
     title="Bye Bye, J. R. R!",
     authors=["bje40dc"],
     text="Löschen Sie alle Bücher, die vom Autor mit der ID 3 geschrieben wurden.",
-    topics=[],
+    topicAbbreviations=[],
     difficulty=3,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.DELETE,
@@ -221,7 +221,7 @@ sql_coll_2_ex_48 = SqlExercise(
         (Autor-ID: 2, Erscheinungsjahr: 2010, Publisher-ID: '12' , Signatur 'PF / 520 - Y / 2',
         Lagerbestand '289', Preis: '24.99 ')."""
     ).replace("\n", " "),
-    topics=[],
+    topicAbbreviations=[],
     difficulty=2,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.INSERT,

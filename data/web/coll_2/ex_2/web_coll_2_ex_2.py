@@ -135,8 +135,8 @@ web_coll_2_ex_2: WebExercise = WebExercise(
     title='Verzweigungen und Strings',
     authors=['alg81dm'],
     text=load_text_from_file(ex_res_path / 'text.html'),
-
     difficulty=3,
+    topicAbbreviations=[],
     content=WebExerciseContent(
         files=[
             ExerciseFile(

@@ -97,8 +97,8 @@ uml_coll_1_ex_2: UmlExercise = UmlExercise(
         verschrieben werden.
         Ein Patient wiederum kann in einer Station aufgenommen bzw. entlassen werden."""
     ).replace('\n', ' '),
-
     difficulty=2,
+    topicAbbreviations=[],
     content=UmlExerciseContent(
         mappings=[
             UmlMapping(key='Stationen', value='Station'),

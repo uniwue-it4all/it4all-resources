@@ -12,8 +12,8 @@ xml_coll_1_ex_2: XmlExercise = XmlExercise(
     title='Vorlesung',
     authors=['bje40dc'],
     text='Erstellen Sie zu dieser DTD ein passendes Xml-Dokument.',
-
     difficulty=2,
+    topicAbbreviations=[],
     content=XmlExerciseContent(
         rootNode='lecture',
         grammarDescription=load_text_from_file(ex_res_path / 'grammarDescription.txt'),

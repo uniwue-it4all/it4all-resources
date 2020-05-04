@@ -204,8 +204,8 @@ sql_coll_1_ex_7 = SqlExercise(
         Der Angestellte mit der OID 8 arbeitet jetzt für den Angestellten mit der OID 3.
         Aktualisieren Sie die Datenbank!"""
     ).replace('\n', ' '),
-    topics=[],
     difficulty=1,
+    topicAbbreviations=[],
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.UPDATE,
         schemaName='employee',
@@ -230,8 +230,8 @@ sql_coll_1_ex_8 = SqlExercise(
     title='Kündigung',
     authors=['bje40dc'],
     text="""Der Angestellte mit der OID 7 hat gekündigt. Löschen Sie ihn aus der Angestelltentabelle.""",
-    topics=[],
     difficulty=1,
+    topicAbbreviations=[],
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.DELETE,
         schemaName='employee',
@@ -259,8 +259,8 @@ sql_coll_1_ex_9 = SqlExercise(
         Es gibt eine neue Angestellte mit Namen Tina Sattler.
         Diese arbeitet für die Person mit der OID 2 und soll als OID 9 und als Nutzernamen 'tina_sattler' bekommen."""
     ),
-    topics=[],
     difficulty=1,
+    topicAbbreviations=[],
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.INSERT,
         schemaName='employee',

@@ -84,8 +84,8 @@ web_coll_1_ex_3: WebExercise = WebExercise(
     title='Hyperlinks und Bilder in HTML',
     authors=['bje40dc'],
     text=load_text_from_file(base_res_path / 'web' / 'coll_1' / 'ex_3' / 'text.html'),
-
     difficulty=2,
+    topicAbbreviations=[],
     content=WebExerciseContent(
         files=[
             ExerciseFile(

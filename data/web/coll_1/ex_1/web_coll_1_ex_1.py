@@ -87,8 +87,8 @@ web_coll_1_ex_1: WebExercise = WebExercise(
     title='Listen in Html',
     authors=['bje40dc'],
     text=load_text_from_file(ex_res_folder / 'text.html'),
-
     difficulty=1,
+    topicAbbreviations=[],
     content=WebExerciseContent(
         files=[
             ExerciseFile(

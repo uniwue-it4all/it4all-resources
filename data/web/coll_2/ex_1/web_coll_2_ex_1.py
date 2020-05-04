@@ -95,8 +95,8 @@ web_coll_2_ex_1: WebExercise = WebExercise(
     title='Klickzähler',
     authors=['bje40dc'],
     text=load_text_from_file(ex_res_path / 'text.html'),
-
     difficulty=2,
+    topicAbbreviations=[],
     content=WebExerciseContent(
         files=[
             ExerciseFile(

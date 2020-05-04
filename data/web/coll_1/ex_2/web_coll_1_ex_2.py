@@ -131,8 +131,8 @@ web_coll_1_ex_2: WebExercise = WebExercise(
     title='Tabellen in Html',
     authors=['bje40dc'],
     text=load_text_from_file(ex_res_folder / 'text.html'),
-
     difficulty=2,
+    topicAbbreviations=[],
     content=WebExerciseContent(
         files=[
             ExerciseFile(

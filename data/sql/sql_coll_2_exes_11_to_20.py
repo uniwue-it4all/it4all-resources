@@ -1,6 +1,6 @@
 from textwrap import dedent
 
-from models.collection import SampleSolution
+from models.basics import SampleSolution
 from models.sql import SqlExerciseType, SqlExercise, SqlExerciseContent, SqlExTag
 
 schemaName = "amazon"
@@ -16,7 +16,7 @@ sql_coll_2_ex_11 = SqlExercise(
         Ordnen Sie allen Büchern ihre jeweiligen Autoren zu.
         Geben Sie jeweils den Titel des Buches und den Nachnamen des Autoren aus!"""
     ).replace("\n", " "),
-    topics=[],
+    topicAbbreviations=[],
     difficulty=1,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,
@@ -42,7 +42,7 @@ sql_coll_2_ex_12 = SqlExercise(
     title="Bücher von Carlsen",
     authors=["bje40dc"],
     text="""Bestimmen Sie Titel und Preis aller Bücher die im Verlag 'Carlsen' erschienen sind.""",
-    topics=[],
+    topicAbbreviations=[],
     difficulty=1,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,
@@ -70,7 +70,7 @@ sql_coll_2_ex_13 = SqlExercise(
     title="Harry Potters Leben",
     authors=["bje40dc"],
     text="""Bestimmen Sie Titel und ISBN sämtlicher Bücher der Autorin 'Rowling' (ohne Anführungszeichen).""",
-    topics=[],
+    topicAbbreviations=[],
     difficulty=1,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,
@@ -97,7 +97,7 @@ sql_coll_2_ex_14 = SqlExercise(
     title="Wilhards Wertungen",
     authors=["bje40dc"],
     text="""Zeigen Sie die Werte aller Ratings an, die der Kunde mit der Email 'wilhard_1041@web.de' abgegeben hat.""",
-    topics=[],
+    topicAbbreviations=[],
     difficulty=2,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,
@@ -124,7 +124,7 @@ sql_coll_2_ex_15 = SqlExercise(
     title="""Wer hat hier so viel bestellt?""",
     authors=["bje40dc"],
     text="""Wie lauten die Nachnamen der Kunden, die mindestens 3 Bestellung aufgegeben haben?""",
-    topics=[],
+    topicAbbreviations=[],
     difficulty=2,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,
@@ -152,7 +152,7 @@ sql_coll_2_ex_16 = SqlExercise(
     title="GMX-Kunden",
     authors=["bje40dc"],
     text="""Geben Sie alle Email-Adressen der Kunden aus die mit 'gmx.de' enden.""",
-    topics=[],
+    topicAbbreviations=[],
     difficulty=1,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,
@@ -179,7 +179,7 @@ sql_coll_2_ex_17 = SqlExercise(
     title="Billige Bücher",
     authors=["bje40dc"],
     text="""Geben Sie die Titel aller Bücher aus die weniger als 10,00 € kosten.""",
-    topics=[],
+    topicAbbreviations=[],
     difficulty=1,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,
@@ -208,7 +208,7 @@ sql_coll_2_ex_18 = SqlExercise(
         Geben die die IDs aller Bücher aus, die von Kunden gewünscht werden.
         Achten Sie darauf, dass eine ID nur einmal vorkommt."""
     ),
-    topics=[],
+    topicAbbreviations=[],
     difficulty=1,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,
@@ -233,7 +233,7 @@ sql_coll_2_ex_19 = SqlExercise(
     title="Jahrgang 81",
     authors=["bje40dc"],
     text="""Wählen Sie die Vor- und Nachnamen der Kunden aus, die im Jahr 1981 Geburtstag haben.""",
-    topics=[],
+    topicAbbreviations=[],
     difficulty=2,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,
@@ -273,7 +273,7 @@ sql_coll_2_ex_20 = SqlExercise(
         Geben Sie die Titel aller Bücher aus, die einen Bestand von weniger als 20.000 Exemplaren
         oder einen Preis unter 14€ haben."""
     ).replace("\n", " "),
-    topics=[],
+    topicAbbreviations=[],
     difficulty=2,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,

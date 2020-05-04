@@ -144,8 +144,8 @@ web_coll_2_ex_3: WebExercise = WebExercise(
     title='Schleifen',
     authors=['alg81dm'],
     text=load_text_from_file(ex_res_path / 'text.html'),
-
     difficulty=2,
+    topicAbbreviations=[],
     content=WebExerciseContent(
         files=[
             ExerciseFile(

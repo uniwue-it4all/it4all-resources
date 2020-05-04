@@ -62,8 +62,8 @@ uml_coll_1_ex_1: UmlExercise = UmlExercise(
         Jeder Kunde kann mehrere Konten besitzen und hat die Möglichkeit, sich das Gesamtsaldo aller Konten anzeigen
         zu lassen und Geld auf ein Konto einzuzahlen."""
     ).replace('\n', ' '),
-
     difficulty=1,
+    topicAbbreviations=[],
     content=UmlExerciseContent(
         mappings=[
             UmlMapping(key='Konten', value='Konto'),

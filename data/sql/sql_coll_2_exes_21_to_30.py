@@ -1,6 +1,6 @@
 from textwrap import dedent
 
-from models.collection import SampleSolution
+from models.basics import SampleSolution
 from models.sql import SqlExerciseType, SqlExercise, SqlExerciseContent, SqlExTag
 
 schemaName = 'amazon'
@@ -12,7 +12,7 @@ sql_coll_2_ex_21 = SqlExercise(
     title="Sterne in der Wüste 1",
     authors=["bje40dc"],
     text="""Wie oft wurde das Buch 'Die Stadt in der Wüste' bewertet? Nennen Sie die Spalte 'Anzahl'.""",
-    topics=[],
+    topicAbbreviations=[],
     difficulty=2,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,
@@ -43,7 +43,7 @@ sql_coll_2_ex_22 = SqlExercise(
         Welche Durchschnittsbewertung bekam das Buch 'Die Stadt in der Wüste'?
         Nennen Sie die Spalte 'Durchschnitt'."""
     ).replace("\n", " "),
-    topics=[],
+    topicAbbreviations=[],
     difficulty=1,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,
@@ -70,7 +70,7 @@ sql_coll_2_ex_23 = SqlExercise(
     title="Harry Potters",
     authors=["bje40dc"],
     text="""Wie hoch ist der Gesamtbestand an Harry Potter-Büchern? Nennen Sie die Spalte 'Gesamtbestand'.""",
-    topics=[],
+    topicAbbreviations=[],
     difficulty=1,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,
@@ -101,7 +101,7 @@ sql_coll_2_ex_24 = SqlExercise(
         Geben Sie jeweils die schlechteste und beste Bewertung des Buches 'Harry Potter und der Halbblutprinz' aus.
         Nennen Sie die Spalten jeweils 'Schlechteste' und 'Beste'."""
     ).replace("\n", " "),
-    topics=[],
+    topicAbbreviations=[],
     difficulty=1,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,
@@ -128,7 +128,7 @@ sql_coll_2_ex_25 = SqlExercise(
     title="Durchschnittlicher Bestand",
     authors=["bje40dc"],
     text="""Wie hoch ist der durchschnittliche Bestand aller Bücher? Nennen Sie die Spalte 'Durchschnitt'.""",
-    topics=[],
+    topicAbbreviations=[],
     difficulty=1,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,
@@ -153,7 +153,7 @@ sql_coll_2_ex_26 = SqlExercise(
     title="Wunsch des Phönix",
     authors=["bje40dc"],
     text="""Wie lauten die Nachnamen der Kunden die sich das Buch 'Harry Potter und der Orden des Phönix' wünschen?""",
-    topics=[],
+    topicAbbreviations=[],
     difficulty=1,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,
@@ -186,7 +186,7 @@ sql_coll_2_ex_27 = SqlExercise(
         Suchen Sie die Titel aller Bücher, deren Autor George Orwell ist.
         Ordnen Sie die Titel nach Erscheinungsjahr abwärts."""
     ).replace("\n", " "),
-    topics=[],
+    topicAbbreviations=[],
     difficulty=3,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,
@@ -218,7 +218,7 @@ sql_coll_2_ex_28 = SqlExercise(
         Zeigen sie Titel und Autor-ID der drei teuersten Bücher an.
         Sortieren Sie die Einträge nach Preis abwärts."""
     ).replace("\n", " "),
-    topics=[],
+    topicAbbreviations=[],
     difficulty=2,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,
@@ -250,7 +250,7 @@ sql_coll_2_ex_29 = SqlExercise(
         Wählen Sie alle Bestellungen aus, die das Buch 'Harry Potter und der Halbblutprinz' enthalten.
         Geben Sie für diese Bestellungen jeweils das Datum und die Anzahl der bestellten Exemplare des Buches aus."""
     ).replace("\n", " "),
-    topics=[],
+    topicAbbreviations=[],
     difficulty=2,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,
@@ -277,7 +277,7 @@ sql_coll_2_ex_30 = SqlExercise(
     title="Emails mit G",
     authors=["bje40dc"],
     text="""Geben Sie alle Email-Adressen der Kunden aus die mit 'gmx.de ' oder mit 'gmail.com' enden.""",
-    topics=[],
+    topicAbbreviations=[],
     difficulty=1,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,

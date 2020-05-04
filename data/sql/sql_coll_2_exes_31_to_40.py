@@ -1,6 +1,6 @@
 from textwrap import dedent
 
-from models.collection import SampleSolution
+from models.basics import SampleSolution
 from models.sql import SqlExerciseType, SqlExercise, SqlExerciseContent, SqlExTag
 
 schemaName = "amazon"
@@ -16,7 +16,7 @@ sql_coll_2_ex_31 = SqlExercise(
         Bestimmen Sie Titel und Preis aller Bücher des Autors 'Tolkien' deren Preis über 10€ liegt.
         Ordnen Sie die Einträge nach Erscheinungsjahr abwärts."""
     ).replace("\n", " "),
-    topics=[],
+    topicAbbreviations=[],
     difficulty=3,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,
@@ -48,7 +48,7 @@ sql_coll_2_ex_32 = SqlExercise(
         Berechnen Sie die Anzahl der bestellten Buchexemplare (Tabelle order_positions), die zum Zeitpunkt des Kaufes
         weniger als fünf Euro gekostet haben. Geben Sie das Ergebnis unter dem Spaltenname 'Anzahl' aus."""
     ).replace("\n", " "),
-    topics=[],
+    topicAbbreviations=[],
     difficulty=2,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,
@@ -89,7 +89,7 @@ sql_coll_2_ex_33 = SqlExercise(
         Ordnen Sie die Einträge nach kumulierten Bestand abwärts.
         Benennen Sie die Spalte des kumulierten Bestandes 'stock_sum' (ohne Anführungszeichen)."""
     ).replace("\n", " "),
-    topics=[],
+    topicAbbreviations=[],
     difficulty=3,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,
@@ -122,7 +122,7 @@ sql_coll_2_ex_34 = SqlExercise(
         Wählen Sie alle Kunden aus die im Februar Geburtstag haben und geben Sie den Vornamen,
         Nachnamen und das Geburtsdatum aus."""
     ).replace("\n", " "),
-    topics=[],
+    topicAbbreviations=[],
     difficulty=1,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,
@@ -149,7 +149,7 @@ sql_coll_2_ex_35 = SqlExercise(
     title="Ich bin der Jüngste!",
     authors=["bje40dc"],
     text="""Geben Sie den Vornamen, Nachnamen und Geburtstag des jüngsten Kunden aus.""",
-    topics=[],
+    topicAbbreviations=[],
     difficulty=2,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,
@@ -184,7 +184,7 @@ sql_coll_2_ex_36 = SqlExercise(
         werden, sich ein neues auszudenken.
         Geben Sie die ID und die Email-Adresse der faulen Kunden aus."""
     ).replace("\n", " "),
-    topics=[],
+    topicAbbreviations=[],
     difficulty=1,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,
@@ -219,7 +219,7 @@ sql_coll_2_ex_37 = SqlExercise(
         Ermitteln Sie den Kunden, welcher die höchste durchschnittliche Bewertung abgegeben hat.
         Geben Sie dazu Vorname, Nachname und seine durchschnittliche Bewertung (Spaltenbezeichnung 'avg_rating') aus."""
     ),
-    topics=[],
+    topicAbbreviations=[],
     difficulty=3,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,
@@ -254,7 +254,7 @@ sql_coll_2_ex_38 = SqlExercise(
         Listen Sie dabei Vorname, Nachname und Einkaufswert (Spaltenbezeichnung 'value') auf.
         Sortieren Sie die Einträge aufwärts nach Einkaufswert."""
     ).replace("\n", " "),
-    topics=[],
+    topicAbbreviations=[],
     difficulty=4,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,
@@ -287,7 +287,7 @@ sql_coll_2_ex_39 = SqlExercise(
     title="Veröffentlichungsjahre",
     authors=["bje40dc"],
     text="""Wählen Sie alle Bücher aus, die in den Jahren 1998, 2001 oder 2011 veröffentlicht wurden.""",
-    topics=[],
+    topicAbbreviations=[],
     difficulty=2,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.SELECT,
@@ -315,7 +315,7 @@ sql_coll_2_ex_40 = SqlExercise(
         Es sind neue Exemplare des Buches mit dem Titel 1894 eingetroffen.
         Aktualisieren Sie den Bestand auf den neuen Wert von 500."""
     ).replace("\n", " "),
-    topics=[],
+    topicAbbreviations=[],
     difficulty=1,
     content=SqlExerciseContent(
         exerciseType=SqlExerciseType.UPDATE,

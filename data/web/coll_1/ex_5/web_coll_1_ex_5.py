@@ -70,8 +70,8 @@ web_coll_1_ex_5: WebExercise = WebExercise(
     title='Audio in HTML 5',
     authors=['bje40dc'],
     text=load_text_from_file(ex_res_path / 'text.html'),
-
     difficulty=1,
+    topicAbbreviations=[],
     content=WebExerciseContent(
         files=[
             ExerciseFile(
